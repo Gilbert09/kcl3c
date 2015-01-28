@@ -6,6 +6,8 @@ development:
   pool: 5
   username: hh
   password: P@ssw0rd123
+  host: 209.141.58.142
+  port: 3306
  
 test:
   adapter: mysql
@@ -15,6 +17,9 @@ test:
   pool: 5
   username: hh
   password: P@ssw0rd123
+  host: 209.141.58.142
+  port: 3306
+
   
 production:
   adapter: mysql
@@ -24,3 +29,6 @@ production:
   pool: 5
   username: hh
   password: P@ssw0rd123
+  host: 209.141.58.142
+  port: 3306
+
