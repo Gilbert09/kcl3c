@@ -1,5 +1,5 @@
 development:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
   database: househunter
@@ -10,7 +10,7 @@ development:
   port: 3306
  
 test:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
   database: househunter
@@ -22,7 +22,7 @@ test:
 
   
 production:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
   database: househunter
