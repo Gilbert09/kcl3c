@@ -17,6 +17,16 @@ class UserController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to(:action => 'show', :id => @user.id)
+    else
+      render('index')
+    end
   end
 
   #def delete end
