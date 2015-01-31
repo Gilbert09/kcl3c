@@ -1,10 +1,23 @@
 class PropertyController < ApplicationController
   def show
-    @properties = Property.find(params[:id])
+    @property = Property.find(params[:id])
   end
 
   def index
     @properties = Property.all
+  end
+
+  def new
+    @property = Property.new
+  end
+
+  def create
+    @property = Property.new
+    if @property.save
+      redirect_to(:action => 'index')
+    else
+      render ('new')
+    end
   end
 
   private
