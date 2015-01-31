@@ -3,6 +3,7 @@ class PropertyController < ApplicationController
   end
 
   def index
+    @properties = Property.all
   end
 
   private
