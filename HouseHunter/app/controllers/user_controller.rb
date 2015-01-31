@@ -29,7 +29,14 @@ class UserController < ApplicationController
     end
   end
 
-  #def delete end
+  def delete
+    @user = User.find(params[:id])
+  end
+
+  def destroy
+    @user = User.find(params[:id]).destroy
+    redirect_to(:action => 'index')
+  end
 
   private
   def user_params
