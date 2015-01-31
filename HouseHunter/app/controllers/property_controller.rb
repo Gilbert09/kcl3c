@@ -1,5 +1,6 @@
 class PropertyController < ApplicationController
   def show
+    @properties = Property.find(params[:id])
   end
 
   def index
