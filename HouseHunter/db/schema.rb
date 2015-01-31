@@ -14,28 +14,52 @@
 ActiveRecord::Schema.define(version: 20150130152615) do
 
   create_table "addresses", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "addressLine1", limit: 255
+    t.string   "addressLine2", limit: 255
+    t.string   "townCity",     limit: 255
+    t.string   "postCode",     limit: 255
+    t.string   "county",       limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "listings", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "views",      limit: 4
+    t.string   "visible",    limit: 255
+    t.string   "dateListed", limit: 255
+    t.string   "dateSold",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "multimedia", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "type",       limit: 255
+    t.string   "name",       limit: 255
+    t.binary   "data",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "properties", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "price",          limit: 4
+    t.integer  "numberBedroom",  limit: 4
+    t.integer  "numberBathroom", limit: 4
+    t.integer  "numberRoom",     limit: 4
+    t.string   "keyword",        limit: 255
+    t.string   "description",    limit: 255
+    t.string   "type",           limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "firstName",  limit: 255
+    t.string   "lastName",   limit: 255
+    t.string   "password",   limit: 255
+    t.string   "title",      limit: 255
+    t.string   "email",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

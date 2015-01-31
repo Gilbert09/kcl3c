@@ -3,7 +3,7 @@ class CreateMultimedia < ActiveRecord::Migration
     create_table :multimedia do |t|
       t.string :type
       t.string :name
-      t.object :data
+      t.binary :data
       t.timestamps null: false
     end
   end
