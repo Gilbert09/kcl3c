@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150130152615) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.integer  "user_id",        limit: 4
+    t.integer  "used_id",        limit: 4
     t.integer  "price",          limit: 4
     t.integer  "numberBedroom",  limit: 4
     t.integer  "numberBathroom", limit: 4
