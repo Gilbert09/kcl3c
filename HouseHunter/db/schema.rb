@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150130152615) do
 
   create_table "addresses", force: :cascade do |t|
-    t.integer  "property_id",  limit: 4,   null: false
+    t.integer  "property_id",  limit: 4
     t.string   "addressLine1", limit: 255
     t.string   "addressLine2", limit: 255
     t.string   "townCity",     limit: 255
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150130152615) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.integer  "property_id", limit: 4,  null: false
+    t.integer  "property_id", limit: 4
     t.integer  "views",       limit: 4
     t.string   "visible",     limit: 255
     t.string   "dateListed",  limit: 255
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150130152615) do
   end
 
   create_table "multimedia", force: :cascade do |t|
-    t.integer  "property_id", limit: 4,    null: false
+    t.integer  "property_id", limit: 4
     t.string   "type",        limit: 255
     t.string   "name",        limit: 255
     t.binary   "data",        limit: 65535
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150130152615) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.integer  "user_id",        limit: 4,   null: false
+    t.integer  "user_id",        limit: 4
     t.integer  "price",          limit: 4
     t.integer  "numberBedroom",  limit: 4
     t.integer  "numberBathroom", limit: 4
