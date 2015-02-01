@@ -1,6 +1,7 @@
 class CreateMultimedia < ActiveRecord::Migration
   def change
     create_table :multimedia do |t|
+      t.integer :property_id
       t.string :type
       t.string :name
       t.binary :data
