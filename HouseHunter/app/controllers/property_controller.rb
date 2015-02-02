@@ -33,6 +33,16 @@ class PropertyController < ApplicationController
     end
   end
 
+  # these methods (delete && destroy) below may be deleted depending on client requests.
+  def delete
+    @property = Property.find(params[:id])
+  end
+
+  def destroy
+    @property = Property.find(params[:id]).destroy
+    redirect_to(:action => 'index')
+  end
+
   private
   def property_params
     params.require(:property).permit(:price, :numberBedroom, :numberBathroom, :numberRoom, :keyword, :description, :type)

@@ -29,6 +29,7 @@ class UserController < ApplicationController
     end
   end
 
+  # these methods (delete && destroy) below may be deleted depending on client requests.
   def delete
     @user = User.find(params[:id])
   end
