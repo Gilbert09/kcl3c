@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.integer  "price",               limit: 4
     t.integer  "numberBedroom",       limit: 4
     t.integer  "numberBathroom",      limit: 4
-    t.integer  "numberReceptionRoom", limit: 4
+    t.integer  "numberRoom",          limit: 4
     t.string   "keyword",             limit: 255
     t.string   "description",         limit: 255
     t.string   "property_type",       limit: 255
