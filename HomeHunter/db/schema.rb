@@ -21,18 +21,18 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.string   "postCode",     limit: 255
     t.string   "county",       limit: 255
     t.string   "country",      limit: 255
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "listings", force: :cascade do |t|
     t.integer  "property_id", limit: 4
     t.integer  "views",       limit: 4
     t.string   "visible",     limit: 255
-    t.datetime "dateListed",  limit: 255
-    t.datetime "dateSold",    limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "dateListed",         null: false
+    t.datetime "dateSold",           null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "multimedia", force: :cascade do |t|
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.string   "password",   limit: 255
     t.string   "title",      limit: 255
     t.string   "email",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
