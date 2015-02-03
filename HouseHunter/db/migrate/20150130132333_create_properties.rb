@@ -8,7 +8,7 @@ class CreateProperties < ActiveRecord::Migration
       t.integer :numberRoom
       t.string :keyword
       t.string :description
-      t.string :type
+      t.string :property_type
       t.timestamps null: false
     end
   end
