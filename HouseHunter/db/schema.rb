@@ -29,30 +29,30 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.integer  "property_id", limit: 4
     t.integer  "views",       limit: 4
     t.string   "visible",     limit: 255
-    t.string   "dateListed",  limit: 255
-    t.string   "dateSold",    limit: 255
+    t.datetime "dateListed",  limit: 255
+    t.datetime "dateSold",    limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   create_table "multimedia", force: :cascade do |t|
-    t.integer  "property_id", limit: 4
-    t.string   "type",        limit: 255
-    t.string   "name",        limit: 255
-    t.binary   "data",        limit: 65535
+    t.integer  "property_id",     limit: 4
+    t.string   "multimedia_type", limit: 255
+    t.string   "name",            limit: 255
+    t.binary   "data",            limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
   create_table "properties", force: :cascade do |t|
-    t.integer  "user_id",        limit: 4
-    t.integer  "price",          limit: 4
-    t.integer  "numberBedroom",  limit: 4
-    t.integer  "numberBathroom", limit: 4
-    t.integer  "numberRoom",     limit: 4
-    t.string   "keyword",        limit: 255
-    t.string   "description",    limit: 255
-    t.string   "property_type",  limit: 255
+    t.integer  "user_id",             limit: 4
+    t.integer  "price",               limit: 4
+    t.integer  "numberBedroom",       limit: 4
+    t.integer  "numberBathroom",      limit: 4
+    t.integer  "numberReceptionRoom", limit: 4
+    t.string   "keyword",             limit: 255
+    t.string   "description",         limit: 255
+    t.string   "property_type",       limit: 255
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end

@@ -5,7 +5,7 @@ class CreateProperties < ActiveRecord::Migration
       t.integer :price
       t.integer :numberBedroom
       t.integer :numberBathroom
-      t.integer :numberRoom
+      t.integer :numberReceptionRoom
       t.string :keyword
       t.string :description
       t.string :property_type
