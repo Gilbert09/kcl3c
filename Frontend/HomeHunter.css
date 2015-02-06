@@ -74,6 +74,7 @@ img.logo{
     background: #bdc3c7;
     margin: 0px auto;
     text-align: left;
+
 }
 
 .content-left {
@@ -87,7 +88,6 @@ img.logo{
     padding: 1.25%;
 
     width: 67.5%;
-    height:2000px;
 
     position: relative;
     float:left;
@@ -101,7 +101,6 @@ img.logo{
     padding: 1.25%;
 
     width:17.5%;
-    height:2000px;
 
     position: relative;
     float:right;
