@@ -1,0 +1,186 @@
+body{
+    margin:0px;
+    background:#ecf0f1;
+}
+
+img.logo{
+    height:60px;
+}
+
+.header-top {
+    height:30px;
+    line-height: 30px;
+    width:100%;
+    margin:0px auto;
+
+    text-align: center; 
+    font-family: "Helvetica", serif;
+
+    background:#262A2A;
+    color: #ecf0f1;
+}
+
+.header-mid {
+    height:60px;
+    line-height: 60px;
+    width:100%;
+    margin:0px auto;
+    
+    text-align: center;
+    font-family: "Helvetica", serif;
+
+    background:#ecf0f1;
+    color:#262A2A;
+}
+
+.header-col-top {
+    float: left;
+    width: 50%;
+}
+
+.links-login {
+    float:left;
+    width: 50%;
+}
+
+.header-col-logo {
+    float:left;
+    width: 33%;
+    height: 60px;
+}
+
+.header-col-links {
+    float:left;
+    width: 66%;
+}
+
+.links-col{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.links-col a:visited, .links-col a:link, .links-col a:active{
+    color:#262A2A;
+    text-decoration: none;
+}
+
+.links-col a:hover{
+    text-decoration: underline;
+}
+
+.content {
+    width:100%;
+    background: #bdc3c7;
+    height: 2000px;
+    margin: 0px auto;
+    text-align: left;
+
+}
+
+.content-left {
+    width: 75%;
+    background: black;
+    
+    height:inherit;
+
+    position: relative;
+    float:left;
+}
+
+.content-right {
+    width:25%;
+    background: red;
+    
+    height:inherit;
+
+    position: relative;
+    float:left;
+}
+
+.content-main {
+    height:500px;
+    background: #e74c3c;
+    position: relative;
+}
+
+.content-steps {
+    height:500px;
+    background: #e67e22;
+    position: relative;
+}
+
+.content-review {
+    height:500px;
+    background: #f39c12;
+    position: relative;
+}
+
+.content-faq {
+    height:500px;
+    background:  #f1c40f;
+    position: relative;
+}
+
+.footer {
+    width:100%;
+    background: #bdc3c7;
+    height: 450px;
+    margin: 0px auto;
+    text-align: left;
+}
+
+.footer-legal { 
+    height:400px;
+    background:#ecf0f1;
+    color:#262A2A;
+    position: relative;
+
+    font-family: "Helvetica", serif;
+    font-size: 350px;
+    text-align: center;
+}
+
+.footer-copyright {
+    height:50px;
+    background:#262A2A;
+    color: #ecf0f1;
+    position: relative;
+
+    font-family: "Helvetica", serif;
+    line-height: 50px;
+}
+
+.overlay-center {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    margin: 0px auto;
+    background: #c0392b;
+
+    top: 25%;
+    left: 20%;
+
+    border: 0px none;
+    border-radius: 10px;
+}
+
+.overlay-listers{
+    position: absolute; 
+    width: 200px;
+    height: 375px;
+    margin: 0px auto;
+    background: #c0392b;
+
+    top: 0%;
+    right: 10%;
+    /* box-shadow: 2px 2px 5px black; */
+
+    border: 0px none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+
+
+
