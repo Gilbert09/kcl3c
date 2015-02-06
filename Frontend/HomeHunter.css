@@ -72,30 +72,39 @@ img.logo{
 .content {
     width:100%;
     background: #bdc3c7;
-    height: 2000px;
     margin: 0px auto;
     text-align: left;
-
 }
 
 .content-left {
-    width: 75%;
-    background: black;
-    
-    height:inherit;
+    background: white;
+
+    margin-top: 2.5%;
+    margin-bottom:2.5%;
+    margin-left:2.5%;
+    margin-right:0%;
+   
+    padding: 1.25%;
+
+    width: 67.5%;
+    height:2000px;
 
     position: relative;
     float:left;
 }
 
 .content-right {
-    width:25%;
-    background: red;
+    background: white;
+
+    margin:2.5%;
     
-    height:inherit;
+    padding: 1.25%;
+
+    width:17.5%;
+    height:2000px;
 
     position: relative;
-    float:left;
+    float:right;
 }
 
 .content-main {
@@ -174,7 +183,6 @@ img.logo{
 
     top: 0%;
     right: 10%;
-    /* box-shadow: 2px 2px 5px black; */
 
     border: 0px none;
     border-radius: 0px 0px 10px 10px;
