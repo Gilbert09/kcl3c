@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20150130152615) do
 
   create_table "addresses", force: :cascade do |t|
-    t.integer  "property_id",  limit: 4
-    t.string   "addressLine1", limit: 255
-    t.string   "addressLine2", limit: 255
-    t.string   "townCity",     limit: 255
-    t.string   "postCode",     limit: 255
-    t.string   "county",       limit: 255
-    t.string   "country",      limit: 255
+    t.integer  "property_id",    limit: 4
+    t.string   "address_line_1", limit: 255
+    t.string   "address_line_2", limit: 255
+    t.string   "town_city",      limit: 255
+    t.string   "post_code",      limit: 255
+    t.string   "county",         limit: 255
+    t.string   "country",        limit: 255
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.integer  "property_id", limit: 4
     t.integer  "views",       limit: 4
     t.string   "visible",     limit: 255
-    t.datetime "dateListed",         null: false
-    t.datetime "dateSold",           null: false
+    t.datetime "date_listed",        null: false
+    t.datetime "date_sold",          null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
@@ -47,19 +47,22 @@ ActiveRecord::Schema.define(version: 20150130152615) do
   create_table "properties", force: :cascade do |t|
     t.integer  "user_id",             limit: 4
     t.integer  "price",               limit: 4
-    t.integer  "numberBedroom",       limit: 4
-    t.integer  "numberBathroom",      limit: 4
-    t.integer  "numberRoom",          limit: 4
+    t.integer  "number_bedroom",      limit: 4
+    t.integer  "number_bathroom",     limit: 4
+    t.integer  "number_reception",    limit: 4
     t.string   "keyword",             limit: 255
     t.string   "description",         limit: 255
     t.string   "property_type",       limit: 255
+    t.string   "status",              limit: 255
+    t.string   "parking",             limit: 255
+    t.string   "outdoor_spaces",      limit: 255
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "firstName",  limit: 255
-    t.string   "lastName",   limit: 255
+    t.string   "first_name", limit: 255
+    t.string   "last_name",  limit: 255
     t.string   "password",   limit: 255
     t.string   "title",      limit: 255
     t.string   "email",      limit: 255

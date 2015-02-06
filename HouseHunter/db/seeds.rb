@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create( firstName: 'Jasper',  lastName: 'van der Valk', password: 'p@ssw0rd123', title: 'Mr', email: 'jasper.v.d.valk@gmail.com' )
-Address.create( addressLine1: '65 Henshaw Street', addressLine2: '', townCity: 'London', postCode: 'SE171PE', county: '', country: 'England' )
-Property.create( price: 500000, numberBedroom: 4, numberBathroom: 2, numberRoom: 8, keyword: 'garage', description: '18th century', property_type: 'attatched' )
+User.create( first_name: 'Jasper',  last_name: 'van der Valk', password: 'p@ssw0rd123',
+             title: 'Mr', email: 'jasper.v.d.valk@gmail.com' )
+Address.create( address_line_1: '65 Henshaw Street', address_line_2: '', town_city: 'London',
+                post_code: 'SE171PE', county: '', country: 'England' )
+Property.create( price: 500000, number_bedroom: 4, number_bathroom: 2, number_reception: 8,
+                 keyword: 'garage', description: '18th century', property_type: 'attatched',
+                 status: 'sold', parking: 'requires permit', outdoor_spaces: 'back garden' )

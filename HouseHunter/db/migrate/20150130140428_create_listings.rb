@@ -4,8 +4,8 @@ class CreateListings < ActiveRecord::Migration
       t.integer :property_id
       t.integer :views
       t.boolean :visible
-      t.timestamps :dateListed
-      t.timestamps :dateSold
+      t.timestamps :date_listed
+      t.timestamps :date_sold
       t.timestamps null: false
     end
   end
