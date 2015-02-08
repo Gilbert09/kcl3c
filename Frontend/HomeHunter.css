@@ -143,8 +143,7 @@ p{
 
     border-radius: 5px;
 
-    float:left;
-    position: relative;
+    
 }
 
 .content-tester {
@@ -169,6 +168,9 @@ p{
         margin-bottom: 2%;
         margin-right: 2.5%;
         margin-left: 0.5%;;
+
+        float:left;
+        position: relative;
     }
 }
 
@@ -187,10 +189,13 @@ p{
     .content-right {
         margin-top: 1.25%;
         margin-bottom:2.5%;
-        margin-left:15px;
+        margin-left:715px;
         margin-right: 5px;
 
         width:260px;
+
+        float:left;
+        position: fixed;
     }
 }
 
