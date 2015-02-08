@@ -146,13 +146,13 @@ p{
     
 }
 
-.content-tester {
+.content-center {
     background: #ffffff;
 }
 
 
 @media(max-width: 900px){
-    .content-tester {
+    .content-center {
         width: 100%;
     }
     .content-left {
@@ -175,7 +175,7 @@ p{
 }
 
 @media(min-width:900px){
-    .content-tester {
+    .content-center {
         width:1000px;
         float: center;
         margin: 0 auto;
