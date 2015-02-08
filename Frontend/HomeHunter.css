@@ -124,10 +124,8 @@ p{
 .content-left {
     background: #ecf0f1;
 
-    padding-top: 5px;
-    padding-bottom: 1.25%;
-    padding-left: 1.25%;
-    padding-right: 1.25%;
+    padding-left: 10px;
+    padding-right: 10px;
 
     position: relative;
     float:left;
@@ -140,120 +138,59 @@ p{
     
     padding-top: 10px;
     padding-bottom: 1.25%;
-    padding-left: 1.25%;
-    padding-right: 1.25%;
-
-    /*position: relative;*/
+    padding-left: 10px;
+    padding-right: 10px;
 
     border-radius: 5px;
+
+    float:left;
+    position: relative;
+}
+
+.content-tester {
+    background: #ffffff;
 }
 
 
-@media(max-width: 800px){
-    .content-left{
-        width:96.5%;
+@media(max-width: 900px){
+    .content-tester {
+        width: 100%;
+    }
+    .content-left {
+        width:97%;
         margin-top: 2%;
         margin-bottom: 1%;
-        margin-right: 3%;
+        margin-right: 2.5%;
         margin-left: 0.5%;
     }
-    .content-right{
-        width:96.5%;
+    .content-right {
+        width:97%;
         margin-top: 1%;
         margin-bottom: 2%;
-        margin-right: 3%;
-        margin-left: 0.5%;
-
-        float:left;
-        position: relative;
+        margin-right: 2.5%;
+        margin-left: 0.5%;;
     }
 }
 
-@media(min-width: 800px){
+@media(min-width:900px){
+    .content-tester {
+        width:1000px;
+        float: center;
+        margin: 0 auto;
+    }
     .content-left {
         margin-top: 1.25%;
         margin-bottom:2.5%;
-        margin-left:5%;
-        margin-right:1%;
 
-        width:60%;
+        width:680px;
     }
     .content-right {
         margin-top: 1.25%;
         margin-bottom:2.5%;
-        margin-left:69.5%;
-        margin-right: 5%;
+        margin-left:15px;
+        margin-right: 5px;
 
-        width:23%;
-
-        float:right;
-        position: fixed;
-    }
-}
-
-@media(min-width:1200px){
-    .content-left {
-        margin-top: 1.25%;
-        margin-bottom:2.5%;
-        margin-left:10%;
-        margin-right:1%;
-
-        width:55%;
-    }
-    .content-right {
-        margin-top: 1.25%;
-        margin-bottom:2.5%;
-        margin-left:69.5%;
-        margin-right: 10%;
-
-        width:18%;
-
-        float:right;
-        position: fixed;
-    }
-}
-
-@media(min-width:1400px){
-    .content-left {
-        margin-top: 1.25%;
-        margin-bottom:2.5%;
-        margin-left:18%;
-        margin-right:1%;
-
-        width:41%;
-    }
-    .content-right {
-        margin-top: 1.25%;
-        margin-bottom:2.5%;
-        margin-left:62.5%;
-        margin-right: 18%;
-
-        width:17%;
-
-        float:right;
-        position: fixed;
-    }
-}
-
-@media(min-width:1700px){
-    .content-left {
-        margin-top: 1.25%;
-        margin-bottom:2.5%;
-        margin-left:23%;
-        margin-right:1%;
-
-        width:36%;
-    }
-    .content-right {
-        margin-top: 1.25%;
-        margin-bottom:2.5%;
-        margin-left:62.5%;
-        margin-right: 23%;
-
-        width:12%;
-
-        float:right;
-        position: fixed;
+        width:260px;
     }
 }
 
