@@ -181,13 +181,13 @@ p{
         margin: 0 auto;
     }
     .content-left {
-        margin-top: 1.25%;
+        margin-top: 15px;
         margin-bottom:2.5%;
 
         width:680px;
     }
     .content-right {
-        margin-top: 1.25%;
+        margin-top: 15px;
         margin-bottom:2.5%;
         margin-left:715px;
         margin-right: 5px;
