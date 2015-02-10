@@ -11,78 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130152615) do
-
-  create_table "addresses", force: :cascade do |t|
-    t.integer  "property_id",    limit: 4
-    t.string   "address_line_1", limit: 255
-    t.string   "address_line_2", limit: 255
-    t.string   "town_city",      limit: 255
-    t.string   "post_code",      limit: 255
-    t.string   "county",         limit: 255
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  create_table "listings", force: :cascade do |t|
-    t.integer  "property_id", limit: 4
-    t.integer  "views",       limit: 4
-    t.string   "visible",     limit: 255
-    t.datetime "date_listed",        null: false
-    t.datetime "date_sold",          null: false
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
-  create_table "multimedia", force: :cascade do |t|
-    t.integer  "property_id",     limit: 4
-    t.integer  "index_number",    limit: 4
-    t.string   "multimedia_type", limit: 255
-    t.string   "file_name",       limit: 255
-    t.string   "caption",         limit: 255
-    t.binary   "data",            limit: 65535
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "properties", force: :cascade do |t|
-    t.integer  "user_id",              limit: 4
-    t.integer  "price",                limit: 4
-    t.integer  "number_of_bedrooms",   limit: 4
-    t.integer  "number_of_bathrooms",  limit: 4
-    t.integer  "number_of_receptions", limit: 4
-    t.string   "kitchen_type",         limit: 255
-    t.string   "keyword",              limit: 255
-    t.string   "property_type",        limit: 255
-    t.string   "status",               limit: 255
-    t.string   "parking",              limit: 255
-    t.string   "outdoor_spaces",       limit: 255
-    t.text     "description",          limit: 65535
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name", limit: 255
-    t.string   "last_name",  limit: 255
-    t.string   "password",   limit: 255
-    t.string   "title",      limit: 255
-    t.string   "email",      limit: 255
-    t.string   "salt",       limit: 255
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
   create_table "rooms", force: :cascade do |t|
     t.integer  "property_id",      limit: 4
     t.integer  "multimedia_id",    limit: 4
-    t.float    "room_height",      limit: 4
-    t.float    "room_width",       limit: 4
+    t.float    "room_height",      limit: 24
+    t.float    "room_width",       limit: 24
     t.string   "room_type",        limit: 255
     t.string   "measurement_unit", limit: 255
     t.text     "description",      limit: 65535
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end
