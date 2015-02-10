@@ -16,5 +16,5 @@ Property.create( price: 500000, number_of_bedrooms: 4, number_of_bathrooms: 2, n
                  keyword: 'garage', property_type: 'attatched', status: 'sold', parking: 'requires permit',
                  outdoor_spaces: 'back garden', description: '18th century' )
 
-Room.create( room_height: 45.55, room_width: 55.55, room_type: 'bedroom', measurement_unit: 'inches',
+Room.create( room_length: 45.55, room_width: 55.55, room_type: 'bedroom', measurement_unit: 'inches',
              description: 'master bedroom very nice' )
