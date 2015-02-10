@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.string   "town_city",      limit: 255
     t.string   "post_code",      limit: 255
     t.string   "county",         limit: 255
-    t.string   "country",        limit: 255
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -52,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.integer  "number_of_bedrooms",    limit: 4
     t.integer  "number_of_bathrooms",   limit: 4
     t.integer  "number_of_receptions",  limit: 4
+    t.string   "kitchen_type",          limit: 255
     t.string   "keyword",               limit: 255
     t.string   "property_type",         limit: 255
     t.string   "status",                limit: 255

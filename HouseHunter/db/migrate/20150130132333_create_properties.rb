@@ -6,6 +6,7 @@ class CreateProperties < ActiveRecord::Migration
       t.integer :number_of_bedrooms
       t.integer :number_of_bathrooms
       t.integer :number_of_receptions
+      t.string :kitchen_type
       t.string :keyword
       t.string :property_type
       t.string :status
