@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150210152250) do
   create_table "rooms", force: :cascade do |t|
     t.integer  "property_id",      limit: 4
     t.integer  "multimedia_id",    limit: 4
-    t.float    "room_height",      limit: 24
+    t.float    "room_length",      limit: 24
     t.float    "room_width",       limit: 24
     t.string   "room_type",        limit: 255
     t.string   "measurement_unit", limit: 255
