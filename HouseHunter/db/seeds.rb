@@ -15,3 +15,6 @@ Address.create( address_line_1: '65 Henshaw Street', address_line_2: '', town_ci
 Property.create( price: 500000, number_of_bedrooms: 4, number_of_bathrooms: 2, number_of_receptions: 8, kitchen_type: 'big',
                  keyword: 'garage', property_type: 'attatched', status: 'sold', parking: 'requires permit',
                  outdoor_spaces: 'back garden', description: '18th century' )
+
+Room.create( room_height: 45.55, room_width: 55.55, room_type: 'bedroom', measurement_unit: 'inches',
+             description: 'master bedroom' )

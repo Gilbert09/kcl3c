@@ -46,20 +46,20 @@ ActiveRecord::Schema.define(version: 20150130152615) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.integer  "user_id",               limit: 4
-    t.integer  "price",                 limit: 4
-    t.integer  "number_of_bedrooms",    limit: 4
-    t.integer  "number_of_bathrooms",   limit: 4
-    t.integer  "number_of_receptions",  limit: 4
-    t.string   "kitchen_type",          limit: 255
-    t.string   "keyword",               limit: 255
-    t.string   "property_type",         limit: 255
-    t.string   "status",                limit: 255
-    t.string   "parking",               limit: 255
-    t.string   "outdoor_spaces",        limit: 255
-    t.text     "description",           limit: 65535
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "user_id",              limit: 4
+    t.integer  "price",                limit: 4
+    t.integer  "number_of_bedrooms",   limit: 4
+    t.integer  "number_of_bathrooms",  limit: 4
+    t.integer  "number_of_receptions", limit: 4
+    t.string   "kitchen_type",         limit: 255
+    t.string   "keyword",              limit: 255
+    t.string   "property_type",        limit: 255
+    t.string   "status",               limit: 255
+    t.string   "parking",              limit: 255
+    t.string   "outdoor_spaces",       limit: 255
+    t.text     "description",          limit: 65535
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,6 +71,18 @@ ActiveRecord::Schema.define(version: 20150130152615) do
     t.string   "salt",       limit: 255
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer  "property_id",      limit: 4
+    t.integer  "multimedia_id",    limit: 4
+    t.float    "room_height",      limit: 4
+    t.float    "room_width",       limit: 4
+    t.string   "room_type",        limit: 255
+    t.string   "measurement_unit", limit: 255
+    t.text     "description",      limit: 65535
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end
