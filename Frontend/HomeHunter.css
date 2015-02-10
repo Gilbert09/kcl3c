@@ -41,6 +41,9 @@ p{
     background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
     background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    margin-top: 3px;
+    margin-bottom: 3px;
+    clear:both;
 }
 
 .align-bar{
@@ -197,6 +200,14 @@ p{
         float:left;
         position: fixed;
     }
+}
+
+.content-image {
+    float: left;
+}
+
+.content-break {
+    clear:both;
 }
 
 .content-main {
