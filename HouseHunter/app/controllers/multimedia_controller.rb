@@ -1,19 +1,19 @@
 class MultimediaController < ApplicationController
   def show
-    @room = Room.find(params[:id])
+    @multimedia = Multimedia.find(params[:id])
   end
 
   def index
-    @rooms = Room.all
+    @multimedias = Multimedia.all
   end
 
   def new
-    @room = Room.new
+    @multimedia = Multimedia.new
   end
 
   def create
-    @room = Room.new
-    if @room.save
+    @multimedia = Multimedias.new
+    if @multimedia.save
       redirect_to(:action => 'index')
     else
       render('new')
@@ -21,24 +21,24 @@ class MultimediaController < ApplicationController
   end
 
   def edit
-    @room = Room.find(params[:id])
+    @multimedia = Multimedia.find(params[:id])
   end
 
   def update
-    @room = Room.find(params[:id])
-    if @room.update_attributes(room_params)
-      redirect_to(:action => 'show', :id => @room.id)
+    @multimedia = Multimedia.find(params[:id])
+    if @multimedia.update_attributes(@multimedia_params)
+      redirect_to(:action => 'show', :id => @multimedia.id)
     else
       render('index')
     end
   end
 
   def delete
-    @room = Room.find(params[:id])
+    @multimedia = Multimedia.find(params[:id])
   end
 
   def destroy
-    @room = Room.find(params[:id]).destroy
+    @multimedia = Multimedia.find(params[:id]).destroy
     redirect_to(:action => 'index')
   end
 
