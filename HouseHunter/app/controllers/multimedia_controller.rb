@@ -12,7 +12,7 @@ class MultimediaController < ApplicationController
   end
 
   def create
-    @multimedia = Multimedias.new
+    @multimedia = Multimedia.new
     if @multimedia.save
       redirect_to(:action => 'index')
     else
