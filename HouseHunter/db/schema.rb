@@ -75,14 +75,16 @@ ActiveRecord::Schema.define(version: 20150210152250) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name", limit: 255
-    t.string   "last_name",  limit: 255
-    t.string   "password",   limit: 255
-    t.string   "title",      limit: 255
-    t.string   "email",      limit: 255
-    t.string   "salt",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "mobile_number", limit: 4
+    t.integer  "home_number",   limit: 4
+    t.string   "first_name",    limit: 255
+    t.string   "last_name",     limit: 255
+    t.string   "password",      limit: 255
+    t.string   "title",         limit: 255
+    t.string   "email",         limit: 255
+    t.string   "salt",          limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
