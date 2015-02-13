@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
 	
 	validates :first_name, presence: true
 	validates :last_name, presence: true
-	validates :mobile_number, presence: true
-	validates :home_number, presence: true
+	validates :phone_number, presence: true
 	validates :title, presence: true
 end

@@ -27,18 +27,16 @@ ActiveRecord::Schema.define(version: 20150212160112) do
   create_table "listings", force: :cascade do |t|
     t.integer  "property_id", limit: 4
     t.integer  "views",       limit: 4
-    t.string   "visible",     limit: 255
-    t.datetime "date_listed",             null: false
-    t.datetime "date_sold",               null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.boolean  "visible",     limit: 1
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "multimedia", force: :cascade do |t|
     t.integer  "property_id",     limit: 4
     t.integer  "index_number",    limit: 4
     t.string   "multimedia_type", limit: 255
-    t.string   "file_name",       limit: 255
+    t.string   "name",            limit: 255
     t.string   "caption",         limit: 255
     t.binary   "data",            limit: 65535
     t.datetime "created_at",                    null: false
@@ -85,15 +83,19 @@ ActiveRecord::Schema.define(version: 20150212160112) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
+    t.string   "confirmation_token",     limit: 255
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "first_name",             limit: 255
     t.string   "last_name",              limit: 255
     t.string   "title",                  limit: 255
-    t.integer  "mobile_number",          limit: 4
-    t.integer  "home_number",            limit: 4
+    t.string   "phone_number",           limit: 255
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
