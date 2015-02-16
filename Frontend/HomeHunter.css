@@ -326,27 +326,44 @@ p{
     height: 200px;
     position: absolute;
     margin: 0px auto;
-    background: #c0392b;
+
+    text-align: center;
+    font-family: "Helvetica", serif;
+
+    background:#ecf0f1;
+    color:#262A2A;
 
     top: 25%;
     left: 20%;
 
     border: 0px none;
     border-radius: 10px;
+
+    opacity: 0.8;
 }
 
 .overlay-listers{
     position: absolute; 
     width: 200px;
-    height: 375px;
+    height: 300px;
     margin: 0px auto;
-    background: #c0392b;
+
+    text-align: center;
+    font-family: "Helvetica", serif;
+
+    vertical-align: bottom;
+
+    background:#ecf0f1;
+    color:#262A2A;
 
     top: 0%;
     right: 10%;
 
+
     border: 0px none;
     border-radius: 0px 0px 10px 10px;
+
+    opacity: 0.8;
 }
 
 
