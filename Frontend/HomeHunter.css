@@ -252,7 +252,9 @@ p{
 
 .content-main {
     height:500px;
-    background: #e74c3c;
+    background-image: url("http://www.tubewalker.com/images/central/liverpool_street_to_leytonstone/source/liverpool_street_to_leytonstone221.jpg");
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -339,7 +341,9 @@ p{
     border: 0px none;
     border-radius: 10px;
 
-    opacity: 0.8;
+    opacity: 0.9;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .overlay-listers{
@@ -363,7 +367,7 @@ p{
     border: 0px none;
     border-radius: 0px 0px 10px 10px;
 
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 
