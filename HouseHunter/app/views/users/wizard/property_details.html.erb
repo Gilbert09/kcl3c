@@ -1,0 +1,13 @@
+<h2>List a Property</h2>
+
+<%= form_for(@Property) do |f|  %>
+
+    <div class="address">
+        <%= f.text_field :address %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>
