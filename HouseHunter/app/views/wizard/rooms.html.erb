@@ -1,0 +1,29 @@
+<h2>List an Address</h2>
+
+<%= form_for(@Room) do |f|  %>
+
+    <div class="room_length">
+      <%= f.text_field :room_length %>
+    </div>
+
+    <div class="room_width">
+      <%= f.text_field :room_width %>
+    </div>
+
+    <div class="room_type">
+      <%= f.text_field :room_type %>
+    </div>
+
+    <div class="measurement_unit">
+      <%= f.text_field :measurement_unit %>
+    </div>
+
+    <div class="description">
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>
