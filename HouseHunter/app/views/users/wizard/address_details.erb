@@ -1,12 +1,26 @@
 <h2>List an Address</h2>
 
-<%= form_for(@PAddress) do |f|  %>
+<%= form_for(@Address) do |f|  %>
 
     <div class="address_line_1">
       <%= f.text_field :address_line_1 %>
     </div>
 
+    <div class="address_line_2">
+      <%= f.text_field :address_line_2 %>
+    </div>
 
+    <div class="town_city">
+      <%= f.text_field :town_city %>
+    </div>
+
+    <div class="post_code">
+      <%= f.text_field :post_code %>
+    </div>
+
+    <div class="county">
+      <%= f.text_field :county %>
+    </div>
 
     <div class="actions">
       <%= f.submit %>
