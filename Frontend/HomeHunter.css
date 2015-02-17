@@ -132,6 +132,14 @@ p{
     text-decoration: underline;
 }
 
+.content-index {
+    width:100%;
+    background: #bdc3c7;
+    margin: 0px auto;
+    text-align: left;
+
+}
+
 .content-left {
     background: #ecf0f1;
 
