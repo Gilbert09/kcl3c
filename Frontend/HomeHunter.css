@@ -34,19 +34,19 @@ p {
     font-size: 14px;
 }
 
-tr:nth-child(odd) {
+#fees-table tr:nth-child(odd) {
     background: #ffffff;
 } 
 
-tr:nth-child(even) {
+#fees-table tr:nth-child(even) {
     background: #EAF2D3;
 } 
 
-td {
+#fees-table td {
     border: 1px solid #98bf21;
 }
 
-th {
+#fees-table th {
     font-size: 1.1em;
     text-align: left;
     padding-top: 5px;
@@ -56,7 +56,7 @@ th {
     border: 1px solid #98bf21;
 }
 
-table {
+#fees-table{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
     border-collapse: collapse;
