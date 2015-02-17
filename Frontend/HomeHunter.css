@@ -1,37 +1,65 @@
-body{
+body {
     margin:0px;
     background:#ffffff;
 }
 
-img.logo{
+img.logo {
     height:60px;
 }
 
-img.stepImage{
+img.stepImage {
     margin-right: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
 }
 
-h1{
+h1 {
     font-family: Helvetica;
     font-size: 25px;
 }
 
-h2{
+h2 {
     font-family: Helvetica;
     font-size: 20px;
 }
 
-h3{
+h3 {
     font-family: Helvetica;
     font-size: 16px;
 }
 
-p{
+p {
     font-family: Helvetica;
     font-size: 14px;
+}
+
+tr:nth-child(odd) {
+    background: #ffffff;
+} 
+
+tr:nth-child(even) {
+    background: #EAF2D3;
+} 
+
+td {
+    border: 1px solid #98bf21;
+}
+
+th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A7C942;
+    color: #ffffff;
+    border: 1px solid #98bf21;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .divider-bar{
@@ -145,6 +173,7 @@ p{
 
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
 
     position: relative;
     float:left;
