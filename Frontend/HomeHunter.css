@@ -132,14 +132,6 @@ p{
     text-decoration: underline;
 }
 
-.content {
-    width:100%;
-    background: #bdc3c7;
-    margin: 0px auto;
-    text-align: left;
-
-}
-
 .content-left {
     background: #ecf0f1;
 
@@ -165,13 +157,13 @@ p{
     
 }
 
-.content-center {
+.content{
     background: #ffffff;
 }
 
 
 @media(max-width: 900px){
-    .content-center {
+    .content {
         width: 100%;
     }
     .content-left {
@@ -206,7 +198,7 @@ p{
 }
 
 @media(min-width:900px){
-    .content-center {
+    .content {
         width:1000px;
         float: center;
         margin: 0 auto;
