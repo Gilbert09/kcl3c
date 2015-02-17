@@ -1,0 +1,15 @@
+<h2>List an Address</h2>
+
+<%= form_for(@PAddress) do |f|  %>
+
+    <div class="address_line_1">
+      <%= f.text_field :address_line_1 %>
+    </div>
+
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>
