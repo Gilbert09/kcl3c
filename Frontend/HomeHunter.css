@@ -104,11 +104,11 @@ input[type="submit"]:hover{
 } 
 
 #fees-table tr:nth-child(even) {
-    background: #EAF2D3;
+    background: #E9F7EF;
 } 
 
 #fees-table td {
-    border: 1px solid #98bf21;
+    border: 1px solid #27ae60;
 }
 
 #fees-table th {
@@ -116,9 +116,9 @@ input[type="submit"]:hover{
     text-align: left;
     padding-top: 5px;
     padding-bottom: 4px;
-    background-color: #A7C942;
+    background-color: #27ae60;
     color: #ffffff;
-    border: 1px solid #98bf21;
+    border: 1px solid #27ae60;
 }
 
 #fees-table{
@@ -251,7 +251,6 @@ input[type="submit"]:hover{
     background: #bdc3c7;
     margin: 0px auto;
     text-align: left;
-
 }
 
 .content-left {
@@ -314,13 +313,22 @@ input[type="submit"]:hover{
     .footer-copyright {
         width: 100%;
     }
-    .overlay-center {
+    .overlay-left {
         width: 85%;
         height: 200px;
         position: absolute;
         margin: 0px auto;
 
-        top: 50%;
+        top: 250px;
+        left: 5%;
+    }
+    .overlay-right {
+        width: 85%;
+        height: 200px;
+        position: absolute;
+        margin: 0px auto;
+
+        top: 500px;
         left: 5%;
     }
     .overlay-listers {
@@ -333,6 +341,9 @@ input[type="submit"]:hover{
         top: 0%;
         right: 5%;
         left: 5%;
+    }
+    .content-main {
+        height:750px;
     }
     #index-large {
         display:none;
@@ -377,23 +388,43 @@ input[type="submit"]:hover{
     .footer-copyright {
         width: 1000px;
     }
-    .overlay-center {
-        width: 45%;
-        height: 200px;
-        position: absolute;
-        margin: 0px auto;
+    .overlay-left {
+        width: 330px;
+        height: 330px;
+        position: relative;
+        top:80px;
+        float:left;
 
-        top: 25%;
-        left: 15%;
+        /*top: 20px;
+        left: 0px;*/
+    }
+    .overlay-right {
+        width: 330px;
+        height: 330px;
+        position: relative;
+        top:80px;
+        float:left;
+        margin-left: 40px;
+
+        /*top: 20px;
+        left: 0px;*/
     }
     .overlay-listers {
-        position: absolute; 
+        position: relative; 
         width: 200px;
         height: 300px;
-        margin: 0px auto;
 
-        top: 0%;
+        padding-top: 10px;
+        float:right;
+
+        
+
+        /*top: 0%;
         right: 10%;
+        left: 500px;*/
+    }
+    .content-main {
+        height:500px;
     }
     #index-small {
         display:none;
@@ -409,7 +440,6 @@ input[type="submit"]:hover{
 }
 
 .content-main {
-    height:500px;
     background-image: url("http://www.tubewalker.com/images/central/liverpool_street_to_leytonstone/source/liverpool_street_to_leytonstone221.jpg");
     background-size: 100% 900px;
     background-repeat: no-repeat;
@@ -418,13 +448,13 @@ input[type="submit"]:hover{
 
 .content-steps {
     height:500px;
-    background: #e67e22;
+    background: #27ae60;
     position: relative;
 }
 
 .content-review {
     height:500px;
-    background: #f39c12;
+    background: #E9F7EF;
     position: relative;
 }
 
@@ -481,7 +511,29 @@ input[type="submit"]:hover{
     background: #262A2A;
 }
 
-.overlay-center {
+.overlay-left {
+    /*width: 500px;
+    height: 200px;
+    position: absolute;
+    margin: 0px auto;*/
+
+    text-align: center;
+    font-family: "Helvetica", serif;
+
+    background:#ecf0f1;
+    color:#262A2A;
+
+    /*top: 25%;
+    left: 20%;*/
+
+    border: 0px none;
+    border-radius: 10px;
+
+    opacity: 0.9;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.overlay-right {
     /*width: 500px;
     height: 200px;
     position: absolute;
@@ -513,7 +565,7 @@ input[type="submit"]:hover{
     text-align: center;
     font-family: "Helvetica", serif;
 
-    vertical-align: bottom;
+    /*vertical-align: bottom;*/
 
     background:#ecf0f1;
     color:#262A2A;
