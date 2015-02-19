@@ -236,6 +236,16 @@ input[type="submit"]:hover{
     color: #27ae60;
 }
 
+.footer-legal a:visited, .footer-legal a:link, .footer-legal a:active{
+    color:#262A2A;
+    text-decoration: none;
+}
+
+.footer-legal a:hover{
+    text-decoration: none;
+    color: #27ae60;
+}
+
 .content-index {
     width:100%;
     background: #bdc3c7;
