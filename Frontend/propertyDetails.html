@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Property Details</title>
+    <h1>Property Details</h1>
+</head>
+<body>
+    <table>
+        <tr>
+            <!--Rooms from property overview to be generated with ruby and added here -->
+            <div id="roomscroll">
+                <td><h2>Interior Rooms</h2></td>
+
+            </div>
+
+            <td><form>
+                <fieldset>
+                    <legend>Bedroom 1 Description:</legend><br>
+                    <table>
+                        <tr>
+                            <td>Room Title</td>
+                            <td><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="measure" value="meters" checked>Meters
+                            <input type="radio" name="measure" value="feet" >Feet</td>
+                        </tr>
+                        <tr>
+                            <td>Room Length</td>
+                            <td><input type="text" name="roomlength"></td>
+                            <td>Room Width</td>
+                            <td><input type="text" name="towncity"></td>
+                        </tr>
+                        <tr>
+                           <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                        </tr>
+
+                    </table>
+                    Room Description:<br>
+                    <textarea rows="10" cols="100%"></textarea>
+                    <br>
+                    Room Photos:<br>
+                    <div id="photobox">
+
+                    </div>
+                    <input type="button" value="upload":>
+
+                </fieldset>
+            </form>
+
+
+                <input type="button" value="previous":>
+                <input type="button" value="next":>
+    </table>
+</body>
+</html>
