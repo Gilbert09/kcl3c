@@ -2,136 +2,58 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Property Details</title>
+    <h1>Property Details</h1>
 </head>
-
 <body>
+    <table>
+        <tr>
+            <div id="roomscroll">
+                <td><h2>Interior Rooms</h2></td>
 
-<form>
-    <fieldset>
-        <legend>Property Address:</legend><br>
-        <table>
-            <tr>
-                <td>Address line 1:</td>
-                <td><input type="text" name="firstlineaddress"></td>
-            </tr>
-            <tr>
-                <td>Address line 2:</td>
-                <td><input type="text" name="secondlineaddress"></td>
-            </tr>
-            <tr>
-                <td>Town/City:</td>
-                <td><input type="text" name="towncity"></td>
-            </tr>
-            <tr>
-                <td>County/Region:</td>
-                <td><input type="text" name="countyregion"></td>
-            </tr>
-            <tr>
-                <td>Postcode:</td>
-                <td><input type="text" name="postcode"></td>
-            </tr>
-        </table>
-        <br>
-    </fieldset>
+            </div>
+
+            <td><form>
+                <fieldset>
+                    <legend>Bedroom 1 Description:</legend><br>
+                    <table>
+                        <tr>
+                            <td>Room Title</td>
+                            <td><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="measure" value="meters" checked>Meters
+                            <input type="radio" name="measure" value="feet" >Feet</td>
+                        </tr>
+                        <tr>
+                            <td>Room Length</td>
+                            <td><input type="text" name="roomlength"></td>
+                            <td>Room Width</td>
+                            <td><input type="text" name="towncity"></td>
+                        </tr>
+                        <tr>
+                           <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                        </tr>
+
+                    </table>
+                    Room Description:<br>
+                    <textarea rows 10 cols 100%></textarea>
+                    <br>
+                    Room Photos:<br>
+                    <div id="photobox">
+
+                    </div>
+                    <input type="button" value="upload":>
+
+                </fieldset>
+            </form>
 
 
-    <fieldset>
-        <legend>Property Description:</legend><br>
-        <table>
-            <tr>
-                <td>Property Type</td>
-                <td><select>
-                    <option value="select">Please Select</option>
-                    <option value="detached">Detached</option>
-                    <option value="semi_detached">Semi-Detached</option>
-                    <option value="terrace">Terrace</option>
-                    <option value="flat">flat</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="bungalow">Bungalow</option>
-                    <option value="cottage">Cottage</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Bedrooms:</td>
-                <td><select>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Bathrooms:</td>
-                    <td><select>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td>Reception Rooms:</td>
-                <td><select>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Other Rooms:</td>
-                <td><select>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Kitchen Type:</td>
-                <td><select>
-                    <option value="select">Please Select</option>
-                    <option value="galley">Galley</option>
-                    <option value="l_shape">L-Shape </option>
-                    <option value="u_shape">U-Shape</option>
-                    <option value="open_plan">Open-plan</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Garden:</td>
-                <td><input type="checkbox" name="garden" value="nogarden" >No Garden
-                    <input type="checkbox" name="garden" value="frontgarden" >Front Garden
-                    <input type="checkbox" name="garden" value="backgarden">Back Garden
-                    <input type="checkbox" name="garden" value="roofgarden">Roof Garden</td>
-            </tr>
-            <tr>
-                <td>Parking:</td>
-                <td><input type="checkbox" name="parking" value="nostreetparking" >No Street Parking
-                    <input type="checkbox" name="parking" value="streetparking" >Street Parking Permit
-                    <input type="checkbox" name="parking" value="streetparking" >Street Parking No Permit
-                    <input type="checkbox" name="parking" value="offstreetparking">Off Street Parking
-                    <input type="checkbox" name="parking" value="garage">Garage</td>
-            </tr>
-        </table>
-    </fieldset>
-    <input type="button" value="next":>
-</form>
+                <input type="button" value="previous":>
+                <input type="button" value="next":>
+    </table>
 </body>
 </html>
