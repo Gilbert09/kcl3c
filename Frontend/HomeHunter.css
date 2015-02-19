@@ -85,6 +85,14 @@ input[type="submit"]:hover{
     background-color: #27ae60;
 }
 
+select{
+    font-size: 16px;
+    margin-bottom: 10px;
+    width:270px;
+    border-radius: 5px;
+    border:none;
+}
+
 .content-login{
     background: #ecf0f1;
 
@@ -125,6 +133,24 @@ input[type="submit"]:hover{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
     border-collapse: collapse;
+}
+
+.content-login a:visited, .content-login a:link, .content-login a:active{
+   color: #262a2a;
+
+}
+
+.content-login a:hover {
+    color: #27ae60;
+}
+
+.content-login{
+    font-family: Helvetica;
+    color: #262a2a;
+}
+
+.content-login a{
+    text-decoration: underline;
 }
 
 .divider-bar{
