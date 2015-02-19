@@ -222,7 +222,28 @@ input[type="submit"]:hover{
 }
 
 .links-col a:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.header-col-top a:visited, .header-col-top a:link, .header-col-top a:active{
+   color: #ecf0f1;;
+    text-decoration: none;
+}
+
+.header-col-top a:hover {
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.footer-legal a:visited, .footer-legal a:link, .footer-legal a:active{
+    color:#262A2A;
+    text-decoration: none;
+}
+
+.footer-legal a:hover{
+    text-decoration: none;
+    color: #27ae60;
 }
 
 .content-index {
@@ -260,11 +281,6 @@ input[type="submit"]:hover{
     /*border: 1px solid #98bf21;*/
 }
 
-.content{
-    background: #ffffff;
-}
-
-
 @media(max-width: 900px){
     .content {
         width: 100%;
@@ -297,6 +313,32 @@ input[type="submit"]:hover{
     }
     .footer-copyright {
         width: 100%;
+    }
+    .overlay-center {
+        width: 85%;
+        height: 200px;
+        position: absolute;
+        margin: 0px auto;
+
+        top: 50%;
+        left: 5%;
+    }
+    .overlay-listers {
+        /*visibility: hidden;*/
+        position: absolute; 
+        width: 400px;
+        height: 200px;
+        margin: 0px auto;
+        
+        top: 0%;
+        right: 5%;
+        left: 5%;
+    }
+    #index-large {
+        display:none;
+    }
+    #index-small {
+        margin-left: 10px;
     }
 }
 
@@ -334,6 +376,27 @@ input[type="submit"]:hover{
     }
     .footer-copyright {
         width: 1000px;
+    }
+    .overlay-center {
+        width: 45%;
+        height: 200px;
+        position: absolute;
+        margin: 0px auto;
+
+        top: 25%;
+        left: 15%;
+    }
+    .overlay-listers {
+        position: absolute; 
+        width: 200px;
+        height: 300px;
+        margin: 0px auto;
+
+        top: 0%;
+        right: 10%;
+    }
+    #index-small {
+        display:none;
     }
 }
 
@@ -419,10 +482,10 @@ input[type="submit"]:hover{
 }
 
 .overlay-center {
-    width: 500px;
+    /*width: 500px;
     height: 200px;
     position: absolute;
-    margin: 0px auto;
+    margin: 0px auto;*/
 
     text-align: center;
     font-family: "Helvetica", serif;
@@ -430,8 +493,8 @@ input[type="submit"]:hover{
     background:#ecf0f1;
     color:#262A2A;
 
-    top: 25%;
-    left: 20%;
+    /*top: 25%;
+    left: 20%;*/
 
     border: 0px none;
     border-radius: 10px;
@@ -442,10 +505,10 @@ input[type="submit"]:hover{
 }
 
 .overlay-listers{
-    position: absolute; 
+    /*position: absolute; 
     width: 200px;
     height: 300px;
-    margin: 0px auto;
+    margin: 0px auto;*/
 
     text-align: center;
     font-family: "Helvetica", serif;
@@ -455,8 +518,8 @@ input[type="submit"]:hover{
     background:#ecf0f1;
     color:#262A2A;
 
-    top: 0%;
-    right: 10%;
+    /*top: 0%;
+    right: 10%;*/
 
 
     border: 0px none;
