@@ -316,6 +316,18 @@ select:focus{
     min-height: 1561px; /*Smallest it can be and not break footer...*/
 }
 
+#content-FAQ {
+    min-height: 700px; 
+}
+
+#content-fees {
+    min-height: 500px; 
+}
+
+#content-getstarted {
+    min-height: 1491px; /*Smallest it can be and not break footer...*/
+}
+
 @media(max-width: 900px){
     .content {
         width: 100%;
