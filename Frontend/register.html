@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HomeHunter | Login</title>
+    <title>HomeHunter | Register</title>
 
     <!-- HomeHunter CSS -->
     <link href="HomeHunter.css" rel="stylesheet">
@@ -15,21 +15,36 @@
         <div class="content-login">
             <form>
                 <fieldset>
-                    <legend>Login to HomeHunter</legend>
+                    <legend>Register with HomeHunter</legend>
                     <hr class="divider-bar"></hr> 
-                    <table align="center" style="border-collapse: separate; border-spacing: 20px;">                         
+                    <table align="center" style="border-collapse: separate; border-spacing: 20px; width: 80%;" >                         
                         <tr>    
                             <td>
+                                <div class="form-text">Email Address:</div> 
                                 <input type="text" name="email" placeholder="Email Address">
                             </td>   
                             
                             <td>
+                                <div class="form-text">Confirm Email Address:</div> 
                                 <input type="text" name="email" placeholder="Confirm Email Address">
                             </td>
                         </tr>    
                         
                         <tr>
                             <td>
+                                <div class="form-text">Password:</div> 
+                                <input type="password" name="password" placeholder="Password">
+                            </td>
+                            
+                            <td>
+                                <div class="form-text">Confirm Password:</div> 
+                                <input type="password" name="confirm" placeholder="Confirm Password">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="form-text">Title:</div> 
                                 <select name="title">
                                     <option value="Select">Please Select...</option>
                                     <option value="Mr">Mr</option>
@@ -41,16 +56,30 @@
                                 </select>
                             </td>
                         </tr>
+                        
                         <tr>
                             <td>
+                                <div class="form-text">First Name:</div> 
                                 <input type="text" name="firstName" placeholder="First Name">
                             </td>
                             
                             <td>
+                                <div class="form-text">Second Name:</div> 
                                 <input type="text" name="lastName" placeholder="Last Name">
                             </td>
-                        </tr> 
+                        </tr>  
 
+                        <tr>
+                            <td>
+                                <div class="form-text">Primary Phone Number:</div> 
+                                <input type="text" name="phone1" placeholder="Primary Phone Number">
+                            </td>
+                            
+                            <td>
+                                <div class="form-text">Secondary Phone Number:</div> 
+                                <input type="text" name="phone2" placeholder="Secondary Phone Number">
+                            </td>
+                        </tr>
                         <tr>
                             <td>
                                 <input type="submit" name"register" value="Register">
@@ -58,7 +87,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <a href="#">Already Registered Login!</a>
+                                <a href="login.html">Already Registered Login!</a>
                             </td>
                         </tr>  
                     </table>    
