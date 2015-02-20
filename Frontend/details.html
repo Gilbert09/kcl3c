@@ -76,23 +76,23 @@
                     <br>
                     <table>
                         <tr>
-                            <td>Address line 1:</td>
+                            <td>Address line 1</td>
                             <td><input type="text" name="firstlineaddress"></td>
                         </tr>
                         <tr>
-                            <td>Address line 2:</td>
+                            <td>Address line 2</td>
                             <td><input type="text" name="secondlineaddress"></td>
                         </tr>
                         <tr>
-                            <td>Town/City:</td>
+                            <td>Town/City</td>
                             <td><input type="text" name="towncity"></td>
                         </tr>
                         <tr>
-                            <td>County/Region:</td>
+                            <td>County/Region</td>
                             <td><input type="text" name="countyregion"></td>
                         </tr>
                         <tr>
-                            <td>Postcode:</td>
+                            <td>Postcode</td>
                             <td><input type="text" name="postcode"></td>
                         </tr>
                     </table>
@@ -114,14 +114,14 @@
                                 <option value="detached">Detached</option>
                                 <option value="semi_detached">Semi-Detached</option>
                                 <option value="terrace">Terrace</option>
-                                <option value="flat">flat</option>
+                                <option value="flat">Flat</option>
                                 <option value="apartment">Apartment</option>
                                 <option value="bungalow">Bungalow</option>
                                 <option value="cottage">Cottage</option>
                             </select></td>
                         </tr>
                         <tr>
-                            <td>Bedrooms:</td>
+                            <td>Bedrooms</td>
                             <td><select>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
@@ -134,7 +134,7 @@
                             </select></td>
                         </tr>
                         <tr>
-                            <td>Bathrooms:</td>
+                            <td>Bathrooms</td>
                             <td><select>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
@@ -147,7 +147,7 @@
                             </select></td>
                         </tr>
                         <tr>
-                            <td>Reception Rooms:</td>
+                            <td>Reception Rooms</td>
                             <td><select>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
@@ -160,7 +160,7 @@
                             </select></td>
                         </tr>
                         <tr>
-                            <td>Other Rooms:</td>
+                            <td>Other Rooms</td>
                             <td><select>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
@@ -173,7 +173,7 @@
                             </select></td>
                         </tr>
                         <tr>
-                            <td>Kitchen Type:</td>
+                            <td>Kitchen Type</td>
                             <td><select>
                                 <option value="select">Please Select</option>
                                 <option value="galley">Galley</option>
@@ -183,25 +183,73 @@
                             </select></td>
                         </tr>
                         <tr>
-                            <td>Garden:</td>
+                            <td>Condition</td>
+                            <td><select>
+                                <option value="select">Please Select</option>
+                                <option value="good">Good</option>
+                                <option value="minorwork">Minor Work</option>
+                                <option value="workthroughout">Work Throughout</option>
+                                <option value="fullrenovation">Full Renovation</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Garden</td>
                             <td><input type="checkbox" name="garden" value="nogarden">No Garden<br>
                                 <input type="checkbox" name="garden" value="frontgarden">Front Garden<br>
                                 <input type="checkbox" name="garden" value="backgarden">Back Garden<br>
-                                <input type="checkbox" name="garden" value="roofgarden">Roof Garden<br><br>
+                                <input type="checkbox" name="garden" value="roofgarden">Terrace Garden<br><br>
+                            </td>
+                            <td><input type="checkbox" name="garden" value="nogarden">Communal Garden<br>
+                                <input type="checkbox" name="garden" value="frontgarden">Private Garden<br>
+                                <input type="checkbox" name="garden" value="backgarden">Enclosed Garden<br>
+                                <input type="checkbox" name="garden" value="roofgarden">Patio Garden<br><br>
+                            </td>
+                            <td>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
                             </td>
                         </tr>
                         <tr>
-                            <td>Parking:</td>
-                            <td><input type="checkbox" name="parking" value="nostreetparking">No Street Parking<br>
-                                <input type="checkbox" name="parking" value="streetparking">Street Parking Permit<br>
-                                <input type="checkbox" name="parking" value="streetparking">Street Parking No Permit<br>
+                            <td>Parking</td>
+                            <td><input type="checkbox" name="parking" value="nostreetparking">No Parking<br>
+                                <input type="checkbox" name="parking" value="streetparking">On Street Parking<br>
                                 <input type="checkbox" name="parking" value="offstreetparking">Off Street Parking<br>
+                                <input type="checkbox" name="parking" value="streetparking">Permit<br>
+                            </td>
+                            <td><input type="checkbox" name="parking" value="offstreetparking">Driveway<br>
+                                <input type="checkbox" name="parking" value="nostreetparking">Gated<br>
+                                <input type="checkbox" name="parking" value="streetparking">Rear Parking<br>
                                 <input type="checkbox" name="parking" value="garage">Garage<br>
+                            </td>
+                            <td><input type="checkbox" name="parking" value="streetparking">communal Parking<br>
+                                <input type="checkbox" name="parking" value="nostreetparking">Allocated Parking<br>
+                                <input type="checkbox" name="parking" value="streetparking">Private Parking<br>
+                                <input type="checkbox" name="parking" value="offstreetparking">Residents Parking<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Heating</td>
+                            <td><input type="checkbox" name="heating" value="nostreetparking">Gas Central Heating<br>
+                                <input type="checkbox" name="heating" value="streetparking">Double Glazing<br>
+                                <input type="checkbox" name="heating" value="offstreetparking">Eco-Friendly<br>
+                                <input type="checkbox" name="heating" value="streetparking">Air Conditioning<br>
+                            </td>
+                            <td><input type="checkbox" name="heating" value="offstreetparking">Electric<br>
+                                <input type="checkbox" name="heating" value="nostreetparking">Gas<br>
+                                <input type="checkbox" name="heating" value="streetparking">Central<br>
+                                <input type="checkbox" name="heating" value="garage">Night Storage<br>
+                            </td>
+                            <td><input type="checkbox" name="heating" value="streetparking">Oil<br>
+                                <input type="checkbox" name="heating" value="nostreetparking">Solar<br>
+                                <input type="checkbox" name="heating" value="streetparking">Solar water<br>
+                                <input type="checkbox" name="heating" value="offstreetparking">Underfloor Heating<br><br>
                             </td>
                         </tr>
                     </table>
                 </fieldset>
-                <input type="button" value="next" :>
+                <input type="button" value="Next" :>
             </form>
         </div>
         <div class="content-right">
