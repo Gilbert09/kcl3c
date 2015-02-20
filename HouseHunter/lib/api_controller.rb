@@ -1,6 +1,6 @@
 class ApiController
 
-  def addProperty(propertyData)
+  def addProperty(jsonData)
   end
 
   def removeProperty(propertyId)

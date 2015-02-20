@@ -1,10 +1,10 @@
 require 'json'
 
 class Zoopla
-  @propertyData = Hash.new {|hash, key|}
+  @jsonData = Hash.new {|hash, key|}
   
-  def initialize
-    @propertyData.to_json
+  def initialize(propertyData)
+    @jsonData.to_json
   end
 
 end
