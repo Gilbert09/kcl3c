@@ -1,7 +1,8 @@
 require 'json'
 
 class Rightmove
-  def initialize
+  propertyData = Hash.new {|hash, key|}
 
+  def initialize
   end
 end
