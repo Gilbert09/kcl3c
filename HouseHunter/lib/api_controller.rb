@@ -1,8 +1,5 @@
 class ApiController
 
-  def initialize
-  end
-
   def addProperty(propertyData)
   end
 
@@ -11,4 +8,5 @@ class ApiController
 
   def editProperty(propertyId)
   end
+
 end
