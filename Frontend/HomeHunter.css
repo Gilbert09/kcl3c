@@ -312,6 +312,10 @@ select:focus{
     /*border: 1px solid #98bf21;*/
 }
 
+#content-advice {
+    min-height: 1561px; /*Smallest it can be and not break footer...*/
+}
+
 @media(max-width: 900px){
     .content {
         width: 100%;
