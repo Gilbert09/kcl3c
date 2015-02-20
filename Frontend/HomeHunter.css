@@ -89,7 +89,7 @@ select{
     font-size: 16px;
     margin-bottom: 10px;
     width:95%;
-    border-radius: 5px;
+    border-radius: 2px;
     border:none;
 }
 
@@ -106,6 +106,7 @@ select:focus{
     padding-bottom: 10px;
     padding-top: 10px;
     margin-top: 15px;
+    margin-bottom: 15px; 
 
     border-radius: 5px;
 
