@@ -1,18 +1,12 @@
 body {
     margin:0px;
     background:#ffffff;
-    font-family: Helvetica;
+    font-family: "Helvetica", serif;
 }
 
-img.logo {
-    height:60px;
-}
-
-img.stepImage {
-    margin-right: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+header {
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1 {
@@ -25,13 +19,6 @@ h2 {
 
 h3 {
     font-size: 16px;
-}
-
-.form-text {
-    font-size: 16px;
-    margin-left: 5px;
-    margin-bottom:10px;
-    color:#262a2a;
 }
 
 p {
@@ -49,9 +36,33 @@ fieldset{
     border:none;
 }
 
+img.logo {
+    height:60px;
+}
+
+img.stepImage {
+    margin: 5px 15px 5px 0;
+    border-radius: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.form-text {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom:10px;
+    color:#262a2a;
+}
+
 input[type="text"], input[type="password"]{
-  padding: 10px;
-  font-size: 16px;
+  padding: 6px 6px 6px 10px;
+  font-size: 22px;
   margin-bottom: 10px;
   width:90%;
   border-radius: 5px;
@@ -64,20 +75,18 @@ input:focus{
 }
 
 input[type="submit"]{
-    background-color: #262a2a;
+    background-color: #27ae60;
     color: #ecf0f1;
-
     font-size: 20px;
-
     border: none;
     padding: 15px 50px;
-
     border-radius: 5px;
     border:none;
 }
 
 input[type="submit"]:hover{
-    background-color: #27ae60;
+    background-color: #2D8452;
+    cursor: pointer;
 }
 
 select{
@@ -105,7 +114,11 @@ select:focus{
 
     border-radius: 5px;
 
-    width: 1000px
+    width: 1000px;
+}
+
+.content-login fieldset {
+    text-align: center;
 }
 
 #fees-table tr:nth-child(odd) {
@@ -161,7 +174,7 @@ select:focus{
     background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
     margin-top: 3px;
-    margin-bottom: 3px;
+    margin-bottom: 15px;
     clear:both;
 }
 
@@ -173,7 +186,7 @@ select:focus{
     margin-top: -1%;
 }
 
-.header-top-back {
+#header-top-container {
     width:100%;
     height:30px;
     margin: 0 auto;
@@ -181,7 +194,7 @@ select:focus{
     background: #262a2a;
 }
 
-.header-mid-back {
+#nav-container {
     width:100%;
     height:60px;
     margin: 0 auto;
@@ -189,27 +202,25 @@ select:focus{
     background: #ecf0f1;
 }
 
-.header-top {
+#header-top {
     height:30px;
     line-height: 30px;
     /*width:1000px;*/
     margin:0px auto;
 
     text-align: center; 
-    font-family: "Helvetica", serif;
 
     background:#262A2A;
     color: #ecf0f1;
 }
 
-.header-mid {
+#nav {
     height:60px;
-    line-height: 60px;
+    line-height: 56px;
     /*width:1000px;*/
     margin:0px auto;
     
     text-align: center;
-    font-family: "Helvetica", serif;
 
     background:#ecf0f1;
     color:#262A2A;
@@ -225,14 +236,15 @@ select:focus{
     width: 50%;
 }
 
-.header-col-logo {
+#logo {
     float:left;
-    width: 33%;
+    width: 210px;
     height: 60px;
 }
 
-.header-col-links {
+#header-link-container {
     float:left;
+    margin-left: 25px;
     width: 66%;
 }
 
@@ -240,24 +252,29 @@ select:focus{
     float: left;
     width: 20%;
     text-align: center;
+    cursor: pointer;
 }
 
-.links-col a:visited, .links-col a:link, .links-col a:active{
+.links-col:hover {
+    border-bottom: 4px solid #27ae60;
+}
+
+#header-link-container a:visited , #header-link-container a:link , #header-link-container a:active {
     color:#262A2A;
     text-decoration: none;
 }
 
-.links-col a:hover{
+#header-link-container a:hover {
     text-decoration: none;
     color: #27ae60;
 }
 
-.header-col-top a:visited, .header-col-top a:link, .header-col-top a:active{
+#user-control a:visited, #user-control a:link, #user-control a:active, #user-profile-link a:visited, #user-profile-link a:link, #user-profile-link a:active{
    color: #ecf0f1;;
     text-decoration: none;
 }
 
-.header-col-top a:hover {
+#user-control a:hover, #user-profile-link a:hover {
     text-decoration: none;
     color: #27ae60;
 }
@@ -343,10 +360,10 @@ select:focus{
         float:left;
         position: relative;
     }
-    .header-top {
+    #header-top {
         width: 100%;
     }
-    .header-mid {
+    #nav {
         width: 100%;
     }
     .footer-legal {
@@ -418,10 +435,10 @@ select:focus{
         float:left;
         position: fixed;
     }
-    .header-top {
+    #header-top {
         width:1000px;
     }
-    .header-mid {
+    #nav {
         width:1000px;
     }
     .footer-legal {
@@ -485,6 +502,7 @@ select:focus{
     background-image: url("http://www.tubewalker.com/images/central/liverpool_street_to_leytonstone/source/liverpool_street_to_leytonstone221.jpg");
     background-size: 100% 900px;
     background-repeat: no-repeat;
+    background-position: 0px -140px;
     position: relative;
 }
 
@@ -522,7 +540,6 @@ select:focus{
     float: center;
     margin: 0 auto;
 
-    font-family: "Helvetica", serif;
     font-size: 16px;
     text-align: center;
 }
@@ -535,7 +552,6 @@ select:focus{
     float: center;
     margin: 0 auto;
 
-    font-family: "Helvetica", serif;
     line-height: 50px;
 }
 
@@ -560,7 +576,6 @@ select:focus{
     margin: 0px auto;*/
 
     text-align: center;
-    font-family: "Helvetica", serif;
 
     background:#ecf0f1;
     color:#262A2A;
@@ -582,7 +597,6 @@ select:focus{
     margin: 0px auto;*/
 
     text-align: center;
-    font-family: "Helvetica", serif;
 
     background:#ecf0f1;
     color:#262A2A;
@@ -605,7 +619,6 @@ select:focus{
     margin: 0px auto;*/
 
     text-align: center;
-    font-family: "Helvetica", serif;
 
     /*vertical-align: bottom;*/
 
@@ -622,7 +635,20 @@ select:focus{
     opacity: 0.9;
 }
 
+.form-control-group {
+    margin-bottom: 6px;
+}
 
+.form-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
 
-
-
+.form-control-group input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 340px;
+}
