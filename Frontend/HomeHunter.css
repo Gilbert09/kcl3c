@@ -74,18 +74,37 @@ input:focus{
     outline: none;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     background-color: #27ae60;
+    box-shadow: 0 6px #196E3D;
     color: #ecf0f1;
     font-size: 20px;
     border: none;
     padding: 15px 50px;
     border-radius: 5px;
     border:none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
 }
 
-input[type="submit"]:hover{
-    background-color: #2D8452;
+input[type="submit"]:hover {
+    box-shadow: 0 4px #196E3D;
+    top: 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    box-shadow: 0 0 #196E3D;
+    top: 6px;
     cursor: pointer;
 }
 
