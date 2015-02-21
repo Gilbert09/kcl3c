@@ -79,6 +79,14 @@ img.stepImage {
     width: 230px !important;
 }
 
+.form-control-group a:link, .form-control-group a:visited, .form-control-group a:active {
+    text-decoration: none !important;
+}
+
+.form-control-group a:hover {
+    text-decoration: underline !important;
+}
+
 input[type="text"], input[type="password"]{
   padding: 0 12px;
   font-size: 22px;
