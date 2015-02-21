@@ -52,7 +52,7 @@ body {
 .wizard-content-standard div input, .wizard-content-standard div select {
 	display: block;
 	border: none;
-	border-bottom: 1px solid #196E3D;
+	border-bottom: 1px solid #27ae60;
 	height: 30px;
 	outline: none;
 	padding: 5px 0px 0px 10px;
@@ -70,7 +70,6 @@ body {
 	display: inline-block;
 	margin-left: -4px;
 	width: 169px;
-
 	-o-transition:.5s;
 	-ms-transition:.5s;
 	-moz-transition:.5s;
