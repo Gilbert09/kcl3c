@@ -72,11 +72,11 @@ img.stepImage {
     display: inline-block;
 }
 
-#password, #email {
-    border-radius: 0px 3px 3px 0px;
+.icon-input {
+    border-radius: 0px 3px 3px 0px !important;
     margin-left: -4px;
     margin-top: -1px;
-    width: 230px;
+    width: 230px !important;
 }
 
 input[type="text"], input[type="password"]{
