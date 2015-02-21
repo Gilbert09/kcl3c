@@ -494,13 +494,17 @@ select:focus{
     width:200px;
     background-color:#ecf0f1;
     float:left;
-    height:800px;
+    display:block;
+    
+
 }
 #account-sidebar ul{
     margin:0;
     padding:0;
     list-style:none;
-
+}
+#account-sidebar ul{
+    text-decoration: none:;
 }
 #account-sidebar ul a:link{
     text-align: center;
@@ -510,6 +514,14 @@ select:focus{
     padding:5px;
     border-bottom: 1px solid grey;
 }   
+#account-sidebar ul a:visited{
+    text-decoration:none;
+}
+
+.account-content{
+    width:inherit;
+    border: 1px solid grey;
+}
 
 .content-image {
     float: left;
