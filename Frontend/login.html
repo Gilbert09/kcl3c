@@ -5,91 +5,97 @@
 
     <!-- HomeHunter CSS -->
     <link href="HomeHunter.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
 </head>
 
 <body>
 <!-- Navigation -->
-<div class="header-top-back">
-            <div class="header-top">
-                <div class="header-col-top">
-                    Home Hunter
+    <header>
+        <div id="header-top-container">
+            <div id="header-top">
+                <div class="float-left" id="user-profile-link">
+                    <a href="#">Tony Sellen</a>
                 </div>
                 
-                <div class="header-col-top">
-                    <a href="login.html">
-                        Login
-                    </a> | Register
+                <div class="float-right" id="user-control">
+                    <a href="login.html">Login</a> | 
+                    <a href="register.html">Register</a>
                 </div>  
             </div>  
         </div>
-    
-        <div class="header-mid-back">
-            <div class="header-mid">
-                <div class="header-col-logo">
+
+        <div id="nav-container">
+            <div id="nav">
+                <div id="logo">
                     <a href="#">
                         <img class="logo" src="http://placehold.it/210x60" alt="Logo">
                     </a>
                 </div>
 
-                <div class="header-col-links">
-                    <div class="links-col">
-                        <a href="getstarted.html">
-                            Get Started
-                        </a>
-                    </div>
-                    <div class="links-col">
-                        <a href="advice.html">
+                <div id="header-link-container">
+
+                    <a href="Details.html">
+                        <div class="links-col">
+                            List Property
+                        </div>
+                    </a>
+                    
+                    <a href="getstarted.html">
+                        <div class="links-col">
+                            How It Works
+                        </div>
+                    </a>
+                    <a href="advice.html">
+                        <div class="links-col">
                             Advice
-                        </a>
-                    </div>
-                    <div class="links-col">
-                        <a href="#">
-                            Link1
-                        </a>
-                    </div>
-                    <div class="links-col">
-                        <a href="fees.html">
+                        </div>
+                    </a>
+
+                    <a href="fees.html">
+                        <div class="links-col">
                             Fees
-                        </a>
-                    </div>
-                    <div class="links-col">
-                        <a href="FAQs.html">
+                        </div>
+                    </a>
+                    
+                    <a href="FAQs.html">
+                        <div class="links-col">
                             FAQs
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>  
         </div>
+    </header>
+
     <div class="content">
-        <div class="content-login">
+        <div id="content-login">
             <form>
                 <fieldset>
                     <legend>Login to HomeHunter</legend>
                     <hr class="divider-bar"></hr> 
-                    <table align="center" style="border-collapse: separate; border-spacing: 20px; width: 80%;">
-                        <tr>
-                            <td>
-                                <div class="form-text">Email Address:</div> 
-                                <input type="text" name="emailAddress" placeholder="Email Address">
-                            </td>
-                            
-                            <td>
-                                <div class="form-text">Password:</div> 
-                                <input type="password" name="password" placeholder="Password">
-                            </td>
-                        </tr>                          
-                            <td colspan="2">
-                                <input type="submit" name="login" value="Login">
-                                &nbsp&nbsp&nbsp<a href="#">Forgotten your password?</a>
-                            </td>   
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#">Register Here!</a>
-                            </td>
-                        </tr>  
-                    </table>    
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
+                        <input type="text" id="email" name="email" placeholder="Email Address">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                    </div>
+
+                    <div class="form-control-group">
+                        <input type="submit" name"login" value="Sign In">
+                    </div>
+
+                    <div class="form-control-group">
+                        <a href="login.html">Forgotten your password?</a>
+                    </div>    
+
+                    <div class="form-control-group">
+                        Not registered? <a href="login.html">Sign up now</a>
+                    </div>    
                 </fieldset>
             </form>    
         </div> 

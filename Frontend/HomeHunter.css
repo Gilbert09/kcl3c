@@ -60,13 +60,32 @@ img.stepImage {
     color:#262a2a;
 }
 
+.fontawesome-user {
+    color: #27ae60;
+    background-color: rgb(224, 224, 224);
+    border-radius: 3px 0px 0px 3px;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    display: inline-block;
+}
+
+#password, #email {
+    border-radius: 0px 3px 3px 0px;
+    margin-left: -4px;
+    margin-top: -1px;
+    width: 230px;
+}
+
 input[type="text"], input[type="password"]{
-  padding: 6px 6px 6px 10px;
+  padding: 0 12px;
   font-size: 22px;
-  margin-bottom: 10px;
   width:90%;
   border-radius: 5px;
   border:none;
+  height: 46px;
 }
 
 input:focus{
@@ -80,15 +99,14 @@ input[type="submit"] {
     color: #ecf0f1;
     font-size: 20px;
     border: none;
-    padding: 15px 50px;
     border-radius: 5px;
     border:none;
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
-    padding: 25px 80px;
+    padding: 21px 80px;
     display: inline-block;
-    margin: 15px 30px;
+    margin: 7px 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -121,22 +139,19 @@ select:focus{
     outline: none; 
 }
 
-.content-login{
+#content-login, #content-register {
     background: #ecf0f1;
-
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
     margin-top: 15px;
     margin-bottom: 15px; 
-
     border-radius: 5px;
-
     width: 1000px;
 }
 
-.content-login fieldset {
+#content-login, #content-register fieldset {
     text-align: center;
 }
 
@@ -168,20 +183,20 @@ select:focus{
     border-collapse: collapse;
 }
 
-.content-login a:visited, .content-login a:link, .content-login a:active{
+#content-login a:visited, #content-login a:link, #content-login a:active{
    color: #262a2a;
 
 }
 
-.content-login a:hover {
+#content-login a:hover {
     color: #27ae60;
 }
 
-.content-login{
+#content-login{
     color: #262a2a;
 }
 
-.content-login a{
+#content-login a{
     text-decoration: underline;
 }
 
@@ -695,12 +710,12 @@ select:focus{
     text-align: right;
     display: inline-block;
     vertical-align: middle;
-    width: 10em;
+    width: 8.2em;
     margin: 0 1em 0 0;
 }
 
 .form-control-group input {
     display: inline-block;
     vertical-align: middle;
-    width: 340px;
+    width: 300px;
 }
