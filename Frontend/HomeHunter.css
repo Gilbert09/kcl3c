@@ -490,6 +490,27 @@ select:focus{
     }
 }
 
+#account-sidebar{
+    width:200px;
+    background-color:#ecf0f1;
+    float:left;
+    height:800px;
+}
+#account-sidebar ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+
+}
+#account-sidebar ul a:link{
+    text-align: center;
+    background-color: transparent;
+    display:block;
+    text-decoration: none;
+    padding:5px;
+    border-bottom: 1px solid grey;
+}   
+
 .content-image {
     float: left;
 }
