@@ -106,9 +106,8 @@ input[type="submit"] {
     box-shadow: 0 6px #196E3D;
     color: #ecf0f1;
     font-size: 20px;
-    border: none;
+    border: none !important;
     border-radius: 5px;
-    border:none;
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
