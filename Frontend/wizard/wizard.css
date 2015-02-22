@@ -266,6 +266,7 @@ body {
 	text-align: center;
 	cursor: pointer;
 	vertical-align: top;
+	padding: 15px 6px !important;
 }
 
 #wizard-rooms-fileupload span {
@@ -276,7 +277,7 @@ body {
 #wizard-rooms-uploaded {
 	display: inline-block;
 	vertical-align: top;
-	width: 227px;
+	width: 245px;
 	border: none;
 }
 
