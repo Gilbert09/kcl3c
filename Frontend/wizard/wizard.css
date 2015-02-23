@@ -1,6 +1,6 @@
 body {
     margin:0px;
-    background:#A39F9F;
+    background:#e5e5e5;
     color: #262a2a;
     font-family: "Helvetica", serif;
 }
@@ -290,7 +290,8 @@ body {
 }
 
 .wizard-bottom {
-	background-color: #EAEAEA;
+	border-top: 1px solid #D7D7D7;
+	background-color: #fff;
 	border-radius: 0 0 2px 2px;
 	height: 70px;
 }
