@@ -188,7 +188,7 @@ body {
 }
 
 #wizard-room-length, #wizard-room-width {
-	width: 128px;
+	width: 121px;
 }
 
 #wizard-room-width {
@@ -196,7 +196,7 @@ body {
 }
 
 #wizard-room-length input, #wizard-room-width input {
-	width: 117px;
+	width: 109px;
 }
 
 #wizard-room-meters, #wizard-room-feet {
@@ -228,6 +228,8 @@ body {
 
 #wizard-room-feet {
 	border-right: none;
+	width: 41px;
+	text-align: center;
 }
 
 .wizard-room-selected {
