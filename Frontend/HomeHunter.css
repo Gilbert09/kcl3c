@@ -197,7 +197,6 @@ select:focus{
 
 #content-login a:visited, #content-login a:link, #content-login a:active{
    color: #838383;
-
 }
 
 #content-login a:hover {
@@ -395,6 +394,33 @@ select:focus{
     min-height: 1550px; /*Smallest it can be and not break footer...*/
 }
 
+#menu-top {
+    height: 40px;
+    width: 80px;
+    float: right;
+    vertical-align: center;
+    margin-top: 10px;
+    background: #212121;
+    color: #fff;
+    border-radius: 5px;
+    top: -5px;
+}
+
+#menu-top a:visited , #menu-top  a:link , #menu-top  a:active {
+    color:#fff;
+    text-decoration: none;
+}
+
+#menu-top a:hover {
+    color: #27ae60;
+}
+
+.menu {
+    display: block;
+    position: relative;
+    top: -6px;
+}
+
 @media(max-width: 900px){
     .content {
         width: 100%;
@@ -461,10 +487,13 @@ select:focus{
         height:750px;
     }
     #index-large {
-        display:none;
+        display: none;
     }
     #index-small {
         margin-left: 10px;
+    }
+    #header-link-container {
+        display: none;
     }
 }
 
@@ -547,11 +576,9 @@ select:focus{
 
 #account-sidebar{
     width:200px;
-    background-color:#ecf0f1;
+    background-color:#e5e5e5;
     float:left;
     display:block;
-    
-
 }
 #account-sidebar ul{
     margin:0;
@@ -559,18 +586,31 @@ select:focus{
     list-style:none;
 }
 #account-sidebar ul{
-    text-decoration: none:;
+    text-decoration: none;
 }
-#account-sidebar ul a:link{
+
+#account-sidebar a:link, #account-sidebar a:visited, #account-sidebar a:hover, #account-sidebar a:active {
     text-align: center;
-    background-color: transparent;
+    background-color: #FFFFFF;
     display:block;
     text-decoration: none;
     padding:5px;
     border-bottom: 1px solid grey;
-}   
-#account-sidebar ul a:visited{
-    text-decoration:none;
+    color: #27ae60;
+}
+.sidebar-selected{
+    background-color:transparent;
+     display:block;
+    text-decoration: none;
+    padding:5px;
+    color: #27ae60;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.account-content{
+    width:inherit;
+    border: 20px solid grey;
 }
 
 .account-content{
