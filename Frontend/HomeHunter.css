@@ -14,7 +14,10 @@ header {
 }
 
 h1 {
-    font-size: 25px;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #838383;
 }
 
 h2 {
@@ -26,7 +29,7 @@ h3 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 legend{
@@ -47,6 +50,15 @@ img.logo {
 img.stepImage {
     margin: 5px 15px 5px 0;
     border-radius: 5px;
+}
+
+ul.hiw{
+    list-style-type: square;
+    padding-left:380px;
+}
+
+ul.hiw li {
+    padding-left: 5px;
 }
 
 .float-left {
@@ -346,9 +358,6 @@ select:focus{
 
 .content-left {
     background: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
     position: relative;
     float:left;
     border-radius: 5px;
@@ -357,7 +366,6 @@ select:focus{
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    padding-top: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 2px;
