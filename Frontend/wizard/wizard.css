@@ -1,0 +1,369 @@
+body {
+    margin:0px;
+    background:#e5e5e5;
+    color: #262a2a;
+    font-family: "Helvetica", serif;
+}
+
+.wizard-container {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	left: 20%;
+	top: 20%;
+}
+
+.wizard-header {
+	background-color: #fff;
+	border-radius: 2px 2px 0 0;
+	padding: 25px 30px;
+	color: #838383;
+}
+
+.wizard-content-standard, .wizard-content-checkbox, .wizard-content-rooms {
+	background-color: #fff;
+}
+
+.wizard-content-standard div {
+	padding: 15px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	display: inline-block;
+	width: 268px;
+}
+
+.wizard-content-standard div:nth-child(even) {
+	margin-left: -4px;
+	width: 269px;
+	border-right: none;
+}
+
+.wizard-content-standard div:nth-child(odd) {
+	margin-left: 1px;
+}
+
+
+.wizard-content-standard div span {
+	display: block;
+	color: #ABAAAA;
+	font-size: 13px;
+}
+
+.wizard-content-standard div input, .wizard-content-standard div select, .wizard-content-rooms div input {
+	display: block;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	height: 30px;
+	outline: none;
+	padding: 5px 0px 0px 10px;
+	font-size: 19px;
+}
+
+.wizard-content-standard div select {
+	width: 100%;
+}
+
+.wizard-content-checkbox div {
+	padding: 15px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	display: inline-block;
+	margin-left: -4px;
+	width: 169px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.wizard-content-checkbox div:hover {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+.wizard-content-checkbox div:hover span {
+	color: white;
+}
+
+.wizard-content-checkbox-selected {
+	background-color: #27ae60;
+}
+
+.wizard-content-checkbox-selected-span {
+	color: white !important;
+}
+
+.wizard-content-checkbox div:nth-child(3n+1), .wizard-content-checkbox div:nth-child(0) {
+	border-right: 1px solid #D7D7D7;
+	width: 168px;
+	margin-left: 0;
+}
+
+.wizard-content-checkbox div:nth-child(3n) {
+	border-right: none;
+}
+
+.wizard-content-checkbox div span {
+	display: block;
+	color: #ABAAAA;
+	font-size: 13px;
+}
+
+.wizard-room-list {
+	width: 150px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	border-right: 1px solid #D7D7D7;
+	height: 417px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.wizard-room-list div {
+	vertical-align: top;
+	height: 50px;
+	border-top: 1px solid #D7D7D7;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.wizard-room-list div:hover {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+.wizard-room-list div:hover span {
+	color: white;
+}
+
+.wizard-room-list-selected {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+.wizard-room-list-selected span {
+	color: white;
+}
+
+.wizard-room-list span {
+	display: block;
+	text-align: center;
+	height: 50px;
+	top: 34%;
+	position: relative;
+}
+
+.wizard-room-tab {
+	width: 448px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin-left: -4px;
+}
+
+.wizard-room-tab div {
+	padding: 15px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	display: inline-block;
+}
+
+.wizard-room-tab div span {
+	display: block;
+	color: #ABAAAA;
+	font-size: 13px;
+}
+
+#wizard-room-title {
+	width: 418px;
+}
+
+#wizard-room-title input {
+	width: 407px;
+}
+
+#wizard-room-length, #wizard-room-width {
+	width: 121px;
+}
+
+#wizard-room-width {
+	margin-left: -4px;
+}
+
+#wizard-room-length input, #wizard-room-width input {
+	width: 109px;
+}
+
+#wizard-room-meters, #wizard-room-feet {
+	margin-left: -4px;
+	vertical-align: top;
+	height: 51px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+#wizard-room-meters:hover, #wizard-room-feet:hover {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+#wizard-room-meters:hover span, #wizard-room-feet:hover span {
+	color: white;
+}
+
+#wizard-room-meters span, #wizard-room-feet span {
+	height: 50px;
+	display: block;
+	top: 35%;
+	position: relative;
+}
+
+#wizard-room-feet {
+	border-right: none;
+	width: 41px;
+	text-align: center;
+}
+
+.wizard-room-selected {
+	background-color: #27ae60;
+}
+
+.wizard-room-selected span {
+	color: white !important;
+}
+
+#wizard-room-description {
+	width: 418px;
+}
+
+#wizard-room-description textarea {
+	resize: none;
+	width: 414px;
+	height: 70px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	padding: 5px 0px 0px 10px;
+	font-size: 19px;
+}
+
+#wizard-rooms-files {
+	border-right: none;
+	width: 418px;
+}
+
+#wizard-rooms-fileupload {
+	display: inline-block;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	height: 65px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	padding: 15px 6px !important;
+}
+
+#wizard-rooms-fileupload span {
+	position: relative;
+	top: 35%;
+}
+
+#wizard-rooms-uploaded {
+	display: inline-block;
+	vertical-align: top;
+	width: 245px;
+	border: none;
+}
+
+#wizard-rooms-uploaded span {
+	display: inline-block !important;
+}
+
+.wizard-rooms-image {
+	height: 60px;
+}
+
+.wizard-bottom {
+	border-top: 1px solid #D7D7D7;
+	background-color: #fff;
+	border-radius: 0 0 2px 2px;
+	height: 70px;
+}
+
+.wizard-bottom div {
+	display: inline-block;
+}
+
+.wizard-next {
+	background-color: #27ae60;
+    box-shadow: 0 6px #196E3D;
+    color: #ecf0f1;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    border:none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    padding: 18px 47px;
+    display: inline-block;
+    margin: 7px 30px;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+}
+
+.wizard-next:hover {
+    box-shadow: 0 4px #196E3D;
+    top: 2px;
+    cursor: pointer;
+}
+
+.wizard-next:active {
+    box-shadow: 0 0 #196E3D;
+    top: 6px;
+    cursor: pointer;
+}
+
+.wizard-previous {
+	position: relative;
+	height: 70px;
+	width: 150px;
+}
+
+.wizard-previous span {
+	position: absolute;
+	top: 35%;
+	left: 20%;
+	display: block;
+	border-bottom: 1px solid #9D9D9D;
+}
+
+.wizard-previous span:hover {
+	cursor: pointer;
+	color: #27ae60;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.showing {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HomeHunter | Online Listings</title>
+    <title>HomeHunter | Register</title>
 
     <!-- HomeHunter CSS -->
     <link href="HomeHunter.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
 </head>
 
 <body>
-<!-- Navigation -->
-
     <header>
         <div id="header-top-container">
             <div id="header-top">
@@ -68,85 +67,66 @@
         </div>
     </header>
 
-    <div class="content" id="content-fees">
-            <div class="content-left">
-                <h1>Financial Common Sense</h1>
-                <hr class="divider-bar">
-                <p>Here at Home Hunter we are proving that selling your home is not as expensive of as difficult as you may have been lead to believe.
-                Our services are based on a single one off fixed fee for listing your home, we don't charge any additional fees once your home has been
-                sold.  In the table below we show just how much you can save by you managing the sale of your own home using Home Hunters listing service.
-                  To get a more accurate savings projection use our savings calculator below.</p>
-                <h2>Savings Comparison Table</h2>
-                <table id="fees-table">
-                    <thead>
-                        <tr>
-                            <th>Property Value</th>
-                            <th>Estate Agent Fee 1.5% + VAT</th>
-                            <th>Home Hunter Fee £</th>
-                            <th>You save</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>£200,000</td>
-                            <td>£3600</td>
-                            <td>£300</td>
-                            <td>£3300</td>
-                        </tr>
-                        <tr>
-                            <td>£300,000</td>
-                            <td>£5400</td>
-                            <td>£300</td>
-                            <td>£5100</td>
-                        </tr>
-                        <tr>
-                            <td>£400,000</td>
-                            <td>£7200</td>
-                            <td>£300</td>
-                            <td>£6900</td>
-                        </tr>
-                        <tr>
-                            <td>£500,000</td>
-                            <td>£3600</td>
-                            <td>£300</td>
-                            <td>£3300</td>
-                        </tr>
-                        <tr>
-                            <td>£600,000</td>
-                            <td>£10800</td>
-                            <td>£300</td>
-                            <td>£10500</td>
-                        </tr>
-                        <tr>
-                            <td>£700,000</td>
-                            <td>£12600</td>
-                            <td>£300</td>
-                            <td>£12300</td>
-                        </tr>
-                        <tr>
-                            <td>£800,000</td>
-                            <td>£14400</td>
-                            <td>£300</td>
-                            <td>£14100</td>
-                        </tr>
-                        <tr>
-                            <td>£900,000</td>
-                            <td>£16200</td>
-                            <td>£300</td>
-                            <td>£15900</td>
-                        </tr>
-                        <tr>
-                            <td>£1,000,000</td>
-                            <td>£18000</td>
-                            <td>£300</td>
-                            <td>£17700</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    </div>
+    <div class="content">
+        <div id="content-login">
+            <form>
+                <fieldset>
+                    <legend>Register with HomeHunter</legend>
+                    <hr class="divider-bar"></hr> 
 
-    <footer>
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
+                        <input class="icon-input" type="text" id="first-name" name="first-name" placeholder="First Name">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
+                        <input class="icon-input" type="text" id="last-name" name="last-name" placeholder="Last Name">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-at"></i></span>
+                        <input class="icon-input" type="text" id="email" name="email" placeholder="Email Address">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-at"></i></span>
+                        <input class="icon-input" type="text" id="confirm-email" name="confirm-email" placeholder="Confirm Email Address">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
+                        <input class="icon-input" type="password" id="password" name="password" placeholder="Password">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
+                        <input class="icon-input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-home"></i></span>
+                        <input class="icon-input" type="text" id="home-number" name="home-number" placeholder="Home Number">
+                    </div>
+
+                    <div class="form-control-group">
+                        <span class="fontawesome-user"><i class="fa fa-mobile"></i></span>
+                        <input class="icon-input" type="text" id="mobile-number" name="mobile-number" placeholder="Mobile Number">
+                    </div>
+
+                    <div class="form-control-group">
+                        <input type="submit" name"register" value="Register">
+                    </div>
+
+                    <div class="form-control-group">
+                        Already Registered? <a href="login.html">Login</a>
+                    </div>
+
+                </fieldset>
+            </form>    
+        </div> 
+    </div>
+   <footer>
         <div id="footer-legal-back">
             <div id="footer-legal">
                 <div class="footer-col">  
