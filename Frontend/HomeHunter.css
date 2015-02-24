@@ -412,6 +412,7 @@ select:focus{
     color: #fff;
     border-radius: 5px;
     top: -5px;
+    display:none;
 }
 
 #menu-top a:visited , #menu-top  a:link , #menu-top  a:active {
@@ -428,6 +429,53 @@ select:focus{
     position: relative;
     top: -6px;
 }
+
+/**CUUUUUUUUUUT **/
+
+nav ul {
+list-style:none;
+}
+nav ul li a {
+display: block;
+text-decoration: none;
+background: rgba(0,0,0,0.3);
+color: white;
+padding: 1em;
+margin-bottom: 1px;
+}
+.drawer {
+  -webkit-transform: translate3d(0, -131px, 0);
+  -moz-transform: translate3d(0, -131px, 0);
+  -o-transform: translate3d(0, -131px, 0);
+  transform: translate3d(0, -131px, 0);
+  -webkit-transition:-webkit-transform 0.25s linear;
+  -moz-transition:-moz-transform 0.25s linear;
+  -o-transition:-o-transform 0.25s linear;
+  transition:transform 0.25s linear;
+  display:none;
+}
+.drawer.active {
+  -webkit-transform: translate3d(0,129px,0)
+  -moz-transform: translate3d(0,129px,0)
+  -o-transform: translate3d(0,129px,0)
+  transform: translate3d(0,129px,0)
+}
+
+/* Fallbacks */
+
+.no-csstransforms .top {
+  position: static;
+}
+
+.no-csstransforms .drawer nav {
+  display: none;
+}
+
+.no-csstransforms .drawer.active nav {
+  display: block;
+}
+
+/**CUUUUUUUUUUT **/
 
 @media(max-width: 900px){
     .content {
