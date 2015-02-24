@@ -1,5 +1,4 @@
 class ApiController
-
   def addProperty(jsonData)
   end
 
@@ -8,5 +7,4 @@ class ApiController
 
   def editProperty(propertyId)
   end
-
 end

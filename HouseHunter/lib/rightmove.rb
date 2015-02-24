@@ -6,5 +6,4 @@ class Rightmove
   def initialize(propertyData)
     @jsonData.to_json
   end
-
 end

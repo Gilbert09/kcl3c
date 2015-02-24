@@ -6,5 +6,4 @@ class Zoopla
   def initialize(propertyData)
     @jsonData.to_json
   end
-
 end
