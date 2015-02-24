@@ -1,13 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
     <head>
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
     </head>
     <body>
-        <h1>Welcome to example.com, <%=h @user.first_name %></h1>
+        <h1>Welcome to HomeHunter.com!</h1>
         <p>
-          You have successfully signed up to HomeHunters.com, with the email address: <%= @user.email %>.<br/>
-          To login to the site, just follow this link: <%=h @url %>.
+          You have successfully signed up to HomeHunters.com, you can now begin to list properties,
+          your login details are as follows: <%= @user.email %> <%= @user.password %>. <br>
+        </p>
+        <p>
+          To login to the site, just follow this link: <%= @url %>.
         </p>
         <p>Thanks for joining and have a great day!</p>
     </body>
