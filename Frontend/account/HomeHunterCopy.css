@@ -682,7 +682,7 @@ margin-bottom: 1px;
     width:77%;
     height:100%;
 }
-.accountSum-prompt{
+#accountSum-prompt{
     width:90%;
     height:400px;
     text-align: center;
@@ -691,7 +691,7 @@ margin-bottom: 1px;
     margin: 20px;
     background-color: #ffffff;
 }
-.accountSum-incomplete{
+#accountSum-incomplete{
     width:90%;
     height:200px;
     text-align:left;
@@ -699,6 +699,23 @@ margin-bottom: 1px;
     padding:10px;
     margin:20px;
     background-color:#ffffff;
+}
+#accountListings-content{
+    width:99%;
+    display:inline-block;
+    margin:20px;
+    background-color:#ffffff;
+}
+#accountListings-content ul {
+    list-style: none;
+}
+.account-listing{
+    width: 600px;
+    height: 150px;
+    background-color: #e5e5e5;
+    display:inline-block;
+    margin-top:3px;
+    margin-bottom:3px;
 }
 .content-image {
     float: left;
