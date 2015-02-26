@@ -45,6 +45,7 @@ fieldset{
 
 img.logo {
     height:55px;
+    margin-top: 2px;
 }
 
 img.stepImage {
@@ -458,7 +459,7 @@ list-style:none;
 nav ul li a {
 display: block;
 text-decoration: none;
-background: rgba(0,0,0,0.6);
+background: rgba(0,0,0,0.9); /*change the last number to edit opacity of menu options*/
 color: white;
 padding: 15px;
 padding-left: 20px;
