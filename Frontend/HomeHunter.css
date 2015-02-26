@@ -359,7 +359,7 @@ select:focus{
 .content-left {
     background: #fff;
     position: relative;
-    float:left;
+    /*float:left;*/
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgb(100,100,100);
     background: #fff;
@@ -385,9 +385,9 @@ select:focus{
 
     /*border: 1px solid #98bf21;*/
 }
-
+/*
 #content-advice {
-    min-height: 1561px; /*Smallest it can be and not break footer...*/
+    min-height: 1561px; /*Smallest it can be and not break footer...
 }
 
 #content-FAQ {
@@ -398,9 +398,10 @@ select:focus{
     min-height: 500px; 
 }
 
-#content-getstarted {
-    min-height: 1550px; /*Smallest it can be and not break footer...*/
+#content-howitworks {
+    min-height: 1550px; /*Smallest it can be and not break footer...
 }
+*/
 
 #menu-top {
     height: 40px;
@@ -497,8 +498,8 @@ margin-bottom: 1px;
     }
     .content-left {
         width:97%;
-        margin-top: 2%;
-        margin-bottom: 1%;
+        margin-top: 15px;
+        margin-bottom: 15px;
         margin-right: 2.5%;
         margin-left: 0.5%;
     }
@@ -578,7 +579,7 @@ margin-bottom: 1px;
     }
     .content-left {
         margin-top: 15px;
-        margin-bottom:2.5%;
+        margin-bottom:15px;
         width:1000px;
     }
     .content-right {
@@ -753,6 +754,10 @@ margin-bottom: 1px;
 
 .content-image {
     float: left;
+}
+
+.content-step-text {
+    min-height: 250px;
 }
 
 .content-break {
