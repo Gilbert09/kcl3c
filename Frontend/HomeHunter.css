@@ -412,7 +412,6 @@ select:focus{
     color: #fff;
     border-radius: 5px;
     top: -5px;
-    display:none;
 }
 
 #menu-top a:visited , #menu-top  a:link , #menu-top  a:active {
@@ -430,19 +429,9 @@ select:focus{
     top: -6px;
 }
 
-/**CUUUUUUUUUUT **/
+/* Accordian menu drop down test BEGIN */
 
-nav ul {
-list-style:none;
-}
-nav ul li a {
-display: block;
-text-decoration: none;
-background: rgba(0,0,0,0.3);
-color: white;
-padding: 1em;
-margin-bottom: 1px;
-}
+/*stuff I got off the internet that I don't understand...
 .drawer {
   -webkit-transform: translate3d(0, -131px, 0);
   -moz-transform: translate3d(0, -131px, 0);
@@ -452,7 +441,7 @@ margin-bottom: 1px;
   -moz-transition:-moz-transform 0.25s linear;
   -o-transition:-o-transform 0.25s linear;
   transition:transform 0.25s linear;
-  display:none;
+ 
 }
 .drawer.active {
   -webkit-transform: translate3d(0,129px,0)
@@ -460,9 +449,24 @@ margin-bottom: 1px;
   -o-transform: translate3d(0,129px,0)
   transform: translate3d(0,129px,0)
 }
+*/
 
+nav ul {
+list-style:none;
+}
+nav ul li a {
+display: block;
+text-decoration: none;
+background: rgba(0,0,0,0.6);
+color: white;
+padding: 15px;
+padding-left: 20px;
+margin-bottom: 1px;
+}
+
+/*More stuff I got off the internet that I don't understand...
 /* Fallbacks */
-
+/*
 .no-csstransforms .top {
   position: static;
 }
@@ -474,8 +478,18 @@ margin-bottom: 1px;
 .no-csstransforms .drawer.active nav {
   display: block;
 }
+*/
 
-/**CUUUUUUUUUUT **/
+.content-drawer {
+    position: absolute;
+    width:100%;
+    margin-top: -16px;
+    margin-left: -20px;
+    z-index: 1;
+    /*display:none;*/
+}
+
+/* Accordian menu drop down test BEGIN */
 
 @media(max-width: 900px){
     .content {
@@ -551,6 +565,9 @@ margin-bottom: 1px;
     #header-link-container {
         display: none;
     }
+    #content-login, #content-register {
+        width: 100%;
+    }
 }
 
 @media(min-width:900px){
@@ -616,8 +633,6 @@ margin-bottom: 1px;
         padding-top: 10px;
         float:right;
 
-        
-
         /*top: 0%;
         right: 10%;
         left: 500px;*/
@@ -628,12 +643,18 @@ margin-bottom: 1px;
     #index-small {
         display:none;
     }
+    #menu-top { 
+        display:none;
+    }
+    .content-drawer {
+        display:none;
+    }
+    #content-login, #content-register {
+        width: 1000px;
+    }
 }
 
-
-
 /*----- Start of account CSS -----*/
-
 
 #account-sidebar{
     width:20%;
@@ -744,6 +765,7 @@ margin-bottom: 1px;
     background-repeat: no-repeat;
     background-position: 0px -140px;
     position: relative;
+    z-index: 0;
 }
 
 .content-steps {
