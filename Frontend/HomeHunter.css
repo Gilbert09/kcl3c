@@ -660,14 +660,14 @@ margin-bottom: 1px;
 /*----- Start of account CSS -----*/
 
 #account-sidebar{
-    width:20%;
     min-width:175px;
     max-width: 200px;
     height: 100%;
     background-color:#e5e5e5;
     float:left;
-    display:block;
+    display:inline-block;
     padding-right:5px;
+
     
 }
 #account-sidebar ul{
@@ -702,17 +702,18 @@ margin-bottom: 1px;
 }
 
 .account-content{
-    width:100%;
+    width:1100px;
     height:100%;
     background-color: #e5e5e5; 
+    min-width:1000px;
 }
 .account-right{
     display:inline-block;
-    width:77%;
+    width:800px;
     height:100%;
 }
 #accountSum-prompt{
-    width:90%;
+    width:800px;
     height:400px;
     text-align: center;
     display: inline-block;
