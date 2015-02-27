@@ -13,7 +13,45 @@
 </head>
 
 <body>
+
     <div data-step="0" class="wizard-container showing">
+        <div class="wizard-header">
+            <span>Can you please provide us with some personal details and confirm those that we already know.</span>
+        </div>
+        <div class="wizard-content-standard">
+            <div>
+                <span>First Name</span>
+                <input type="text" name="fname" tabindex="1">
+            </div>
+            <div>
+                <span>Last Name</span>
+                <input type="text" name="lname" tabindex="2"/>
+            </div>
+            <div>
+                <span>Email</span>
+                <input type="text" name="email" tabindex="3"/>
+            </div>
+            <div>
+                <span>Phone Number</span>
+                <input type="text" name="phone" tabindex="4"/>
+            </div>
+            <!-- <div>
+                <span>Address Line 2</span>
+                <input type="text" name="addressline2" tabindex="5"/>
+            </div>
+            <div>
+                <span>Postcode</span>
+                <input type="text" name="postcode" tabindex="6"/>
+            </div> -->
+        </div>
+        <div class="wizard-bottom">
+            <div class="float-right">
+                <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div data-step="1" class="wizard-container hidden">
         <div class="wizard-header">
             <span>Please enter the address of the property you wish to sell.</span>
         </div>
@@ -50,7 +88,7 @@
         </div>
     </div>
 
-    <div data-step="1" class="wizard-container hidden">
+    <div data-step="2" class="wizard-container hidden">
         <div class="wizard-header">
             <span>General information about your property.</span>
         </div>
@@ -168,7 +206,8 @@
             </div>
         </div>
     </div>
-    <div data-step="2" class="wizard-container hidden">
+
+    <div data-step="3" class="wizard-container hidden">
         <div class="wizard-header">
 
             <span>Please select what type of garden your property has. You can select more than one.</span>
@@ -209,7 +248,7 @@
         </div>
     </div>
 
-    <div data-step="3" class="wizard-container hidden">
+    <div data-step="4" class="wizard-container hidden">
         <div class="wizard-header">
             <span>Please select parking facilities that relate to your property, you may select more than one.</span>
         </div>
@@ -261,7 +300,7 @@
         </div>
     </div>
 
-    <div data-step="4" class="wizard-container hidden">
+    <div data-step="5" class="wizard-container hidden">
         <div class="wizard-header">
             <span>Please select heating facilities that relate to your property, You can select more than one.</span>
         </div>
@@ -313,7 +352,7 @@
         </div>
     </div>
 
-        <div data-step="5" class="wizard-container hidden">
+        <div data-step="6" class="wizard-container hidden">
         <div class="wizard-header">
            <span>Please enter dimensions for each room, photos are need for Master Bedroom, the front of your property
                 and 1 additional photo.</span>
@@ -390,6 +429,12 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
         <div class="wizard-bottom">
             <div class="wizard-previous float-left">
                 <span>Back</span>
