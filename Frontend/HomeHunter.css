@@ -309,6 +309,11 @@ select:focus{
     border-bottom: 4px solid #27ae60;
 }
 
+#links-selected {
+    border-bottom: 4px solid #27ae60;
+    color: #27ae60;
+}
+
 #header-link-container a:visited , #header-link-container a:link , #header-link-container a:active {
     color:#262A2A;
     text-decoration: none;
@@ -492,7 +497,7 @@ margin-bottom: 1px;
     /*display:none;*/
 }
 
-/* Accordian menu drop down test BEGIN */
+/* Accordian menu drop down test END */
 
 @media(max-width: 900px){
     .content {
@@ -656,6 +661,10 @@ margin-bottom: 1px;
         width: 1000px;
     }
 }
+
+/* .content {
+    min-height: 500px;???
+}*/
 
 /*----- Start of account CSS -----*/
 
