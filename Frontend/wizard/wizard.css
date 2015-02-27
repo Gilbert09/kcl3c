@@ -20,7 +20,7 @@ body {
 	color: #838383;
 }
 
-.wizard-content-standard, .wizard-content-checkbox, .wizard-content-rooms {
+.wizard-content-standard, .wizard-content-checkbox, .wizard-content-rooms, .wizard-content-description {
 	background-color: #fff;
 }
 
@@ -244,7 +244,7 @@ body {
 	width: 418px;
 }
 
-#wizard-room-description textarea {
+#wizard-room-description textarea, #wizard-house-description textarea {
 	resize: none;
 	width: 414px;
 	height: 70px;
@@ -366,4 +366,36 @@ body {
 
 .hidden {
 	display: none;
+}
+
+.scroll-field {
+  overflow: auto;
+  resize: none;
+	width: 414px;
+	height: 70px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	padding: 5px 0px 0px 10px;
+	font-size: 19px;
+}
+
+#wizard-content-description div span {
+  display: block;
+	color: #ABAAAA;
+	font-size: 13px;
+}
+
+#wizard-content-description div {
+  background-color: #fff;
+  width: auto;
+  border-top: 1px solid #D7D7D7;
+  padding: 15px;
+}
+
+#wizard-content-description {
+	/*border-right: 1px solid #D7D7D7;*/
+	/*display: inline-block;*/
+
+  width: 600px;
 }

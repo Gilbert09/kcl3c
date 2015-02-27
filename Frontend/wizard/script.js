@@ -21,7 +21,7 @@ $(document).ready(function() {
 		if ($(this).hasClass("wizard-content-checkbox-selected")) {
 			$(this).removeClass("wizard-content-checkbox-selected");
 			$(this).find("span").removeClass("wizard-content-checkbox-selected-span");
-		} 
+		}
 		else {
 			$(this).addClass("wizard-content-checkbox-selected");
 			$(this).find("span").addClass("wizard-content-checkbox-selected-span");
