@@ -1,8 +1,9 @@
 class UserMailer < ApplicationMailer
+  default from: 'notifications@homehunter.com'
+
   def welcome_email(user)
-    mail(to: user.email) do |format|
-      format.html { render layout: 'mailer.html.erb' }
-      format.text
-    end
+    @user = user
+    @url  = 'http://homehunter.com/login'
+    mail(to: @user.email, subject: 'Welcome to HomeHunter.com')
   end
 end
