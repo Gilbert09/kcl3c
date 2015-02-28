@@ -335,8 +335,8 @@ select:focus{
 }
 
 .footer-col {
-    width: 33%;
-    text-align: center;
+    /*width: 33%;*/
+    text-align: left;
     display: inline-block;
     vertical-align: top;
 }
@@ -521,16 +521,24 @@ margin-bottom: 1px;
         position: relative;
     }
     #header-top {
-        width: 100%;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     #nav {
-        width: 100%;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     #footer-legal {
-        width: 100%;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .footer-copyright {
-        width: 100%;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .overlay-left {
         width: 85%;
@@ -575,6 +583,10 @@ margin-bottom: 1px;
     }
     #content-login, #content-register {
         width: 100%;
+    }
+    .footer-col {
+        width:100%;
+        margin-bottom: 10px;
     }
 }
 
@@ -659,6 +671,9 @@ margin-bottom: 1px;
     }
     #content-login, #content-register {
         width: 1000px;
+    }
+    .footer-col {
+        width:330px;
     }
 }
 
