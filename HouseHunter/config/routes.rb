@@ -4,9 +4,6 @@ Rails.application.routes.draw do
 
   resources :property
 
-  devise_for :users
-
-
   get 'wizard' => 'wizard#index'
   get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
