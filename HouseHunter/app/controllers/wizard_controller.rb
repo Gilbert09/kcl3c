@@ -1,8 +1,6 @@
 class WizardController < ApplicationController
   before_action :authenticate_user!
 
-  @apicontroller = ApiController.new
-
   def index
     json = params["data"]
     render :json => json
@@ -10,7 +8,8 @@ class WizardController < ApplicationController
 
   def draft
     if user_signed_in?
-      @apicontroller.saveDraft(params["data"])
+      api = ApiController.new
+      api.saveDraft(params["data"])
     else
       render :json => '{ "error": "user not authenticated" }'
     end
