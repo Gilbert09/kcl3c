@@ -1,5 +1,4 @@
 class WizardController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     json = params["data"]
