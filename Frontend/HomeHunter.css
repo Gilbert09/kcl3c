@@ -162,6 +162,10 @@ select:focus{
     outline: none; 
 }
 
+#rightmove-margin {
+    margin-top: 37px;
+}
+
 #content-login, #content-register {
     box-shadow: 0px 2px 5px rgb(100,100,100);
     background: #fff;
@@ -636,7 +640,7 @@ margin-bottom: 1px;
     .overlay-listers {
         position: relative; 
         width: 200px;
-        height: 280px;
+        height: 320px;
 
         padding-top: 10px;
         float:right;
