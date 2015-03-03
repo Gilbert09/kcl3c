@@ -5,6 +5,11 @@ class SorceryCore < ActiveRecord::Migration
       t.string :crypted_password
       t.string :salt
 
+      t.string :first_name
+      t.string :last_name
+      t.string :title
+      t.string :phone_number
+
       t.timestamps
     end
 
