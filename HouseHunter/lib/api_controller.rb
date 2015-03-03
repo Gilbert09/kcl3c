@@ -5,9 +5,15 @@ class ApiController
   def removeProperty(propertyId)
   end
 
-  def editProperty(propertyId)
+  def getBranchPropertyList(branchId)
   end
 
-  def getProperties(branchId)
+  def addPremiumListing(jsonData)
+  end
+
+  def addFeaturedProperty(jsonData)
+  end
+
+  def removeFeaturedProperty(propertyId)
   end
 end
