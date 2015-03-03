@@ -591,6 +591,9 @@ margin-bottom: 1px;
         width:100%;
         margin-bottom: 10px;
     }
+    #divider-bar-temp{
+        display: none;
+    }
 }
 
 @media(min-width:900px){
