@@ -9,7 +9,7 @@
   <body>
 
   <div id="nav">
-    <% if current_user %>
+    <% if logged_in? %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
       <%= link_to "Logout", :logout, method: :post %>
     <% else %>
