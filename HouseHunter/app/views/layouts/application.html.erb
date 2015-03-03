@@ -9,6 +9,7 @@
   <body>
 
   <div id="nav">
+  	<%= logged_in?.to_s %>
     <% if logged_in? %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
       <%= link_to "Logout", :logout, method: :post %>
