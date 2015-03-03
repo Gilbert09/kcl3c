@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :property
 
   get 'wizard' => 'wizard#index'
+  get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
   
   # The priority is based upon order of creation: first created -> highest priority.

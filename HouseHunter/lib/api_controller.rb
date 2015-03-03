@@ -16,4 +16,7 @@ class ApiController
 
   def removeFeaturedProperty(propertyId)
   end
+
+  def saveDraft(jsonData)
+  end
 end
