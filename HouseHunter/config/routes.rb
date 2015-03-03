@@ -4,11 +4,9 @@ Rails.application.routes.draw do
 
   resources :property
 
-  Rails.application.routes.draw do
-    devise_for :users, controllers: {
-      sessions: 'sessions'
-    }
-  end
+  devise_for :users, controllers: {
+    sessions: 'sessions'
+  }
 
 
   get 'wizard' => 'wizard#index'
