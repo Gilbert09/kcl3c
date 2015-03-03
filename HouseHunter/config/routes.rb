@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   resources :property
 
+  Rails.application.routes.draw do
+    devise_for :users, controllers: {
+      sessions: 'sessions'
+    }
+  end
+
+
   get 'wizard' => 'wizard#index'
   get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
