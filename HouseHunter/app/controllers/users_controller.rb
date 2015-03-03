@@ -15,6 +15,9 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+
+    # added this confirm address but not sure if needed!
+    UserMailer.confirm_address(@user).deliver_now
   end
 
   # GET /users/1/edit
@@ -28,6 +31,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        UserMailer.welcome_email(@user).deliver_now
+
         format.html { redirect_to :users, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
