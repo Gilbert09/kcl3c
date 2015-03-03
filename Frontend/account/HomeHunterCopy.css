@@ -954,26 +954,28 @@ footer {
     border-bottom: 1px solid #D7D7D7;
 }
 
-.incomplete-listing {
-  background-color: #ffffff;
-  min-width: 950px;
-  max-width: auto;
-	height: auto;
-  display: inline-block;
-  float: left;
-  margin-top: 0.3em;
-  margin-bottom: 0.2em;
-  margin-left: 0.75em;
-  margin-right: 0.5em;
-  padding: 1em;
-}
-
 .wizard-section-complete {
   color: #D7D7D7;
 }
 
 .wizard-section-incomplete {
   color: #838383;
+}
+
+.account-right h1 {
+  text-align: center;
+}
+
+.incomplete-listing {
+  background-color: #ffffff;
+  width: 100%;
+	height: auto;
+  display: inline-block;
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em;
 }
 
 .property-name {
@@ -984,23 +986,19 @@ footer {
   display:block;
 }
 
-.finish-button h2 {
-  float: right;
-}
-
 .incomplete-listing ul li {
   margin-top: 0.2em;
   font-size: 1.2em;
 }
 
-.account-right h1 {
-  text-align: center;
+.finish-button {
+  float: right;
 }
 
 .finish-button h2 {
-  margin-bottom: 0em;
   text-size: 1.5em;
   color: #838383;
+  /*display: block;*/
 }
 
 .finish-button h2:hover {
@@ -1009,12 +1007,6 @@ footer {
 }
 
 .front-house-image img {
-  /*display: inline-block;
-  float: right;*/
-  display: none;
-}
-
-.progress {
-  display: inline;
-  float: left;
+  display: inline-block;
+  float: right;
 }
