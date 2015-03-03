@@ -12,7 +12,7 @@ class WizardController < ApplicationController
     if user_signed_in?
       @apicontroller.saveDraft(params["data"])
     else
-      render :json => ''
+      render :json => '{ "error": "user not authenticated" }'
     end
   end
 end
