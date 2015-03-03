@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
 		 :confirmable
 	
-	validates :first_name, presence: true
-	validates :last_name, presence: true
-	validates :phone_number, presence: true
-	validates :title, presence: true
+	# validates :first_name, presence: true
+	# validates :last_name, presence: true
+	# validates :phone_number, presence: true
+	# validates :title, presence: true
 end
