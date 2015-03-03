@@ -854,7 +854,8 @@ footer {
 
     text-align: center;
 
-    background:#ecf0f1;
+    /*background:#ecf0f1;*/
+    background:rgba(236,240,241,0.9);
     color:#262A2A;
 
     /*top: 25%;
@@ -863,7 +864,7 @@ footer {
     border: 0px none;
     border-radius: 10px;
 
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -877,17 +878,17 @@ footer {
 
     /*vertical-align: bottom;*/
 
-    background:#ecf0f1;
+    /*background:#ecf0f1;*/
+    background:rgba(236,240,241,0.9);
     color:#262A2A;
 
     /*top: 0%;
     right: 10%;*/
 
-
     border: 0px none;
     border-radius: 0px 0px 10px 10px;
 
-    opacity: 0.9;
+    /*opacity: 0.9;*/
 }
 
 .form-control-group {
