@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :property
 
   devise_for :users, controllers: {
-    sessions: 'sessions'
+    sessions: 'users/sessions'
   }
 
 
