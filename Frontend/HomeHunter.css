@@ -543,22 +543,13 @@ margin-bottom: 1px;
         padding-left: 5%;
         padding-right: 5%;
     }
-    .overlay-left {
+    .overlay-center {
         width: 85%;
         height: 200px;
         position: absolute;
         margin: 0px auto;
 
         top: 250px;
-        left: 5%;
-    }
-    .overlay-right {
-        width: 85%;
-        height: 200px;
-        position: absolute;
-        margin: 0px auto;
-
-        top: 500px;
         left: 5%;
     }
     .overlay-listers {
@@ -630,7 +621,7 @@ margin-bottom: 1px;
     .footer-copyright {
         width: 1000px;
     }
-    .overlay-left {
+    .overlay-center {
         width: 330px;
         height: 330px;
         position: relative;
@@ -866,7 +857,7 @@ footer {
     background: #262A2A;
 }
 
-.overlay-left {
+.overlay-center {
     /*width: 500px;
     height: 200px;
     position: absolute;
