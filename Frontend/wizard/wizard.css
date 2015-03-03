@@ -244,7 +244,7 @@ body {
 	width: 418px;
 }
 
-#wizard-room-description textarea, #wizard-house-description textarea {
+#wizard-room-description textarea, #wizard-house-description textarea, #wizard-description-description textarea  {
 	resize: none;
 	width: 414px;
 	height: 70px;
@@ -289,6 +289,16 @@ body {
 
 .wizard-rooms-image {
 	height: 60px;
+}
+
+#wizard-description-description {
+	width: 568px;
+	border-right: none;
+}
+
+#wizard-description-description textarea {
+	width: 558px;
+	height: 250px;
 }
 
 .wizard-bottom {
@@ -369,8 +379,8 @@ body {
 }
 
 .scroll-field {
-  overflow: auto;
-  resize: none;
+	overflow: auto;
+	resize: none;
 	width: 414px;
 	height: 70px;
 	outline: none;
