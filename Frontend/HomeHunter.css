@@ -162,6 +162,10 @@ select:focus{
     outline: none; 
 }
 
+.nav-links {
+    margin-top: 1px;
+}
+
 #rightmove-margin {
     margin-top: 37px;
 }
