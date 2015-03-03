@@ -2,6 +2,11 @@ Account pages- To Do.
 
 	We need to discuss the whole functionality of this part of the site as we did with the wizard and static pages. User paths, things the user can change, needed information ect ect ect.
 
+
+	Navigation from homepage
+
+		-Discussion needed about whether we should have a full account interface that the user operates in or a dropdown-esque account navigation for ease of use. 
+
 	General 
 
 		- We need to tie in the pages with the header and footer when thats ready and go over the styling to make it consistent with the rest of the site.
