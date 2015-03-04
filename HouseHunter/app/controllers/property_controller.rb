@@ -1,4 +1,7 @@
 class PropertyController < ApplicationController
+
+  before_filter :authorize
+
   def show
     @property = Property.find(params[:id])
   end
