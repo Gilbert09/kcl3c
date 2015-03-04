@@ -1010,7 +1010,7 @@ footer {
   float: right;
 }
 
-.wizard-section-incomplete:hover, .wizard-section-edit:hover {
+.wizard-section-incomplete:hover, .wizard-section-edit:hover, .wizard-section-complete:hover {
   text-decoration :underline;
 }
 
