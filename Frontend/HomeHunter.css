@@ -424,7 +424,7 @@ select:focus{
     float: right;
     vertical-align: center;
     margin-top: 10px;
-    background: #212121;
+    background: #262A2A;
     color: #fff;
     border-radius: 5px;
     top: -5px;
@@ -477,7 +477,7 @@ list-style:none;
 nav ul li a {
 display: block;
 text-decoration: none;
-background: rgba(0,0,0,0.9); /*change the last number to edit opacity of menu options*/
+background: rgba(38,42,42,0.9); /*change the last number to edit opacity of menu options*/
 color: white;
 padding: 15px;
 padding-left: 20px;
