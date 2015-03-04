@@ -1,185 +1,202 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>HomeHunter | Online Listings</title>
+<head>
+    <title>HomeHunter | Online Listings</title>
 
-		<!-- HomeHunter CSS -->
-   		<link href="HomeHunter.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="script.js"></script>
-   		<meta charset="UTF-8">
-	</head>	
+    <!-- HomeHunter CSS -->
+    <link href="HomeHunter.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
 
-	<body>
+    <script type="text/javascript">
+        function showValue(num) {
+            var result = document.getElementById('result');
+            var saving = document.getElementById('saving');
+            result.innerHTML = num;
+            saving.innerHTML = Math.round(num*0.015*1.2);
+        }
+    </script>
 
-		<header>
-			<div id="header-top-container">
-	            <div id="header-top">
-	                <div class="float-left" id="user-profile-link">
-	                    <a href="#">Tony Sellen</a>
-	                </div>
-	                
-	                <div class="float-right" id="user-control">
-	                    <a href="login.html">Login</a> | 
-	                    <a href="register.html">Register</a>
-	                </div>  
-	            </div>  
-	        </div>
+</head>
 
-			<div id="nav-container">
-				<div id="nav">
-					<div id="logo">
-						<a href="index.html">
-							<img class="logo" src="logo.jpg" alt="Logo">
-						</a>
-					</div>
+<body>
 
-					<div id="header-link-container">
+<header>
+    <div id="header-top-container">
+        <div id="header-top">
+            <div class="float-left" id="user-profile-link">
+                <a href="#">Tony Sellen</a>
+            </div>
 
-		                <a href="wizard\wizard.html">
-		                    <div class="links-col">
-		                    	List Property
-		                    </div>
-						</a>
-						
-		                <a href="howitworks.html">
-		                    <div class="links-col">
-		                    	How It Works
-		                    </div>
-						</a>
-						<a href="advice.html">
-		                    <div class="links-col">
-		                    	Advice
-		                    </div>
-						</a>
+            <div class="float-right" id="user-control">
+                <a href="login.html">Login</a> |
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </div>
 
-						<a href="fees.html">
-							<div class="links-col">
-								Fees
-							</div>
-						</a>
-						
-						<a href="FAQs.html">
-							<div class="links-col">
-								FAQs
-							</div>
-						</a>
-					</div>
+    <div id="nav-container">
+        <div id="nav">
+            <div id="logo">
+                <a href="index.html">
+                    <img class="logo" src="logo.jpg" alt="Logo">
+                </a>
+            </div>
 
-					<!--Menu for small window here-->
-					<div id="menu-top"> 
-						<a href="#" class="menu"><span>≡</span> Menu</a>
-					</div>
+            <div id="header-link-container">
 
-				</div>	
-			</div>
-		</header>
-		
-		<!-- Accordian menu drop down test BEGIN -->
-			
-		<!-- Content -->	
-		<div class="content-index">
-			<div class="content-drawer">	
-				<div class="drawer" id="drawer">
-					<nav>
-					  <ul >
-					    <li><a href="wizard\wizard.html">List Property</a></li>
-					    <li><a href="howitworks.html">How It Works</a></li>
-					    <li><a href="advice.html">Advice</a></li>
-					    <li><a href="fees.html">Fees</a></li>
-					    <li><a href="FAQs.html">FAQs</a></li>
-					  </ul>
-					</nav>
-				</div>
-			</div>
-			<!-- Accordian menu drop down test END -->
-			<div class="content-main">
-				<div class="content">
-					<div class="overlay-center">
-	                    <p>
-	                    	With Home Hunter you can sell your own Home In 5 easy steps for a &pound300 fixed fee
-	                    </p>
-	                    <input type="submit" name"register" value="Register" id="register-id">
-					</div>
+                <a href="wizard\wizard.html">
+                    <div class="links-col">
+                        List Property
+                    </div>
+                </a>
 
-					<div class="overlay-listers">
-						<div class="allign-bar"></div>
-	                    <h3><center>We list your property to get your property the most attention possible</center></h3>
-	                    
-	    
-	                    <div class="divider-bar"></div>
+                <a href="howitworks.html">
+                    <div class="links-col">
+                        How It Works
+                    </div>
+                </a>
+                <a href="advice.html">
+                    <div class="links-col">
+                        Advice
+                    </div>
+                </a>
 
-	                    <p><a href ="http://www.zoopla.co.uk" target="_blank">
-	                    	<img src="zooplalogo.png" alt="Zoopla" width="180">
-	                    </a>
-	                    <a id="index-small" href ="http://www.rightmove.co.uk" target="_blank">
-	                    	<img src="rightmovelogo.png" alt="Rightmove" width="180">
-	                    </a></p>
-	                    
-	                    <div class="divider-bar" id="divider-bar-temp"></div>
+                <a href="fees.html">
+                    <div class="links-col">
+                        Fees
+                    </div>
+                </a>
 
-	                    <p id="rightmove-margin"><a id="index-large" href ="http://www.rightmove.co.uk" target="_blank">
-	                    	<img src="rightmovelogo.png" alt="Rightmove" width="180">
-	                    </a></p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="content-steps">
-				<div class="content">
-				</div>
-			</div>
+                <a href="FAQs.html">
+                    <div class="links-col">
+                        FAQs
+                    </div>
+                </a>
+            </div>
 
-			<div class="content-review">
-				<div class="content">
-				</div>
-			</div>
+            <!--Menu for small window here-->
+            <div id="menu-top">
+                <a href="#" class="menu"><span>≡</span> Menu</a>
+            </div>
 
-			<div class="content-Fees">
-				<div class="content">
-	                <h1>Package Cost</h1><!--center title -->
-	                <div>
-	                    <h3>£300 Fixed Rate</h3> <!-- center with some sort of coloured emphasize -->
-	                </div>
+        </div>
+    </div>
+</header>
 
-	                <p>List or table stating everything that is supplied for the cost</p>
-	               </div>
-			</div>
-		</div>
+<!-- Accordian menu drop down test BEGIN -->
 
-	   <footer>
-	    	<div id="footer-legal-back">
-	    		<div id="footer-legal">
-	                <div class="footer-col">  
-	                    <span><strong>Save Money With Home Hunter</strong></span>
-	                    <span>Mortgage Calculator</span>
-	                    <span>Stamp Duty Calculator</span>
-	                    <span>Savings Calculator</span>
-	                    <span>Who's who Property Advice</span>
-	                    <span>Buying and Selling Check List</span>
-	                    <span><a href="FAQs.html">FAQs</a></span>
-	                </div>
-	                <div class="footer-col">  
-	                    <span><strong>Get to know us</strong></span>
-	                    <span><a href="hhaboutus">About us</a></span>
-	                    <span><a href="hhcontactus">Contact us</a></span>
-	                    <span><a href="hhtermsofuse.html">Terms of use</a></span>
-	                    <span><a href="hhcookiespolicy">Cookies Policy</a></span>
-	                </div>
-	                <div class="footer-col">  
-	                    <span><strong>Getting Started</strong></span>
-	                    <span>5 Easy Steps</span>
-	                    <span>Sell your property</span>
-	                    <span><a href="fees.html">Fees</a></span>
-	                    <span>Privacy Notice</span>
-	                </div>
-	    		</div>
-	    	</div>
-	    	<div class="footer-copyright-back">
-	    		<div class="footer-copyright">
-	    			&copy COPYRIGHT
-	    		</div>	
-	    	</div>
-	    </footer>
-	</body>	
+<!-- Content -->
+<div class="content-index">
+    <div class="content-drawer">
+        <div class="drawer" id="drawer">
+            <nav>
+                <ul>
+                    <li><a href="wizard\wizard.html">List Property</a></li>
+                    <li><a href="howitworks.html">How It Works</a></li>
+                    <li><a href="advice.html">Advice</a></li>
+                    <li><a href="fees.html">Fees</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Accordian menu drop down test END -->
+    <div class="content-main">
+        <div class="content">
+            <div class="overlay-center">
+                <p>
+                    With Home Hunter you can sell your own Home In 5 easy steps for a &pound300 fixed fee
+                </p>
+                <input type="submit" name="register" value="Register" id="register-id">
+            </div>
+
+            <div class="overlay-listers">
+                <div class="allign-bar"></div>
+                <h3>We list your property to get your property the most attention possible</h3>
+
+
+                <div class="divider-bar"></div>
+
+                <p><a href="http://www.zoopla.co.uk" target="_blank">
+                    <img src="zooplalogo.png" alt="Zoopla" width="180">
+                </a>
+                    <a id="index-small" href="http://www.rightmove.co.uk" target="_blank">
+                        <img src="rightmovelogo.png" alt="Rightmove" width="180">
+                    </a></p>
+
+                <div class="divider-bar" id="divider-bar-temp"></div>
+
+                <p id="rightmove-margin"><a id="index-large" href="http://www.rightmove.co.uk" target="_blank">
+                    <img src="rightmovelogo.png" alt="Rightmove" width="180">
+                </a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-steps">
+        <div class="content">
+            <div>My property is worth -</div>
+                <div id="result" style="height:100px;width:400px;" ></div>
+
+                <input type="range" id="sliderBar" min="0" max="1000000" step="1" value="0"
+                       onChange="showValue(this.value);" style="width:600px;height:10px;"/>
+            <p>You could save this much with House Hunter</p>
+            <p id="saving"></p>
+
+
+            <div class="content-review">
+                <div class="content">
+                </div>
+            </div>
+
+            <div class="content-Fees">
+                <div class="content">
+                    <h1>Package Cost</h1><!--center title -->
+                    <div>
+                        <h3>£300 Fixed Rate</h3> <!-- center with some sort of coloured emphasize -->
+                    </div>
+
+                    <p>List or table stating everything that is supplied for the cost</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <footer>
+            <div id="footer-legal-back">
+                <div id="footer-legal">
+                    <div class="footer-col">
+                        <span><strong>Save Money With Home Hunter</strong></span>
+                        <span>Mortgage Calculator</span>
+                        <span>Stamp Duty Calculator</span>
+                        <span>Savings Calculator</span>
+                        <span>Who's who Property Advice</span>
+                        <span>Buying and Selling Check List</span>
+                        <span><a href="FAQs.html">FAQs</a></span>
+                    </div>
+                    <div class="footer-col">
+                        <span><strong>Get to know us</strong></span>
+                        <span><a href="hhaboutus">About us</a></span>
+                        <span><a href="hhcontactus">Contact us</a></span>
+                        <span><a href="hhtermsofuse.html">Terms of use</a></span>
+                        <span><a href="hhcookiespolicy">Cookies Policy</a></span>
+                    </div>
+                    <div class="footer-col">
+                        <span><strong>Getting Started</strong></span>
+                        <span>5 Easy Steps</span>
+                        <span>Sell your property</span>
+                        <span><a href="fees.html">Fees</a></span>
+                        <span>Privacy Notice</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright-back">
+                <div class="footer-copyright">
+                    &copy COPYRIGHT
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
