@@ -8,20 +8,46 @@
 	<div class="account-content">
 		<div id="account-sidebar">
 			<ul>
-				
+
 				<li class="sidebar-selected"><h1>Active Listings</h1></li>
 				<li><a href="account-incompleteListings.html"><h1>Incomplete Listings</h1></a></li>
 				<li><a href="account-inactiveListings.html"><h1>Inactive Listings</h1></a></li>
 				<li><a href="account-details.html"><h1>My Details</h1></a></li>
 			</ul>
 		</div>
+
 		<div class="account-right">
-			<h2>Active Listings:</h2>
-			<div id="accountSum-prompt"> Depending on the user, we can display some different things. Massive prompt to begin a listing if the user has none, Possibly this is where we can list unfinished listings if the user is halfway through the process.
-				<img src="http://placehold.it/650x350">
+			<h1>Active Listings</h1>
+			<div class="divider-bar"></div>
+			<div class="account-subheading"> Below is a list of all of your listings, here you can edit or hide. </div>
+
+			<!-- An example active listing; this will need to be dependant on what user is up to -->
+			<div class="account-listing">
+
+				<div class="front-house-image">
+					<img src="http://placehold.it/350x200">
+				</div>
+
+				<div class="property-name">
+					<h2> 123 Example Road, London, SE6 315 </h2>
+				</div>
+
+				<ul class="progress">
+					<li class="wizard-section-edit"> Personal Information </li>
+					<li class="wizard-section-edit"> Address </li>
+					<li class="wizard-section-edit"> General Information </li>
+					<li class="wizard-section-edit"> Outdoor Spaces </li>
+					<li class="wizard-section-edit"> Parking </li>
+					<li class="wizard-section-edit"> Heating </li>
+					<li class="wizard-section-edit"> Rooms </li>
+				</ul>
+
+				<div class="next-step-button">
+					<h2> Hide </h2>
+				</div>
+
 			</div>
-			<h2>Active Listings</h2>
-			<div class="accountSum-listings">active listings on the acount.</div>
+
 		</div>
 	</div>
 </body>

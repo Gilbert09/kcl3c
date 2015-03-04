@@ -958,7 +958,7 @@ footer {
   color: #D7D7D7;
 }
 
-.wizard-section-incomplete {
+.wizard-section-incomplete, .wizard-section-edit {
   color: #838383;
 }
 
@@ -966,7 +966,7 @@ footer {
   text-align: center;
 }
 
-.incomplete-listing {
+.account-listing {
   background-color: #ffffff;
   width: 100%;
 	height: auto;
@@ -986,22 +986,21 @@ footer {
   display:block;
 }
 
-.incomplete-listing ul li {
+.account-listing ul li {
   margin-top: 0.2em;
   font-size: 1.2em;
 }
 
-.finish-button {
+.next-step-button {
   float: right;
 }
 
-.finish-button h2 {
+.next-step-button h2 {
   text-size: 1.5em;
   color: #838383;
-  /*display: block;*/
 }
 
-.finish-button h2:hover {
+.next-step-button h2:hover {
   color: #27AE60;
   text-decoration: underline;
 }
@@ -1009,4 +1008,15 @@ footer {
 .front-house-image img {
   display: inline-block;
   float: right;
+}
+
+.wizard-section-incomplete:hover, .wizard-section-edit:hover {
+  text-decoration :underline;
+}
+
+.account-subheading {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #838383;
 }
