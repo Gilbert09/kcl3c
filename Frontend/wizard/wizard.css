@@ -406,3 +406,7 @@ body {
 #wizard-content-description {
   width: 600px;
 }
+
+#wizard-room-title {
+  display:none;
+}
