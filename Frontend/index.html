@@ -16,6 +16,11 @@
             saving.innerHTML = Math.round(num*0.015*1.2);
         }
     </script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 </head>
 
 <body>
@@ -137,9 +142,8 @@
         <div class="content">
             <div>My property is worth -</div>
                 <div id="result" style="height:100px;width:400px;" ></div>
-
                 <input type="range" id="sliderBar" min="0" max="1000000" step="1" value="0"
-                       onChange="showValue(this.value);" style="width:600px;height:10px;"/>
+                       onChange="showValue(this.value);"/>
             <p>You could save this much with House Hunter</p>
             <p id="saving"></p>
 
