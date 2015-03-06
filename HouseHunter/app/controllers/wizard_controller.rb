@@ -6,7 +6,7 @@ class WizardController < ApplicationController
   end
 
   def draft
-    if user_signed_in?
+    if signed_in?
       api = ApiController.new
       api.saveDraft(params["data"])
     else
