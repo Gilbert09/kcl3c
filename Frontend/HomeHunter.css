@@ -796,7 +796,12 @@ margin-bottom: 1px;
 .content-steps {
     text-align: center;
     text:40px;
-    height:500px;
+    height:300px;
+    background: #E9F7EF;
+    position: relative;
+}
+.content-priceplan{
+    height:300px;
     background: #E9F7EF;
     position: relative;
 }
@@ -950,3 +955,25 @@ input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     margin-top: -14px;
 }
+
+.price-circles{
+    background: none repeat scroll 0 0 #293a42;
+    border-radius: 50px;
+    background-color: #27ae60;
+    border: 3px solid #196E3D;
+    color: #ffffff;
+    display: table-cell;
+    font-size: 14px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+.price-circles strong {
+    font-size: 40px;
+}
+.price-circles sup {
+    font-size: 10px;
+}
+
