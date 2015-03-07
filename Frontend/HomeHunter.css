@@ -800,11 +800,19 @@ margin-bottom: 1px;
     background: #E9F7EF;
     position: relative;
 }
+
+.content-index {
+    width: inherit;
+    text-align: center;
+}
 .content-priceplan{
+    width: 100%;
     height:300px;
     background: #E9F7EF;
     position: relative;
 }
+
+
 
 .content-review {
     height:500px;
@@ -971,9 +979,37 @@ input[type=range]::-webkit-slider-thumb {
     width: 100px;
 }
 .price-circles strong {
-    font-size: 40px;
+    font-size: 28px;
 }
 .price-circles sup {
+
     font-size: 10px;
 }
+
+.price-col {
+
+    display: inline-block;
+    padding-right: 150px;
+    padding-top: 30px;
+
+}
+
+.price-col1 {
+    display: inline-block;
+    padding-right: 150px;
+    padding-top: 30px;
+}
+
+.price-col2 {
+    display: inline-block;
+    padding-right: 150px;
+    padding-top: 30px;
+}
+
+.price-col3 {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+
 
