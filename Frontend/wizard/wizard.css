@@ -48,7 +48,7 @@ body {
 
 .wizard-content-standard div span {
 	display: block;
-	color: #ABAAAA;
+	color: #838383;
 	font-size: 13px;
 }
 
@@ -109,7 +109,7 @@ body {
 
 .wizard-content-checkbox div span {
 	display: block;
-	color: #ABAAAA;
+	color: #838383;
 	font-size: 13px;
 }
 
@@ -178,7 +178,7 @@ body {
 
 .wizard-room-tab div span {
 	display: block;
-	color: #ABAAAA;
+	color: #838383;
 	font-size: 13px;
 }
 
@@ -395,7 +395,7 @@ body {
 
 #wizard-content-description div span {
   display: block;
-	color: #ABAAAA;
+	color: #838383;
 	font-size: 13px;
 }
 
