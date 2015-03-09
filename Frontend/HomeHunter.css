@@ -66,6 +66,33 @@ img.listing{
     border-radius: 2px;
 }
 
+#listing-iconcontainer{
+    background-color: #fff;
+    color:#000;
+
+    font-size: xx-large;
+    margin: 10px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    border-radius: 2px;
+    float: right;
+    width: 400px;
+
+}
+
+.listing-icon{
+    width:14.5%;
+    display: inline-block;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.listing-icon img{
+    width: 100%;
+    height: 100%;
+}
+
 #listing-price{
     background-color: #262A2A;
     color:#DFDFDF;
@@ -79,6 +106,7 @@ img.listing{
     display: inline-block;
     border-radius: 2px;
     text-align: center;
+    float left;
 }
 
 #listing-price h2{
@@ -146,7 +174,7 @@ img.listing{
     display: inline-block;
 }
 
-.listing-floorplan{
+#listing-floorplan{
     width:32%;
     display: inline-block;
     margin-bottom: 10px;
@@ -155,7 +183,7 @@ img.listing{
     
 }
 
-.listing-school{
+#listing-school{
     width:32%;
     display: inline-block;
     margin-bottom: 10px;
@@ -163,7 +191,7 @@ img.listing{
     margin-left: 10px
 }
 
-.listing-features{
+#listing-features{
     width:32%;
     display: inline-block;
     margin-bottom: 10px;
