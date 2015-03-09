@@ -18,6 +18,12 @@ h1 {
     font-size: 30px;
     text-align: center;
     color: #838383;
+    cursor: pointer;
+}
+
+h1 a:hover{
+        text-decoration: none;
+    color: #27ae60;
 }
 
 h2 {
@@ -700,6 +706,7 @@ margin-bottom: 1px;
 
 
 }
+
 #account-sidebar ul{
     margin:0;
     padding:0;
@@ -709,7 +716,7 @@ margin-bottom: 1px;
     text-decoration: none;
 }
 
-#account-sidebar a:link, #account-sidebar a:visited, #account-sidebar a:hover, #account-sidebar a:active {
+#account-sidebar a:link, #account-sidebar a:visited, #account-sidebar a:active {
     text-align: center;
     background-color: #FFFFFF;
     display:block;
@@ -718,25 +725,31 @@ margin-bottom: 1px;
     border-bottom: 1px solid grey;
     color: #27ae60;
 }
+
+
 #account-sidebar h1{
     color:#000000;
 }
-.sidebar-selected{
+
+.sidebar-selected {
     background-color:transparent;
      display:block;
     text-decoration: none;
     padding:5px;
-    color: #27ae60;
     text-align: center;
     border-bottom: 1px solid grey;
 }
 
+.sidebar-selected h1 {
+    color: #27ae60 !important;
+}
 .account-content{
     width:1100px;
     height:100%;
     background-color: #e5e5e5;
     min-width:1000px;
 }
+
 .account-right{
     display:inline-block;
     width:800px;
@@ -777,6 +790,11 @@ margin-bottom: 1px;
     display:inline-block;
     margin-top:3px;
     margin-bottom:3px;
+}
+#account-link a:hover{
+     text-decoration: none;
+    color: #27ae60;
+
 }
 
 
