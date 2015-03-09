@@ -183,6 +183,11 @@ img.listing{
     
 }
 
+#listing-floorplan img{
+    padding:20px;
+    width: 80%;
+}
+
 #listing-school{
     width:32%;
     display: inline-block;
@@ -191,7 +196,7 @@ img.listing{
     margin-left: 10px
 }
 
-#listing-features{
+#listing-transport{
     width:32%;
     display: inline-block;
     margin-bottom: 10px;
@@ -199,11 +204,22 @@ img.listing{
 }
 
 #listing-map{
-    width: 100%;
+    width: 61.5%;
     display: inline-block;
     text-align: center;
     margin-bottom: 15px;
+   
+    padding-right: 50px;
 }
+
+#listing-features{
+    width: 32.5%;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
 
 img.stepImage {
     margin: 5px 15px 5px 0;
