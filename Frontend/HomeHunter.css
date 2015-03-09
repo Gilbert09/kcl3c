@@ -106,7 +106,7 @@ img.listing{
     display: inline-block;
     border-radius: 2px;
     text-align: center;
-    float left;
+    float: left;
 }
 
 #listing-price h2{
@@ -970,7 +970,7 @@ margin-bottom: 1px;
 }
 
 .content-main {
-    background-image: url("http://www.tubewalker.com/images/central/liverpool_street_to_leytonstone/source/liverpool_street_to_leytonstone221.jpg");
+    background-image: url("indexmainpic.jpg");
     background-size: 100% 900px;
     background-repeat: no-repeat;
     background-position: 0px -140px;
@@ -979,30 +979,25 @@ margin-bottom: 1px;
     height: 500px;
 }
 
-.content-steps {
+.content-priceplan{
+    text-align: center;
+    width: 100%;
+    height:300px;
+    background: #D7D7D7;
+    position: relative;
+}
+
+.content-slider {
     text-align: center;
     text:40px;
     height:300px;
-    background: #E9F7EF;
+    background: #D7D7D7;
     position: relative;
 }
 
-.content-index {
-    width: inherit;
-    text-align: center;
-}
-.content-priceplan{
-    width: 100%;
-    height:300px;
-    background: #E9F7EF;
-    position: relative;
-}
-
-
-
-.content-review {
+.content-steps {
     height:500px;
-    background: #E9F7EF;
+    background: #D7D7D7;
     position: relative;
 }
 
@@ -1196,6 +1191,4 @@ input[type=range]::-webkit-slider-thumb {
     display: inline-block;
     padding-top: 30px;
 }
-
-
 
