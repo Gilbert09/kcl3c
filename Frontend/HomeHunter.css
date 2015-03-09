@@ -220,6 +220,19 @@ img.listing{
     vertical-align: top;
 }
 
+#listing-keywords{
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+#listing-keywords h2{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100%;
+}
 
 img.stepImage {
     margin: 5px 15px 5px 0;
