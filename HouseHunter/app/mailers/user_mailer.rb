@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
   def confirm_address(user)
     @user = user
-    @url = 'http://homehunter.com/registrationConfirmation'
+    @url = 'http://homehunter.com/confirmation'
     mail(to: @user.email, subject: 'Please confirm your email address')
   end
 
