@@ -12,8 +12,8 @@
         function showValue(num) {
             var result = document.getElementById('result');
             var saving = document.getElementById('saving');
-            result.innerHTML = num;
-            saving.innerHTML = Math.round(num*0.015*1.2);
+            result.innerHTML = '£'+num;
+            saving.innerHTML = '£'+ Math.round(num*0.015*1.2);
         }
     </script>
 </head>
@@ -144,24 +144,26 @@
         </div>
         <div class="content-priceplan">
             <div class="price-circles"><sup>From</sup><br><strong>£400</strong>+VAT</div>
-            <div class="price-col"><h2><strong>Basic Package</strong></h2>All you need to sell your property</div>
+
+            <div class="price-col"><h2><strong>Basic</strong></h2>All you need to sell your property</div>
         </div>
-        <div class="content-priceplan">
+        <div id="content-priceplan1">
             <div class="price-circles"><sup>From</sup><br><strong>£600</strong>+VAT</div>
-            <div class="price-col"><h2><strong>Premium Package</strong></h2>Basic package with that little extra</div>
+            <div id="price-col1"><h2><strong>Premium</strong></h2>Basic package with that little extra</div>
         </div>
     </div>
 
     <div class="content-slider">
         <div class="content">
             <div><h2>My property is worth</h2></div>
-            <strong><div id="result" style="height:40px;" ></div></strong>
+            <strong><div id="result" style="height:40px;" >£0</div></strong>
             <div>
-                <input type="range" id="sliderBar" min="0" max="1000000" step="25000" value="250000"
+                <input type="range" id="sliderBar" min="0" max="1000000" step="10000" value="0"
                        onChange="showValue(this.value);"/>
             </div><br>
             <div><h2>You could save this much with House Hunter</h2></div>
-           <strong><div id="saving"></div></strong>
+           <strong><div id="saving">£0</div></strong><br>
+            Savings are based on an estate agent fee of 1.5%
         </div>
     </div>
 </div>
