@@ -954,12 +954,13 @@ margin-bottom: 1px;
 
 
 /*----- End of account CSS -----*/
-
-
-
-
 .content-image {
     float: left;
+}
+
+.content-image img{
+    height: 250px;
+    width: 350px;
 }
 
 .content-step-text {
