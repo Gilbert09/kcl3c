@@ -135,8 +135,7 @@ img.listing{
     font-size: large;
 }
 
-#listing-info{
-    background-color: #fff;
+#listing-info{;
     padding:0px;
     border-radius: 2px;
     display: inline-block;
@@ -167,12 +166,12 @@ img.listing{
 }
 
 #listing-description{
-    width:100%;
+    width:925px;
     display: inline-block;
 }
 
 #listing-floorplan{
-    width:32%;
+    width:300px;
     display: inline-block;
     margin-bottom: 10px;
     vertical-align: top;
@@ -186,7 +185,7 @@ img.listing{
 }
 
 #listing-school{
-    width:32%;
+    width:300px;
     display: inline-block;
     margin-bottom: 10px;
     vertical-align: top;
@@ -194,23 +193,23 @@ img.listing{
 }
 
 #listing-transport{
-    width:32%;
+    width:300px;
     display: inline-block;
     margin-bottom: 10px;
     vertical-align: top;
 }
 
 #listing-map{
-    width: 61.5%;
+    width: 610px;
     display: inline-block;
     text-align: center;
     margin-bottom: 15px;
    
-    padding-right: 50px;
+    padding-right: 15px;
 }
 
 #listing-features{
-    width: 32.5%;
+    width: 300px;
     display: inline-block;
     text-align: left;
     margin-bottom: 15px;
