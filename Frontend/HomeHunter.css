@@ -1188,7 +1188,7 @@ input[type=range]::-webkit-slider-thumb {
     border: 1px solid #196E3D;
     color: #ffffff;
     display: table-cell;
-    font-size: 14px;
+    font-size: 18px;
     height: 40px;
     margin: 0 auto;
     text-align: center;
@@ -1196,11 +1196,16 @@ input[type=range]::-webkit-slider-thumb {
     width: 200px;
 }
 .text-steps{
+
     height: 200px;
     display: inline-block;
-    width: 200px;
+    width: 180px;
     font-size: 14px;
+    text-align: justify;
 
+}
+.text-steps h2{
+    text-align: center;
 }
 
 .price-circles{
