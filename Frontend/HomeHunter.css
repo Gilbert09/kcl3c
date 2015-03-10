@@ -1172,19 +1172,6 @@ input[type=range]::-webkit-slider-thumb {
     display: inline-block;
     padding-right: 150px;
     padding-top: 30px;
-
-}
-
-.price-col1 {
-    display: inline-block;
-    padding-right: 150px;
-    padding-top: 30px;
-}
-
-.price-col2 {
-    display: inline-block;
-    padding-right: 150px;
-    padding-top: 30px;
 }
 
 .price-col3 {
