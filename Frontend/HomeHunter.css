@@ -59,15 +59,16 @@ img.listing{
 
 .slider-container{
     max-height: 500px;
-    margin:10px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom:0px;
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
     border-radius: 2px;
 }
 
-#listing-iconcontainer{
-    background-color: #fff;
+#listing-iconcontainer{;
     color:#000;
 
     font-size: xx-large;
@@ -75,17 +76,19 @@ img.listing{
     margin-top: 25px;
     margin-bottom: 0px;
     border-radius: 2px;
-    float: right;
-    width: 400px;
-
+    float: left;
+    width: 350px;
+    height: 67px;
 }
 
 .listing-icon{
-    width:14.5%;
+    width:35px;
     display: inline-block;
     text-align: center;
     line-height: 100%;
     vertical-align: middle;
+    font-size: 20px;
+    margin-top: 15px;
 }
 
 .listing-icon img{
@@ -106,7 +109,7 @@ img.listing{
     display: inline-block;
     border-radius: 2px;
     text-align: center;
-    float left;
+    float: left;
 }
 
 #listing-price h2{
@@ -126,26 +129,20 @@ img.listing{
     border-radius: 2px;
     display: inline-block;
     margin: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
     text-align:center;
     font-size: large;
-
 }
 
-#listing-info{
-    background-color: #fff;
-    padding:10px;
-    margin: 10px;
+#listing-info{;
+    padding:0px;
     border-radius: 2px;
     display: inline-block;
     margin: 10px;
     margin-top: 0px;
     margin-bottom: 15px;
-    padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
     text-align:left;
@@ -170,12 +167,12 @@ img.listing{
 }
 
 #listing-description{
-    width:100%;
+    width:925px;
     display: inline-block;
 }
 
 #listing-floorplan{
-    width:32%;
+    width:300px;
     display: inline-block;
     margin-bottom: 10px;
     vertical-align: top;
@@ -183,26 +180,53 @@ img.listing{
     
 }
 
+#listing-floorplan img{
+    padding:20px;
+    width: 80%;
+}
+
 #listing-school{
-    width:32%;
+    width:300px;
     display: inline-block;
     margin-bottom: 10px;
     vertical-align: top;
     margin-left: 10px
 }
 
-#listing-features{
-    width:32%;
+#listing-transport{
+    width:300px;
     display: inline-block;
     margin-bottom: 10px;
     vertical-align: top;
 }
 
 #listing-map{
-    width: 100%;
+    width: 610px;
     display: inline-block;
     text-align: center;
     margin-bottom: 15px;
+   
+    padding-right: 15px;
+}
+
+#listing-features{
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+#listing-keywords{
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+#listing-keywords h2{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 img.stepImage {
@@ -747,8 +771,38 @@ margin-bottom: 1px;
         width:100%;
         margin-bottom: 10px;
     }
-    #divider-bar-temp{
+    #divider-bar-temp {
         display: none;
+    }
+    #listing-description {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-map {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-floorplan{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;       
+    }
+    #listing-school{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-transport{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-features{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
@@ -924,12 +978,13 @@ margin-bottom: 1px;
 
 
 /*----- End of account CSS -----*/
-
-
-
-
 .content-image {
     float: left;
+}
+
+.content-image img{
+    height: 250px;
+    width: 350px;
 }
 
 .content-step-text {
@@ -941,7 +996,7 @@ margin-bottom: 1px;
 }
 
 .content-main {
-    background-image: url("http://www.tubewalker.com/images/central/liverpool_street_to_leytonstone/source/liverpool_street_to_leytonstone221.jpg");
+    background-image: url("indexmainpic.jpg");
     background-size: 100% 900px;
     background-repeat: no-repeat;
     background-position: 0px -140px;
@@ -950,30 +1005,36 @@ margin-bottom: 1px;
     height: 500px;
 }
 
-.content-steps {
+.content-priceplan{
+    padding-top:30px;
+    text-align: center;
+    width: 100%;
+    height:300px;
+    background: #D7D7D7;
+    position: relative;
+}
+
+.content-slider {
+    padding-top:30px;
     text-align: center;
     text:40px;
     height:300px;
-    background: #E9F7EF;
+    background: #27ae60;
     position: relative;
 }
 
-.content-index {
-    width: inherit;
+#content-steps {
+    padding-top: 30px;
     text-align: center;
-}
-.content-priceplan{
     width: 100%;
     height:300px;
-    background: #E9F7EF;
+    background: #D7D7D7;
     position: relative;
 }
-
-
-
-.content-review {
-    height:500px;
-    background: #E9F7EF;
+.content-steps{
+    vertical-align: top;
+    display: inline-block;
+    background: #D7D7D7;
     position: relative;
 }
 
@@ -1105,7 +1166,7 @@ input[type=range]::-webkit-slider-runnable-track {
     cursor: pointer;
     animate: 0.2s;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #27ae60;
+    background: #ffffff;
     border-radius: 25px;
     border: 0px solid #000101;
 }
@@ -1115,15 +1176,41 @@ input[type=range]::-webkit-slider-thumb {
     height: 40px;
     width: 20px;
     border-radius: 7px;
-    background: #196E3D;
+    background:#196E3D;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -14px;
 }
+.square-steps{
+    background: none repeat scroll 0 0 #293a42;
+    border-radius: 10px;
+    background-color: #27ae60;
+    border: 3px solid #196E3D;
+    color: #ffffff;
+    display: table-cell;
+    font-size: 18px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+}
+.text-steps{
+
+    height: 200px;
+    display: inline-block;
+    width: 180px;
+    font-size: 14px;
+    text-align: justify;
+
+}
+.text-steps h2{
+    text-align: center;
+}
 
 .price-circles{
     background: none repeat scroll 0 0 #293a42;
-    border-radius: 50px;
+    border-radius: 20px;
     background-color: #27ae60;
     border: 3px solid #196E3D;
     color: #ffffff;
@@ -1133,7 +1220,7 @@ input[type=range]::-webkit-slider-thumb {
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
-    width: 100px;
+    width: 125px;
 }
 .price-circles strong {
     font-size: 28px;
@@ -1148,25 +1235,10 @@ input[type=range]::-webkit-slider-thumb {
     display: inline-block;
     padding-right: 150px;
     padding-top: 30px;
-
 }
 
 .price-col1 {
     display: inline-block;
-    padding-right: 150px;
     padding-top: 30px;
 }
-
-.price-col2 {
-    display: inline-block;
-    padding-right: 150px;
-    padding-top: 30px;
-}
-
-.price-col3 {
-    display: inline-block;
-    padding-top: 30px;
-}
-
-
 

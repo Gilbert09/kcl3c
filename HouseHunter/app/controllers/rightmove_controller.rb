@@ -1,6 +1,4 @@
-require 'json'
-
-class Rightmove
+class RightmoveController < ApplicationController
   @data = Hash.new
 
   def initialize(propertyData)

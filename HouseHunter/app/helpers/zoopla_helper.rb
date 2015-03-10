@@ -1,0 +1,2 @@
+module ZooplaHelper
+end

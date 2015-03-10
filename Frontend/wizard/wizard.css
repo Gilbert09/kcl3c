@@ -346,13 +346,13 @@ body {
     cursor: pointer;
 }
 
-.wizard-previous {
+.wizard-previous, .edit-button {
 	position: relative;
 	height: 70px;
 	width: 150px;
 }
 
-.wizard-previous span {
+.wizard-previous span, .edit-button span {
 	position: absolute;
 	top: 35%;
 	left: 20%;
@@ -360,7 +360,7 @@ body {
 	border-bottom: 1px solid #9D9D9D;
 }
 
-.wizard-previous span:hover {
+.wizard-previous span:hover, .edit-button span:hover {
 	cursor: pointer;
 	color: #27ae60;
 }
@@ -412,4 +412,39 @@ body {
 
 #wizard-room-title {
   display:none;
+}
+
+.review-tab h2 {
+  border:none !important;
+  margin: none;
+  margin-left: 20px !important;
+  margin-bottom: 0 !important;
+  color: #838383;
+}
+
+.edit-button {
+  width: auto !important;
+  height: auto;
+  border: none !important;
+  float: right;
+}
+
+.review-tab {
+  padding: 3px !important;
+  width: 594px !important;
+	border-right: 0px solid #D7D7D7 !important;
+  border-left: 0px solid #D7D7D7;
+  margin-left: 0px !important;
+}
+
+.review-info {
+  padding: 3px !important;
+  width: 574px !important;
+  padding-left: 25px !important;
+  border-top: 0px solid #D7D7D7 !important;
+}
+
+.review-info p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

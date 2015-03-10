@@ -1,6 +1,4 @@
-require 'json'
-
-class Zoopla
+class ZooplaController < ApplicationController
   @data = Hash.new
   
   def initialize(propertyData)
