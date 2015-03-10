@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20150304162650) do
     t.string "first_name",         limit: 255
     t.string "last_name",          limit: 255
     t.string "phone_number",       limit: 255
+    t.string "email",              limit: 255
     t.string "encrypted_password", limit: 128
     t.string "confirmation_token", limit: 128
     t.string "remember_token",     limit: 128

@@ -1,0 +1,2 @@
+class RightmoveController < ApplicationController
+end

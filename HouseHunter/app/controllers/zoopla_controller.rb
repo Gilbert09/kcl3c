@@ -1,0 +1,2 @@
+class ZooplaController < ApplicationController
+end
