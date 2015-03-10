@@ -346,13 +346,13 @@ body {
     cursor: pointer;
 }
 
-.wizard-previous {
+.wizard-previous, .edit-button {
 	position: relative;
 	height: 70px;
 	width: 150px;
 }
 
-.wizard-previous span {
+.wizard-previous span, .edit-button span {
 	position: absolute;
 	top: 35%;
 	left: 20%;
@@ -360,7 +360,7 @@ body {
 	border-bottom: 1px solid #9D9D9D;
 }
 
-.wizard-previous span:hover {
+.wizard-previous span:hover, .edit-button span:hover {
 	cursor: pointer;
 	color: #27ae60;
 }
