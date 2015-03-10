@@ -1183,9 +1183,9 @@ input[type=range]::-webkit-slider-thumb {
 }
 .square-steps{
     background: none repeat scroll 0 0 #293a42;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #27ae60;
-    border: 1px solid #196E3D;
+    border: 3px solid #196E3D;
     color: #ffffff;
     display: table-cell;
     font-size: 18px;
