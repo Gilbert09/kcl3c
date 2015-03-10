@@ -980,6 +980,7 @@ margin-bottom: 1px;
 }
 
 .content-priceplan{
+    padding-top:30px;
     text-align: center;
     width: 100%;
     height:300px;
@@ -988,15 +989,24 @@ margin-bottom: 1px;
 }
 
 .content-slider {
+    padding-top:30px;
     text-align: center;
     text:40px;
+    height:300px;
+    background: #27ae60;
+    position: relative;
+}
+
+#content-steps {
+    padding: 30px;
+    text-align: center;
+    width: 100%;
     height:300px;
     background: #D7D7D7;
     position: relative;
 }
-
-.content-steps {
-    height:500px;
+.content-steps{
+    display: inline-block;
     background: #D7D7D7;
     position: relative;
 }
@@ -1129,7 +1139,7 @@ input[type=range]::-webkit-slider-runnable-track {
     cursor: pointer;
     animate: 0.2s;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #27ae60;
+    background: #ffffff;
     border-radius: 25px;
     border: 0px solid #000101;
 }
@@ -1139,15 +1149,29 @@ input[type=range]::-webkit-slider-thumb {
     height: 40px;
     width: 20px;
     border-radius: 7px;
-    background: #196E3D;
+    background:#196E3D;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -14px;
 }
+.square-steps{
+    background: none repeat scroll 0 0 #293a42;
+    border-radius: 5px;
+    background-color: #27ae60;
+    border: 1px solid #196E3D;
+    color: #ffffff;
+    display: table-cell;
+    font-size: 14px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+}
 
 .price-circles{
     background: none repeat scroll 0 0 #293a42;
-    border-radius: 50px;
+    border-radius: 20px;
     background-color: #27ae60;
     border: 3px solid #196E3D;
     color: #ffffff;
@@ -1157,7 +1181,7 @@ input[type=range]::-webkit-slider-thumb {
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
-    width: 100px;
+    width: 125px;
 }
 .price-circles strong {
     font-size: 28px;
@@ -1174,7 +1198,7 @@ input[type=range]::-webkit-slider-thumb {
     padding-top: 30px;
 }
 
-.price-col3 {
+.price-col1 {
     display: inline-block;
     padding-top: 30px;
 }
