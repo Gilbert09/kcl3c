@@ -775,10 +775,34 @@ margin-bottom: 1px;
         display: none;
     }
     #listing-description {
-    width:100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     #listing-map {
-    width: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-floorplan{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;       
+    }
+    #listing-school{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-transport{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #listing-features{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
