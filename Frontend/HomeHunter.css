@@ -771,8 +771,14 @@ margin-bottom: 1px;
         width:100%;
         margin-bottom: 10px;
     }
-    #divider-bar-temp{
+    #divider-bar-temp {
         display: none;
+    }
+    #listing-description {
+    width:100%;
+    }
+    #listing-map {
+    width: 100%;
     }
 }
 
