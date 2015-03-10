@@ -7,7 +7,7 @@
 <body>
   <div id="header">
     <% if signed_in? -%> 
-      <%= link_to_function t('.sign_out'), 'javascript:document.cookie="";window.location="/";' %>
+      <%= link_to t('.sign_out'), :data => {:id => "logout"} %>
     <% else -%>
       <%= link_to t('.sign_in'), sign_in_path %>
     <% end -%>
