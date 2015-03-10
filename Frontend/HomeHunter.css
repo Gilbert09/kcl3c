@@ -59,7 +59,9 @@ img.listing{
 
 .slider-container{
     max-height: 500px;
-    margin:10px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom:0px;
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -77,7 +79,7 @@ img.listing{
     border-radius: 2px;
     float: right;
     width: 400px;
-
+    height: 67px;
 }
 
 .listing-icon{
@@ -126,26 +128,21 @@ img.listing{
     border-radius: 2px;
     display: inline-block;
     margin: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
     text-align:center;
     font-size: large;
-
 }
 
 #listing-info{
     background-color: #fff;
-    padding:10px;
-    margin: 10px;
+    padding:0px;
     border-radius: 2px;
     display: inline-block;
     margin: 10px;
     margin-top: 0px;
     margin-bottom: 15px;
-    padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
     text-align:left;
