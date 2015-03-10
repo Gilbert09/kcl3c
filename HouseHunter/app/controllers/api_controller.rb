@@ -24,7 +24,7 @@ class ApiController < ApplicationController
     return true
   end
 
-  def saveDraft(jsonData)
+  def saveDraft(jsonData, stageCode)
     return true
   end
 end
