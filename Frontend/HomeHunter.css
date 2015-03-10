@@ -1025,7 +1025,7 @@ margin-bottom: 1px;
 }
 
 .content-priceplan{
-    padding-right: 80px;
+    padding-right: 50px;
     text-align: center;
     vertical-align: top;
     display: inline-block;
@@ -1258,12 +1258,12 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .price-col {
-    padding-right: 80px;
+    padding-right: 50px;
     height: 200px;
     display: inline-block;
     width: 125px;
     font-size: 14px;
-    text-align: justify;
+    text-align: center;
 }
 .price-col h2{
     text-align: center;
@@ -1274,7 +1274,7 @@ input[type=range]::-webkit-slider-thumb {
     display: inline-block;
     width: 125px;
     font-size: 14px;
-    text-align: justify;
+    text-align: center;
 
 }
 
