@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < Clearance::UsersController
   def new
     @user = User.new(params[:users])
 
