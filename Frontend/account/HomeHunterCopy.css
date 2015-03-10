@@ -813,8 +813,13 @@ margin-bottom: 1px;
     margin-bottom: 15px;
     border-radius: 2px;
     width: 1000px;
-    color: #838383;
-    
+    color: #838383;    
+}
+
+.test{
+    margin-left: auto;
+    margin-right: auto;
+    width: 310px;
 }
 
 /*----- End of account CSS -----*/
@@ -984,7 +989,6 @@ footer {
 .form-control-group input {
     display: inline-block;
     vertical-align: middle;
-    margin: 0px center;
     width: 300px;
     border-top: 1px solid #D7D7D7;
     border-right: 1px solid #D7D7D7;
