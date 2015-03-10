@@ -220,7 +220,6 @@ img.listing{
     width: 100%;
     display: inline-block;
     text-align: left;
-    margin-bottom: 15px;
     vertical-align: top;
 }
 
@@ -771,8 +770,14 @@ margin-bottom: 1px;
         width:100%;
         margin-bottom: 10px;
     }
-    #divider-bar-temp{
+    #divider-bar-temp {
         display: none;
+    }
+    #listing-description {
+    width:100%;
+    }
+    #listing-map {
+    width: 100%;
     }
 }
 
@@ -948,12 +953,13 @@ margin-bottom: 1px;
 
 
 /*----- End of account CSS -----*/
-
-
-
-
 .content-image {
     float: left;
+}
+
+.content-image img{
+    height: 250px;
+    width: 350px;
 }
 
 .content-step-text {
