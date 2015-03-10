@@ -7,7 +7,7 @@
 <body>
   <div id="header">
     <% if signed_in? -%> 
-      <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';">Sign Out</a>
+      <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';document.location='/'">Sign Out</a>
     <% else -%>
       <%= link_to t('.sign_in'), sign_in_path %>
     <% end -%>
