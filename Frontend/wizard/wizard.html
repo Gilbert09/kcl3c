@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div data-step="0" class="wizard-container showing">
+    <div data-step="0" class="wizard-container hidden">
         <div class="wizard-header">
             <span>Can you please provide us with some personal details and confirm those that we already know.</span>
         </div>
@@ -492,96 +492,98 @@
         </div>
     </div>
 
-    <div data-step="9" class="wizard-container hidden">
+    <div data-step="9" class="wizard-container showing">
         <div class="wizard-header">
             <span>Please check that all of your information is correct. You will not be able to go back and make any changes after this page.</span>
         </div>
+
         <div class="wizard-content-standard">
 
-        <div class="review-tab">
-          <h2>Personal Information</h2>
-          <div class="review-info">
-            <p>Name: Joe Bloggs</p>
-            <p>Email: examples@examples.com</p>
-            <p>Phone: 12345 678901</p>
+          <div class="review-tab">
+            <h2>Personal Information</h2>
+            <div class="review-info">
+              <p>Name: Joe Bloggs</p>
+              <p>Email: examples@examples.com</p>
+              <p>Phone: 12345 678901</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
           </div>
-          <div class="edit-button">
-            <span>Edit</span>
+
+          <div class="review-tab">
+            <h2>Address</h2>
+            <div class=review-info>
+              <p>Address: 12 Some Street, Some Town, Some Country</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
           </div>
+
+          <div class="review-tab">
+            <h2>General Information</h2>
+            <div class="review-info">
+              <p>Property Type: Detached</p>
+              <p>Number of floors: 4</p>
+              <p>Entrance Floor: 0</p>
+              <p>Condition: Good</p>
+              <p>Bedrooms: 2</p>
+              <p>Bathrooms: 1</p>
+              <p>Reception Rooms: 1</p>
+              <p>Other Rooms: 1</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Other Information</h2>
+            <div class=review-info>
+              <p>Outdoor Spaces: Rear Garden, Front Garden</p>
+              <p>Parking: Driveway</p>
+              <p>Heating: Central</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Room Information</h2>
+            <div class="review-info">
+              <p>Bedroom: Master Bedroom, 3m x 4m</p>
+              <p>Bedroom: Guest Bedroom, 4m x 3m</p>
+              <p>Bathrooms: Bathroom, 3m x 2m</p>
+              <p>Reception Room: Living Room, 4m x 3m</p>
+              <p>Other Room: Kitchen, 4m x 4m</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Keywords and Description</h2>
+            <div class="review-info">
+              <p>Pre-war build, working fireplace in kitchen, large garden with small shed<p>
+              <p>Large apple tree in the garden</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Photos</h2>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="review-tab">
-          <h2>Address</h2>
-          <div class=review-info>
-            <p>Address: 12 Some Street, Some Town, Some Country</p>
-          </div>
-          <div class="edit-button">
-            <span>Edit</span>
-          </div>
-        </div>
-
-        <div class="review-tab">
-          <h2>General Information</h2>
-          <div class="review-info">
-            <p>Property Type: Detached</p>
-            <p>Number of floors: 4</p>
-            <p>Entrance Floor: 0</p>
-            <p>Condition: Good</p>
-            <p>Bedrooms: 2</p>
-            <p>Bathrooms: 1</p>
-            <p>Reception Rooms: 1</p>
-            <p>Other Rooms: 1</p>
-          </div>
-          <div class="edit-button">
-            <span>Edit</span>
-          </div>
-        </div>
-
-        <div class="review-tab">
-          <h2>Other Information</h2>
-          <div class=review-info>
-            <p>Outdoor Spaces: Rear Garden, Front Garden</p>
-            <p>Parking: Driveway</p>
-            <p>Heating: Central</p>
-          </div>
-          <div class="edit-button">
-            <span>Edit</span>
-          </div>
-        </div>
-
-        <div class="review-tab">
-          <h2>Room Information</h2>
-          <div class="review-info">
-            <p>Bedroom: Master Bedroom, 3m x 4m</p>
-            <p>Bedroom: Guest Bedroom, 4m x 3m</p>
-            <p>Bathrooms: Bathroom, 3m x 2m</p>
-            <p>Reception Room: Living Room, 4m x 3m</p>
-            <p>Other Room: Kitchen, 4m x 4m</p>
-          </div>
-          <div class="edit-button">
-            <span>Edit</span>
-          </div>
-        </div>
-
-        <div class="review-tab">
-          <h2>Keywords and Description</h2>
-          <div class="review-info">
-            <p>Pre-war build, working fireplace in kitchen, large garden with small shed<p>
-            <p>Large apple tree in the garden</p>
-          </div>
-          <div class="edit-button">
-            <span>Edit</span>
-          </div>
-        </div>
-
-        <div class="review-tab">
-          <h2>Photos</h2>
-          <div class="edit-button">
-            <span>Edit</span>
-          </div>
-        </div>
-
-        </div>
         <div class="wizard-bottom">
           <div class="wizard-previous float-left">
               <span>Back</span>
@@ -590,6 +592,7 @@
               <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
           </div>
         </div>
+      </div>
     </div>
 
     <div data-step="10" class="wizard-container hidden">
