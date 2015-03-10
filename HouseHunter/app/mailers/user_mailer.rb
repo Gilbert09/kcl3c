@@ -7,6 +7,11 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Please confirm your email address')
   end
 
+  def confirm_password(user)
+    @user = user
+    mail(to: @user.email, subject: 'Your password has been changed')
+  end
+
   def forgot_password(user)
     @user = user
     @url = 'http://homehunter.com/forgotpassword'
