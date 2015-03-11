@@ -974,6 +974,10 @@ margin-bottom: 1px;
         width:70%;
         padding: 16px 10px;
     }
+    #overlay-center-fineprint {
+        margin-top: 5px;
+        font-size: 15px;
+    }
 }
 
 /*----- Start of account CSS -----*/
