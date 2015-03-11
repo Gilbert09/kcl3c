@@ -824,6 +824,10 @@ margin-bottom: 1px;
     #menu-top {
         width: 80px;
     }
+    .content-image img{
+        height: 250px;
+        width: 350px;
+    }
 }
 
 @media(min-width:900px){
@@ -920,6 +924,10 @@ margin-bottom: 1px;
         margin-top: 25px;
         font-size: 15px;
     }
+    .content-image img{
+        height: 250px;
+        width: 350px;
+    }
 }
 
 @media(max-width: 500px){
@@ -977,6 +985,9 @@ margin-bottom: 1px;
     #overlay-center-fineprint {
         margin-top: 5px;
         font-size: 15px;
+    }
+    .content-image img{
+        width: 100%;
     }
 }
 
@@ -1076,11 +1087,6 @@ margin-bottom: 1px;
 /*----- End of account CSS -----*/
 .content-image {
     float: left;
-}
-
-.content-image img{
-    height: 250px;
-    width: 350px;
 }
 
 .content-step-text {
