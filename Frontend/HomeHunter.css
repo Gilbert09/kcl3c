@@ -959,6 +959,10 @@ margin-bottom: 1px;
     #menu-top {
         width: 40px;
     }
+    input[type=submit] {
+        width:70%;
+        padding: 16px 10px;
+    }
 }
 
 /*----- Start of account CSS -----*/
