@@ -909,10 +909,26 @@ margin-bottom: 1px;
         width: 100%;
         max-width: 300px;
     }
-        #content-steps {
+    #content-steps {
         height:1000px;
         width:100%;
         max-width: 200px;
+    }
+    .overlay-listers {
+        /*visibility: hidden;*/
+        position: absolute; 
+        width: 100%;
+        max-width: 300px;
+        height: 230px;
+        margin: 0px auto;
+        
+        top: 0%;
+        right: 5%;
+        left: 5%;
+    }
+    #index-small {
+        margin-top: 300px !important;
+        margin-left: 0px !important;
     }
 }
 
