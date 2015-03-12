@@ -703,8 +703,8 @@ margin-bottom: 1px;
     float:left;
     display:inline-block;
     padding-right:5px;
-
-
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #account-sidebar ul{
@@ -748,6 +748,7 @@ margin-bottom: 1px;
 .sidebar-selected h1 {
     color: #27ae60 !important;
 }
+
 .account-content{
     width:1100px;
     height:100%;
@@ -759,7 +760,10 @@ margin-bottom: 1px;
     display:inline-block;
     width:800px;
     height:100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
 #accountSum-prompt{
     width:800px;
     height:400px;
@@ -813,7 +817,7 @@ margin-bottom: 1px;
     margin-bottom: 15px;
     border-radius: 2px;
     width: 1000px;
-    color: #838383;    
+    color: #838383;
 }
 
 .test{
