@@ -827,6 +827,12 @@ margin-bottom: 1px;
         height: 250px;
         width: 350px;
     }
+    #overlay-center-text {
+        font-size: 22px;
+    }
+    #overlay-center-text span {
+        font-size: 12px;
+    }
 }
 
 @media(min-width:900px){
@@ -926,6 +932,9 @@ margin-bottom: 1px;
     .content-image img{
         height: 250px;
         width: 350px;
+    }
+    #overlay-center-text span {
+        font-size: 14px;
     }
 }
 
