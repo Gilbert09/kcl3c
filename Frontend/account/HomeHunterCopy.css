@@ -701,10 +701,12 @@ margin-bottom: 1px;
     height: 100%;
     background-color:#e5e5e5;
     float:left;
-    display:inline-block;
+    display:inline;
     padding-right:5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgb(100,100,100);
+  
 }
 
 #account-sidebar ul{
@@ -820,10 +822,24 @@ margin-bottom: 1px;
     color: #838383;
 }
 
-.test{
+.center{
     margin-left: auto;
     margin-right: auto;
     width: 310px;
+}
+
+#box {
+     box-shadow: 0px 2px 5px rgb(100,100,100);
+    background: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    width: 850px;
+    color: #838383;
 }
 
 /*----- End of account CSS -----*/
