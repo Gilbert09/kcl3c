@@ -767,8 +767,7 @@ margin-bottom: 1px;
         width: 100%;
     }
     .footer-col {
-        width:100%;
-        margin-bottom: 10px;
+        width:215px;
     }
     #divider-bar-temp {
         display: none;
@@ -1006,6 +1005,10 @@ margin-bottom: 1px;
     }
     #menu-top span {
         display: none;
+    }
+    .footer-col {
+        width:100%;
+        margin-bottom: 10px;
     }
 }
 
