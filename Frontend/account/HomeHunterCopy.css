@@ -838,7 +838,7 @@ margin-bottom: 1px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 2px;
-    width: 850px;
+    width: 880px;
     color: #838383;
 }
 
@@ -1030,8 +1030,8 @@ footer {
 
 .account-listing {
   background-color: #ffffff;
-  width: 100%;
-	height: auto;
+  width: 90%;
+  height: auto;
   display: inline-block;
   margin-top: 0.3em;
   margin-bottom: 0.2em;
