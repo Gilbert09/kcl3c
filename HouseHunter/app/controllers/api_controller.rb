@@ -50,6 +50,8 @@ class ApiController < ApplicationController
 
     when 9
 
+    else 
+      return "else"
     end
 
     return true
