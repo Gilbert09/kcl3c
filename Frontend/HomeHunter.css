@@ -916,15 +916,14 @@ margin-bottom: 1px;
         padding-top:20px;
     }
     #overlay-center-text {
-       padding: 40px;
-       display: table-cell;
-       font-size: 14px;
-       text-align: center;
-       vertical-align: middle;
-   }
-   #overlay-center-text strong{
-       font-size: 30px;
-   }
+        font-size: 30px;
+        margin: 50px;
+        margin-bottom: 40px;
+    }
+    #overlay-center-fineprint {
+        margin-top: 25px;
+        font-size: 15px;
+    }
     .content-image img{
         height: 250px;
         width: 350px;
