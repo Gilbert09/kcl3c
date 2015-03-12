@@ -989,6 +989,21 @@ margin-bottom: 1px;
     .content-image img{
         width: 100%;
     }
+    #submit-login, #submit-register {
+        width:75%;
+        padding: 16px 0px;
+    }
+    #other-links {
+        width: 75% !important;
+        font-size: 14px;
+    }
+    input[type="password"], input[type="text"]{
+        width:50% !important;
+        font-size: 12px;
+    }
+    #content-login, #content-register {
+        padding: 10px 0px;
+    }
 }
 
 /*----- Start of account CSS -----*/
@@ -1234,6 +1249,11 @@ footer {
     border-radius: 0px 0px 10px 10px;
 
     /*opacity: 0.9;*/
+}
+
+#other-links {
+    width: 295px; 
+    margin: 0 auto;
 }
 
 .form-control-group {
