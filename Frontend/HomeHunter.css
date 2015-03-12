@@ -1119,12 +1119,21 @@ margin-bottom: 1px;
 .content-image {
     float: left;
 }
+.content-image-fees {
+    margin: 20px;
+    float: left;
+}
 
 .content-step-text {
     min-height: 250px;
 }
 .content-fees-text {
+    margin: 20px;
     min-height: 150px;
+}
+.content-fees-text h2 {
+    margin-top: 40px;
+
 }
 .content-break {
     clear:both;
