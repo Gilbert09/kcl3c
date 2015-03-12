@@ -341,7 +341,7 @@ select:focus{
 }
 
 .footer-col {
-    /*width: 33%;*/
+    width: 490px;
     text-align: left;
     display: inline-block;
     vertical-align: top;
