@@ -842,6 +842,10 @@ margin-bottom: 1px;
     color: #838383;
 }
 
+#no-margin {
+    margin: 0px;
+}
+
 /*----- End of account CSS -----*/
 
 
