@@ -10,11 +10,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
+        function rounding(num) {
+            num = num / 10000;
+            return Math.round(num)*10000;
+        }
+
+        //the saving the user will make
+        function saving_cost(num) {
+          return Math.round(num*0.015*1.2);
+        }
+
+        //the value of their property
+        function value(num) {
+          num = num / 40;
+          num = rounding(Math.pow((num/1.19),5.29345));
+          return num;
+        }
+
         function showValue(num) {
             var result = document.getElementById('result');
             var saving = document.getElementById('saving');
-            result.innerHTML = '£'+num;
-            saving.innerHTML = '£'+ Math.round(num*0.015*1.2);
+
+            house_value = value(num);
+
+            result.innerHTML = '£'+ house_value
+            saving.innerHTML = '£'+ saving_cost(house_value);
         }
     </script>
 </head>
@@ -163,7 +183,7 @@
                 <div><h2>My property is worth: </h2></div>
                 <strong><div id="result" style="height:40px;" >£0</div></strong>
                 <div>
-                    <input type="range" id="sliderBar" min="0" max="1000000" step="5000" value="0"
+                    <input type="range" id="sliderBar" min="240" max="1000" step="5" value="0"
                            onChange="showValue(this.value);"/>
                 </div><br>
                 <div><h2>You could save <div id="saving">£0</div> with Home Hunter.</h2></div>
@@ -173,14 +193,14 @@
     </div>
 </div>
     <div id="content-steps">
-        <div><h2>4 Quick steps to selling your property</h2></div>
+        <div><h2>5 Quick steps to selling your property</h2></div>
         <div class="content-steps">
             <div class="square-steps"><strong>Step 1</strong></div>
-            <div class="text-steps"><h2><strong>Register</strong></h2>Create an account to gain access to our services.</div>
+            <div class="text-steps"><h2><strong>Register</strong></h2>Create an account with us.</div>
         </div>
         <div class="content-steps">
             <div class="square-steps"><strong>Step 2</strong></div>
-            <div class="text-steps"><h2><strong>Create</strong></h2>Login and create your property listing.</div>
+            <div class="text-steps"><h2><strong>Create</strong></h2>Create your property listing.</div>
         </div>
         <div class="content-steps">
             <div class="square-steps"><strong>Step 3</strong></div>
