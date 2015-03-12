@@ -423,6 +423,7 @@ select:focus{
     margin-top: 3px;
     margin-bottom: 15px;
     clear:both;
+    background-color: #27AE60;
 }
 
 .align-bar{
@@ -1143,6 +1144,11 @@ margin-bottom: 1px;
     position: relative;
 }
 
+#content-priceplan1{
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+}
 .content-priceplan{
     padding-right: 30px;
     padding-left: 30px;
