@@ -740,14 +740,14 @@ margin-bottom: 1px;
         position: absolute;
         margin: 0px auto;
 
-        top: 250px;
+        top: 235px;
         left: 5%;
     }
     .overlay-listers {
         /*visibility: hidden;*/
         position: absolute; 
         width: 400px;
-        height: 200px;
+        height: 170px;
         margin: 0px auto;
         
         top: 0%;
@@ -883,7 +883,7 @@ margin-bottom: 1px;
     .overlay-listers {
         position: relative; 
         width: 200px;
-        height: 320px;
+        height: 300px;
 
         padding-top: 10px;
         float:right;
@@ -953,8 +953,8 @@ margin-bottom: 1px;
         /*visibility: hidden;*/
         position: absolute; 
         width: 90%;
-        max-width: 270px;
-        height: 240px;
+        max-width: 230px;
+        height: 220px;
         margin: 0px auto;
         
         top: 0%;
@@ -966,7 +966,7 @@ margin-bottom: 1px;
         margin-left: 0px !important;
     }
     .overlay-center {
-        top: 270px;
+        top: 250px;
         height: 220px;
         max-width: 400px;
     }
