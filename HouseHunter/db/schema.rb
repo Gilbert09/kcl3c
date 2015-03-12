@@ -14,14 +14,15 @@
 ActiveRecord::Schema.define(version: 20150304162650) do
 
   create_table "addresses", force: :cascade do |t|
-    t.integer  "property_id",    limit: 4
-    t.string   "address_line_1", limit: 255
-    t.string   "address_line_2", limit: 255
-    t.string   "town_city",      limit: 255
-    t.string   "post_code",      limit: 255
-    t.string   "county",         limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "property_id",       limit: 4
+    t.string   "address_line_1",    limit: 255
+    t.string   "address_line_2",    limit: 255
+    t.string   "town_city",         limit: 255
+    t.string   "post_code",         limit: 255
+    t.string   "county",            limit: 255
+    t.string   "house_name_number", limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150304162650) do
 
   create_table "multimedia", force: :cascade do |t|
     t.integer  "property_id",     limit: 4
+    t.integer  "room_id",         limit: 4
     t.integer  "index_number",    limit: 4
     t.string   "multimedia_type", limit: 255
     t.string   "name",            limit: 255
@@ -44,20 +46,25 @@ ActiveRecord::Schema.define(version: 20150304162650) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.integer  "user_id",              limit: 4
-    t.integer  "price",                limit: 4
-    t.integer  "number_of_bedrooms",   limit: 4
-    t.integer  "number_of_bathrooms",  limit: 4
-    t.integer  "number_of_receptions", limit: 4
-    t.string   "kitchen_type",         limit: 255
-    t.string   "keyword",              limit: 255
-    t.string   "property_type",        limit: 255
-    t.string   "status",               limit: 255
-    t.string   "parking",              limit: 255
-    t.string   "outdoor_spaces",       limit: 255
-    t.text     "description",          limit: 65535
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.integer  "user_id",               limit: 4
+    t.integer  "price",                 limit: 4
+    t.integer  "number_of_bedrooms",    limit: 4
+    t.integer  "number_of_bathrooms",   limit: 4
+    t.integer  "number_of_receptions",  limit: 4
+    t.integer  "number_of_other_rooms", limit: 4
+    t.integer  "number_of_floors",      limit: 4
+    t.integer  "entrance_floor",        limit: 4
+    t.string   "kitchen_type",          limit: 255
+    t.string   "keyword",               limit: 255
+    t.string   "property_type",         limit: 255
+    t.string   "status",                limit: 255
+    t.string   "parking",               limit: 255
+    t.string   "outdoor_space",         limit: 255
+    t.string   "condition",             limit: 255
+    t.string   "heating",               limit: 255
+    t.text     "description",           limit: 65535
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "rooms", force: :cascade do |t|
