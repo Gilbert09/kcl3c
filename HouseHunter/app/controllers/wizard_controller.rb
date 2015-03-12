@@ -8,7 +8,7 @@ class WizardController < ApplicationController
   def draft
     if signed_in?
       api = ApiController.new
-      result = api.saveDraft(JSON.parse(params["data"]), params["stage"])
+      result = api.saveDraft(JSON.parse(params["data"])["data"], params["stage"])
       render :json => '{ "status": "Complete - ' + result + '"}'
     else
       render :json => '{ "Error": "User not authenticated - " }'
