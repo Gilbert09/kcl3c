@@ -27,7 +27,7 @@ class ApiController < ApplicationController
   def saveDraft(jsonData, stage)
     case stage
     when "1"
-      user = User.find(jsonData.data.id)
+      user = User.find(jsonData["id"])
       user.first_name = jsonData["first_name"]
       user.last_name = jsonData["last_name"]
       user.email = jsonData["email"]
