@@ -846,6 +846,10 @@ margin-bottom: 1px;
     margin: 0px;
 }
 
+#next-step {    
+    float: right;  
+}
+
 /*----- End of account CSS -----*/
 
 
