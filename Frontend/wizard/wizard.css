@@ -18,7 +18,6 @@ body {
 
 .wizard-header {
 	background-color: #fff;
-	border-radius: 2px 2px 0 0;
 	padding: 25px 30px;
 	color: #838383;
 }
@@ -448,4 +447,59 @@ body {
 .review-info p {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.wizard-progress-bar {
+  height: 7px;
+  background-color: #27ae60;
+  border-radius: 3px 0px 0px 0px;
+}
+
+#progress-bar-0 {
+  width: 8%;
+}
+
+#progress-bar-1 {
+  width: 16%;
+}
+
+#progress-bar-2 {
+  width: 24%;
+}
+
+#progress-bar-3 {
+  width: 32%;
+}
+
+#progress-bar-4 {
+  width: 40%;
+}
+
+#progress-bar-5 {
+  width: 48%;
+}
+
+#progress-bar-6 {
+  width: 56%;
+}
+
+#progress-bar-7 {
+  width: 64%;
+}
+
+#progress-bar-8 {
+  width: 72%;
+}
+
+#progress-bar-9 {
+  width: 80%;
+}
+
+#progress-bar-10 {
+  width: 88%;
+}
+
+#progress-bar-11 {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
 }
