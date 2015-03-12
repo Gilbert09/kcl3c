@@ -1,4 +1,5 @@
 class ApiController < ApplicationController
+  include Clearance::User
   
   def sendProperty(jsonData)
     return true
