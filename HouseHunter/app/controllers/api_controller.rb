@@ -27,11 +27,13 @@ class ApiController < ApplicationController
   def saveDraft(jsonData, stage)
     case stage
     when 1
-      user = User.new
+      user = User.find(jsonData.id)
       user.first_name = jsonData.first_name;
       user.last_name = jsonData.last_name;
       user.email = jsonData.email;
       user.phone_number = jsonData.phone_number;
+      user.save
+      return user.id
     when 2
 
     when 3
