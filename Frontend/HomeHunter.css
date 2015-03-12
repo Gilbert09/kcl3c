@@ -916,14 +916,15 @@ margin-bottom: 1px;
         padding-top:20px;
     }
     #overlay-center-text {
-        font-size: 30px;
-        margin: 50px;
-        margin-bottom: 40px;
-    }
-    #overlay-center-fineprint {
-        margin-top: 25px;
-        font-size: 15px;
-    }
+       padding: 40px;
+       display: table-cell;
+       font-size: 14px;
+       text-align: center;
+       vertical-align: middle;
+   }
+   #overlay-center-text strong{
+       font-size: 30px;
+   }
     .content-image img{
         height: 250px;
         width: 350px;
@@ -979,8 +980,8 @@ margin-bottom: 1px;
         width: 40px;
     }
     input[type=submit] {
-        width:70%;
-        padding: 16px 10px;
+        width:70% !important;
+        padding: 16px 10px !important;
     }
     #overlay-center-fineprint {
         margin-top: 5px;
