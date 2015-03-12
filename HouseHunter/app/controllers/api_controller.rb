@@ -1,5 +1,4 @@
 class ApiController < ApplicationController
-  include Clearance::User
   
   def sendProperty(jsonData)
     return true
@@ -25,7 +24,7 @@ class ApiController < ApplicationController
     return true
   end
 
-  def saveDraft(jsonData, stage)
+  def saveDraft(jsonData, stage, current_user)
     case stage
     when "1"
       user = current_user
