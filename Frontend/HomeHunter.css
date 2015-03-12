@@ -1004,6 +1004,9 @@ margin-bottom: 1px;
     #content-login, #content-register {
         padding: 10px 0px;
     }
+    #menu-top span {
+        display: none;
+    }
 }
 
 /*----- Start of account CSS -----*/
