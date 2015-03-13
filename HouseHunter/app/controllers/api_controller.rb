@@ -47,13 +47,24 @@ class ApiController < ApplicationController
       address.post_code = jsonData["postcode"]
       address.save
     when "3"
-
+      property.property_type = jsonData["property_date"]
+      property.entrance_floor = jsonData["entrance_floor"]
+      property.number_of_bedrooms = jsonData["number_of_bedrooms"]
+      property.number_of_receptions = jsonData["number_of_receptions"]
+      property.number_of_floors = jsonData["number_of_floors"]
+      property.condition = jsonData["condition"]
+      property.number_of_bathrooms = jsonData["number_of_bathrooms"]
+      property.number_of_other_rooms = jsonData["number_of_other_rooms"]
+      property.save
     when "4"
-
+      property.outdoor_space = jsonData["outdoor_space"]
+      property.save
     when "5"
-
+      property.parking = jsonData["parking"]
+      property.save
     when "6"
-
+      property.heating = jsonData["heating"]
+      property.save
     when "7"
 
     when "8"
