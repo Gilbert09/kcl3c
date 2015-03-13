@@ -1564,7 +1564,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 .square-steps-howitworks {
     background: none repeat scroll 0 0 #293a42;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #27ae60;
     border: 3px solid #196E3D;
     color: #ffffff;
