@@ -268,8 +268,7 @@ ul.hiw li {
     color: #27ae60;
     background-color: rgb(224, 224, 224);
     border-radius: 3px 0px 0px 3px;
-    display: block;
-    height: 48px;
+    height: 50px;
     line-height: 48px;
     text-align: center;
     width: 50px;
@@ -360,10 +359,7 @@ select:focus{
 #content-login, #content-register {
     box-shadow: 0px 2px 5px rgb(100,100,100);
     background: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 2px;
@@ -770,7 +766,7 @@ margin-bottom: 1px;
         display: none;
     }
     #content-login, #content-register {
-        width: 100%;
+        width: 96%;
     }
     .footer-col {
         width:215px;
@@ -983,6 +979,9 @@ margin-bottom: 1px;
 }
 
 @media(max-width: 500px){
+    #content-login, #content-register {
+        width: 100%;
+    }
     #content-priceplan{
         height:1050px;
         width: 100%;
@@ -1223,15 +1222,6 @@ margin-bottom: 1px;
     margin-right: auto;
     width: 500px;
     margin-top: 5px;
-}
- 
-#box {
-    box-shadow: 0px 2px 5px rgb(100,100,100);
-    background: #fff;
-    padding: 10px;
-    border-radius: 2px;
-    width: 760px;
-    color: #838383;
 }
  
 #no-margin {
@@ -1506,16 +1496,14 @@ footer {
     margin-bottom: 6px;
 }
 
-.form-control-group label {
+/*.form-control-group label {
     text-align: right;
-    display: inline-block;
     vertical-align: middle;
     width: 8.2em;
     margin: 0 1em 0 0;
-}
+} Does this do anything? */
 
 .form-control-group input {
-    display: inline-block;
     vertical-align: middle;
     width: 300px;
     border-top: 1px solid #D7D7D7;
@@ -1673,7 +1661,3 @@ input[type=range]::-webkit-slider-thumb {
     display:block;
 }
 
-.details-form {
-    width:305px;
-    margin-right: 0px;
-}
