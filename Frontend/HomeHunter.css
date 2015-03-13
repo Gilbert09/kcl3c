@@ -1044,7 +1044,6 @@ margin-bottom: 1px;
 
 #account-sidebar{
     width: 200px;
-    height: 100%;
     background-color:#e5e5e5;
     float:left;
     display:inline;
@@ -1104,6 +1103,7 @@ margin-bottom: 1px;
 .account-right{
     display:inline-block;
     width:700px;
+    min-height: 425px;
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 5px rgb(100,100,100);
@@ -1186,7 +1186,7 @@ margin-bottom: 1px;
 }
  
 #no-margin {
-    margin: 0px;
+    margin-left: 0px !important;
 }
  
 #next-step {    
@@ -1318,7 +1318,6 @@ footer {
     background: #bdc3c7;
     margin: 0px auto;
     text-align: left;
-    margin-top: 20px;
 }
 
 #footer-legal {
