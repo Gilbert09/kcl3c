@@ -838,10 +838,26 @@ margin-bottom: 1px;
         font-size: 12px;
     }
     .account-content {
-        width: 100% !important;
+        width: 100%;
     }
     .account-right {
-        width: 65% !important;
+        width:72%;
+    }
+    #account-sidebar {
+        width: 22%;
+        max-width: 200px;
+        margin-right: 1%;
+    }
+    #account-sidebar h1{
+        font-size: 20px;
+    }
+    .front-house-image img {
+        display: block;
+        float: center;
+        margin: 0px auto;
+    }
+    #next-step {    
+        float: right;  
     }
 }
 
@@ -946,6 +962,24 @@ margin-bottom: 1px;
     #overlay-center-text span {
         font-size: 14px;
     }
+    .account-right {
+        width: 760px;
+    }
+    #account-sidebar{
+        width: 200px;
+        margin-right: 15px;
+    }
+    .account-content{
+        width:1000px;
+    }
+    .front-house-image img {
+        display: inline-block;
+        float: right;
+        margin-left: 15px;
+    }
+    #next-step {    
+        float: right;  
+    }
 }
 
 @media(max-width: 500px){
@@ -1045,23 +1079,36 @@ margin-bottom: 1px;
         width: 85%;
     }
     .account-content {
-        width: 100% !important;
+        width: 100%;
     }
     .account-right {
-        width: 93% !important;
+        width: 93%;
+    }
+    #account-sidebar{
+        width:200px;
+    }
+    .front-house-image img {
+        width: 90%;
+    }
+    #account-sidebar h1{
+        font-size: 25px !important;
+    }
+    #next-step {    
+        float: center;
+        margin: 5px auto; 
+        display: block; 
+        max-width: 200px
     }
 }
 
 /*----- Start of account CSS -----*/
 
 #account-sidebar{
-    width: 200px;
     background-color:#e5e5e5;
     float:left;
     display:inline;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-right: 15px;
     box-shadow: 0px 2px 5px rgb(100,100,100);s
 }
 #account-sidebar ul{
@@ -1107,7 +1154,6 @@ margin-bottom: 1px;
 }
 
 .account-content{
-    width:1000px;
     float:center;
     margin:5px auto;
     background-color: #e5e5e5;
@@ -1121,7 +1167,6 @@ margin-bottom: 1px;
     background: #fff;
     padding: 10px;
     border-radius: 2px;
-    width: 760px;
     color: #838383;
 }
 #accountSum-prompt{
@@ -1151,14 +1196,7 @@ margin-bottom: 1px;
 #accountListings-content ul {
     list-style: none;
 }
-.account-listing{
-    width: 600px;
-    height: 150px;
-    background-color: #e5e5e5;
-    display:inline-block;
-    margin-top:3px;
-    margin-bottom:3px;
-}
+
 
 #account-link a:hover{
      text-decoration: none;
@@ -1199,10 +1237,7 @@ margin-bottom: 1px;
 #no-margin {
     margin-left: 0px !important;
 }
- 
-#next-step {    
-    float: right;  
-}
+
 
 .next-step-button {
   float: right;
@@ -1220,13 +1255,7 @@ margin-bottom: 1px;
   color: #27AE60;
   text-decoration: underline;
 }
- 
-.front-house-image img {
-  display: inline-block;
-  float: right;
-  margin-left: 15px;
-  margin-right: -15px;
-}
+
 
 .wizard-section-incomplete:hover, .wizard-section-edit:hover, .wizard-section-complete:hover {
   text-decoration :underline;
@@ -1414,16 +1443,12 @@ footer {
 }
  
 .account-listing {
-  background-color: #ffffff;
-  width: 90%;
-  height: auto;
-  display: inline-block;
-  margin-top: 0.3em;
-  margin-bottom: 0.2em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  padding: 0.5em;
- 
+    background-color: #ffffff;
+    width: 100%;
+
+    display: inline-block;
+    margin-top:3px;
+    margin-bottom:3px;
 }
  
 .property-name {
