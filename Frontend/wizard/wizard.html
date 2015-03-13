@@ -608,7 +608,9 @@
     <div data-step="10" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-10"></div>
         <div class="wizard-header">
-            <span>Please complete the below PayPal form and your listing process will be completed.</span>
+            <span>To finish your listing please follow the instructions after clicking the PayPal button, you will then
+                be redirected to the final page of the wizard which will confirm your property has been listed on our trusted
+                partners Rightmove.</span>
         </div>
         <div class="wizard-content-standard">
 
@@ -617,17 +619,13 @@
           <div class="wizard-previous float-left">
               <span>Back</span>
           </div>
-          <div class="float-right">
-              <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=homehunter@firstvirtual.co.uk"
-                      data-button="paynow"
-                      data-name="Home Hunter"
-                      data-quantity="1"
-                      data-amount="300"
-                      data-currency="GBP"
-                      data-shipping="0"
-                      data-tax="60"
-                      data-callback="http://homehunter.com/index"
-                      ></script>
+          <div id="paypal-button">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="VG7UNLQ2K5ECN">
+                  <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_checkout_pp_142x27.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+              </form>
           </div>
     </div>
 
