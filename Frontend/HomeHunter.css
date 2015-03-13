@@ -1452,3 +1452,9 @@ input[type=range]::-webkit-slider-thumb {
     font-size: 28px;
     margin-bottom: 15px;
 }
+
+#how-it-works-register {
+    float: center;
+    margin: 20px auto;
+    display:block;
+}
