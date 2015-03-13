@@ -50,11 +50,23 @@ class ApiController < ApplicationController
       property.property_type = jsonData["property_date"]
       property.entrance_floor = jsonData["entrance_floor"]
       property.number_of_bedrooms = jsonData["number_of_bedrooms"]
+      for item in property.number_of_bedrooms
+        bedroom = Room.new
+      end
       property.number_of_receptions = jsonData["number_of_receptions"]
+      for item in property.number_of_receptions
+        reception = Room.new
+      end
       property.number_of_floors = jsonData["number_of_floors"]
       property.condition = jsonData["condition"]
       property.number_of_bathrooms = jsonData["number_of_bathrooms"]
+      for item in property.number_of_bathrooms
+        bathroom = Room.new
+      end
       property.number_of_other_rooms = jsonData["number_of_other_rooms"]
+      for item in property.number_of_other_rooms
+        otherRoom = Room.new
+      end
       property.save
     when "4"
       property.outdoor_space = jsonData["outdoor_space"]
