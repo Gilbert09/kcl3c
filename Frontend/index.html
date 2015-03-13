@@ -22,14 +22,14 @@
 
         //the value of their property
         function value(num) {
-          num = num / 80;
+          num = num / 160;
           console.log(num);
           if(num > 12.5) {
             num = rounding(Math.pow((num/1.19),5.29345));
             return num / 5;
           } else {
             num = rounding(Math.pow(((num*-1)/1.2), 5));
-            num = num / 5;
+            num = num * -2;
             console.log("out: " + num);
             return num / 5;
           }
@@ -191,7 +191,7 @@
                 <div><h2>My property is worth: </h2></div>
                 <strong><div id="result" style="height:40px;" >£0</div></strong>
                 <div>
-                    <input type="range" id="sliderBar" min="500" max="2000" step="5" value="0"
+                    <input type="range" id="sliderBar" min="1500" max="4000" step="5" value="0"
                            onChange="showValue(this.value);"/>
                 </div><br>
                 <div><h2>You could save <div id="saving">£0</div> with Home Hunter.</h2></div>
