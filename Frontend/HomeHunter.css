@@ -1026,6 +1026,12 @@ margin-bottom: 1px;
         width: 100%;
         margin: 0px auto;
     }
+    .content-image-fees{
+        width: 85%;
+    }
+    .content-fees-text{
+        width: 85%;
+    }
 }
 
 /*----- Start of account CSS -----*/
