@@ -57,11 +57,14 @@ class ApiController < ApplicationController
       property.number_of_other_rooms = jsonData["number_of_other_rooms"]
       property.save
     when "4"
-
+      property.outdoor_space = jsonData["outdoor_space"]
+      property.save
     when "5"
-
+      property.parking = jsonData["parking"]
+      property.save
     when "6"
-
+      property.heating = jsonData["heating"]
+      property.save
     when "7"
 
     when "8"
