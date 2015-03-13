@@ -1354,6 +1354,20 @@ input[type=range]::-webkit-slider-thumb {
     vertical-align: middle;
     width: 220px;
 }
+.square-steps-howitworks {
+    background: none repeat scroll 0 0 #293a42;
+    border-radius: 10px;
+    background-color: #27ae60;
+    border: 3px solid #196E3D;
+    color: #ffffff;
+    display: table-cell;
+    font-size: 28px;
+    height: 125px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 150px;
+}
 .text-steps{
 
     padding-bottom: 10px
