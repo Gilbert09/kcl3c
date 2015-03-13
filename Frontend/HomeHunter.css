@@ -837,6 +837,12 @@ margin-bottom: 1px;
     #overlay-center-text span {
         font-size: 12px;
     }
+    .account-content {
+        width: 100% !important;
+    }
+    .account-right {
+        width: 65% !important;
+    }
 }
 
 @media(min-width:900px){
@@ -1038,6 +1044,12 @@ margin-bottom: 1px;
     .content-fees-text{
         width: 85%;
     }
+    .account-content {
+        width: 100% !important;
+    }
+    .account-right {
+        width: 93% !important;
+    }
 }
 
 /*----- Start of account CSS -----*/
@@ -1102,7 +1114,6 @@ margin-bottom: 1px;
 }
 .account-right{
     display:inline-block;
-    width:700px;
     min-height: 425px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -1222,8 +1233,6 @@ margin-bottom: 1px;
 }
  
 .account-subheading {
- 
- 
   display: block;
   text-align: center;
   margin-bottom: 1em;
@@ -1401,18 +1410,7 @@ footer {
 }
 
 .account-right h1 {
- 
- 
- 
- 
- 
- 
- 
- 
- 
   text-align: center;
- 
- 
 }
  
 .account-listing {
@@ -1648,4 +1646,9 @@ input[type=range]::-webkit-slider-thumb {
     float: center;
     margin: 20px auto;
     display:block;
+}
+
+.details-form {
+    width:305px;
+    margin-right: 0px;
 }
