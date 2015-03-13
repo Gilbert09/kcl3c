@@ -503,3 +503,9 @@ body {
   width: 100%;
   border-radius: 3px 3px 0 0;
 }
+
+#paypal-button {
+    padding-top: 20px;
+    padding-right: 25px;
+    float: right;
+}
