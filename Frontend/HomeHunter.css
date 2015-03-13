@@ -1168,6 +1168,9 @@ margin-bottom: 1px;
     border-radius: 2px;
     color: #838383;
 }
+#account-right-details {
+    text-align: center;
+}
 #accountSum-prompt{
     width:800px;
     height:400px;
@@ -1223,11 +1226,6 @@ margin-bottom: 1px;
     width: 500px;
     margin-top: 5px;
 }
- 
-#no-margin {
-    margin-left: 0px !important;
-}
-
 
 .next-step-button {
   float: right;
