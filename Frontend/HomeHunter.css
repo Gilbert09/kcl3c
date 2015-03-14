@@ -266,7 +266,7 @@ ul.hiw li {
 
 .fontawesome-user {
     color: #27ae60;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(215, 215, 215);
     border-radius: 3px 0px 0px 3px;
     height: 50px;
     line-height: 48px;
@@ -376,7 +376,7 @@ select:focus{
 }
 
 #fees-table tr:nth-child(even) {
-    background: #E9F7EF;
+    background: #e5e5e5;
 }
 
 #fees-table td {
