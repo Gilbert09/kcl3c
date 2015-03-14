@@ -277,11 +277,10 @@ ul.hiw li {
 
 .icon-input {
     border-radius: 0px 3px 3px 0px !important;
-    margin-left: -5px;
+    margin-left: -4px;
     margin-top: 1px;
     vertical-align: top !important;
     width: 230px !important;
-    display:inline-block;
 }
 
 .form-control-group a:link, .form-control-group a:visited, .form-control-group a:active {
