@@ -278,8 +278,10 @@ ul.hiw li {
 .icon-input {
     border-radius: 0px 3px 3px 0px !important;
     margin-left: -5px;
-    margin-top: 0px;
+    margin-top: 1px;
+    vertical-align: top !important;
     width: 230px !important;
+    display:inline-block;
 }
 
 .form-control-group a:link, .form-control-group a:visited, .form-control-group a:active {
@@ -852,8 +854,8 @@ margin-bottom: 1px;
         float: center;
         margin: 0px auto;
     }
-    #next-step {    
-        float: right;  
+    #next-step {
+        float: right;
     }
 }
 
@@ -973,8 +975,8 @@ margin-bottom: 1px;
         float: right;
         margin-left: 15px;
     }
-    #next-step {    
-        float: right;  
+    #next-step {
+        float: right;
     }
 }
 
@@ -1092,10 +1094,10 @@ margin-bottom: 1px;
     #account-sidebar h1{
         font-size: 25px !important;
     }
-    #next-step {    
+    #next-step {
         float: center;
-        margin: 5px auto; 
-        display: block; 
+        margin: 5px auto;
+        display: block;
         max-width: 200px
     }
 }
@@ -1203,9 +1205,9 @@ margin-bottom: 1px;
 #account-link a:hover{
      text-decoration: none;
     color: #27ae60;
- 
+
 }
- 
+
 .account-details-edit{
     box-shadow: 0px 2px 5px rgb(100,100,100);
     background: #fff;
@@ -1219,7 +1221,7 @@ margin-bottom: 1px;
     width: 1000px;
     color: #838383;
 }
- 
+
 .center{
     margin-left: auto;
     margin-right: auto;
@@ -1230,15 +1232,15 @@ margin-bottom: 1px;
 .next-step-button {
   float: right;
 }
- 
+
 .next-step-button h2 {
   text-size: 1.5em;
   color: #838383;
- 
- 
- 
+
+
+
 }
- 
+
 .next-step-button h2:hover {
   color: #27AE60;
   text-decoration: underline;
@@ -1248,7 +1250,7 @@ margin-bottom: 1px;
 .wizard-section-incomplete:hover, .wizard-section-edit:hover, .wizard-section-complete:hover {
   text-decoration :underline;
 }
- 
+
 .account-subheading {
   display: block;
   text-align: center;
@@ -1409,18 +1411,18 @@ footer {
     height: 200px;
     position: absolute;
     margin: 0px auto;*/
- 
+
     text-align: center;
- 
+
     background:#ecf0f1;
     color:#262A2A;
- 
+
     /*top: 25%;
     left: 20%;*/
- 
+
     border: 0px none;
     border-radius: 10px;
- 
+
     opacity: 0.9;
     padding-left: 10px;
     padding-right: 10px;
@@ -1429,7 +1431,7 @@ footer {
 .account-right h1 {
   text-align: center;
 }
- 
+
 .account-listing {
     background-color: #ffffff;
     width: 100%;
@@ -1438,26 +1440,26 @@ footer {
     margin-top:3px;
     margin-bottom:3px;
 }
- 
+
 .property-name {
   background-color: #fff;
- 
- 
- 
- 
- 
+
+
+
+
+
     border-radius: 2px 2px 0 0;
     padding: 1px 10px;
     color: #838383;
   display:block;
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
 }
- 
+
 .account-listing ul li {
   margin-top: 0.2em;
   font-size: 1.2em;
@@ -1658,4 +1660,3 @@ input[type=range]::-webkit-slider-thumb {
     margin: 20px auto;
     display:block;
 }
-
