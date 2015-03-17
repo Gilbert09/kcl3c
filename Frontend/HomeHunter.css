@@ -305,7 +305,7 @@ input:focus{
     outline: none;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="button"] {
     background-color: #27ae60;
     box-shadow: 0 6px #196E3D;
     color: #ecf0f1;
@@ -324,13 +324,13 @@ input[type="submit"] {
     position: relative;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover {
     box-shadow: 0 4px #196E3D;
     top: 2px;
     cursor: pointer;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active, input[type="button"]:active {
     box-shadow: 0 0 #196E3D;
     top: 6px;
     cursor: pointer;
@@ -584,11 +584,19 @@ select:focus{
 
     /*border: 1px solid #98bf21;*/
 }
-/*
-#content-advice {
-    min-height: 1561px; /*Smallest it can be and not break footer...
+
+#content-advice a:visited , #content-advice  a:link , #content-advice  a:active, 
+.account-content a:visited , .account-content  a:link , .account-content  a:active {
+    color:#27ae60;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+#content-advice a:hover, 
+.account-content a:hover {
+    color: #196E3D;
+}
+/*
 #content-FAQ {
     min-height: 700px;
 }
@@ -1035,7 +1043,7 @@ margin-bottom: 1px;
     #menu-top {
         width: 40px;
     }
-    input[type=submit] {
+    input[type=submit], input[type=button] {
         width:70% !important;
         padding: 16px 10px !important;
     }
@@ -1165,7 +1173,7 @@ margin-bottom: 1px;
 }
 .account-right{
     display:inline-block;
-    min-height: 425px;
+    min-height: 400px;
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 5px rgb(100,100,100);
@@ -1260,6 +1268,8 @@ margin-bottom: 1px;
   text-align: center;
   margin-bottom: 1em;
   color: #838383;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /*----- End of account CSS -----*/
@@ -2183,6 +2193,6 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #get-started {
-    float: center;
-    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
