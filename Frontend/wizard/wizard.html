@@ -4,7 +4,7 @@
     <title>HomeHunter | Wizard</title>
 
     <!-- HomeHunter CSS -->
-    <link href="wizard.css" rel="stylesheet">
+    <link href="../HomeHunter.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="dropzone.js"></script>
@@ -21,19 +21,19 @@
         <div class="wizard-content-standard">
             <div>
                 <span>First Name</span>
-                <input type="text" name="fname" tabindex="1">
+                <input type="text" name="fname" tabindex="1" id="no-border-radius"/>
             </div>
             <div>
                 <span>Last Name</span>
-                <input type="text" name="lname" tabindex="2"/>
+                <input type="text" name="lname" tabindex="2" id="no-border-radius"/>
             </div>
             <div>
                 <span>Email</span>
-                <input type="text" name="email" tabindex="3"/>
+                <input type="text" name="email" tabindex="3" id="no-border-radius"/>
             </div>
             <div>
                 <span>Phone Number</span>
-                <input type="text" name="phone" tabindex="4"/>
+                <input type="text" name="phone" tabindex="4" id="no-border-radius"/>
             </div>
         </div>
         <div class="wizard-bottom">
@@ -51,27 +51,27 @@
         <div class="wizard-content-standard">
             <div>
                 <span>House Name / Number</span>
-                <input type="text" name="housenamenumber" tabindex="1">
+                <input type="text" name="housenamenumber" tabindex="1" id="no-border-radius"/>
             </div>
             <div>
                 <span>City</span>
-                <input type="text" name="City" tabindex="4"/>
+                <input type="text" name="City" tabindex="4" id="no-border-radius"/>
             </div>
             <div>
                 <span>Address Line 1</span>
-                <input type="text" name="addressline1" tabindex="2"/>
+                <input type="text" name="addressline1" tabindex="2" id="no-border-radius"/>
             </div>
             <div>
                 <span>County</span>
-                <input type="text" name="county" tabindex="5"/>
+                <input type="text" name="county" tabindex="5" id="no-border-radius"/>
             </div>
             <div>
                 <span>Address Line 2</span>
-                <input type="text" name="addressline2" tabindex="3"/>
+                <input type="text" name="addressline2" tabindex="3" id="no-border-radius"/>
             </div>
             <div>
                 <span>Postcode</span>
-                <input type="text" name="postcode" tabindex="6"/>
+                <input type="text" name="postcode" tabindex="6" id="no-border-radius"/>
             </div>
         </div>
         <div class="wizard-bottom">
@@ -92,7 +92,7 @@
       <div class="wizard-content-standard">
           <div>
               <span>Property Type</span>
-              <select name="propertytype">
+              <select name="propertytype" id="no-border-radius">
                   <option value=""></option>
                   <option>Detached</option>
                   <option>Semi-Detached</option>
@@ -105,7 +105,7 @@
           </div>
           <div>
               <span>Number of Floors</span>
-              <select name="numberoffloors">
+              <select name="numberoffloors" id="no-border-radius">
                   <option value=""></option>
                   <option>0</option>
                   <option>1</option>
@@ -119,7 +119,7 @@
           </div>
           <div>
               <span>Entrance Floor</span>
-              <select name="entrancefloor">
+              <select name="entrancefloor" id="no-border-radius">
                 <option value=""></option>
                 <option>0</option>
                 <option>1</option>
@@ -133,7 +133,7 @@
           </div>
           <div>
               <span>Condition</span>
-              <select name="condition">
+              <select name="condition" id="no-border-radius">
                   <option value=""></option>
                   <option>Good</option>
                   <option>Minor Work</option>
@@ -143,7 +143,7 @@
           </div>
           <div>
               <span>Bedrooms</span>
-              <select name="bedrooms">
+              <select name="bedrooms" id="no-border-radius">
                   <option value=""></option>
                   <option>0</option>
                   <option>1</option>
@@ -158,7 +158,7 @@
 
           <div>
               <span>Bathrooms</span>
-              <select name="bathrooms">
+              <select name="bathrooms" id="no-border-radius">
                   <option value=""></option>
                   <option>0</option>
                   <option>1</option>
@@ -172,7 +172,7 @@
           </div>
           <div>
               <span>Reception Rooms</span>
-              <select name="receptionrooms">
+              <select name="receptionrooms" id="no-border-radius">
                   <option value=""></option>
                   <option>0</option>
                   <option>1</option>
@@ -186,7 +186,7 @@
           </div>
           <div>
               <span>Other Rooms</span>
-              <select name="otherrooms">
+              <select name="otherrooms" id="no-border-radius">
                   <option value=""></option>
                   <option>0</option>
                   <option>1</option>
@@ -415,11 +415,11 @@
               </div>
               <div id="wizard-room-length">
                   <span>Room Length</span>
-                  <input type="text" name="roomlength" />
+                  <input type="text" name="roomlength"  id="no-border-radius"/>
               </div>
               <div id="wizard-room-width">
                   <span>Room Width</span>
-                  <input type="text" name="roomwidth" />
+                  <input type="text" name="roomwidth"  id="no-border-radius"/>
               </div>
               <div id="wizard-room-meters" class="wizard-room-selected">
                   <span>Metres</span>
@@ -459,13 +459,13 @@
     <div class="wizard-content-standard">
         <div id="wizard-keywords-options">
           <span>Keyword Suggestions</span>
-          <div>
+          <div id="length-fix">
 
           </div>
         </div>
         <div id="wizard-keywords-field">
           <span>Keywords</span>
-          <div>
+          <div id="length-fix">
 
           </div>
         </div>
