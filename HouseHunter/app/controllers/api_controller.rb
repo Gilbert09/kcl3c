@@ -105,5 +105,4 @@ class ApiController < ApplicationController
       return JSON.parse('{ "result": "Error", "message": "Invalid stage" }');
     end
   end
-  end
 end
