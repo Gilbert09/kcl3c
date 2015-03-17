@@ -34,18 +34,36 @@ class ApiController < ApplicationController
       current_user.save
       return JSON.parse('{ "result": "Success", "message": "Data saved" }');
     when "2"
-      property = Property.new
-      address = Address.new
-      property.address_id = address.id;
-      property.save
+      newAddress = true
+      if jsonData["address_id"] != nil
+        current_user.properties.each do |p|
+          p.addresses.each do |a|
+            if a.id == jsonData["address_id"].to_s then newAddress = false;
+          end
+        end
+      end
 
-      address.house_name_number = jsonData["house_name_number"]
-      address.address_line_1 = jsonData["address_line_1"]
-      address.address_line_2 = jsonData["address_line_2"]
-      address.town_city = jsonData["city"]
-      address.county = jsonData["county"]
-      address.post_code = jsonData["postcode"]
-      address.save
+      if newAddress then
+        property = Property.new
+        address = Address.new
+        property.save
+        address.save
+
+        address.property_id = proeprty.id
+        property.user_id = current_user.id
+        property.address_id = address.id
+        property.save
+
+        address.house_name_number = jsonData["house_name_number"]
+        address.address_line_1 = jsonData["address_line_1"]
+        address.address_line_2 = jsonData["address_line_2"]
+        address.town_city = jsonData["city"]
+        address.county = jsonData["county"]
+        address.post_code = jsonData["postcode"]
+        address.save
+      else
+        
+      end
     when "3"
       property.property_type = jsonData["property_date"]
       property.entrance_floor = jsonData["entrance_floor"]
