@@ -45,7 +45,7 @@ class ApiController < ApplicationController
       when "9"
         stage9(jsonData, stage, current_user)
       else 
-        return JSON.parse('{ "result": "Error", "message": "Invalid stage" }');
+        return JSON.parse('{ "result": "Error", "message": "Invalid stage" }')
     end
   end
 
@@ -56,7 +56,7 @@ class ApiController < ApplicationController
       current_user.email = jsonData["email"]
       current_user.phone_number = jsonData["phone_number"]
       current_user.save
-      return JSON.parse('{ "result": "Success", "message": "Data saved" }');
+      return JSON.parse('{ "result": "Success", "message": "Data saved" }')
     end
 
     def stage2(jsonData, stage, current_user)
@@ -68,7 +68,7 @@ class ApiController < ApplicationController
       end
 
       if newAddress == true and jsonData["address_id"] != nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid address ID" }');
+        return JSON.parse('{ "result": "Error", "message": "Invalid address ID" }')
       end
 
       if newAddress then
@@ -89,6 +89,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": " + address.id.to_s +", \"property_id\": " + property.id.to_s + " } }")
       else
         address = Address.find(jsonData["address_id"] )
         address.house_name_number = jsonData["house_name_number"]
@@ -98,31 +99,24 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
+        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id.to_s +', "property_id": ' + address.property_id.to_s + ' } }')
       end
     end
 
     def stage3(jsonData, stage, current_user)
-      property.property_type = jsonData["property_date"]
-      property.entrance_floor = jsonData["entrance_floor"]
-      property.number_of_bedrooms = jsonData["number_of_bedrooms"]
-      for item in property.number_of_bedrooms
-        bedroom = Room.new
+      if jsonData["property_id"] == nil then
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
-      property.number_of_receptions = jsonData["number_of_receptions"]
-      for item in property.number_of_receptions
-        reception = Room.new
+
+      property = current_user.properties.where("id = '" + jsonData["property_id"] + "'")
+      if property == nil then 
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
-      property.number_of_floors = jsonData["number_of_floors"]
-      property.condition = jsonData["condition"]
-      property.number_of_bathrooms = jsonData["number_of_bathrooms"]
-      for item in property.number_of_bathrooms
-        bathroom = Room.new
-      end
-      property.number_of_other_rooms = jsonData["number_of_other_rooms"]
-      for item in property.number_of_other_rooms
-        otherRoom = Room.new
-      end
-      property.save
+
+
+
+
+
     end
 
     def stage4(jsonData, stage, current_user)
