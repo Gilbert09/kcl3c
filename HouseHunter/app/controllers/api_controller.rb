@@ -104,27 +104,19 @@ class ApiController < ApplicationController
     end
 
     def stage3(jsonData, stage, current_user)
-      property.property_type = jsonData["property_date"]
-      property.entrance_floor = jsonData["entrance_floor"]
-      property.number_of_bedrooms = jsonData["number_of_bedrooms"]
-      for item in property.number_of_bedrooms
-        bedroom = Room.new
+      if jsonData["property_id"] == nil then
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
-      property.number_of_receptions = jsonData["number_of_receptions"]
-      for item in property.number_of_receptions
-        reception = Room.new
+
+      property = current_user.properties.where("id = '" + jsonData["property_id"] + "'")
+      if property == nil then 
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
-      property.number_of_floors = jsonData["number_of_floors"]
-      property.condition = jsonData["condition"]
-      property.number_of_bathrooms = jsonData["number_of_bathrooms"]
-      for item in property.number_of_bathrooms
-        bathroom = Room.new
-      end
-      property.number_of_other_rooms = jsonData["number_of_other_rooms"]
-      for item in property.number_of_other_rooms
-        otherRoom = Room.new
-      end
-      property.save
+
+
+
+
+
     end
 
     def stage4(jsonData, stage, current_user)
