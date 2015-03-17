@@ -80,6 +80,7 @@ class ApiController < ApplicationController
         address.property_id = property.id
         property.user_id = current_user.id
         property.address_id = address.id
+        property.status = "Draft"
         property.save
 
         address.house_name_number = jsonData["house_name_number"]
