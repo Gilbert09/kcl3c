@@ -172,6 +172,42 @@ class ApiController < ApplicationController
     end
 
     def stage7(jsonData, stage, current_user)
+      if jsonData["property_id"] == nil then
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      end
+
+      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
+      end
+
+      property = current_user.properties.find(jsonData["property_id"])
+
+      if jsonData["room_id"] == nil then
+        room = Room.new
+        room.property_id = property.id
+
+        room.room_type = jsonData["room_type"]
+        room.room_length = jsonData["room_length"]
+        room.room_width = jsonData["room_width"]
+        room.measurement_unit = jsonData["measurement_unit"]
+        room.description = jsonData["description"]
+        room.save
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s}, \"room_id\": #{room.id} } }")
+      else
+        if property.rooms.exists?(jsonData["room_id"]) != true then 
+          return JSON.parse('{ "result": "Error", "message": "Invalid room ID" }')
+        end
+
+        room = property.room.find(jsonData["room_id"])
+        room.room_type = jsonData["room_type"]
+        room.room_length = jsonData["room_length"]
+        room.room_width = jsonData["room_width"]
+        room.measurement_unit = jsonData["measurement_unit"]
+        room.description = jsonData["description"]
+        room.save
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s}, \"room_id\": #{room.id} } }")
+      end
+
 
     end
 
