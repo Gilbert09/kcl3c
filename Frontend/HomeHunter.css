@@ -1153,8 +1153,8 @@ margin-bottom: 1px;
 }
 
 .sidebar-selected{
-    background-color:transparent;
-     display:block;
+    background-color:#27ae60;;
+    display:block;
     text-decoration: none;
     padding:5px;
     color: #27ae60;
@@ -1163,7 +1163,7 @@ margin-bottom: 1px;
 }
 
 .sidebar-selected h1 {
-    color: #27ae60 !important;
+    color: #fff !important;
 }
 
 .account-content{
