@@ -198,7 +198,7 @@ class ApiController < ApplicationController
           return JSON.parse('{ "result": "Error", "message": "Invalid room ID" }')
         end
 
-        room = property.room.find(jsonData["room_id"])
+        room = property.rooms.find(jsonData["room_id"])
         room.room_type = jsonData["room_type"]
         room.room_length = jsonData["room_length"]
         room.room_width = jsonData["room_width"]
