@@ -79,7 +79,7 @@ class ApiController < ApplicationController
         property.save
         address.save
 
-        address.property_id = proeprty.id
+        address.property_id = property.id
         property.user_id = current_user.id
         property.address_id = address.id
         property.save
@@ -92,7 +92,7 @@ class ApiController < ApplicationController
         address.post_code = jsonData["postcode"]
         address.save
       else
-        address = Address.find(jsonData["address_id"])
+        address = Address.find(jsonData["address_id"] )
         address.house_name_number = jsonData["house_name_number"]
         address.address_line_1 = jsonData["address_line_1"]
         address.address_line_2 = jsonData["address_line_2"]
