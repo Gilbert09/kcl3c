@@ -1153,17 +1153,16 @@ margin-bottom: 1px;
 }
 
 .sidebar-selected{
-    background-color:transparent;
+    background-color:#27ae60;
      display:block;
     text-decoration: none;
     padding:5px;
-    color: #27ae60;
     text-align: center;
     border-bottom: 1px solid grey;
 }
 
 .sidebar-selected h1 {
-    color: #27ae60 !important;
+    color: #fff !important;
 }
 
 .account-content{
