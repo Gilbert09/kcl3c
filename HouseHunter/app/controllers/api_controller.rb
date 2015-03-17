@@ -108,7 +108,7 @@ class ApiController < ApplicationController
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
 
-      property = current_user.properties.where("id = '" + jsonData["property_id"] + "'")
+      property = current_user.properties.find(jsonData["property_id"])
       if property == nil then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
