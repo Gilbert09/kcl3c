@@ -855,6 +855,7 @@ margin-bottom: 1px;
     }
     #next-step {
         float: right;
+        width: 300px;
     }
 }
 
@@ -976,6 +977,7 @@ margin-bottom: 1px;
     }
     #next-step {
         float: right;
+        width: 300px;
     }
 }
 
