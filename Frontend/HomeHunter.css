@@ -1122,7 +1122,7 @@ margin-bottom: 1px;
     display:inline;
     margin-top: 15px;
     margin-bottom: 15px;
-    box-shadow: 0px 2px 5px rgb(100,100,100);s
+    box-shadow: 0px 2px 5px rgb(100,100,100);
 }
 #account-sidebar ul{
     margin:0;
@@ -1231,6 +1231,10 @@ margin-bottom: 1px;
     border-radius: 2px;
     width: 1000px;
     color: #838383;
+}
+
+.front-house-image img {
+    border-radius: 5px;
 }
 
 .center{
