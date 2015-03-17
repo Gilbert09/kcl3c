@@ -18,6 +18,11 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Did you forget your password?')
   end
 
+  def upload_confirmation(user)
+    @user = user
+    mail(to: @user.email, subject: 'Your property has successfully been listed')
+  end
+
   def welcome_email(user)
     @user = user
     @url  = 'http://homehunter.com/login'
