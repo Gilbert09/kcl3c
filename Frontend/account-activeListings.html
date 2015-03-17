@@ -1,79 +1,83 @@
 <!DOCTYPE html>
 <head>
     <title>HomeHunter | Account Summary</title>
-    <link rel="stylesheet" href="../HomeHunter.css">
+    <link rel="stylesheet" href="HomeHunter.css">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
  <header>
-        <div id="header-top-container">
-            <div id="header-top">
-                <div class="float-left" id="user-profile-link">
-                    <a href="#">Tony Sellen</a>
-                </div>
-                
-                <div class="float-right" id="user-control">
-                    <a href="../login.html">Login</a> | 
-                    <a href="../register.html">Register</a>
-                </div>  
-            </div>  
+    <div id="header-top-container">
+        <div id="header-top">
+            <div class="float-left" id="user-profile-link">
+                <a href="#">Home Hunter</a>
+            </div>
+
+            <div class="float-right" id="user-control">
+                <a href="login.html">Login</a> |
+                <a href="register.html">Register</a>
+            </div>
         </div>
+    </div>
 
-        <div id="nav-container">
-            <div id="nav">
-                <div id="logo">
-                    <a href="../index.html">
-                            <img class="logo" src="logo.jpg" alt="Logo">
-                        </a>
-                </div>
+    <div id="nav-container">
+        <div id="nav">
+            <div id="logo">
+                <a href="index.html">
+                    <img class="logo" src="logo.jpg" alt="Logo">
+                </a>
+            </div>
 
-                <div id="header-link-container">
+            <div id="header-link-container">
 
-                    <a href="../wizard\wizard.html">
-                        <div class="links-col">
-                            List Property
-                        </div>
-                    </a>
-                    
-                    <a href="../howitworks.html">
-                        <div class="links-col">
-                            How It Works
-                        </div>
-                    </a>
-                    <a href="../advice.html">
-                        <div class="links-col">
-                            Advice
-                        </div>
-                    </a>
-
-                    <a href="../fees.html">
-                        <div class="links-col">
-                            Fees
-                        </div>
-                    </a>
-                    
-                    <a href="../FAQs.html">
-                        <div class="links-col">
-                            FAQs
-                        </div>
-                    </a>
-                </div>
-                <div id="menu-top"> 
-                        <a href="#" class="menu">≡ <span>Menu</span></a>
+                <a href="account-details.html">
+                    <div class="links-col">
+                        My Account
                     </div>
-            </div>  
+                </a>
+
+                <a href="howitworks.html">
+                    <div class="links-col">
+                        How It Works
+                    </div>
+                </a>
+
+                <a href="fees.html">
+                    <div class="links-col">
+                        Fees
+                    </div>
+                </a>
+
+                <a href="advice.html">
+                    <div class="links-col">
+                        Advice
+                    </div>
+                </a>
+
+                <a href="FAQs.html">
+                    <div class="links-col">
+                        FAQs
+                    </div>
+                </a>
+            </div>
+
+            <!--Menu for small window here-->
+            <div id="menu-top">
+                <a href="#" class="menu">≡ <span>Menu</span></a>
+            </div>
+
         </div>
-    </header>
+    </div>
+</header>
 
     <div class="content-drawer">
         <div class="drawer" id="drawer">
             <nav>
                 <ul>
-                    <li><a href="wizard\wizard.html">List Property</a></li>
-                    <li><a href="howitworks.html">How It Works</a></li>
+                    <li><a href="account-details.html">My Account</a></li>
                     <li><a href="advice.html">Advice</a></li>
+                    <li><a href="howitworks.html">How It Works</a></li>
                     <li><a href="fees.html">Fees</a></li>
                     <li><a href="FAQs.html">FAQs</a></li>
                 </ul>
@@ -86,18 +90,18 @@
 			<ul>
 
 				<li><a href="account-incompleteListings.html"><h1>Incomplete Listings</h1></a></li>
-				<li><a href="account-activeListings.html"><h1>Active Listings</h1></a></li>
-				<li class="sidebar-selected"><h1>Inactive Listings</h1></li>
+				<li class="sidebar-selected"><h1>Active Listings</h1></li>
+				<li><a href="account-inactiveListings.html"><h1>Inactive Listings</h1></a></li>
 				<li><a href="account-details.html"><h1>My Details</h1></a></li>
 			</ul>
 		</div>
 
 		<div class="account-right">
-			<h1>Inactive Listings</h1>
+			<h1>Active Listings</h1>
 			<div class="divider-bar"></div>
-			<div class="account-subheading"> Below is a list of all of your hidden listings, here you can edit or unhide. </div>
+			<div class="account-subheading"> Below is a list of all of your listings, here you can edit or hide. </div>
 
-			<!-- An example inactive listing -->
+			<!-- An example active listing -->
 			<div class="account-listing">
 
 				<div class="front-house-image">
@@ -119,10 +123,10 @@
 					<li class="wizard-section-edit"> Description </li>
 				</ul>
 
-			<!--	<div class="next-step-button">
-					<h2> Unhide </h2>
-				</div> -->
-				<input type="submit" name"unhide" value="Unhide" id="next-step">
+				<!--<div class="next-step-button">
+					<h2> Hide </h2>
+				</div>-->
+				<input type="submit" name"hide" value="Hide" id="next-step">
 
 			</div>
 
