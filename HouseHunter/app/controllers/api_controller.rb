@@ -113,6 +113,7 @@ class ApiController < ApplicationController
       end
 
       property = current_user.properties.find(jsonData["property_id"])
+      property.price = jsonData["price"]
       property.property_type = jsonData["property_type"]
       property.number_of_floors = jsonData["number_of_floors"]
       property.entrance_floor = jsonData["entrance_floor"]
