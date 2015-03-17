@@ -1,0 +1,511 @@
+body {
+    margin:0px;
+    background:#e5e5e5;
+    color: #262a2a;
+    font-family: "Helvetica", serif;
+}
+
+.wizard-container {
+	width: 600px;
+	height: 600px;
+	position: relative;
+	top:50px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.wizard-header {
+	background-color: #fff;
+	padding: 25px 30px;
+	color: #838383;
+}
+
+.wizard-content-standard, .wizard-content-checkbox, .wizard-content-rooms, .wizard-content-description {
+	background-color: #fff;
+}
+
+.wizard-content-standard div {
+	padding: 15px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	display: inline-block;
+	width: 268px;
+}
+
+.wizard-content-standard div:nth-child(even) {
+	margin-left: -4px;
+	width: 269px;
+	border-right: none;
+}
+
+.wizard-content-standard div:nth-child(odd) {
+	margin-left: 1px;
+}
+
+
+.wizard-content-standard div span {
+	display: block;
+	color: #838383;
+	font-size: 13px;
+}
+
+.wizard-content-standard div input, .wizard-content-standard div select, .wizard-content-rooms div input {
+	display: block;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	height: 30px;
+	outline: none;
+	padding: 5px 0px 0px 10px;
+	font-size: 19px;
+}
+
+.wizard-content-standard div select {
+	width: 100%;
+}
+
+.wizard-content-checkbox div {
+	padding: 15px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	display: inline-block;
+	margin-left: -4px;
+	width: 169px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.wizard-content-checkbox div:hover {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+.wizard-content-checkbox div:hover span {
+	color: white;
+}
+
+.wizard-content-checkbox-selected {
+	background-color: #27ae60;
+}
+
+.wizard-content-checkbox-selected-span {
+	color: white !important;
+}
+
+.wizard-content-checkbox div:nth-child(3n+1), .wizard-content-checkbox div:nth-child(0) {
+	border-right: 1px solid #D7D7D7;
+	width: 168px;
+	margin-left: 0;
+}
+
+.wizard-content-checkbox div:nth-child(3n) {
+	border-right: none;
+}
+
+.wizard-content-checkbox div span {
+	display: block;
+	color: #838383;
+	font-size: 13px;
+}
+
+.wizard-room-list {
+	width: 150px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	border-right: 1px solid #D7D7D7;
+	height: 417px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.wizard-room-list div {
+	vertical-align: top;
+	height: 50px;
+	border-top: 1px solid #D7D7D7;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.wizard-room-list div:hover {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+.wizard-room-list div:hover span {
+	color: white;
+}
+
+.wizard-room-list-selected {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+.wizard-room-list-selected span {
+	color: white;
+}
+
+.wizard-room-list span {
+	display: block;
+	text-align: center;
+	height: 50px;
+	top: 34%;
+	position: relative;
+}
+
+.wizard-room-tab {
+	width: 448px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin-left: -4px;
+}
+
+.wizard-room-tab div {
+	padding: 15px;
+	border-top: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	display: inline-block;
+}
+
+.wizard-room-tab div span {
+	display: block;
+	color: #838383;
+	font-size: 13px;
+}
+
+#wizard-room-title {
+	width: 418px;
+}
+
+#wizard-room-title input {
+	width: 407px;
+}
+
+#wizard-room-length, #wizard-room-width {
+	width: 121px;
+}
+
+#wizard-room-width {
+	margin-left: -4px;
+}
+
+#wizard-room-length input, #wizard-room-width input {
+	width: 109px;
+}
+
+#wizard-room-meters, #wizard-room-feet {
+	margin-left: -4px;
+	vertical-align: top;
+	height: 51px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+#wizard-room-meters:hover, #wizard-room-feet:hover {
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+#wizard-room-meters:hover span, #wizard-room-feet:hover span {
+	color: white;
+}
+
+#wizard-room-meters span, #wizard-room-feet span {
+	height: 50px;
+	display: block;
+	top: 35%;
+	position: relative;
+}
+
+#wizard-room-feet {
+	border-right: none;
+	width: 41px;
+	text-align: center;
+}
+
+.wizard-room-selected {
+	background-color: #27ae60;
+}
+
+.wizard-room-selected span {
+	color: white !important;
+}
+
+#wizard-room-description {
+	width: 418px;
+}
+
+#wizard-room-description textarea, #wizard-house-description textarea, #wizard-description-description textarea  {
+	resize: none;
+	width: 414px;
+	height: 70px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	padding: 5px 0px 0px 10px;
+	font-size: 19px;
+}
+
+#wizard-rooms-files {
+	border-right: none;
+	width: 418px;
+}
+
+#wizard-rooms-fileupload {
+	display: inline-block;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	height: 65px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	padding: 15px 6px !important;
+}
+
+#wizard-rooms-fileupload span {
+	position: relative;
+	top: 35%;
+}
+
+#wizard-rooms-uploaded {
+	display: inline-block;
+	vertical-align: top;
+	width: 245px;
+	border: none;
+}
+
+#wizard-rooms-uploaded span {
+	display: inline-block !important;
+}
+
+.wizard-rooms-image {
+	height: 60px;
+}
+
+#wizard-description-description {
+	width: 568px;
+	border-right: none;
+}
+
+#wizard-description-description textarea {
+	width: 558px;
+	height: 250px;
+}
+
+.wizard-bottom {
+	border-top: 1px solid #D7D7D7;
+	background-color: #fff;
+	border-radius: 0 0 2px 2px;
+	height: 70px;
+	margin-bottom: 50px;
+}
+
+.wizard-bottom div {
+	display: inline-block;
+}
+
+.wizard-next {
+	background-color: #27ae60;
+    box-shadow: 0 6px #196E3D;
+    color: #ecf0f1;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    border:none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    padding: 18px 47px;
+    display: inline-block;
+    margin: 7px 30px;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+}
+
+.wizard-next:hover {
+    box-shadow: 0 4px #196E3D;
+    top: 2px;
+    cursor: pointer;
+}
+
+.wizard-next:active {
+    box-shadow: 0 0 #196E3D;
+    top: 6px;
+    cursor: pointer;
+}
+
+.wizard-previous, .edit-button {
+	position: relative;
+	height: 70px;
+	width: 150px;
+}
+
+.wizard-previous span, .edit-button span {
+	position: absolute;
+	top: 35%;
+	left: 20%;
+	display: block;
+	border-bottom: 1px solid #9D9D9D;
+}
+
+.wizard-previous span:hover, .edit-button span:hover {
+	cursor: pointer;
+	color: #27ae60;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.showing {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.scroll-field {
+	overflow: auto;
+	resize: none;
+	width: 414px;
+	height: 70px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #27ae60;
+	padding: 5px 0px 0px 10px;
+	font-size: 19px;
+}
+
+#wizard-content-description div span {
+  display: block;
+	color: #838383;
+	font-size: 13px;
+}
+
+#wizard-content-description div {
+  background-color: #fff;
+  width: auto;
+  border-top: 1px solid #D7D7D7;
+  padding: 15px;
+}
+
+#wizard-content-description {
+  width: 600px;
+}
+
+#wizard-room-title {
+  display:none;
+}
+
+.review-tab h2 {
+  border:none !important;
+  margin: none;
+  margin-left: 20px !important;
+  margin-bottom: 0 !important;
+  color: #838383;
+}
+
+.edit-button {
+  width: auto !important;
+  height: auto;
+  border: none !important;
+  float: right;
+}
+
+.review-tab {
+  padding: 3px !important;
+  width: 594px !important;
+	border-right: 0px solid #D7D7D7 !important;
+  border-left: 0px solid #D7D7D7;
+  margin-left: 0px !important;
+}
+
+.review-info {
+  padding: 3px !important;
+  width: 574px !important;
+  padding-left: 25px !important;
+  border-top: 0px solid #D7D7D7 !important;
+}
+
+.review-info p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.wizard-progress-bar {
+  height: 7px;
+  background-color: #27ae60;
+  border-radius: 3px 0px 0px 0px;
+}
+
+#progress-bar-0 {
+  width: 8%;
+}
+
+#progress-bar-1 {
+  width: 16%;
+}
+
+#progress-bar-2 {
+  width: 24%;
+}
+
+#progress-bar-3 {
+  width: 32%;
+}
+
+#progress-bar-4 {
+  width: 40%;
+}
+
+#progress-bar-5 {
+  width: 48%;
+}
+
+#progress-bar-6 {
+  width: 56%;
+}
+
+#progress-bar-7 {
+  width: 64%;
+}
+
+#progress-bar-8 {
+  width: 72%;
+}
+
+#progress-bar-9 {
+  width: 80%;
+}
+
+#progress-bar-10 {
+  width: 88%;
+}
+
+#progress-bar-11 {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+
+#paypal-button {
+    padding-top: 20px;
+    padding-right: 25px;
+    float: right;
+}

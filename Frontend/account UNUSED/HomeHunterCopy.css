@@ -1,0 +1,1092 @@
+body {
+    margin:0px;
+    /*background: #A39F9F;*/
+    background-color: #e5e5e5;
+    font-family: "Helvetica", serif;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 2px 1px rgb(100,100,100);
+    -moz-box-shadow: 0px 0px 2px 1px rgb(100,100,100);
+    box-shadow: 0px 0px 2px 1px rgb(100,100,100);
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #838383;
+    cursor: pointer;
+}
+
+h1 a:hover{
+    text-decoration: none;
+    color: #27ae60;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+legend{
+    padding:10px;
+    font-size: 30px;
+    text-align: center;
+    color: #838383;
+}
+
+fieldset{
+    border:none;
+}
+
+img.logo {
+    height:55px;
+    margin-top: 2px;
+}
+
+img.stepImage {
+    margin: 5px 15px 5px 0;
+    border-radius: 5px;
+}
+
+ul.hiw{
+    list-style-type: square;
+    padding-left:380px;
+}
+
+ul.hiw li {
+    padding-left: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.form-text {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom:10px;
+    color:#262a2a;
+}
+
+.fontawesome-user {
+    color: #27ae60;
+    background-color: rgb(224, 224, 224);
+    border-radius: 3px 0px 0px 3px;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 50px;
+    display: inline-block;
+}
+
+.icon-input {
+    border-radius: 0px 3px 3px 0px !important;
+    margin-left: -4px;
+    margin-top: 0px;
+    width: 230px !important;
+}
+
+.form-control-group a:link, .form-control-group a:visited, .form-control-group a:active {
+    text-decoration: none !important;
+}
+
+.form-control-group a:hover {
+    text-decoration: underline !important;
+}
+
+input[type="text"], input[type="password"]{
+  padding: 0 12px;
+  font-size: 22px;
+  width:90%;
+  border-radius: 5px;
+  border:none;
+  height: 46px;
+}
+
+input:focus{
+
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #27ae60;
+    box-shadow: 0 6px #196E3D;
+    color: #ecf0f1;
+    font-size: 20px;
+    border: none !important;
+    border-radius: 5px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    padding: 16px 80px;
+    display: inline-block;
+    margin: 7px 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 4px #196E3D;
+    top: 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    box-shadow: 0 0 #196E3D;
+    top: 6px;
+    cursor: pointer;
+}
+
+select{
+    font-size: 16px;
+    margin-bottom: 10px;
+    width:95%;
+    border-radius: 2px;
+    border:none;
+}
+
+select:focus{
+    box-shadow: 0px 0px 0px 2px #27ae60;
+    outline: none;
+}
+
+#content-login, #content-register {
+    box-shadow: 0px 2px 5px rgb(100,100,100);
+    background: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    width: 1000px;
+    color: #838383;
+}
+
+#content-login, #content-register fieldset {
+    text-align: center;
+}
+
+#fees-table tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+#fees-table tr:nth-child(even) {
+    background: #E9F7EF;
+}
+
+#fees-table td {
+    border: 1px solid #27ae60;
+}
+
+#fees-table th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #27ae60;
+    color: #ffffff;
+    border: 1px solid #27ae60;
+}
+
+#fees-table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#content-login a:visited, #content-login a:link, #content-login a:active{
+   color: #838383;
+}
+
+#content-login a:hover {
+    color: #27ae60;
+}
+
+#content-login{
+    color: #838383;
+}
+
+#content-login a{
+    text-decoration: underline;
+}
+
+.divider-bar{
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,0,0));
+    margin-top: 3px;
+    margin-bottom: 15px;
+    clear:both;
+}
+
+.align-bar{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    margin-top: -1%;
+}
+
+#header-top-container {
+    width:100%;
+    height:30px;
+    margin: 0 auto;
+    background: #262A2A;
+}
+
+#nav-container {
+    width:100%;
+    height:60px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#header-top {
+    height:30px;
+    line-height: 30px;
+    margin:0px auto;
+    text-align: center;
+    background: #262A2A;
+    color: #ecf0f1;
+}
+
+#nav {
+    height:60px;
+    line-height: 56px;
+    margin:0px auto;
+    text-align: center;
+    background: #fff;
+    color: #262A2A;
+}
+
+.header-col-top {
+    float: left;
+    width: 50%;
+}
+
+.links-login {
+    float:left;
+    width: 50%;
+}
+
+#logo {
+    float:left;
+    width: 210px;
+    height: 60px;
+}
+
+#header-link-container {
+    float:left;
+    margin-left: 25px;
+    width: 66%;
+}
+
+.links-col{
+    float: left;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.links-col:hover {
+    border-bottom: 4px solid #27ae60;
+}
+
+#links-selected {
+    border-bottom: 4px solid #27ae60;
+    color: #27ae60;
+}
+
+#header-link-container a:visited , #header-link-container a:link , #header-link-container a:active {
+    color:#262A2A;
+    text-decoration: none;
+}
+
+#header-link-container a:hover {
+    text-decoration: none;
+    color: #27ae60;
+}
+
+#user-control a:visited, #user-control a:link, #user-control a:active, #user-profile-link a:visited, #user-profile-link a:link, #user-profile-link a:active{
+   color: #ecf0f1;;
+    text-decoration: none;
+}
+
+#user-control a:hover, #user-profile-link a:hover {
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.footer-col {
+    width: 490px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-col span {
+    display: block;
+}
+
+#footer-legal a:visited, #footer-legal a:link, #footer-legal a:active{
+    color:#262A2A;
+    text-decoration: none;
+}
+
+#footer-legal a:hover{
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.content-index {
+    width:100%;
+    background: #bdc3c7;
+    margin: 0px auto;
+    text-align: left;
+}
+
+.content-left {
+    background: #fff;
+    position: relative;
+    /*float:left;*/
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgb(100,100,100);
+    background: #fff;
+    padding-bottom: 10px;
+    padding-top: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+
+    /*padding-left: 10px;
+    padding-right: 10px;
+    width: 1000px;*/
+}
+
+.content-right {
+    /*background: #EAF2D3;*/
+    background: #ecf0f1;
+
+    padding-top: 10px;
+    padding-bottom: 1.25%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 5px;
+
+    /*border: 1px solid #98bf21;*/
+}
+/*
+#content-advice {
+    min-height: 1561px; /*Smallest it can be and not break footer...
+}
+
+#content-FAQ {
+    min-height: 700px;
+}
+
+#content-fees {
+    min-height: 500px;
+}
+
+#content-howitworks {
+    min-height: 1550px; /*Smallest it can be and not break footer...
+}
+*/
+
+#menu-top {
+    height: 40px;
+    width: 80px;
+    float: right;
+    vertical-align: center;
+    margin-top: 10px;
+    background: #212121;
+    color: #fff;
+    border-radius: 5px;
+    top: -5px;
+}
+
+#menu-top a:visited , #menu-top  a:link , #menu-top  a:active {
+    color:#fff;
+    text-decoration: none;
+}
+
+#menu-top a:hover {
+    color: #27ae60;
+}
+
+.menu {
+    display: block;
+    position: relative;
+    top: -6px;
+}
+
+/* Accordian menu drop down test BEGIN */
+
+/*stuff I got off the internet that I don't understand...
+.drawer {
+  -webkit-transform: translate3d(0, -131px, 0);
+  -moz-transform: translate3d(0, -131px, 0);
+  -o-transform: translate3d(0, -131px, 0);
+  transform: translate3d(0, -131px, 0);
+  -webkit-transition:-webkit-transform 0.25s linear;
+  -moz-transition:-moz-transform 0.25s linear;
+  -o-transition:-o-transform 0.25s linear;
+  transition:transform 0.25s linear;
+
+}
+.drawer.active {
+  -webkit-transform: translate3d(0,129px,0)
+  -moz-transform: translate3d(0,129px,0)
+  -o-transform: translate3d(0,129px,0)
+  transform: translate3d(0,129px,0)
+}
+*/
+
+nav ul {
+list-style:none;
+}
+nav ul li a {
+display: block;
+text-decoration: none;
+background: rgba(0,0,0,0.9); /*change the last number to edit opacity of menu options*/
+color: white;
+padding: 15px;
+padding-left: 20px;
+margin-bottom: 1px;
+}
+
+/*More stuff I got off the internet that I don't understand...
+/* Fallbacks */
+/*
+.no-csstransforms .top {
+  position: static;
+}
+
+.no-csstransforms .drawer nav {
+  display: none;
+}
+
+.no-csstransforms .drawer.active nav {
+  display: block;
+}
+*/
+
+.content-drawer {
+    position: absolute;
+    width:100%;
+    margin-top: -16px;
+    margin-left: -20px;
+    z-index: 1;
+    /*display:none;*/
+}
+
+/* Accordian menu drop down test END */
+
+@media(max-width: 900px){
+    .content {
+        width: 100%;
+    }
+    .content-left {
+        width:93%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 1%;
+        margin-left: 1%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .content-right {
+        width:97%;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        margin-right: 2.5%;
+        margin-left: 0.5%;;
+
+        float:left;
+        position: relative;
+    }
+    #header-top {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #nav {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #footer-legal {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .footer-copyright {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .overlay-left {
+        width: 85%;
+        height: 200px;
+        position: absolute;
+        margin: 0px auto;
+
+        top: 250px;
+        left: 5%;
+    }
+    .overlay-right {
+        width: 85%;
+        height: 200px;
+        position: absolute;
+        margin: 0px auto;
+
+        top: 500px;
+        left: 5%;
+    }
+    .overlay-listers {
+        /*visibility: hidden;*/
+        position: absolute;
+        width: 400px;
+        height: 200px;
+        margin: 0px auto;
+
+        top: 0%;
+        right: 5%;
+        left: 5%;
+    }
+    .content-main {
+        height:750px;
+    }
+    #index-large {
+        display: none;
+    }
+    #index-small {
+        margin-left: 10px;
+    }
+    #header-link-container {
+        display: none;
+    }
+    #content-login, #content-register {
+        width: 100%;
+    }
+    .footer-col {
+        width:100%;
+        margin-bottom: 10px;
+    }
+    #divider-bar-temp{
+        display: none;
+    }
+}
+
+@media(min-width:900px){
+    .content {
+        width:1000px;
+        float: center;
+        margin: 0 auto;
+    }
+    .content-left {
+        width:1000px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .content-right {
+        margin-top: 15px;
+        margin-bottom:2.5%;
+        margin-left:715px;
+        margin-right: 5px;
+
+        width:260px;
+
+        float:left;
+        position: fixed;
+    }
+    #header-top {
+        width:1000px;
+    }
+    #nav {
+        width:1000px;
+    }
+    #footer-legal {
+        width: 1000px;
+    }
+    .footer-copyright {
+        width: 1000px;
+    }
+    .overlay-left {
+        width: 330px;
+        height: 330px;
+        position: relative;
+        top:80px;
+        float:left;
+
+        /*top: 20px;
+        left: 0px;*/
+    }
+    .overlay-right {
+        width: 330px;
+        height: 330px;
+        position: relative;
+        top:80px;
+        float:left;
+        margin-left: 40px;
+
+        /*top: 20px;
+        left: 0px;*/
+    }
+    .overlay-listers {
+        position: relative;
+        width: 200px;
+        height: 300px;
+
+        padding-top: 10px;
+        float:right;
+
+        /*top: 0%;
+        right: 10%;
+        left: 500px;*/
+    }
+    .content-main {
+        height:500px;
+    }
+    #index-small {
+        display:none;
+    }
+    #menu-top {
+        display:none;
+    }
+    .content-drawer {
+        display:none;
+    }
+    #content-login, #content-register {
+        width: 1000px;
+    }
+    .footer-col {
+        width:330px;
+    }
+}
+
+/* .content {
+    min-height: 500px;???
+}*/
+
+/*----- Start of account CSS -----*/
+
+#account-sidebar{
+    min-width:175px;
+    max-width: 200px;
+    height: 100%;
+    background-color:#e5e5e5;
+    float:left;
+    display:inline;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgb(100,100,100);
+
+}
+
+#account-sidebar ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#account-sidebar ul{
+    text-decoration: none;
+}
+
+#account-sidebar a:link, #account-sidebar a:visited, #account-sidebar a:active {
+    text-align: center;
+    background-color: #FFFFFF;
+    display:block;
+    text-decoration: none;
+    padding:5px;
+    border-bottom: 1px solid grey;
+    color: #27ae60;
+}
+
+#account-sidebar a h1:hover {
+    text-decoration: none;
+    color: #27ae60 !important;
+}
+
+
+#account-sidebar h1{
+    color:#000000;
+}
+
+.sidebar-selected {
+    background-color:transparent;
+     display:block;
+    text-decoration: none;
+    padding:5px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.sidebar-selected h1 {
+    color: #27ae60 !important;
+}
+
+.account-content{
+    width:1100px;
+    height:100%;
+    background-color: #e5e5e5;
+    min-width:1000px;
+}
+
+.account-right{
+    display:inline-block;
+    width:800px;
+    height:100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#accountSum-prompt{
+    width:800px;
+    height:400px;
+    text-align: center;
+    display: inline-block;
+    padding:10px;
+    margin: 20px;
+    background-color: #ffffff;
+}
+#accountSum-listing{
+    width:90%;
+    height:200px;
+    text-align:left;
+    display:inline-block;
+    padding:10px;
+    margin:20px;
+    background-color:#ffffff;
+}
+
+#accountListings-content{
+    width:99%;
+    display:inline-block;
+    margin:20px;
+    background-color:#ffffff;
+}
+#accountListings-content ul {
+    list-style: none;
+}
+.account-listing{
+    width: 600px;
+    height: 150px;
+    background-color: #e5e5e5;
+    display:inline-block;
+    margin-top:3px;
+    margin-bottom:3px;
+}
+#account-link a:hover{
+     text-decoration: none;
+    color: #27ae60;
+
+}
+
+.account-details-edit{
+    box-shadow: 0px 2px 5px rgb(100,100,100);
+    background: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    width: 1000px;
+    color: #838383;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    margin-top: 5px;
+}
+
+#box {
+     box-shadow: 0px 2px 5px rgb(100,100,100);
+    background: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    width: 880px;
+    color: #838383;
+}
+
+#no-margin {
+    margin: 0px;
+}
+
+#next-step {    
+    float: right;  
+}
+
+/*----- End of account CSS -----*/
+
+
+
+
+.content-image {
+    float: left;
+}
+
+.content-step-text {
+    min-height: 250px;
+}
+
+.content-break {
+    clear:both;
+}
+
+.content-main {
+    background-image: url("http://www.tubewalker.com/images/central/liverpool_street_to_leytonstone/source/liverpool_street_to_leytonstone221.jpg");
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
+    background-position: 0px -140px;
+    position: relative;
+    z-index: 0;
+}
+
+.content-steps {
+    height:500px;
+    background: #27ae60;
+    position: relative;
+}
+
+.content-review {
+    height:500px;
+    background: #E9F7EF;
+    position: relative;
+}
+
+.content-faq {
+    height:500px;
+    background:  #f1c40f;
+    position: relative;
+}
+
+footer {
+    width:100%;
+    background: #bdc3c7;
+    margin: 0px auto;
+    text-align: left;
+    margin-top: 100px;
+}
+
+#footer-legal {
+    background: #fff;
+    color: #262A2A;
+    position: relative;
+    float: center;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.footer-copyright {
+    height:50px;
+    background:#262A2A;
+    color: #ecf0f1;
+    position: relative;
+    float: center;
+    margin: 0 auto;
+
+    line-height: 50px;
+}
+
+#footer-legal-back {
+    width: 100%;
+    background: #fff;
+}
+
+.footer-copyright-back {
+    height: 50px;
+    width: 100%;
+
+    background: #262A2A;
+}
+
+.overlay-left {
+    /*width: 500px;
+    height: 200px;
+    position: absolute;
+    margin: 0px auto;*/
+
+    text-align: center;
+
+    background:#ecf0f1;
+    color:#262A2A;
+
+    /*top: 25%;
+    left: 20%;*/
+
+    border: 0px none;
+    border-radius: 10px;
+
+    opacity: 0.9;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.overlay-right {
+    /*width: 500px;
+    height: 200px;
+    position: absolute;
+    margin: 0px auto;*/
+
+    text-align: center;
+
+    background:#ecf0f1;
+    color:#262A2A;
+
+    /*top: 25%;
+    left: 20%;*/
+
+    border: 0px none;
+    border-radius: 10px;
+
+    opacity: 0.9;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.overlay-listers{
+    /*position: absolute;
+    width: 200px;
+    height: 300px;
+    margin: 0px auto;*/
+
+    text-align: center;
+
+    /*vertical-align: bottom;*/
+
+    background:#ecf0f1;
+    color:#262A2A;
+
+    /*top: 0%;
+    right: 10%;*/
+
+
+    border: 0px none;
+    border-radius: 0px 0px 10px 10px;
+
+    opacity: 0.9;
+}
+
+.form-control-group {
+    margin-bottom: 6px;
+}
+
+.form-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 8.2em;
+    margin: 0 1em 0 0;
+}
+
+.form-control-group input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    border-top: 1px solid #D7D7D7;
+    border-right: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.wizard-section-complete {
+  color: #D7D7D7;
+}
+
+.wizard-section-incomplete, .wizard-section-edit {
+  color: #838383;
+}
+
+.account-right h1 {
+  text-align: center;
+}
+
+.account-listing {
+  background-color: #ffffff;
+  width: 90%;
+  height: auto;
+  display: inline-block;
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em;
+}
+
+.property-name {
+  background-color: #fff;
+	border-radius: 2px 2px 0 0;
+	padding: 1px 10px;
+	color: #838383;
+  display:block;
+}
+
+.account-listing ul li {
+  margin-top: 0.2em;
+  font-size: 1.2em;
+}
+
+.next-step-button {
+  float: right;
+}
+
+.next-step-button h2 {
+  text-size: 1.5em;
+  color: #838383;
+}
+
+.next-step-button h2:hover {
+  color: #27AE60;
+  text-decoration: underline;
+}
+
+.front-house-image img {
+  display: inline-block;
+  float: right;
+}
+
+.wizard-section-incomplete:hover, .wizard-section-edit:hover, .wizard-section-complete:hover {
+  text-decoration :underline;
+}
+
+.account-subheading {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #838383;
+}

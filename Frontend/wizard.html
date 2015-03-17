@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HomeHunter | Wizard</title>
+
+    <!-- HomeHunter CSS -->
+    <link href="HomeHunter.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="dropzone.js"></script>
+    <script src="wizardscript.js"></script>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+  <header>
+    <div id="header-top-container">
+        <div id="header-top">
+            <div class="float-left" id="user-profile-link">
+                <a href="#">Home Hunter</a>
+            </div>
+
+            <div class="float-right" id="user-control">
+                <a href="login.html">Login</a> |
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="nav-container">
+        <div id="nav">
+            <div id="logo">
+                <a href="index.html">
+                    <img class="logo" src="logo.jpg" alt="Logo">
+                </a>
+            </div>
+
+            <div id="header-link-container">
+
+                <a href="account-details.html">
+                    <div class="links-col">
+                        My Account
+                    </div>
+                </a>
+
+                <a href="howitworks.html">
+                    <div class="links-col">
+                        How It Works
+                    </div>
+                </a>
+
+                <a href="fees.html">
+                    <div class="links-col">
+                        Fees
+                    </div>
+                </a>
+
+                <a href="advice.html">
+                    <div class="links-col">
+                        Advice
+                    </div>
+                </a>
+
+                <a href="FAQs.html">
+                    <div class="links-col">
+                        FAQs
+                    </div>
+                </a>
+            </div>
+
+            <!--Menu for small window here-->
+            <div id="menu-top">
+                <a href="#" class="menu">≡ <span>Menu</span></a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+    <div class="content-drawer">
+        <div class="drawer" id="drawer">
+            <nav>
+                <ul>
+                    <li><a href="account-details.html">My Account</a></li>
+                    <li><a href="advice.html">Advice</a></li>
+                    <li><a href="howitworks.html">How It Works</a></li>
+                    <li><a href="fees.html">Fees</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div data-step="0" class="wizard-container showing">
+        <div class="wizard-progress-bar" id="progress-bar-0"></div>
+        <div class="wizard-header">
+            <span>Can you please provide us with some personal details and confirm those that we already know.</span>
+        </div>
+        <div class="wizard-content-standard">
+            <div>
+                <span>First Name</span>
+                <input type="text" name="fname" tabindex="1" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>Last Name</span>
+                <input type="text" name="lname" tabindex="2" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>Email</span>
+                <input type="text" name="email" tabindex="3" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>Phone Number</span>
+                <input type="text" name="phone" tabindex="4" id="no-border-radius"/>
+            </div>
+        </div>
+        <div class="wizard-bottom">
+            <div class="float-right">
+                <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div data-step="1" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-1"></div>
+        <div class="wizard-header">
+            <span>Please enter the address of the property you wish to sell.</span>
+        </div>
+        <div class="wizard-content-standard">
+            <div>
+                <span>House Name / Number</span>
+                <input type="text" name="housenamenumber" tabindex="1" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>City</span>
+                <input type="text" name="City" tabindex="4" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>Address Line 1</span>
+                <input type="text" name="addressline1" tabindex="2" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>County</span>
+                <input type="text" name="county" tabindex="5" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>Address Line 2</span>
+                <input type="text" name="addressline2" tabindex="3" id="no-border-radius"/>
+            </div>
+            <div>
+                <span>Postcode</span>
+                <input type="text" name="postcode" tabindex="6" id="no-border-radius"/>
+            </div>
+        </div>
+        <div class="wizard-bottom">
+            <div class="wizard-previous float-left">
+                <span>Back</span>
+            </div>
+            <div class="float-right">
+                <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div data-step="2" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-2"></div>
+      <div class="wizard-header">
+          <span>General information about your property.</span>
+      </div>
+      <div class="wizard-content-standard">
+          <div>
+              <span>Property Type</span>
+              <select name="propertytype" id="no-border-radius">
+                  <option value=""></option>
+                  <option>Detached</option>
+                  <option>Semi-Detached</option>
+                  <option>Terrace</option>
+                  <option>Flat</option>
+                  <option>Apartment</option>
+                  <option>Bungalow</option>
+                  <option>Cottage</option>
+              </select>
+          </div>
+          <div>
+              <span>Number of Floors</span>
+              <select name="numberoffloors" id="no-border-radius">
+                  <option value=""></option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+              </select>
+          </div>
+          <div>
+              <span>Entrance Floor</span>
+              <select name="entrancefloor" id="no-border-radius">
+                <option value=""></option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+              </select>
+          </div>
+          <div>
+              <span>Condition</span>
+              <select name="condition" id="no-border-radius">
+                  <option value=""></option>
+                  <option>Good</option>
+                  <option>Minor Work</option>
+                  <option>Work Needed Throughout</option>
+                  <option>Full Renovation Required</option>
+              </select>
+          </div>
+          <div>
+              <span>Bedrooms</span>
+              <select name="bedrooms" id="no-border-radius">
+                  <option value=""></option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+              </select>
+          </div>
+
+          <div>
+              <span>Bathrooms</span>
+              <select name="bathrooms" id="no-border-radius">
+                  <option value=""></option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+              </select>
+          </div>
+          <div>
+              <span>Reception Rooms</span>
+              <select name="receptionrooms" id="no-border-radius">
+                  <option value=""></option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+              </select>
+          </div>
+          <div>
+              <span>Other Rooms</span>
+              <select name="otherrooms" id="no-border-radius">
+                  <option value=""></option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+              </select>
+          </div>
+      </div>
+      <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div class="float-right">
+              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          </div>
+      </div>
+    </div>
+
+    <div data-step="3" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-3"></div>
+      <div class="wizard-header">
+
+          <span>Please select what type of garden your property has. You can select more than one.</span>
+      </div>
+      <div class="wizard-content-checkbox">
+          <div>
+              <span>No Garden</span>
+          </div>
+          <div>
+              <span>Front Garden</span>
+          </div>
+          <div>
+              <span>Back Garden</span>
+          </div>
+          <div>
+              <span>Terrace Garden</span>
+          </div>
+          <div>
+              <span>Communal Garden</span>
+          </div>
+          <div> <!--<div style="border-bottom: 1px solid #D7D7D7;"> Why is this here?-->
+              <span>Private Garden</span>
+          </div>
+          <div>
+              <span>Enclosed Garden</span>
+          </div>
+          <div>
+              <span>Patio Garden</span>
+          </div>
+          <div>
+            <span>Rear Garden</span>
+          </div>
+      </div>
+      <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div class="float-right">
+              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          </div>
+      </div>
+    </div>
+
+    <div data-step="4" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-4"></div>
+      <div class="wizard-header">
+          <span>Please select parking facilities that relate to your property, you may select more than one.</span>
+      </div>
+      <div class="wizard-content-checkbox">
+          <div>
+              <span>No Parking</span>
+          </div>
+          <div>
+              <span>On Street Parking</span>
+          </div>
+          <div>
+              <span>Off Street Parking</span>
+          </div>
+          <div>
+              <span>Permit</span>
+          </div>
+          <div>
+              <span>Driveway</span>
+          </div>
+          <div>
+              <span>Gated</span>
+          </div>
+          <div>
+              <span>Rear Parking</span>
+          </div>
+          <div>
+              <span>Garage</span>
+          </div>
+          <div>
+              <span>Communal Parking</span>
+          </div>
+          <div>
+              <span>Allocated Parking</span>
+          </div>
+          <div>
+              <span>Private Parking</span>
+          </div>
+          <div>
+              <span>Residents Parking</span>
+          </div>
+      </div>
+      <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div class="float-right">
+              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          </div>
+      </div>
+    </div>
+
+    <div data-step="5" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-5"></div>
+        <div class="wizard-header">
+            <span>Please select heating facilities of your property. You can select more than one.</span>
+        </div>
+        <div class="wizard-content-checkbox">
+            <div>
+                <span>Gas Central Heating</span>
+            </div>
+            <div>
+                <span>Double Glazing</span>
+            </div>
+            <div>
+                <span>Eco-Friendly</span>
+            </div>
+            <div>
+                <span>Air Conditioning</span>
+            </div>
+            <div>
+                <span>Electric</span>
+            </div>
+            <div>
+                <span>Gas</span>
+            </div>
+            <div>
+                <span>Central</span>
+            </div>
+            <div>
+                <span>Night Storage</span>
+            </div>
+            <div>
+                <span>Oil</span>
+            </div>
+            <div>
+                <span>Solar</span>
+            </div>
+            <div>
+                <span>Solar Water</span>
+            </div>
+            <div>
+                <span>Underfloor Heating</span>
+            </div>
+        </div>
+        <div class="wizard-bottom">
+            <div class="wizard-previous float-left">
+                <span>Back</span>
+            </div>
+            <div class="float-right">
+                <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div data-step="6" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-6"></div>
+      <div class="wizard-header">
+         <span>Please enter some details for each room. The name of each room is needed and
+           we recommend providing dimensions and a description.</span>
+         <br/>
+         <span> Photos are also required for the Master Bedroom, the front of your property
+           and 1 additional photo, although we recommend atleast one for each room. </span>
+      </div>
+      <div class="wizard-content-rooms">
+          <div class="wizard-room-list">
+              <div class="wizard-room-list-selected">
+                  <span>Master Bedroom</span>
+              </div>
+              <div>
+                  <span>Bedroom 2</span>
+              </div>
+              <div>
+                  <span>Bedroom 3</span>
+              </div>
+              <div>
+                  <span>Reception 1</span>
+              </div>
+              <div>
+                  <span>Kitchen 1</span>
+              </div>
+              <div>
+                  <span>Bathroom 1</span>
+              </div>
+              <div>
+                  <span>Reception 1</span>
+              </div>
+              <div>
+                  <span>Kitchen 1</span>
+              </div>
+              <div>
+                  <span>Bathroom 1</span>
+              </div>
+              <div>
+                  <span>Reception 1</span>
+              </div>
+              <div>
+                  <span>Kitchen 1</span>
+              </div>
+              <div>
+                  <span>Bathroom 1</span>
+              </div>
+          </div>
+          <div class="wizard-room-tab">
+              <div id="wizard-room-title">
+                  <span>Room Title</span>
+                  <input type="text" name="roomtitle" />
+              </div>
+              <div id="wizard-room-length">
+                  <span>Room Length</span>
+                  <input type="text" name="roomlength"  id="no-border-radius"/>
+              </div>
+              <div id="wizard-room-width">
+                  <span>Room Width</span>
+                  <input type="text" name="roomwidth"  id="no-border-radius"/>
+              </div>
+              <div id="wizard-room-meters" class="wizard-room-selected">
+                  <span>Metres</span>
+              </div>
+              <div id="wizard-room-feet">
+                  <span>Feet</span>
+              </div>
+              <div id="wizard-room-description">
+                  <span>Room Description</span>
+                  <textarea></textarea>
+              </div>
+              <div id="wizard-rooms-files">
+                  <div id="wizard-rooms-fileupload">
+                      <span>Click or Drag Here to <br />Upload Pictures</span>
+                  </div>
+                  <div id="wizard-rooms-uploaded">
+                      <span><img class="wizard-rooms-image" data-dz-thumbnail /></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div class="float-right">
+              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          </div>
+      </div>
+  </div>
+
+  <div data-step="7" class="wizard-container hidden">
+    <div class="wizard-progress-bar" id="progress-bar-7"></div>
+    <div class="wizard-header">
+        <span>Everyone's property is different so below are a list of keywords that you can drop and drag into the right box. Feel free to even add your own.</span>
+    </div>
+    <div class="wizard-content-standard">
+        <div id="wizard-keywords-options">
+          <span>Keyword Suggestions</span>
+          <div id="length-fix">
+
+          </div>
+        </div>
+        <div id="wizard-keywords-field">
+          <span>Keywords</span>
+          <div id="length-fix">
+
+          </div>
+        </div>
+    </div>
+    <div class="wizard-bottom">
+      <div class="wizard-previous float-left">
+          <span>Back</span>
+      </div>
+      <div class="float-right">
+          <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div data-step="8" class="wizard-container hidden">
+    <div class="wizard-progress-bar" id="progress-bar-8"></div>
+    <div class="wizard-header">
+        <span>Below is a box for you to provide us with a description of anything we've missed. We suggest adding any of the features that your property has.</span>
+    </div>
+    <div class="wizard-content-standard">
+        <div id="wizard-description-description">
+            <span>Description</span>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div class="wizard-bottom">
+      <div class="wizard-previous float-left">
+          <span>Back</span>
+      </div>
+      <div class="float-right">
+          <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+    <div data-step="9" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-9"></div>
+        <div class="wizard-header">
+            <span>Please check that all of your information is correct. You will not be able to go back and make any changes after this page.</span>
+        </div>
+
+        <div class="wizard-content-standard">
+
+          <div class="review-tab">
+            <h2>Personal Information</h2>
+            <div class="review-info">
+              <p>Name: Joe Bloggs</p>
+              <p>Email: examples@examples.com</p>
+              <p>Phone: 12345 678901</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Address</h2>
+            <div class=review-info>
+              <p>Address: 12 Some Street, Some Town, Some Country</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>General Information</h2>
+            <div class="review-info">
+              <p>Property Type: Detached</p>
+              <p>Number of floors: 4</p>
+              <p>Entrance Floor: 0</p>
+              <p>Condition: Good</p>
+              <p>Bedrooms: 2</p>
+              <p>Bathrooms: 1</p>
+              <p>Reception Rooms: 1</p>
+              <p>Other Rooms: 1</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Other Information</h2>
+            <div class=review-info>
+              <p>Outdoor Spaces: Rear Garden, Front Garden</p>
+              <p>Parking: Driveway</p>
+              <p>Heating: Central</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Room Information</h2>
+            <div class="review-info">
+              <p>Bedroom: Master Bedroom, 3m x 4m</p>
+              <p>Bedroom: Guest Bedroom, 4m x 3m</p>
+              <p>Bathrooms: Bathroom, 3m x 2m</p>
+              <p>Reception Room: Living Room, 4m x 3m</p>
+              <p>Other Room: Kitchen, 4m x 4m</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Keywords and Description</h2>
+            <div class="review-info">
+              <p>Pre-war build, working fireplace in kitchen, large garden with small shed<p>
+              <p>Large apple tree in the garden</p>
+            </div>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+          <div class="review-tab">
+            <h2>Photos</h2>
+            <div class="edit-button">
+              <span>Edit</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div class="float-right">
+              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-step="10" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-10"></div>
+        <div class="wizard-header">
+            <span>To finish your listing please follow the instructions after clicking the PayPal button, we charge £500, you will then
+                be redirected to the final page of the wizard.</span>
+        </div>
+        <div class="wizard-content-standard">
+
+        </div>
+        <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div id="paypal-button">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="VG7UNLQ2K5ECN">
+                  <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_checkout_pp_142x27.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+              </form>
+          </div>
+    </div>
+</div>
+
+
+</body>
+</html>
