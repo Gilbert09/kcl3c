@@ -44,6 +44,16 @@
             result.innerHTML = '£'+ house_value
             saving.innerHTML = '£'+ saving_cost(house_value);
         }
+
+        $(document).ready(function() {
+            showValue(2590);
+
+            $('#sliderBar').on("change mousemove", function() {
+                showValue($(this).val());
+            });
+        });
+
+        
     </script>
 </head>
 
@@ -188,8 +198,7 @@
                 <div><h2>My property is worth: </h2></div>
                 <strong><div id="result" style="height:40px;" >£0</div></strong>
                 <div>
-                    <input type="range" id="sliderBar" min="1500" max="4000" step="5" value="0"
-                           onChange="showValue(this.value);"/>
+                    <input type="range" id="sliderBar" min="1500" max="4000" step="5" value="2590" />
                 </div><br>
                 <div><h2>You could save <div id="saving">£0</div> with Home Hunter.</h2></div>
                 Savings are based on an estate agent fee of 1.5% +VAT.
