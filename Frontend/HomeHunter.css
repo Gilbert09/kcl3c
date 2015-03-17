@@ -1969,6 +1969,42 @@ input[type=range]::-webkit-slider-thumb {
     height: 60px;
 }
 
+#wizard-property-files {
+  border-right: none;
+  width: 569px;
+}
+
+#wizard-property-fileupload {
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid #27ae60;
+  height: 65px;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: top;
+  padding: 15px 6px !important;
+}
+
+#wizard-property-fileupload span {
+  position: relative;
+  top: 35%;
+}
+
+#wizard-property-uploaded {
+  display: inline-block;
+  vertical-align: top;
+  width: 245px;
+  border: none;
+}
+
+#wizard-property-uploaded span {
+  display: inline-block !important;
+}
+
+.wizard-property-image {
+  height: 60px;
+}
+
 #wizard-description-description {
     width: 568px;
     border-right: none;
