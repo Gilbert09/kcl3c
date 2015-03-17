@@ -45,7 +45,7 @@ class ApiController < ApplicationController
       when "9"
         stage9(jsonData, stage, current_user)
       else 
-        return JSON.parse('{ "result": "Error", "message": "Invalid stage" }');
+        return JSON.parse('{ "result": "Error", "message": "Invalid stage" }')
     end
   end
 
@@ -56,7 +56,7 @@ class ApiController < ApplicationController
       current_user.email = jsonData["email"]
       current_user.phone_number = jsonData["phone_number"]
       current_user.save
-      return JSON.parse('{ "result": "Success", "message": "Data saved" }');
+      return JSON.parse('{ "result": "Success", "message": "Data saved" }')
     end
 
     def stage2(jsonData, stage, current_user)
@@ -68,7 +68,7 @@ class ApiController < ApplicationController
       end
 
       if newAddress == true and jsonData["address_id"] != nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid address ID" }');
+        return JSON.parse('{ "result": "Error", "message": "Invalid address ID" }')
       end
 
       if newAddress then
@@ -89,7 +89,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id +', "property_id": ' + property.id + ' } }');
+        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id.to_s +', "property_id": ' + property.id.to_s + ' } }')
       else
         address = Address.find(jsonData["address_id"] )
         address.house_name_number = jsonData["house_name_number"]
@@ -99,7 +99,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id +', "property_id": ' + address.property_id + ' } }');
+        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id.to_s +', "property_id": ' + address.property_id.to_s + ' } }')
       end
     end
 
@@ -110,7 +110,7 @@ class ApiController < ApplicationController
 
       property = current_user.properties.where("id = '" + jsonData["property_id"] + "'")
       if property == nil then 
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
 
