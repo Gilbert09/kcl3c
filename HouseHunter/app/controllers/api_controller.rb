@@ -38,8 +38,7 @@ class ApiController < ApplicationController
         if jsonData["address_id"] != nil
           current_user.properties.each do |p|
             p.addresses.each do |a|
-              if a.id == jsonData["address_id"].to_s then newAddress = false;
-              end
+              if a.id == jsonData["address_id"].to_s then newAddress = false end
             end
           end
         end
