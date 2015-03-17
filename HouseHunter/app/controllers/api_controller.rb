@@ -89,7 +89,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": " + address.id.to_s +", \"property_id\": " + property.id.to_s + " } }")
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": #{address.id.to_s}, \"property_id\": #{property.id.to_s} } }")
       else
         address = Address.find(jsonData["address_id"] )
         address.house_name_number = jsonData["house_name_number"]
@@ -99,7 +99,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id.to_s +', "property_id": ' + address.property_id.to_s + ' } }')
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": #{address.id.to_s}, \"property_id\": #{address.property_id.to_s} } }")
       end
     end
 
