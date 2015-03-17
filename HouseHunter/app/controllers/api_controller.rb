@@ -137,6 +137,8 @@ class ApiController < ApplicationController
 
       property = current_user.properties.find(jsonData["property_id"])
       property.outdoor_space = jsonData["outdoor_space"]
+      property.save
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
     def stage5(jsonData, stage, current_user)
@@ -150,6 +152,8 @@ class ApiController < ApplicationController
 
       property = current_user.properties.find(jsonData["property_id"])
       property.parking = jsonData["parking"]
+      property.save
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
     def stage6(jsonData, stage, current_user)
@@ -163,6 +167,8 @@ class ApiController < ApplicationController
 
       property = current_user.properties.find(jsonData["property_id"])
       property.heating = jsonData["heating"]
+      property.save
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
     def stage7(jsonData, stage, current_user)
