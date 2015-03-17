@@ -99,7 +99,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id +' } }');
+        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id +', "property_id": ' + address.property_id + ' } }');
       end
     end
 
