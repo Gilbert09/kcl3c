@@ -2181,3 +2181,8 @@ input[type=range]::-webkit-slider-thumb {
 #length-fix {
     width:245px;
 }
+
+#get-started {
+    float: center;
+    margin:auto;
+}
