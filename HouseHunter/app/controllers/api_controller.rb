@@ -89,7 +89,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": " + address.id.to_s +", \"property_id\": " + property.id.to_s + " } }")
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": #{address.id.to_s}, \"property_id\": #{property.id.to_s} } }")
       else
         address = Address.find(jsonData["address_id"] )
         address.house_name_number = jsonData["house_name_number"]
@@ -99,7 +99,7 @@ class ApiController < ApplicationController
         address.county = jsonData["county"]
         address.post_code = jsonData["postcode"]
         address.save
-        return JSON.parse('{ "result": "Success", "message": "Data saved", "data": { "address_id": ' + address.id.to_s +', "property_id": ' + address.property_id.to_s + ' } }')
+        return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"address_id\": #{address.id.to_s}, \"property_id\": #{address.property_id.to_s} } }")
       end
     end
 
@@ -108,15 +108,22 @@ class ApiController < ApplicationController
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
 
-      property = current_user.properties.where("id = '" + jsonData["property_id"] + "'")
-      if property == nil then 
+      if current_user.properties.exists?(jsonData["property_id"]) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
+      property = current_user.properties.find(jsonData["property_id"])
+      property.property_type = jsonData["property_type"]
+      property.number_of_floors = jsonData["number_of_floors"]
+      property.entrance_floor = jsonData["entrance_floor"]
+      property.condition = jsonData["condition"]
+      property.number_of_bedrooms = jsonData["number_of_bedrooms"]
+      property.number_of_bathrooms = jsonData["number_of_bathrooms"]
+      property.number_of_receptions = jsonData["number_of_receptions"]
+      property.number_of_other_rooms = jsonData["number_of_other_rooms"]
+      property.save
 
-
-
-
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
     def stage4(jsonData, stage, current_user)
