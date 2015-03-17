@@ -80,6 +80,7 @@ class ApiController < ApplicationController
         address.property_id = property.id
         property.user_id = current_user.id
         property.address_id = address.id
+        property.status = "Draft"
         property.save
 
         address.house_name_number = jsonData["house_name_number"]
@@ -113,6 +114,7 @@ class ApiController < ApplicationController
       end
 
       property = current_user.properties.find(jsonData["property_id"])
+      property.price = jsonData["price"]
       property.property_type = jsonData["property_type"]
       property.number_of_floors = jsonData["number_of_floors"]
       property.entrance_floor = jsonData["entrance_floor"]
@@ -172,6 +174,8 @@ class ApiController < ApplicationController
     end
 
     def stage7(jsonData, stage, current_user)
+      #TODO: Upload multimedia still, probably as a seperate method idk
+
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
@@ -212,10 +216,32 @@ class ApiController < ApplicationController
     end
 
     def stage8(jsonData, stage, current_user)
+      if jsonData["property_id"] == nil then
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      end
 
+      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
+      end
+
+      property = current_user.properties.find(jsonData["property_id"])
+      property.keyword = jsonData["keywords"]
+      property.save
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
     def stage9(jsonData, stage, current_user)
+      if jsonData["property_id"] == nil then
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      end
 
+      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
+      end
+
+      property = current_user.properties.find(jsonData["property_id"])
+      property.description = jsonData["description"]
+      property.save
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 end
