@@ -1,11 +1,16 @@
 $(document).ready(function() {
 	$(document).on("click", ".wizard-next", function() {
-		var currentStep = $($(this).parents()[2]).attr("data-step");
-		var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
-		if (nextStage.length == 0) return;
-		$($($(this).parents()[2])).fadeOut(1000, function() {
-			$(nextStage).fadeIn(1000);
-		});
+		var stThis = this;
+		setTimeout(function() {
+			var currentStep = $($(stThis).parents()[2]).attr("data-step");
+			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+			if (nextStage.length == 0) return;
+			$($($(stThis).parents()[2])).fadeOut(1000, function() {
+				$(nextStage).fadeIn(1000);
+				changeButton();
+			});
+		}, 1000);
+		changeButton();
 	});
 
 	$(document).on("click", ".wizard-previous span", function() {
@@ -63,3 +68,17 @@ $(document).ready(function() {
 		$(this).addClass("wizard-room-selected");
 	});
 });
+
+function changeButton() {
+	if ($(".wizard-next").css("padding") == "12px 47px") {
+		$(".wizard-next").html("Continue <i class=\"fa fa-long-arrow-right\"></i>");
+		$(".wizard-next").css("padding", "18px 47px");
+		$(".wizard-next").css("width", "179px");
+	} else {
+		$(".wizard-next").css("padding", "12px 47px");
+		$(".wizard-next").animate({
+			width: "123px"
+		}, 600);
+		$(".wizard-next").html("<i class=\"fa fa-spinner fa-pulse fa-2x\"></i>");
+	}
+}
