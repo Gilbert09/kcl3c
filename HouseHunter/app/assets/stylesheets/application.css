@@ -291,7 +291,7 @@ ul.hiw li {
     text-decoration: underline !important;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="email"], input[type="password"] {
   padding: 0 12px;
   font-size: 22px;
   width:90%;
