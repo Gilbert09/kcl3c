@@ -1382,6 +1382,7 @@ margin-bottom: 1px;
 }
 
 footer {
+    position: absolute;
     width:100%;
     background: #bdc3c7;
     margin: 0px auto;
