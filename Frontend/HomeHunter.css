@@ -988,7 +988,7 @@ margin-bottom: 1px;
         width: 300px;
     }
     #account-sidebar h1{
-        font-size: 25px !important;
+        font-size: 20px !important;
     }
 }
 
@@ -1104,7 +1104,7 @@ margin-bottom: 1px;
         width: 90%;
     }
     #account-sidebar h1{
-        font-size: 25px !important;
+        font-size: 20px !important;
     }
     #next-step {
         float: center;
@@ -1735,6 +1735,7 @@ input[type=range]::-webkit-slider-thumb {
     outline: none;
     padding: 5px 0px 0px 10px;
     font-size: 19px;
+    input: 97%;
 }
 
 .wizard-content-standard div select {
@@ -2232,8 +2233,36 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 0px !important;
 }
 
-#length-fix {
-    width:245px;
+.keyword{
+    color:white;
+    background-color: #27ae60;
+    display: inline-block;
+    
+    margin-top: 5px;
+    margin-left: 1px !important;
+    padding:5px !important;
+    width: auto !important;
+
+    border-radius: 2px;
+    border: none !important;
+
+    cursor: -webkit-grab; cursor: -moz-grab;
+}
+
+#wizard-keywords-options{
+    height: 300px;
+    margin: 0px !important;
+    display: inline-block;
+    width: 266px   !important;
+    vertical-align: top;
+}
+
+#wizard-keywords-field{
+    height: 300px;
+    margin: 0px !important;
+    display: inline-block;
+    width: 266px !important;
+    vertical-align: top;
 }
 
 #get-started {
