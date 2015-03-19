@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'notifications@homehunter.com'
+  default from: 'no-reply@homehunter.com'
 
   def confirm_address(user)
     @user = user
