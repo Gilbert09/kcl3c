@@ -1,8 +1,9 @@
 body {
-    margin:0px;
+    margin:0 0 100px;
     /*background: #A39F9F;*/
     background-color: #e5e5e5;
     font-family: "Helvetica", serif;
+
 }
 
 header {
@@ -1405,9 +1406,13 @@ margin-bottom: 1px;
 footer {
     position: absolute;
     width:100%;
+    left: 0;
+    bottom: 0;
+    height: 0;
     background: #bdc3c7;
     margin: 0px auto;
     text-align: left;
+
 }
 
 #footer-legal {
@@ -1727,10 +1732,10 @@ input[type=range]::-webkit-slider-thumb {
 
 .wizard-container {
     width: 600px;
-    height: 600px;
+    height: 100%;
     position: relative;
     top:50px;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -1772,6 +1777,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .wizard-content-standard div input, .wizard-content-standard div select, .wizard-content-rooms div input {
+
     display: block;
     border: none;
     border-bottom: 1px solid #27ae60;
@@ -2318,4 +2324,9 @@ input[type=range]::-webkit-slider-thumb {
   /* Styling for the price estimation box; will need to be full length horizontally */
   width: 568px;
   border-right: none;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
 }
