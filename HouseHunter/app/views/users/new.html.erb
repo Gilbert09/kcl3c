@@ -1,15 +1,52 @@
-<div id="clearance" class="sign-up">
-  <h2><%= t('.title') %></h2>
-
-  <%= form_for @user do |form| %>
-    <%= render partial: '/users/form', object: form %>
-
-    <div class="submit-field">
-      <%= form.submit %>
+<div class="content-drawer">
+    <div class="drawer" id="drawer">
+        <nav>
+            <ul>
+                <li><a href="account-wizard.html">My Account</a></li>
+                <li><a href="advice.html">Advice</a></li>
+                <li><a href="howitworks.html">How It Works</a></li>
+                <li><a href="fees.html">Fees</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+            </ul>
+        </nav>
     </div>
+</div>
+<div class="content">
+    <div id="content-login">
+        <form>
+            <fieldset>
+                <legend>Register with HomeHunter</legend>
+                <hr class="divider-bar"></hr> 
 
-    <div class="other-links">
-      <%= link_to t('.sign_in'), sign_in_path %>
-    </div>
-  <% end %>
+                <div class="form-control-group">
+                    <span class="fontawesome-user"><i class="fa fa-at"></i></span>
+                    <input class="icon-input" type="text" id="email" name="email" placeholder="Email Address">
+                </div>
+
+                <div class="form-control-group">
+                    <span class="fontawesome-user"><i class="fa fa-at"></i></span>
+                    <input class="icon-input" type="text" id="confirm-email" name="confirm-email" placeholder="Confirm Email Address">
+                </div>
+
+                <div class="form-control-group">
+                    <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
+                    <input class="icon-input" type="password" id="password" name="password" placeholder="Password">
+                </div>
+
+                <div class="form-control-group">
+                    <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
+                    <input class="icon-input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                </div>
+
+                <div class="form-control-group">
+                    <input type="submit" name"register" value="Register" id="submit-register">
+                </div>
+
+                <div class="form-control-group" id="other-links">
+                    Already Registered? <a href="login.html">Login</a>
+                </div>
+
+            </fieldset>
+        </form>    
+    </div> 
 </div>
