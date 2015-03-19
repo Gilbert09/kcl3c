@@ -1973,7 +1973,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 418px;
 }
 
-#wizard-room-description textarea, #wizard-house-description textarea, #wizard-description-description textarea  {
+#wizard-room-description textarea, #wizard-house-description textarea, #wizard-description-description textarea, #message-description textarea {
     resize: none;
     width: 414px;
     height: 70px;
@@ -2056,12 +2056,12 @@ input[type=range]::-webkit-slider-thumb {
   height: 60px;
 }
 
-#wizard-description-description {
+#wizard-description-description, #message-description {
     width: 568px;
     border-right: none;
 }
 
-#wizard-description-description textarea {
+#wizard-description-description textarea, #message-description textarea {
     width: 558px;
     height: 250px;
 }
