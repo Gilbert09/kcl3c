@@ -1297,6 +1297,27 @@ margin-bottom: 1px;
   margin-right: auto ;
 }
 
+#termsandconditions {
+
+    width: 700px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+#privacynotice {
+
+    width: 700px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+#cookiespolicy {
+
+    width: 700px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
 
 /*----- End of account CSS -----*/
 .content-image {
