@@ -13,31 +13,29 @@
 </div>
 <div class="content">
     <div id="content-login">
-        <form>
-            <fieldset>
-                <legend>Login to HomeHunter</legend>
-                <hr class="divider-bar"></hr>
-                <%= form_for :session, url: session_path do |form| %>
-                    <div class="form-control-group">
-                        <span class="fontawesome-user"><i class="fa fa-at"></i></span>
-                        <%= form.text_field :email, type: 'text', class: 'icon-input', id: 'email', name: 'email', placeholder: 'Email Address' %>
-                    </div>
+        <fieldset>
+            <legend>Login to HomeHunter</legend>
+            <hr class="divider-bar"></hr>
+            <%= form_for :session, url: session_path do |form| %>
+                <div class="form-control-group">
+                    <span class="fontawesome-user"><i class="fa fa-at"></i></span>
+                    <%= form.text_field :email, type: 'text', class: 'icon-input', id: 'email', name: 'email', placeholder: 'Email Address' %>
+                </div>
 
-                    <div class="form-control-group">
-                        <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                        <%= form.text_field :password, type: 'password', class: 'icon-input', id: 'password', name: 'password', placeholder: 'Password' %>
-                    </div>
+                <div class="form-control-group">
+                    <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
+                    <%= form.text_field :password, type: 'password', class: 'icon-input', id: 'password', name: 'password', placeholder: 'Password' %>
+                </div>
 
-                    <div class="form-control-group">
-                        <%= form.submit id: 'submit-login', value: 'Sign In', name: 'login' %>
-                    </div>
+                <div class="form-control-group">
+                    <%= form.submit id: 'submit-login', value: 'Sign In', name: 'login' %>
+                </div>
 
-                    <div class="form-control-group" id="other-links">
-                        <a href="register.html" class="float-left">Register</a>
-                        <a href="forgotpassword.html" class="float-right">Forgotten password</a>
-                    </div>
-                <% end %>
-            </fieldset>
-        </form>
+                <div class="form-control-group" id="other-links">
+                    <a href="register.html" class="float-left">Register</a>
+                    <a href="forgotpassword.html" class="float-right">Forgotten password</a>
+                </div>
+            <% end %>
+        </fieldset>
     </div>
 </div>
