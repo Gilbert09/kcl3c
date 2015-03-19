@@ -19,16 +19,16 @@
             <%= form_for :session, url: session_path do |form| %>
                 <div class="form-control-group">
                     <span class="fontawesome-user"><i class="fa fa-at"></i></span>
-                    <%= form.text_field :email, type: 'email' %>
+                    <%= form.text_field :email, type: 'email', class: 'icon-input', placeholder: 'Email Address' %>
                 </div>
 
                 <div class="form-control-group">
                     <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                    <%= form.password_field :password %>
+                    <%= form.password_field :password, class: 'icon-input', placeholder: 'Password' %>
                 </div>
 
                 <div class="form-control-group">
-                    <%= form.submit %>
+                    <%= form.submit id: 'submit-login', value: 'Sign In' %>
                 </div>
 
                 <div class="form-control-group" id="other-links">
