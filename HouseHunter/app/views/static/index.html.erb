@@ -104,3 +104,49 @@
         <div class="text-steps"><h2><strong>Track</strong></h2>Monitor and edit your property.</div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    function rounding(num) {
+        num = num / 5000;
+        return Math.round(num)*5000;
+    }
+
+    //the saving the user will make
+    function saving_cost(num) {
+      return Math.round(num*0.015*1.2);
+    }
+
+    //the value of their property
+    function value(num) {
+      num = num / 160;
+      console.log(num);
+      if(num > 12.5) {
+        num = rounding(Math.pow((num/1.19),5.29345));
+        return num / 5;
+      } else {
+        num = rounding(Math.pow(((num*-1)/1.2), 5));
+        num = num * -2;
+        console.log("out: " + num);
+        return num / 5;
+      }
+    }
+
+    function showValue(num) {
+        var result = document.getElementById('result');
+        var saving = document.getElementById('saving');
+
+        house_value = value(num);
+
+        result.innerHTML = '£'+ house_value
+        saving.innerHTML = '£'+ saving_cost(house_value);
+    }
+
+    $(document).ready(function() {
+        showValue(2590);
+
+        $('#sliderBar').on("change mousemove", function() {
+            showValue($(this).val());
+        });
+    });
+</script>
