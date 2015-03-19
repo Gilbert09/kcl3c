@@ -5,7 +5,7 @@ class UsersController < Clearance::UsersController
 
   def new
     @user = user_from_params
-    render "users/new"
+    render template: "users/new"
 
     UserMailer.confirm_address(@user).deliver_now
   end
@@ -18,7 +18,7 @@ class UsersController < Clearance::UsersController
       UserMailer.welcome_email(@user).deliver_now
       redirect_back_or url_after_create
     else
-      render "users/new"
+      render template: "users/new"
     end
   end
 
