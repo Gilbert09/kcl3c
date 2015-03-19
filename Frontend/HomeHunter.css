@@ -1735,7 +1735,7 @@ input[type=range]::-webkit-slider-thumb {
     outline: none;
     padding: 5px 0px 0px 10px;
     font-size: 19px;
-    input: 97%;
+    width: 97%;
 }
 
 .wizard-content-standard div select {
@@ -2237,7 +2237,7 @@ input[type=range]::-webkit-slider-thumb {
     color:white;
     background-color: #27ae60;
     display: inline-block;
-    
+
     margin-top: 5px;
     margin-left: 1px !important;
     padding:5px !important;
