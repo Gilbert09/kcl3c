@@ -13,7 +13,7 @@
                         <a href="#"><%= current_user.first_name + " " + current_user.last_name %></a> |
                     <% end %>
                     
-                    <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';document.location='/'">Sign Out</a>
+                    <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';document.location='/'">Log Out</a>
                 <% else %>
                     <%= link_to "Login", sign_in_path %> |
                     <%= link_to "Register", sign_up_path %>
