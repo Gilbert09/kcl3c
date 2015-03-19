@@ -13,40 +13,40 @@
 </div>
 <div class="content">
     <div id="content-login">
-        <form>
+        <%= form_for @user do |form| %>
             <fieldset>
                 <legend>Register with HomeHunter</legend>
                 <hr class="divider-bar"></hr> 
 
                 <div class="form-control-group">
                     <span class="fontawesome-user"><i class="fa fa-at"></i></span>
-                    <input class="icon-input" type="text" id="email" name="email" placeholder="Email Address">
+                    <%= form.text_field :email, type: 'email', class: 'icon-input', placeholder: 'Email Address' %>
                 </div>
 
                 <div class="form-control-group">
                     <span class="fontawesome-user"><i class="fa fa-at"></i></span>
-                    <input class="icon-input" type="text" id="confirm-email" name="confirm-email" placeholder="Confirm Email Address">
+                    <%= form.text_field :email, type: 'email', class: 'icon-input', placeholder: 'Confirm Email Address' %>
                 </div>
 
                 <div class="form-control-group">
                     <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                    <input class="icon-input" type="password" id="password" name="password" placeholder="Password">
+                    <%= form.password_field :password, class: 'icon-input', placeholder: 'Password' %>
                 </div>
 
                 <div class="form-control-group">
                     <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                    <input class="icon-input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                    <%= form.password_field :password, class: 'icon-input', placeholder: 'Confirm Password' %>
                 </div>
 
                 <div class="form-control-group">
-                    <input type="submit" name"register" value="Register" id="submit-register">
+                    <%= form.submit id: 'submit-register', value: 'Register' %>
                 </div>
 
                 <div class="form-control-group" id="other-links">
                     Already Registered? <a href="login.html">Login</a>
                 </div>
 
-            </fieldset>
-        </form>    
+            </fieldset> 
+        <% end %>
     </div> 
 </div>
