@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div id="header">
-    <% if signed_in? -%> 
-      <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';document.location='/'">Sign Out</a>
-    <% else -%>
-      <%= link_to t('.sign_in'), sign_in_path %>
-    <% end -%>
-  </div>
+  <%= render "static/header" %>
 
   <div id="flash">
     <% flash.each do |key, value| -%>
@@ -20,5 +15,7 @@
   </div>
 
   <%= yield %>
+
+  <%= render "static/footer" %>
 </body>
 </html>
