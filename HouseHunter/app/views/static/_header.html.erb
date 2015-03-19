@@ -7,7 +7,12 @@
 
             <div class="float-right" id="user-control">
                 <% if signed_in? %>
-                    <a href="#"><%= current_user.first_name + " " + current_user.last_name %></a> |
+                    <% if current_user.first_name == nil or current_user.last_name == nil %>
+                        <a href="#"><%= current_user.email %></a> |
+                    <% else %>
+                        <a href="#"><%= current_user.first_name + " " + current_user.last_name %></a> |
+                    <% end %>
+                    
                     <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';document.location='/'">Sign Out</a>
                 <% else %>
                     <%= link_to "Login", sign_in_path %> |
