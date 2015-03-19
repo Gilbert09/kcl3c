@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  
+  root :to => 'static#index'
+
   resources :passwords, controller: 'clearance/passwords', only: [:create, :new]
   resource :session, controller: 'clearance/sessions', only: [:create]
 
@@ -14,9 +15,12 @@ Rails.application.routes.draw do
   delete '/logout' => 'clearance/sessions#destroy', as: 'sign_out'
   get '/register' => 'clearance/users#new', as: 'sign_up'
 
-  root :to => 'static#index'
-
   resources :property
+
+  get 'how-it-works' => 'static#howitworks', as: 'how_it_works'
+  get 'fees' => 'static#fees', as: 'fees'
+  get 'advice' => 'static#advice', as: 'advice'
+  get 'faq' => 'static#faq', as: 'faq'
 
   get 'wizard' => 'wizard#index'
   get 'save' => 'wizard#draft'
