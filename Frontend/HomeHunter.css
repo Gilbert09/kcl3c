@@ -590,14 +590,16 @@ select:focus{
 }
 
 #content-advice a:visited , #content-advice  a:link , #content-advice  a:active,
-.account-content a:visited , .account-content  a:link , .account-content  a:active {
+.account-content a:visited , .account-content  a:link , .account-content  a:active,
+.content-about a:visited , .content-about  a:link , .content-about  a:active {
     color:#27ae60;
     text-decoration: none;
     font-weight: bold;
 }
 
 #content-advice a:hover,
-.account-content a:hover {
+.account-content a:hover, 
+.content-about a:hover {
     color: #196E3D;
 }
 /*
