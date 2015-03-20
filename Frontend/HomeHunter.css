@@ -869,6 +869,15 @@ margin-bottom: 1px;
         float: right;
         width: 300px;
     }
+    .content-about {
+        width: 95% !important;
+        max-width: 800px !important;
+    }
+
+    #content-about-placer {
+        width: 95% !important;
+        max-width: 800px !important;
+    }
 }
 
 @media(min-width:900px){
@@ -1280,7 +1289,7 @@ margin-bottom: 1px;
   margin-right: 20px;
 }
 
-.about-us {
+.content-about {
     display:inline-block;
     min-height: 400px;
     margin-top: 15px;
@@ -1294,34 +1303,12 @@ margin-bottom: 1px;
     width: 800px;
 }
 
-#about-us {
+#content-about-placer {
 
-   width: 700px ;
+   width: 800px ;
   margin-left: auto ;
   margin-right: auto ;
 }
-
-#termsandconditions {
-
-    width: 700px ;
-    margin-left: auto ;
-    margin-right: auto ;
-}
-
-#privacynotice {
-
-    width: 700px ;
-    margin-left: auto ;
-    margin-right: auto ;
-}
-
-#cookiespolicy {
-
-    width: 700px ;
-    margin-left: auto ;
-    margin-right: auto ;
-}
-
 
 /*----- End of account CSS -----*/
 .content-image {
