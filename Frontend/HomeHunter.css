@@ -1,9 +1,11 @@
 body {
-    margin:0 0 100px;
     /*background: #A39F9F;*/
     background-color: #e5e5e5;
     font-family: "Helvetica", serif;
+}
 
+#wizard-margin {
+    margin:0 0 100px;
 }
 
 header {
