@@ -1,11 +1,31 @@
 <div class="account-content">
 	<div id="account-sidebar">
 		<ul>
-            <li><a href="account-wizard.html"><h1>Create Listings</h1></a></li>
-			<li><a href="account-incompleteListings.html"><h1>Incomplete Listings</h1></a></li>
-			<li><a href="account-activeListings.html"><h1>Active Listings</h1></a></li>
-			<li class="sidebar-selected"><h1>Inactive Listings</h1></li>
-			<li><a href="account-details.html"><h1>My Details</h1></a></li>
+            <li>
+                <%= link_to account_create_path do %>
+                    <h1>Create Listings</h1>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to account_incomplete_path do %>
+                    <h1>Incomplete Listings</h1>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to account_active_path do %>
+                    <h1>Active Listings</h1>
+                <% end %>
+            </li>
+            <li class="sidebar-selected">
+                <%= link_to account_inactive_path do %>
+                    <h1>Inactive Listings</h1>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to account_details_path do %>
+                    <h1>Details Listings</h1>
+                <% end %>
+            </li>
 		</ul>
 	</div>
 
