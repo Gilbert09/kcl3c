@@ -19,4 +19,20 @@ class StaticController < ApplicationController
   def faq
     render 'faq'
   end
+
+  def about
+    render 'about'
+  end
+
+  def contact
+    render 'contact'
+  end
+
+  def terms
+    render 'terms'
+  end
+
+  def cookie
+    render 'coiokie'
+  end
 end

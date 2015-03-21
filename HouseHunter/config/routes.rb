@@ -22,6 +22,11 @@ Rails.application.routes.draw do
   get 'advice' => 'static#advice', as: 'advice'
   get 'faq' => 'static#faq', as: 'faq'
 
+  get 'about' => 'static#about', as: 'about'
+  get 'contact' => 'static#contact', as: 'contact'
+  get 'terms' => 'static#terms', as: 'terms'
+  get 'cookie' => 'static#cookie', as: 'cookie'
+
   get 'wizard' => 'wizard#index'
   get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
