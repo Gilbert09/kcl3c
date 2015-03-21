@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
   def confirm_address(user)
     @user = user
-    @url = 'http://homehunter.com/confirmation'
+    @url = 'http://homehunter.com/confirmationresponse'
     mail(to: @user.email, subject: 'Please confirm your email address')
   end
 
@@ -20,6 +20,7 @@ class UserMailer < ApplicationMailer
 
   def upload_confirmation(user)
     @user = user
+    @url = 'http://homehunter.com/activeListings'
     mail(to: @user.email, subject: 'Your property has successfully been listed')
   end
 
