@@ -3,24 +3,24 @@
         <div id="footer-legal">
             <div class="footer-col">
                 <span><strong>Get to know us</strong></span>
-                <span><a href="hhaboutus">About us</a></span>
-                <span><a href="hhcontactus">Contact us</a></span>
-                <span><a href="hhtermsofuse.html">Terms of use</a></span>
-                <span><a href="hhcookiespolicy">Cookies Policy</a></span>
-                <span><a href="FAQs.html">FAQs</a></span>
+                <span><%= link_to about_path "About us" %></span>
+                <span><%= link_to contact_path "Contact us" %></span>
+                <span><%= link_to terms_path "Terms of use" %></span>
+                <span><%= link_to cookie_path "Cookie policy" %></span>
+                <span><%= link_to faq_path "FAQs" %></span>
             </div>
             <div class="footer-col">
                 <span><strong>Getting Started</strong></span>
                 <span>5 Easy Steps</span>
                 <span>Sell your property</span>
-                <span><a href="fees.html">Fees</a></span>
+                <span><%= link_to fees_path "Fees" %></span>
                 <span>Privacy Notice</span>
             </div>
         </div>
     </div>
     <div class="footer-copyright-back">
         <div class="footer-copyright">
-            &copy COPYRIGHT
+            &copy Copyright HomeHunter 2015
         </div>
     </div>
 </footer>
