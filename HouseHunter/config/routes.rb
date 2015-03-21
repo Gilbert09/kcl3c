@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get 'account/active' => 'static#activeListings', as: 'account_active'
   get 'account/inactive' => 'static#inactiveListings', as: 'account_inactive'
   get 'account/details' => 'static#details', as: 'account_details'
-  get 'account/details/edit' => 'static#editdetails', as: 'account_details_edit'
+  get 'account/details/edit' => 'static#editDetails', as: 'account_details_edit'
 
   get 'wizard' => 'wizard#index'
   get 'save' => 'wizard#draft'
