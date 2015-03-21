@@ -27,6 +27,14 @@ Rails.application.routes.draw do
   get 'terms' => 'static#terms', as: 'terms'
   get 'cookie' => 'static#cookie', as: 'cookie'
 
+  get 'account' => 'static#account', as 'account'
+  get 'account/create' => 'static#createListing', as 'account_create'
+  get 'account/incomplete' => 'static#incompleteListings', as 'account_incomplete'
+  get 'account/active' => 'static#activeListings', as 'account_active'
+  get 'account/inactive' => 'static#inactiveListings', as 'account_inactive'
+  get 'account/details' => 'static#details', as 'account_details'
+  get 'account/details/edit' => 'static#editdetails', as 'account_details_edit'
+
   get 'wizard' => 'wizard#index'
   get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'

@@ -33,6 +33,34 @@ class StaticController < ApplicationController
   end
 
   def cookie
-    render 'coiokie'
+    render 'cookie'
+  end
+
+  def account
+    redirect_to action: 'createListing'
+  end
+
+  def createListing
+    render 'account/create'
+  end
+
+  def incompleteListings
+    render 'account/incomplete'
+  end
+
+  def activeListings
+    render 'account/active'
+  end
+
+  def inactiveListings
+    render 'account/inactive'
+  end
+
+  def details
+    render 'account/details'
+  end
+
+  def editDetails
+    render 'account/editdetails'
   end
 end
