@@ -2,7 +2,7 @@
     <div id="header-top-container">
         <div id="header-top">
             <div class="float-left" id="user-profile-link">
-                <a href="#">Home Hunter</a>
+                <%= link_to "Home Hunter", root_path %>
             </div>
 
             <div class="float-right" id="user-control">
@@ -30,9 +30,9 @@
     <div id="nav-container">
         <div id="nav">
             <div id="logo">
-                <a href="index.html">
+                <%= link_to root_path do %>
                     <%= image_tag "Logo.jpg", class: "logo", alt: "Logo" %>
-                </a>
+                <% end %>
             </div>
 
             <div id="header-link-container">
