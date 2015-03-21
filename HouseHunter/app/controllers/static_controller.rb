@@ -63,4 +63,10 @@ class StaticController < ApplicationController
   def editDetails
     render 'account/editdetails'
   end
+
+  def signout
+    sign_out
+    cookies.delete(:remember_token)
+    redirect_to action: 'index'
+  end
 end

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   delete '/logout' => 'clearance/sessions#destroy', as: 'sign_out'
   get '/register' => 'clearance/users#new', as: 'sign_up'
 
+  get 'signout' => 'static#signout', as: 'blah'
+
   resources :property
 
   get 'how-it-works' => 'static#howitworks', as: 'how_it_works'
