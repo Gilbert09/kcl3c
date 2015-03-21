@@ -32,8 +32,8 @@ class StaticController < ApplicationController
     render 'terms'
   end
 
-  def cookie
-    render 'cookie'
+  def cookies
+    render 'cookies'
   end
 
   def account
