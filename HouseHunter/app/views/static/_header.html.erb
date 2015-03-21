@@ -8,9 +8,13 @@
             <div class="float-right" id="user-control">
                 <% if signed_in? %>
                     <% if current_user.first_name == nil or current_user.last_name == nil %>
-                        <a href="#"><%= current_user.email %></a> |
+                        <%= link_to account_path do %>
+                            <%= current_user.email %> |
+                        <% end %>
                     <% else %>
-                        <a href="#"><%= current_user.first_name + " " + current_user.last_name %></a> |
+                        <%= link_to account_path do %>
+                            <%= current_user.first_name + " " + current_user.last_name %> |
+                        <% end %>
                     <% end %>
                     
                     <a href="#" onclick="document.cookie='remember_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';document.location='/'">Log Out</a>
@@ -33,11 +37,11 @@
 
             <div id="header-link-container">
                 <% if signed_in? %>
-                    <a href="account-wizard.html">
+                    <%= link_to account_path do %>
                         <div class="links-col">
                             My Account
                         </div>
-                    </a>
+                    <% end %>
                 <% end %>
 
                 <%= link_to how_it_works_path do %>
