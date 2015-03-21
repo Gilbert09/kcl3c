@@ -1,8 +1,12 @@
 body {
-    margin:0px;
+    margin:0 0 0px;
     /*background: #A39F9F;*/
     background-color: #e5e5e5;
     font-family: "Helvetica", serif;
+}
+
+#wizard-margin {
+    margin:0 0 100px;
 }
 
 header {
@@ -586,14 +590,16 @@ select:focus{
 }
 
 #content-advice a:visited , #content-advice  a:link , #content-advice  a:active,
-.account-content a:visited , .account-content  a:link , .account-content  a:active {
+.account-content a:visited , .account-content  a:link , .account-content  a:active,
+.content-about a:visited , .content-about  a:link , .content-about  a:active {
     color:#27ae60;
     text-decoration: none;
     font-weight: bold;
 }
 
 #content-advice a:hover,
-.account-content a:hover {
+.account-content a:hover, 
+.content-about a:hover {
     color: #196E3D;
 }
 /*
@@ -865,6 +871,15 @@ margin-bottom: 1px;
         float: right;
         width: 300px;
     }
+    .content-about {
+        width: 95% !important;
+        max-width: 800px !important;
+    }
+
+    #content-about-placer {
+        width: 95% !important;
+        max-width: 800px !important;
+    }
 }
 
 @media(min-width:900px){
@@ -988,7 +1003,7 @@ margin-bottom: 1px;
         width: 300px;
     }
     #account-sidebar h1{
-        font-size: 25px !important;
+        font-size: 20px !important;
     }
 }
 
@@ -1104,7 +1119,7 @@ margin-bottom: 1px;
         width: 90%;
     }
     #account-sidebar h1{
-        font-size: 25px !important;
+        font-size: 20px !important;
     }
     #next-step {
         float: center;
@@ -1276,6 +1291,27 @@ margin-bottom: 1px;
   margin-right: 20px;
 }
 
+.content-about {
+    display:inline-block;
+    min-height: 400px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgb(100,100,100);
+    background: #fff;
+    padding: 10px;
+    border-radius: 2px;
+    color: #838383;
+    text-align: center;
+    width: 800px;
+}
+
+#content-about-placer {
+
+   width: 800px ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
 /*----- End of account CSS -----*/
 .content-image {
     float: left;
@@ -1360,10 +1396,17 @@ margin-bottom: 1px;
 }
 
 footer {
+    position: absolute;
     width:100%;
+    left: 0;
+    bottom: 0;
+    height: 0;
     background: #bdc3c7;
     margin: 0px auto;
     text-align: left;
+    -webkit-box-shadow: 0px 2px 5px 1px rgb(100,100,100);
+    -moz-box-shadow: 0px 2px 5px 1px rgb(100,100,100);
+    box-shadow: 0px 2px 5px 1px rgb(100,100,100);
 }
 
 #footer-legal {
@@ -1683,10 +1726,10 @@ input[type=range]::-webkit-slider-thumb {
 
 .wizard-container {
     width: 600px;
-    height: 600px;
+    height: 100%;
     position: relative;
     top:50px;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -1728,6 +1771,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .wizard-content-standard div input, .wizard-content-standard div select, .wizard-content-rooms div input {
+
     display: block;
     border: none;
     border-bottom: 1px solid #27ae60;
@@ -1735,6 +1779,7 @@ input[type=range]::-webkit-slider-thumb {
     outline: none;
     padding: 5px 0px 0px 10px;
     font-size: 19px;
+    width: 97%;
 }
 
 .wizard-content-standard div select {
@@ -1922,7 +1967,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 418px;
 }
 
-#wizard-room-description textarea, #wizard-house-description textarea, #wizard-description-description textarea  {
+#wizard-room-description textarea, #wizard-house-description textarea, #wizard-description-description textarea, #message-description textarea {
     resize: none;
     width: 414px;
     height: 70px;
@@ -2005,12 +2050,12 @@ input[type=range]::-webkit-slider-thumb {
   height: 60px;
 }
 
-#wizard-description-description {
+#wizard-description-description, #message-description {
     width: 568px;
     border-right: none;
 }
 
-#wizard-description-description textarea {
+#wizard-description-description textarea, #message-description textarea {
     width: 558px;
     height: 250px;
 }
@@ -2232,8 +2277,36 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 0px !important;
 }
 
-#length-fix {
-    width:245px;
+.keyword{
+    color:white;
+    background-color: #27ae60;
+    display: inline-block;
+
+    margin-top: 5px;
+    margin-left: 1px !important;
+    padding:5px !important;
+    width: auto !important;
+
+    border-radius: 2px;
+    border: none !important;
+
+    cursor: -webkit-grab; cursor: -moz-grab;
+}
+
+#wizard-keywords-options{
+    height: 300px;
+    margin: 0px !important;
+    display: inline-block;
+    width: 266px   !important;
+    vertical-align: top;
+}
+
+#wizard-keywords-field{
+    height: 300px;
+    margin: 0px !important;
+    display: inline-block;
+    width: 266px !important;
+    vertical-align: top;
 }
 
 #get-started {
@@ -2245,4 +2318,9 @@ input[type=range]::-webkit-slider-thumb {
   /* Styling for the price estimation box; will need to be full length horizontally */
   width: 568px;
   border-right: none;
+}
+
+html {
+    position: relative;
+    min-height: 82%;
 }
