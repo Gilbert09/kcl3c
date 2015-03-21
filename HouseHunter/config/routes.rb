@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get 'about' => 'static#about', as: 'about'
   get 'contact' => 'static#contact', as: 'contact'
   get 'terms' => 'static#terms', as: 'terms'
-  get 'cookies' => 'static#cookies', as: 'cookies'
+  get 'cookie' => 'static#cookie', as: 'cookie'
 
   get 'account' => 'static#account', as: 'account'
   get 'account/create' => 'static#createListing', as: 'account_create'
