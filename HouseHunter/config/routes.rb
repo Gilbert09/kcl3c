@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'clearance/sessions#destroy', as: 'sign_out'
   get '/register' => 'clearance/users#new', as: 'sign_up'
 
-  get 'signout' => 'static#signout', as: 'custom_log_out'
+  get 'signout' => 'account#signout', as: 'custom_log_out'
 
   resources :property
 
@@ -29,13 +29,15 @@ Rails.application.routes.draw do
   get 'terms' => 'static#terms', as: 'terms'
   get 'cookie' => 'static#cookie', as: 'cookie'
 
-  get 'account' => 'static#account', as: 'account'
-  get 'account/create' => 'static#createListing', as: 'account_create'
-  get 'account/incomplete' => 'static#incompleteListings', as: 'account_incomplete'
-  get 'account/active' => 'static#activeListings', as: 'account_active'
-  get 'account/inactive' => 'static#inactiveListings', as: 'account_inactive'
-  get 'account/details' => 'static#details', as: 'account_details'
-  get 'account/details/edit' => 'static#editDetails', as: 'account_details_edit'
+  get 'account' => 'account#account', as: 'account'
+  get 'account/create' => 'account#createListing', as: 'account_create'
+  get 'account/incomplete' => 'account#incompleteListings', as: 'account_incomplete'
+  get 'account/active' => 'account#activeListings', as: 'account_active'
+  get 'account/inactive' => 'account#inactiveListings', as: 'account_inactive'
+  get 'account/details' => 'account#details', as: 'account_details'
+  get 'account/details/edit' => 'account#editDetails', as: 'account_details_edit'
+  post 'account/listing/:id/hide' => 'account#hideListing', as: 'hide_listing'
+  post 'account/listing/:id/show' => 'account#showListing', as: 'show_listing'
 
   get 'wizard' => 'wizard#show', as: 'wizard'
   get 'save' => 'wizard#draft'

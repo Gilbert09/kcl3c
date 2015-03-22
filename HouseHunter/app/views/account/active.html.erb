@@ -54,9 +54,9 @@
 					<li class="wizard-section-edit"> Description </li>
 				</ul>
 
-	            <a href="account-inactiveListings.html">
-	                <input type="submit" name"hide" value="Hide" id="next-step">
-	            </a>
+				<%= link_to hide_listing(p.id), method: :post do %>
+					<input type="submit" name"hide" value="Hide" id="next-step">
+				<% end %>
 			</div>
 
 		<% end %>
