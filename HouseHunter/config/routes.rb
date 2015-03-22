@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   get 'account/details' => 'static#details', as: 'account_details'
   get 'account/details/edit' => 'static#editDetails', as: 'account_details_edit'
 
-  get 'wizard' => 'wizard#index'
+  get 'wizard' => 'wizard#show', as: 'wizard'
   get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
   
