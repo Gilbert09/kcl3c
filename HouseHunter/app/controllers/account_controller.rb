@@ -45,6 +45,7 @@ class AccountController < ApplicationController
       current_user.email = params["email"]
       current_user.phone_number = params["phone_number"]
       current_user.save
+      raise 'foo'
       redirect_to action: 'details'
     end
   end
