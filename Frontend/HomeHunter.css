@@ -2324,9 +2324,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #wizard-keywords-field{
+    border-left: solid #D7D7D7 1px;
     height: 300px;
     display: inline-block;
-    width: 273px !important;
+    width: 266px !important;
     vertical-align: top;
 }
 
