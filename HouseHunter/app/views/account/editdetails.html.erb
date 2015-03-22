@@ -48,12 +48,12 @@
 
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                        <input class="icon-input" type="password" id="password" name="password" placeholder="Password">
+                        <%= password_field_tag 'password', nil, class: 'icon-input', placeholder: 'Password' %>
                     </div>
 
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                        <input class="icon-input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                        <%= password_field_tag 'confirm-password', nil, class: 'icon-input', placeholder: 'Confirm Password' %>
                     </div>
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-mobile"></i></span>
