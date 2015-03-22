@@ -47,15 +47,17 @@ class StaticController < ApplicationController
   end
 
   def incompleteListings
+    @properties = current_user.properties.where("status = 'incomplete'")
     render 'account/incomplete'
   end
 
   def activeListings
-    @properties = current_user.properties
+    @properties = current_user.properties.where("status = 'active'")
     render 'account/active'
   end
 
   def inactiveListings
+    @properties = current_user.properties.where("status = 'inactive'")
     render 'account/inactive'
   end
 

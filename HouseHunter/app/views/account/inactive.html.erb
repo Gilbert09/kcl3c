@@ -32,36 +32,34 @@
 		<div class="divider-bar"></div>
 		<div class="account-subheading"> Below is a list of all of your hidden listings, here you can edit or unhide. </div>
 
-		<!-- An example inactive listing -->
-		<div class="account-listing">
+		<% @properties.each do |p| %>
 
-			<div class="front-house-image">
-				<img src="http://placehold.it/350x200">
+			<div class="account-listing">
+				<div class="front-house-image">
+					<img src="http://placehold.it/350x200">
+				</div>
+
+				<div class="property-name">
+					<h2><a href="listing.html" target="_blank"><%= p.address.house_name_number %>, <%= p.address.address_line_1 %>, <%= p.address.town_city %>, <%= p.address.post_code %></a></h2>
+				</div>
+
+				<ul class="progress">
+					<li class="wizard-section-edit"> Address </li>
+					<li class="wizard-section-edit"> General Information </li>
+					<li class="wizard-section-edit"> Outdoor Spaces </li>
+					<li class="wizard-section-edit"> Parking </li>
+					<li class="wizard-section-edit"> Heating </li>
+					<li class="wizard-section-edit"> Rooms </li>
+					<li class="wizard-section-edit"> Key Features </li>
+					<li class="wizard-section-edit"> Description </li>
+				</ul>
+
+	            <a href="account-inactiveListings.html">
+	                <input type="submit" name"hide" value="Hide" id="next-step">
+	            </a>
 			</div>
 
-			<div class="property-name">
-				<h2> 123 Example Road, London, SE6 315 </h2>
-			</div>
-
-			<ul class="progress">
-				<li class="wizard-section-edit"> Address </li>
-				<li class="wizard-section-edit"> General Information </li>
-				<li class="wizard-section-edit"> Outdoor Spaces </li>
-				<li class="wizard-section-edit"> Parking </li>
-				<li class="wizard-section-edit"> Heating </li>
-				<li class="wizard-section-edit"> Rooms </li>
-				<li class="wizard-section-edit"> Key Features </li>
-				<li class="wizard-section-edit"> Description </li>
-			</ul>
-
-		<!--	<div class="next-step-button">
-				<h2> Unhide </h2>
-			</div> -->
-            <a href="account-activeListings.html">
-                <input type="submit" name"unhide" value="Unhide" id="next-step">
-            </a>
-
-		</div>
+		<% end %>
 
 	</div>
 </div>
