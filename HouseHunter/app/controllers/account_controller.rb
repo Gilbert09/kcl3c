@@ -46,8 +46,7 @@ class AccountController < ApplicationController
       current_user.phone_number = params["phone_number"]
       render :text => current_user.inspect
       current_user.save
-      raise 'foo'
-      redirect_to action: 'details'
+      #redirect_to action: 'details'
     end
   end
 
