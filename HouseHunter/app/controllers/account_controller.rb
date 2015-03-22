@@ -34,9 +34,10 @@ class AccountController < ApplicationController
   end
 
   def saveDetails
+    raise 'foo'
     if params[:password] != params[:confirm_password] then
       flash[:error] = "Passwords do not match"
-      render 'account/editdetails'
+      render 'account/editDetails'
     else
       user = current_user
       user.first_name = params[:first_name]
