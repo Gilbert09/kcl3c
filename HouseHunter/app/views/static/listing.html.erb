@@ -5,11 +5,11 @@
         </div>
 
         <div id="listing-iconcontainer">
-            <div class="listing-icon"><img src="bed.png" alt="bedrooms"></div>
+            <div class="listing-icon"><%= image_tag "bed.png" %></div>
             <div class="listing-icon">2</div>
-            <div class="listing-icon"><img src="bath.png" alt="bathrooms"></div>
+            <div class="listing-icon"><%= image_tag "bath.png" %></div>
             <div class="listing-icon">1</div>
-            <div class="listing-icon"><img src="sofa.png" alt="living rooms"></div>
+            <div class="listing-icon"><%= image_tag "sofa.png" %></div>
             <div class="listing-icon">1</div>
         </div>    
         <br/>
@@ -19,7 +19,7 @@
         </div>
         
         <div class="slider-container">
-            <img class="listing" src="house.jpg" alt="up-house:D">
+            <%= image_tag "house.jpg", class: "listing" %>
         </div>
 
         <br/>
@@ -53,7 +53,7 @@
             <div id="listing-floorplan"> 
                 <h2>Floorplan</h2>
 
-                <img src="floorplan.jpg" alt="floorplan"></img>
+                <%= image_tag "floorplan.jpg" %>
             </div> 
             
             <div id="listing-school"> 
