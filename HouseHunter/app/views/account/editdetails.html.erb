@@ -31,7 +31,7 @@
         <h1>Edit Your Details</h1>
         <div class="divider-bar"></div>
             <div class="account-subheading"> Feel free to edit your personal details, and let us know how you prefer to be contacted. </div>
-            <%= form_tag("/edit", method: "post") do %>
+            <%= form_tag("edit", method: "post") do %>
                 <fieldset>
                     <div class="form-control-group">
                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
@@ -60,7 +60,7 @@
                         <%= text_field_tag :phone_number, current_user.phone_number, class: 'icon-input', placeholder: 'Phome Number' %>
                     </div>
                     <div class="form-control-group">
-                        <%= submit_tag value: 'Save Details' %>
+                        <%= submit_tag 'Save Details' %>
                     </div>
                 </fieldset>
             <% end %>
