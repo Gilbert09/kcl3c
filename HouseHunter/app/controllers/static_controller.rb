@@ -1,8 +1,6 @@
 class StaticController < ApplicationController
 
-  before_filter :redirect_signed_in_users, only: [:account, :createListing, :incompleteListings, :activeListings, :inactiveListings, :details, :editDetails]
-  skip_before_filter :require_login, only: [:account, :createListing, :incompleteListings, :activeListings, :inactiveListings, :details, :editDetails]
-  skip_before_filter :authorize, only: [:account, :createListing, :incompleteListings, :activeListings, :inactiveListings, :details, :editDetails]
+  before_action :require_login :require_login, only: [:account, :createListing, :incompleteListings, :activeListings, :inactiveListings, :details, :editDetails]
 
   def index
     render 'index'
