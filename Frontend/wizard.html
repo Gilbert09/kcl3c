@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <!-- first section of the wizard; asking them to confirm their personal details -->
+
     <div data-step="0" class="wizard-container showing">
         <div class="wizard-progress-bar" id="progress-bar-0"></div>
         <div class="wizard-header">
@@ -123,8 +123,7 @@
         </div>
     </div>
 
-    <!-- section section of the wizard; the address of the property the user wishes to list -->
-    <div data-step="1" class="wizard-container hidden">
+    <div data-step="8" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-1"></div>
         <div class="wizard-header">
             <span>Please enter the address of the property you wish to sell.</span>
@@ -165,7 +164,6 @@
         </div>
     </div>
 
-    <!-- third section of the wizard; some general information about the property such as type and numbers of each room -->
     <div data-step="2" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-2"></div>
       <div class="wizard-header">
@@ -295,52 +293,51 @@
       </div>
     </div>
 
-    <!-- fourth section of the wizard; some options for their outdoor spaces taken from the Rightmove API documentation -->
     <div data-step="3" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-3"></div>
-        <div class="wizard-header">
+      <div class="wizard-header">
+
           <span>Please select what type of garden your property has. You can select more than one.</span>
-        </div>
+      </div>
       <div class="wizard-content-checkbox">
-        <div>
-            <span>No Garden</span>
-        </div>
-        <div>
-            <span>Front Garden</span>
-        </div>
-        <div>
-            <span>Back Garden</span>
-        </div>
-        <div>
-            <span>Terrace Garden</span>
-        </div>
-        <div>
-            <span>Communal Garden</span>
-        </div>
-        <div>
-            <span>Private Garden</span>
-        </div>
-        <div>
-            <span>Enclosed Garden</span>
-        </div>
-        <div>
-            <span>Patio Garden</span>
-        </div>
-        <div>
-          <span>Rear Garden</span>
-        </div>
+          <div>
+              <span>No Garden</span>
+          </div>
+          <div>
+              <span>Front Garden</span>
+          </div>
+          <div>
+              <span>Back Garden</span>
+          </div>
+          <div>
+              <span>Terrace Garden</span>
+          </div>
+          <div>
+              <span>Communal Garden</span>
+          </div>
+          <div> <!--<div style="border-bottom: 1px solid #D7D7D7;"> Why is this here?-->
+              <span>Private Garden</span>
+          </div>
+          <div>
+              <span>Enclosed Garden</span>
+          </div>
+          <div>
+              <span>Patio Garden</span>
+          </div>
+          <div>
+            <span>Rear Garden</span>
+          </div>
       </div>
       <div class="wizard-bottom">
-        <div class="wizard-previous float-left">
-          <span>Back</span>
-        </div>
-        <div class="float-right">
-          <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
-        </div>
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div class="float-right">
+              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          </div>
       </div>
     </div>
 
-    <!-- fifth section of the wizard; some options for their parking taken from the Rightmove API documentation -->
     <div data-step="4" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-4"></div>
       <div class="wizard-header">
@@ -394,7 +391,6 @@
       </div>
     </div>
 
-    <!-- sixth section of the wizard; heating options, again, taken from the Rightmove API documentation -->
     <div data-step="5" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-5"></div>
         <div class="wizard-header">
@@ -448,7 +444,6 @@
         </div>
     </div>
 
-    <!-- seventh section of the wizard; information about each of the rooms including photos -->
     <div data-step="6" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-6"></div>
           <div class="wizard-header">
@@ -540,89 +535,94 @@
       </div>
     </div>
 
-    <!-- eighth section of the wizard; the user can upload any other photos like the front of the house or garden -->
-    <div data-step="7" class="wizard-container hidden">
-      <div class="wizard-progress-bar" id="progress-bar-7"></div>
-      <div class="wizard-header">
-         <span>Please upload any pictures of your property you may have.</span>
-      </div>
-      <div class="wizard-content-standard">
-        <div id="wizard-property-files">
-            <div id="wizard-property-fileupload">
-                <span>Click or Drag Here to <br />Upload Pictures</span>
-            </div>
-            <div id="wizard-property-uploaded">
-                <span><img class="wizard-property-image" data-dz-thumbnail /></span>
-            </div>
-        </div>
-      </div>
-      <div class="wizard-bottom">
-          <div class="wizard-previous float-left">
-              <span>Back</span>
+  <div data-step="7" class="wizard-container hidden">
+    <div class="wizard-progress-bar" id="progress-bar-7"></div>
+    <div class="wizard-header">
+       <span>Please upload any pictures of your property you may have.</span>
+    </div>
+    <div class="wizard-content-standard">
+      <div id="wizard-property-files">
+          <div id="wizard-property-fileupload">
+              <span>Click or Drag Here to <br />Upload Pictures</span>
           </div>
-          <div class="float-right">
-              <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+          <div id="wizard-property-uploaded">
+              <span><img class="wizard-property-image" data-dz-thumbnail /></span>
           </div>
       </div>
     </div>
-
-    <!-- ninth section of the wizard; some keywords about the property that the user may not have considered as important selling qualities -->
-    <div data-step="8" class="wizard-container hidden">
-      <div class="wizard-progress-bar" id="progress-bar-8"></div>
-      <div class="wizard-header">
-          <span>Everyone's property is different so below are a list of keywords that you can drop and drag into the right box. Feel free to even add your own.</span>
-      </div>
-      <div class="wizard-content-standard">
-          <div id="wizard-keywords-options">
-            <span>Keyword Suggestions</span>
-              <div class="keyword">Victorian</div>
-              <div class="keyword">Tudor</div>
-              <div class="keyword">Bay Windows</div>
-              <div class="keyword">Fireplace</div>
-              <div class="keyword">Height Ceilings</div>
-              <div class="keyword">Open Plan</div>
-              <div class="keyword">Ceiling Roses</div>
-              <div class="keyword">Spacious</div>
-              <div class="keyword">Oak Floor</div>
-          </div>
-
-          <div id="wizard-keywords-field">
-            <span>Keywords</span>
-          </div>
-      </div>
-      <div class="wizard-bottom">
+    <div class="wizard-bottom">
         <div class="wizard-previous float-left">
             <span>Back</span>
         </div>
         <div class="float-right">
             <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
         </div>
-      </div>
+    </div>
+  </div>
+
+  <div data-step="1" class="wizard-container hidden">
+    <div class="wizard-progress-bar" id="progress-bar-8"></div>
+    <div class="wizard-header">
+        <span>Everyone's property is different so below are a list of keywords that you can drop and drag into the right box. Feel free to even add your own.</span>
     </div>
 
-    <!-- ninth section of the wizard; the user can add anything else to their listing in the form of description -->
-    <div data-step="9" class="wizard-container hidden">
-      <div class="wizard-progress-bar" id="progress-bar-9"></div>
-      <div class="wizard-header">
-          <span>Below is a box for you to provide us with a description of anything we've missed. We suggest adding any of the features that your property has.</span>
-      </div>
-      <div class="wizard-content-standard">
-          <div id="wizard-description-description">
-              <span>Description</span>
-              <textarea></textarea>
-          </div>
-      </div>
-      <div class="wizard-bottom">
-        <div class="wizard-previous float-left">
-            <span>Back</span>
+    <div class="wizard-content-standard">
+
+        
+        <div id="wizard-keywords-options">
+          <span>Keyword Suggestions</span>
+            <div class="keyword">Victorian</div>
+            <div class="keyword">Tudor</div>
+            <div class="keyword">Bay Windows</div>
+            <div class="keyword">Fireplace</div>
+            <div class="keyword">Height Ceilings</div>
+            <div class="keyword">Open Plan</div>
+            <div class="keyword">Ceiling Roses</div>
+            <div class="keyword">Spacious</div>
+            <div class="keyword">Oak Floor</div>
         </div>
-        <div class="float-right">
-            <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+
+        <div id="wizard-keywords-field">
+          <span>Keywords</span>
         </div>
+        <div id="wizard-keyword-input">
+            <span>Enter keyword</span>
+            <input type="text" name="keyword" tabindex="0" id="no-border-radius"/>
+        </div>
+
+
+    </div>
+    <div class="wizard-bottom">
+      <div class="wizard-previous float-left">
+          <span>Back</span>
+      </div>
+      <div class="float-right">
+          <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
       </div>
     </div>
+  </div>
 
-    <!-- eleventh section of the wizard; a review section to make sure all of the information is correct -->
+  <div data-step="9" class="wizard-container hidden">
+    <div class="wizard-progress-bar" id="progress-bar-9"></div>
+    <div class="wizard-header">
+        <span>Below is a box for you to provide us with a description of anything we've missed. We suggest adding any of the features that your property has.</span>
+    </div>
+    <div class="wizard-content-standard">
+        <div id="wizard-description-description">
+            <span>Description</span>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div class="wizard-bottom">
+      <div class="wizard-previous float-left">
+          <span>Back</span>
+      </div>
+      <div class="float-right">
+          <button class="wizard-next">Continue <i class="fa fa-long-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
     <div data-step="10" class="wizard-container hidden">
       <div class="wizard-progress-bar" id="progress-bar-10"></div>
         <div class="wizard-header">
@@ -726,30 +726,29 @@
         </div>
       </div>
 
-      <!-- twelfth section of the wizard; payment - the user can pay for the service through the paypal API -->
-      <div data-step="11" class="wizard-container hidden">
-        <div class="wizard-progress-bar" id="progress-bar-11"></div>
-          <div class="wizard-header">
-              <span>To finish your listing please follow the instructions after clicking the PayPal button, we charge £500, you will then
-                  be redirected to the final page of the listing process.</span>
-          </div>
-          <div class="wizard-content-standard">
 
-          </div>
-          <div class="wizard-bottom">
-            <div class="wizard-previous float-left">
-                <span>Back</span>
-            </div>
-            <div id="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VG7UNLQ2K5ECN">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_checkout_pp_142x27.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
-      </div>
+    <div data-step="11" class="wizard-container hidden">
+      <div class="wizard-progress-bar" id="progress-bar-11"></div>
+        <div class="wizard-header">
+            <span>To finish your listing please follow the instructions after clicking the PayPal button, we charge £500, you will then
+                be redirected to the final page of the listing process.</span>
+        </div>
+        <div class="wizard-content-standard">
 
+        </div>
+        <div class="wizard-bottom">
+          <div class="wizard-previous float-left">
+              <span>Back</span>
+          </div>
+          <div id="paypal-button">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="VG7UNLQ2K5ECN">
+                  <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_checkout_pp_142x27.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+              </form>
+          </div>
+    </div>
 </div>
   <footer>
       <div id="footer-legal-back">

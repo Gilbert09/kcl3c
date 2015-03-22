@@ -2339,6 +2339,10 @@ input[type=range]::-webkit-slider-thumb {
   width: 568px;
   border-right: none;
 }
+#wizard-keyword-input{
+    width: 568px;
+    border-right: none;
+}
 
 html {
     position: relative;
