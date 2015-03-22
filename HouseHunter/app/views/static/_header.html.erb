@@ -9,12 +9,14 @@
                 <% if signed_in? %>
                     <% if current_user.first_name == nil or current_user.last_name == nil %>
                         <%= link_to account_path do %>
-                            <%= current_user.email %> |
+                            <%= current_user.email %>
                         <% end %>
+                         |
                     <% else %>
                         <%= link_to account_path do %>
-                            <%= current_user.first_name + " " + current_user.last_name %> |
+                            <%= current_user.first_name + " " + current_user.last_name %>
                         <% end %>
+                         |
                     <% end %>
                     
                     <%= link_to "Log Out", custom_log_out_path %>
