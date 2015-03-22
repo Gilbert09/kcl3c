@@ -42,7 +42,7 @@ class AccountController < ApplicationController
       user = User.find(current_user.id)
       user.first_name = params["first_name"]
       user.last_name = params["last_name"]
-      if params["password"] != "" or params["password"] != nil then user.update_password params["password"] end
+      #if params["password"] != "" or params["password"] != nil then user.update_password params["password"] end
       user.email = params["email"]
       user.phone_number = params["phone_number"]
       render :text => user.save!.inspect
