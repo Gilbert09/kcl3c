@@ -41,7 +41,7 @@ class AccountController < ApplicationController
       user = current_user
       user.first_name = params[:first_name]
       user.last_name = params[:last_name]
-      user.update_password params[:password]
+      if params[:password] != nil then user.update_password params[:password] end
       user.email = params[:email]
       user.phone_number = params[:phone_number]
       user.save
