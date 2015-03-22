@@ -31,36 +31,36 @@
         <h1>Edit Your Details</h1>
         <div class="divider-bar"></div>
             <div class="account-subheading"> Feel free to edit your personal details, and let us know how you prefer to be contacted. </div>
-            <%= form_for :user, :url => account_details_edit_save_path, :html => { :method => :post } do |f| %>
+            <%= form_tag({controller: "account", action: "saveDetails"}, method: "post") do %>
                 <fieldset>
                     <div class="form-control-group">
                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
-                        <%= f.text_field :first_name, class: 'icon-input', placeholder: 'First Name', value: current_user.first_name %>
+                        <%= text_field_tag :first_name, class: 'icon-input', placeholder: 'First Name', value: current_user.first_name %>
                     </div>
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-user"></i></span>
-                        <%= f.text_field :last_name, class: 'icon-input', placeholder: 'Last Name', value: current_user.last_name %>
+                        <%= text_field_tag :last_name, class: 'icon-input', placeholder: 'Last Name', value: current_user.last_name %>
                     </div>
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-at"></i></span>
-                        <%= f.text_field :email, class: 'icon-input', placeholder: 'Email Address', value: current_user.email %>
+                        <%= text_field_tag :email, class: 'icon-input', placeholder: 'Email Address', value: current_user.email %>
                     </div>
 
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                        <%= f.password_field :password, class: 'icon-input', placeholder: 'Password' %>
+                        <%= password_field_tag :password, class: 'icon-input', placeholder: 'Password' %>
                     </div>
 
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-lock"></i></span>
-                        <%= f.password_field :confirm_password, class: 'icon-input', placeholder: 'Confirm Password' %>
+                        <%= password_field_tag :confirm_password, class: 'icon-input', placeholder: 'Confirm Password' %>
                     </div>
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-mobile"></i></span>
-                        <%= f.text_field :phone_number, class: 'icon-input', placeholder: 'Phome Number', value: current_user.phone_number %>
+                        <%= text_field_tag :phone_number, class: 'icon-input', placeholder: 'Phome Number', value: current_user.phone_number %>
                     </div>
                     <div class="form-control-group">
-                        <%= f.submit 'Save Details' %>
+                        <%= submit_tag 'Save Details' %>
                     </div>
                 </fieldset>
             <% end %>
