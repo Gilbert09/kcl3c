@@ -1,5 +1,7 @@
 class WizardController < ApplicationController
 
+  before_action :require_login, only: [:show]
+
   def show
     render 'wizard/wizard'
   end
