@@ -33,6 +33,22 @@ class AccountController < ApplicationController
     render 'account/editdetails'
   end
 
+  def saveDetails
+    if params[:password] != params[:confirm_password] then
+      flash[:error] = "Passwords do not match"
+      render 'account/editdetails'
+    else
+      user = current_user
+      user.first_name = params[:first_name]
+      user.last_name = params[:last_name]
+      user.update_password params[:password]
+      user.email = params[:email]
+      user.phone_number = params[:phone_number]
+      user.save
+      redirect_to action: 'details'
+    end
+  end
+
   def hideListing
   	id = params[:id]
   	if current_user.properties.exists?(id) then

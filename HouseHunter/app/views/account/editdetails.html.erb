@@ -31,7 +31,7 @@
         <h1>Edit Your Details</h1>
         <div class="divider-bar"></div>
             <div class="account-subheading"> Feel free to edit your personal details, and let us know how you prefer to be contacted. </div>
-            <%= form_tag("edit", method: "post") do %>
+            <%= form_tag account_details_edit_save_path, method: "post" do %>
                 <fieldset>
                     <div class="form-control-group">
                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
