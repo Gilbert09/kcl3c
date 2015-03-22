@@ -37,7 +37,11 @@ class StaticController < ApplicationController
   end
 
   def listing
-    @listing = Property.find(params[:id])
-    render 'listing'
+    if Property.exists?(params[:id]) then
+      @listing = Property.find(params[:id])
+      render 'listing'
+    else
+      redirect_to action: 'index'
+    end
   end
 end
