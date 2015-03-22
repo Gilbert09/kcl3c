@@ -62,7 +62,11 @@ class AccountController < ApplicationController
   end
 
   def newListing
-  	render 'wizard/wizard'
+  	property = Property.new
+	property.user_id = current_user.id
+    property.status = "incomplete"
+    property.save
+    redirect_to action: 'editListing', id: property.id
   end
 
   def saveWizard
