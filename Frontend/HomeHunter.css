@@ -1077,7 +1077,7 @@ margin-bottom: 1px;
         width: 75% !important;
         font-size: 14px;
     }
-    input[type="password"], input[type="text"]{
+    input[type="password"], input[type="text"], input[type="email"]{
         width:50% !important;
         font-size: 12px;
     }
