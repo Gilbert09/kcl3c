@@ -44,6 +44,7 @@ class AccountController < ApplicationController
       if params["password"] != "" or params["password"] != nil then current_user.update_password params["password"] end
       current_user.email = params["email"]
       current_user.phone_number = params["phone_number"]
+      render :text => current_user.inspect
       current_user.save
       raise 'foo'
       redirect_to action: 'details'
