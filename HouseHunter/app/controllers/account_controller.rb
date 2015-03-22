@@ -39,14 +39,13 @@ class AccountController < ApplicationController
       flash[:error] = "Passwords do not match"
       render 'account/editDetails'
     else
-      user = User.find(current_user.id)
-      user.first_name = params["first_name"]
-      user.last_name = params["last_name"]
-      #if params["password"] != "" or params["password"] != nil then user.update_password params["password"] end
-      user.email = params["email"]
-      user.phone_number = params["phone_number"]
-      render :text => params["password"].inspect
-      #redirect_to action: 'details'
+      current_user.first_name = params["first_name"]
+      current_user.last_name = params["last_name"]
+      if params["password"] != "" and params["password"] != nil then current_user.update_password params["password"] end
+      current_user.email = params["email"]
+      current_user.phone_number = params["phone_number"]
+      current_user.save
+      redirect_to action: 'details'
     end
   end
 
