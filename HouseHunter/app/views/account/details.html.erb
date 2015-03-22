@@ -34,19 +34,19 @@
                 <fieldset>
         			<div class="form-control-group">
                        <span class="fontawesome-user"><i class="fa fa-user"></i></span>
-                        <input class="icon-input" type="text" id="first-name" name="first-name" placeholder="First Name" readonly="true">
+                        <%= text_field type: 'text', class: 'icon-input', placeholder: 'First Name', readonly: "true", value: current_user.first_name %>
                     </div>
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-user"></i></span>
-                        <input class="icon-input" type="text" id="last-name" name="last-name" placeholder="Last Name" readonly="true">
+                        <%= text_field type: 'text', class: 'icon-input', placeholder: 'Last Name', readonly: "true", value: current_user.last_name %>
                     </div>
         			<div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-at"></i></span>
-                        <input class="icon-input" type="text" id="email" name="email" placeholder="Email Address" readonly="true">
+                        <%= text_field type: 'text', class: 'icon-input', placeholder: 'Email Address', readonly: "true", value: current_user.email %>
                     </div>
                     <div class="form-control-group">
                         <span class="fontawesome-user"><i class="fa fa-mobile"></i></span>
-                        <input class="icon-input" type="text" id="mobile-number" name="mobile-number" placeholder="Mobile Number" readonly="true">
+                        <%= text_field type: 'text', class: 'icon-input', placeholder: 'Phome Number', readonly: "true", value: current_user.phone_number %>
                     </div>
                     <div class="form-control-group">
                         <%= link_to account_details_edit_path do %>
