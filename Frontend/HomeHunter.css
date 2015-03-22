@@ -1745,7 +1745,7 @@ input[type=range]::-webkit-slider-thumb {
     background-color: #fff;
 }
 
-.wizard-content-standard div {
+.wizard-content-standard div, .wizard-content-standard div div {
     padding: 15px;
     border-top: 1px solid #D7D7D7;
     border-right: 1px solid #D7D7D7;
@@ -2303,7 +2303,6 @@ input[type=range]::-webkit-slider-thumb {
     color:white;
     background-color: #27ae60;
     display: inline-block;
-
     margin-top: 5px;
     margin-left: 1px !important;
     padding:5px !important;
@@ -2319,14 +2318,15 @@ input[type=range]::-webkit-slider-thumb {
     height: 300px;
     margin: 0px !important;
     display: inline-block;
-    width: 266px   !important;
+    width: 269px   !important;
     vertical-align: top;
 }
 
 #wizard-keywords-field{
+
     height: 300px;
     display: inline-block;
-    width: 273px !important;
+    width: 269px !important;
     vertical-align: top;
 }
 
@@ -2340,6 +2340,7 @@ input[type=range]::-webkit-slider-thumb {
   border-right: none;
 }
 #wizard-keyword-input{
+
     width: 568px;
     border-right: none;
 }
