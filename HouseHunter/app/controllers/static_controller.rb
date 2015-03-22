@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
 
-  before_action :require_login :require_login, only: [:account, :createListing, :incompleteListings, :activeListings, :inactiveListings, :details, :editDetails]
+  before_action :require_login, only: [:account, :createListing, :incompleteListings, :activeListings, :inactiveListings, :details, :editDetails]
 
   def index
     render 'index'
