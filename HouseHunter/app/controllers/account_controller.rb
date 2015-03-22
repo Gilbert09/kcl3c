@@ -1,6 +1,6 @@
 class AccountController < ApplicationController
 
-  before_action :require_login
+  before_action :require_login 
 
   def account
     redirect_to action: 'createListing'
@@ -58,11 +58,21 @@ class AccountController < ApplicationController
   end
 
   def editListing
-  	
+  	render 'wizard/wizard'
   end
 
   def newListing
-  	
+  	render 'wizard/wizard'
+  end
+
+  def saveWizard
+    if signed_in?
+      api = ApiController.new
+      result = api.saveDraft(JSON.parse(params["data"])["data"], params["stage"], current_user)
+      render :json => result
+    else
+      render :json => '{ "status": "Error", "message": "User not authenticated" }'
+    end
   end
 
   def signout

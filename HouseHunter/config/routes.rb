@@ -40,8 +40,8 @@ Rails.application.routes.draw do
   get 'account/listing/:id/show' => 'account#showListing', as: 'show_listing'
   get 'account/listing/:id/edit' => 'account#editListing', as: 'edit_listing'
   get 'account/listing/new' => 'account#newListing', as: 'new_listing'
+  get 'account/listing/:id/save' => 'account#wizardSave'
 
-  get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
   
   # The priority is based upon order of creation: first created -> highest priority.
