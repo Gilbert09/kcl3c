@@ -40,7 +40,7 @@
 				</div>
 
 				<div class="property-name">
-					<% if p.address != nil or p.address.house_name_number != nil then %>
+					<% if p.address != nil and p.address.house_name_number != nil then %>
 						<h2><%= p.address.house_name_number %>, <%= p.address.address_line_1 %>, <%= p.address.town_city %>, <%= p.address.post_code %></h2>
 					<% else %>
 						<h2>No Address</h2>
