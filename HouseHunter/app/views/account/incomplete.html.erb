@@ -54,9 +54,9 @@
 					<li class="wizard-section-incomplete"> Description </li>
 				</ul>
 
-	            <a href="account-inactiveListings.html">
-	                <input type="submit" name"hide" value="Hide" id="next-step">
-	            </a>
+	            <%= link_to edit_listing_path(p) do %>
+					<input type="submit" name"hide" value="Finish" id="next-step">
+				<% end %>
 			</div>
 
 		<% end %>

@@ -38,8 +38,9 @@ Rails.application.routes.draw do
   get 'account/details/edit' => 'account#editDetails', as: 'account_details_edit'
   get 'account/listing/:id/hide' => 'account#hideListing', as: 'hide_listing'
   get 'account/listing/:id/show' => 'account#showListing', as: 'show_listing'
+  get 'account/listing/:id/edit' => 'account#editListing', as: 'edit_listing'
+  get 'account/listing/new' => 'account#newListing', as: 'new_listing'
 
-  get 'wizard' => 'wizard#show', as: 'wizard'
   get 'save' => 'wizard#draft'
   get ':action' => 'static#:action'
   

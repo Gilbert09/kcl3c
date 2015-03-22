@@ -57,6 +57,14 @@ class AccountController < ApplicationController
   	end
   end
 
+  def editListing
+  	
+  end
+
+  def newListing
+  	
+  end
+
   def signout
     sign_out
     cookies.delete(:remember_token)
