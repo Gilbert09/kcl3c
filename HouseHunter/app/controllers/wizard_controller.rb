@@ -1,5 +1,9 @@
 class WizardController < ApplicationController
 
+  def show
+    render 'wizard/wizard'
+  end
+
   def index
     json = params["data"]
     render :json => json
