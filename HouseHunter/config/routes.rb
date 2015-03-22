@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   get 'account/listing/:id/edit' => 'account#editListing', as: 'edit_listing'
   get 'account/listing/new' => 'account#newListing', as: 'new_listing'
   get 'account/listing/:id/save' => 'account#wizardSave'
+  get 'listing/:id' => 'static#listing', as: 'listing'
 
   get ':action' => 'static#:action'
   

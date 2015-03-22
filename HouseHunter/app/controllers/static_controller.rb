@@ -35,4 +35,9 @@ class StaticController < ApplicationController
   def cookie
     render 'cookies'
   end
+
+  def listing
+    @listing = Property.find(params[:id])
+    render 'listing'
+  end
 end
