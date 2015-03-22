@@ -598,7 +598,7 @@ select:focus{
 }
 
 #content-advice a:hover,
-.account-content a:hover, 
+.account-content a:hover,
 .content-about a:hover {
     color: #196E3D;
 }
@@ -1745,7 +1745,7 @@ input[type=range]::-webkit-slider-thumb {
     background-color: #fff;
 }
 
-.wizard-content-standard div {
+.wizard-content-standard div, .wizard-content-standard div div {
     padding: 15px;
     border-top: 1px solid #D7D7D7;
     border-right: 1px solid #D7D7D7;
@@ -2103,13 +2103,13 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-.wizard-previous, .edit-button {
+.wizard-previous {
     position: relative;
     height: 70px;
     width: 150px;
 }
 
-.wizard-previous span, .edit-button span {
+.wizard-previous span {
     position: absolute;
     top: 35%;
     left: 20%;
@@ -2117,7 +2117,7 @@ input[type=range]::-webkit-slider-thumb {
     border-bottom: 1px solid #9D9D9D;
 }
 
-.wizard-previous span:hover, .edit-button span:hover {
+.wizard-previous span:hover {
     cursor: pointer;
     color: #27ae60;
 }
@@ -2173,10 +2173,12 @@ input[type=range]::-webkit-slider-thumb {
 
 .review-tab h2 {
   border:none !important;
-  margin: none;
-  margin-left: 20px !important;
+  /*margin: none;*/
   margin-bottom: 0 !important;
+  margin-top: 0 !important;
   color: #838383;
+  font-size: 13px;
+  font-weight: normal;
 }
 
 .edit-button {
@@ -2184,14 +2186,32 @@ input[type=range]::-webkit-slider-thumb {
   height: auto;
   border: none !important;
   float: right;
+  position: relative;
+  width: 150px;
+}
+
+.edit-button span {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  display: block;
+  border-bottom: 1px solid #9D9D9D;
+  color: #000000 !important;
+  font-size: 15px !important;
+}
+
+.edit-button span:hover {
+  cursor: pointer;
+  color: #27ae60 !important;
 }
 
 .review-tab {
-  padding: 3px !important;
-  width: 594px !important;
-    border-right: 0px solid #D7D7D7 !important;
+  padding: 15px !important;
+  width: 570px !important;
+  border-right: 0px solid #D7D7D7 !important;
   border-left: 0px solid #D7D7D7;
   margin-left: 0px !important;
+  displauy: inline-block;
 }
 
 .review-info {
@@ -2199,11 +2219,13 @@ input[type=range]::-webkit-slider-thumb {
   width: 574px !important;
   padding-left: 25px !important;
   border-top: 0px solid #D7D7D7 !important;
+  padding-top: 10px !important;
 }
 
 .review-info p {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #838383;
 }
 
 .wizard-progress-bar {
@@ -2281,7 +2303,6 @@ input[type=range]::-webkit-slider-thumb {
     color:white;
     background-color: #27ae60;
     display: inline-block;
-
     margin-top: 5px;
     margin-left: 1px !important;
     padding:5px !important;
@@ -2297,15 +2318,15 @@ input[type=range]::-webkit-slider-thumb {
     height: 300px;
     margin: 0px !important;
     display: inline-block;
-    width: 266px   !important;
+    width: 269px   !important;
     vertical-align: top;
 }
 
 #wizard-keywords-field{
+
     height: 300px;
-    margin: 0px !important;
     display: inline-block;
-    width: 266px !important;
+    width: 269px !important;
     vertical-align: top;
 }
 
@@ -2315,12 +2336,16 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #wizard-price-estimation {
-  /* Styling for the price estimation box; will need to be full length horizontally */
   width: 568px;
   border-right: none;
+}
+#wizard-keyword-input{
+
+    width: 568px;
+    border-right: none;
 }
 
 html {
     position: relative;
-    min-height: 82%;
+    min-height: 100%;
 }
