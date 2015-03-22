@@ -82,6 +82,6 @@ class AccountController < ApplicationController
   def signout
     sign_out
     cookies.delete(:remember_token)
-    redirect_to action: 'index'
+    redirect_to controller: 'static', action: 'index'
   end
 end
