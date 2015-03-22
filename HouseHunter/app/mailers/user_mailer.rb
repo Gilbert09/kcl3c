@@ -20,7 +20,7 @@ class UserMailer < ApplicationMailer
 
   def upload_confirmation(user)
     @user = user
-    @url = 'http://homehunter.com/activeListings'
+    @url = 'http://homehunter.com/account/active'
     mail(to: @user.email, subject: 'Your property has successfully been listed')
   end
 
