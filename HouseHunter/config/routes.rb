@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   get 'account/inactive' => 'account#inactiveListings', as: 'account_inactive'
   get 'account/details' => 'account#details', as: 'account_details'
   get 'account/details/edit' => 'account#editDetails', as: 'account_details_edit'
-  #post 'account/details/edit' => 'account#saveDetails', as: 'account_details_edit_save'
+  post 'account/details/edit' => 'account#saveDetails', as: 'account_details_edit_save'
   get 'account/listing/:id/hide' => 'account#hideListing', as: 'hide_listing'
   get 'account/listing/:id/show' => 'account#showListing', as: 'show_listing'
   get 'account/listing/:id/edit' => 'account#editListing', as: 'edit_listing'
