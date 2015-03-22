@@ -41,7 +41,7 @@ class AccountController < ApplicationController
     else
       current_user.first_name = params["first_name"]
       current_user.last_name = params["last_name"]
-      if params["password"] != nil then current_user.update_password params["password"] end
+      if params["password"] != "" or params["password"] != nil then current_user.update_password params["password"] end
       current_user.email = params["email"]
       current_user.phone_number = params["phone_number"]
       current_user.save
