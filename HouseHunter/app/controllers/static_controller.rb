@@ -51,6 +51,7 @@ class StaticController < ApplicationController
   end
 
   def activeListings
+    @properties = current_user.properties
     render 'account/active'
   end
 
