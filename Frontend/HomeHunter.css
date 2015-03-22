@@ -2325,9 +2325,8 @@ input[type=range]::-webkit-slider-thumb {
 
 #wizard-keywords-field{
     height: 300px;
-    margin: 0px !important;
     display: inline-block;
-    width: 266px !important;
+    width: 273px !important;
     vertical-align: top;
 }
 
