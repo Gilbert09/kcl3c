@@ -40,7 +40,11 @@
 				</div>
 
 				<div class="property-name">
-					<h2><a href="listing.html" target="_blank"><%= p.address.house_name_number %>, <%= p.address.address_line_1 %>, <%= p.address.town_city %>, <%= p.address.post_code %></a></h2>
+					<h2>
+						<%= link_to listing_path(p), target: "_new" do %>
+							<%= p.address.house_name_number %>, <%= p.address.address_line_1 %>, <%= p.address.town_city %>, <%= p.address.post_code %>
+						<% end %>
+					</h2>
 				</div>
 
 				<ul class="progress">
