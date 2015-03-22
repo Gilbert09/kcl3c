@@ -58,7 +58,7 @@ class AccountController < ApplicationController
   end
 
   def editListing
-  	render 'wizard/wizard'
+  	render 'account/wizard'
   end
 
   def newListing
