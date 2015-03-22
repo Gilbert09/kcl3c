@@ -1,6 +1,7 @@
 class AccountController < ApplicationController
 
   before_action :require_login 
+  skip_before_filter :verify_authenticity_token, :only => [:editDetails, :saveDetails]
 
   def account
     redirect_to action: 'createListing'
