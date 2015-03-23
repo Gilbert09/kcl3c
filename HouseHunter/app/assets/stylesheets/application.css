@@ -2349,3 +2349,7 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+#wizard-bottom-large {
+    height: 120px !important;
+}
