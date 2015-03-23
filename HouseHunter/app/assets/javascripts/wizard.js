@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 		var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 		if (nextStage.length == 0) return;
-		$($($(stThis).parents()[2])).fadeOut(1000, function() {
+		$($($(this).parents()[2])).fadeOut(1000, function() {
 			$(nextStage).fadeIn(1000);
 			changeButton();
 		});
@@ -97,7 +97,7 @@ function stage1() {
 
 
 function stage2() {
-	
+	return JSON.stringify({"data": { "property_type": $("select[name='propertytype']").val(), "number_of_floors": "", "entrance_floor": "", "condition": "", "number_of_bedrooms": "", "number_of_bathroom": "", "number_of_receptions": "", "number_of_other_rooms": "", "price": "" }})
 }
 
 function stage3() {
