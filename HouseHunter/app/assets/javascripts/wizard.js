@@ -109,15 +109,24 @@ function stage3() {
 }
 
 function stage4() {
-
+	var parking = "";
+	$("div[data-step='4']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		parking += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "parking": parking.substring(0, parking.length - 1) }})
 }
 
 function stage5() {
-
+	var heating = "";
+	$("div[data-step='5']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		heating += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "heating": heating.substring(0, heating.length - 1) }})
 }
 
 function stage6() {
 
+}
 
 function stage7() {
 
