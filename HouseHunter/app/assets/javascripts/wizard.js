@@ -97,19 +97,31 @@ function stage1() {
 
 
 function stage2() {
-	return JSON.stringify({"data": { "property_type": $("select[name='propertytype']").val(), "number_of_floors": "", "entrance_floor": "", "condition": "", "number_of_bedrooms": "", "number_of_bathroom": "", "number_of_receptions": "", "number_of_other_rooms": "", "price": "" }})
+	return JSON.stringify({"data": { "property_type": $("select[name='propertytype']").val(), "number_of_floors": $("select[name='numberoffloors']").val(), "entrance_floor": $("select[name='entrancefloor']").val(), "condition": $("select[name='condition']").val(), "number_of_bedrooms": $("select[name='bedrooms']").val(), "number_of_bathroom": $("select[name='bathrooms']").val(), "number_of_receptions": $("select[name='receptionrooms']").val(), "number_of_other_rooms": $("select[name='otherrooms']").val(), "price": $("input[name='price']").val() }})
 }
 
 function stage3() {
-
+	var gardens = "";
+	$("div[data-step='3']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		gardens += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "gardens": gardens.substring(0, gardens.length - 1) }})
 }
 
 function stage4() {
-
+	var parking = "";
+	$("div[data-step='4']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		parking += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "parking": parking.substring(0, parking.length - 1) }})
 }
 
 function stage5() {
-
+	var heating = "";
+	$("div[data-step='5']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		heating += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "heating": heating.substring(0, heating.length - 1) }})
 }
 
 function stage6() {
