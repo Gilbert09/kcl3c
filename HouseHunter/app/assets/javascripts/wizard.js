@@ -87,12 +87,17 @@ function changeButton() {
 	}
 }
 
-function stage1() {
-	
+function stage0() {
+	return JSON.stringify({"data": { "first_name": $("input[name='fname']").val(), "last_name": $("input[name='lname']").val(), "email": $("input[name='email']").val(), "phone_number": $("input[name='phone']").val() }})
 }
 
-function stage2() {
+function stage1() {
+	return JSON.stringify({"data":{"house_name_number": $("input[name='housenamenumber']").val(), "address_line_1": $("input[name='addressline1']").val(), "address_line_2": $("input[name='addressline2']").val(), "city": $("input[name='city']").val(), "county": $("input[name='county']").val(), "postcode": $("input[name='postcode']").val()}})
+}
 
+
+function stage2() {
+	
 }
 
 function stage3() {
