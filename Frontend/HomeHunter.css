@@ -2171,6 +2171,10 @@ input[type=range]::-webkit-slider-thumb {
   display:inline-block;
 }
 
+#wizard-bottom-large {
+    height: 120px !important;
+}
+
 .review-tab h2 {
   border:none !important;
   /*margin: none;*/
