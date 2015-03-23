@@ -1,16 +1,20 @@
 $(document).ready(function() {
 	$(document).on("click", ".wizard-next", function() {
-		var stThis = this;
-		setTimeout(function() {
-			var currentStep = $($(stThis).parents()[2]).attr("data-step");
-			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
-			if (nextStage.length == 0) return;
-			$($($(stThis).parents()[2])).fadeOut(1000, function() {
-				$(nextStage).fadeIn(1000);
-				changeButton();
-			});
-		}, 1000);
-		changeButton();
+		var currentStep = $($(this).parents()[2]).attr("data-step");
+
+		//Send data to be save
+
+
+
+
+
+
+		var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+		if (nextStage.length == 0) return;
+		$($($(this).parents()[2])).fadeOut(1000, function() {
+			$(nextStage).fadeIn(1000);
+			changeButton();
+		});
 	});
 
 	$(document).on("click", ".wizard-previous span", function() {
@@ -31,6 +35,10 @@ $(document).ready(function() {
 			$(this).addClass("wizard-content-checkbox-selected");
 			$(this).find("span").addClass("wizard-content-checkbox-selected-span");
 		}
+	});
+
+	$(document).on("click", "div[data-step='5'] .wizard-next", function() {
+		generateRooms();
 	});
 
 	var options = {
@@ -73,7 +81,7 @@ function changeButton() {
 	if ($(".wizard-next").css("padding") == "12px 47px") {
 		$(".wizard-next").html("Continue <i class=\"fa fa-long-arrow-right\"></i>");
 		$(".wizard-next").css("padding", "18px 47px");
-		$(".wizard-next").css("width", "auto");
+		$(".wizard-next").css("width", "179px");
 	} else {
 		$(".wizard-next").css("padding", "12px 47px");
 		$(".wizard-next").animate({
@@ -82,3 +90,90 @@ function changeButton() {
 		$(".wizard-next").html("<i class=\"fa fa-spinner fa-pulse fa-2x\"></i>");
 	}
 }
+
+function generateRooms() {
+	var bedrooms = parseInt($("select[name='bedrooms']").val());
+	var bathrooms = parseInt($("select[name='bathrooms']").val());
+	var receptions = parseInt($("select[name='receptionrooms']").val());
+	var other = parseInt($("select[name='otherrooms']").val());
+
+	for (var i = 0; i < bedrooms; i++) {
+		$(".wizard-room-list").append("<div><span>Bedroom " + (i + 1) + "</span></div>");
+	}
+
+	for (var i = 0; i < receptions; i++) {
+		$(".wizard-room-list").append("<div><span>Reception " + (i + 1) + "</span></div>");
+	}
+
+	for (var i = 0; i < bathrooms; i++) {
+		$(".wizard-room-list").append("<div><span>Bathrooms " + (i + 1) + "</span></div>");
+	}
+
+	for (var i = 0; i < other; i++) {
+		$(".wizard-room-list").append("<div><span>Other " + (i + 1) + "</span></div>");
+	}
+
+	$($(".wizard-room-list").children()[0]).addClass("wizard-room-list-selected");
+}
+
+function stage0() {
+	return JSON.stringify({"data": { "first_name": $("input[name='fname']").val(), "last_name": $("input[name='lname']").val(), "email": $("input[name='email']").val(), "phone_number": $("input[name='phone']").val() }})
+}
+
+function stage1() {
+	return JSON.stringify({"data":{"house_name_number": $("input[name='housenamenumber']").val(), "address_line_1": $("input[name='addressline1']").val(), "address_line_2": $("input[name='addressline2']").val(), "city": $("input[name='city']").val(), "county": $("input[name='county']").val(), "postcode": $("input[name='postcode']").val()}})
+}
+
+
+function stage2() {
+	return JSON.stringify({"data": { "property_type": $("select[name='propertytype']").val(), "number_of_floors": $("select[name='numberoffloors']").val(), "entrance_floor": $("select[name='entrancefloor']").val(), "condition": $("select[name='condition']").val(), "number_of_bedrooms": $("select[name='bedrooms']").val(), "number_of_bathroom": $("select[name='bathrooms']").val(), "number_of_receptions": $("select[name='receptionrooms']").val(), "number_of_other_rooms": $("select[name='otherrooms']").val(), "price": $("input[name='price']").val() }})
+}
+
+function stage3() {
+	var gardens = "";
+	$("div[data-step='3']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		gardens += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "gardens": gardens.substring(0, gardens.length - 1) }})
+}
+
+function stage4() {
+	var parking = "";
+	$("div[data-step='4']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		parking += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "parking": parking.substring(0, parking.length - 1) }})
+}
+
+function stage5() {
+	var heating = "";
+	$("div[data-step='5']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
+		heating += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "heating": heating.substring(0, heating.length - 1) }})
+}
+
+function stage6() {
+
+}
+
+function stage7() {
+
+}
+
+function stage8() {
+
+}
+
+function stage9() {
+
+}
+
+function stage10() {
+
+}
+
+function stage11() {
+
+}
+

@@ -37,6 +37,10 @@ $(document).ready(function() {
 		}
 	});
 
+	$(document).on("click", "div[data-step='5'] .wizard-next", function() {
+		generateRooms();
+	});
+
 	var options = {
 		url: "/file/post",
 		previewsContainer: "#wizard-rooms-uploaded",
@@ -58,6 +62,10 @@ $(document).ready(function() {
 	$("#wizard-rooms-fileupload span").dropzone(options);
 
 	$(document).on("click", ".wizard-room-list div", function() {
+		var currentTab = $(".wizard-room-list-selected").find("span").text();
+		
+
+
 		$(".wizard-room-list-selected").removeClass("wizard-room-list-selected");
 		$(this).addClass("wizard-room-list-selected");
 	});
@@ -85,6 +93,37 @@ function changeButton() {
 		}, 600);
 		$(".wizard-next").html("<i class=\"fa fa-spinner fa-pulse fa-2x\"></i>");
 	}
+}
+
+var rooms = { "rooms": [] }
+
+function generateRooms() {
+	var bedrooms = parseInt($("select[name='bedrooms']").val());
+	var bathrooms = parseInt($("select[name='bathrooms']").val());
+	var receptions = parseInt($("select[name='receptionrooms']").val());
+	var other = parseInt($("select[name='otherrooms']").val());
+
+	for (var i = 0; i < bedrooms; i++) {
+		$(".wizard-room-list").append("<div><span>Bedroom " + (i + 1) + "</span></div>");
+		rooms.rooms.push({ "title": "Bedroom " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+	}
+
+	for (var i = 0; i < receptions; i++) {
+		$(".wizard-room-list").append("<div><span>Reception " + (i + 1) + "</span></div>");
+		rooms.rooms.push({ "title": "Reception " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+	}
+
+	for (var i = 0; i < bathrooms; i++) {
+		$(".wizard-room-list").append("<div><span>Bathroom " + (i + 1) + "</span></div>");
+		rooms.rooms.push({ "title": "Bathroom " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+	}
+
+	for (var i = 0; i < other; i++) {
+		$(".wizard-room-list").append("<div><span>Other " + (i + 1) + "</span></div>");
+		rooms.rooms.push({ "title": "Other " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+	}
+
+	$($(".wizard-room-list").children()[0]).addClass("wizard-room-list-selected");
 }
 
 function stage0() {
