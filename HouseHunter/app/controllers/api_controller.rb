@@ -66,7 +66,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
   private
 
   # this method takes all the data from the first stage of listing of a property on the wizard, it takes parameters to help identify the user working.
-    def stage1(jsonData, stage, current_user, property)
+    def stage1(jsonData, stage, current_user, propertyID)
       current_user.first_name = jsonData["first_name"]
       current_user.last_name = jsonData["last_name"]
       current_user.email = jsonData["email"]
@@ -76,7 +76,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
     end
 
   # this method takes all the data from the second stage of listing of a property on the wizard.
-    def stage2(jsonData, stage, current_user, property)
+    def stage2(jsonData, stage, current_user, propertyID)
       newAddress = true
       if jsonData["address_id"] != nil
         current_user.properties.each do |p|
@@ -90,7 +90,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
 
       if newAddress then
         address = Address.new
-        property = Property.find(property)
+        property = Property.find(propertyID)
         address.save
 
         address.property_id = property.id
@@ -119,16 +119,16 @@ simply returns true as we have no access to the APIs, it inherits all the method
     end
 
   # this method takes all the data from the third stage of listing of a property on the wizard.
-    def stage3(jsonData, stage, current_user, property)
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+    def stage3(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
       property.price = jsonData["price"]
       property.property_type = jsonData["property_type"]
       property.number_of_floors = jsonData["number_of_floors"]
@@ -143,73 +143,73 @@ simply returns true as we have no access to the APIs, it inherits all the method
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the fourth stage of listing of a property on the wizard.
-    def stage4(jsonData, stage, current_user, property)
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+    def stage4(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
       property.outdoor_space = jsonData["outdoor_space"]
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
   # this method takes all the data from the fifth stage of listing of a property on the wizard.
-    def stage5(jsonData, stage, current_user, property)
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+    def stage5(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
       property.parking = jsonData["parking"]
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the sixth stage of listing of a property on the wizard.
-    def stage6(jsonData, stage, current_user, property)
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+    def stage6(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
       property.heating = jsonData["heating"]
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the seventh stage of listing of a property on the wizard.
-    def stage7(jsonData, stage, current_user, property)
+    def stage7(jsonData, stage, current_user, propertyID)
       #TODO: Upload multimedia still, probably as a seperate method idk
 
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
 
       if jsonData["room_id"] == nil then
         room = Room.new
         room.property_id = property.id
 
-        room.room_type = jsonData["room_type"]
-        room.room_length = jsonData["room_length"]
-        room.room_width = jsonData["room_width"]
-        room.measurement_unit = jsonData["measurement_unit"]
+        room.room_type = jsonData["title"]
+        room.room_length = jsonData["length"]
+        room.room_width = jsonData["width"]
+        room.measurement_unit = jsonData["units"]
         room.description = jsonData["description"]
         room.save
         return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s}, \"room_id\": #{room.id} } }")
@@ -219,10 +219,10 @@ simply returns true as we have no access to the APIs, it inherits all the method
         end
 
         room = property.rooms.find(jsonData["room_id"])
-        room.room_type = jsonData["room_type"]
-        room.room_length = jsonData["room_length"]
-        room.room_width = jsonData["room_width"]
-        room.measurement_unit = jsonData["measurement_unit"]
+        room.room_type = jsonData["title"]
+        room.room_length = jsonData["length"]
+        room.room_width = jsonData["width"]
+        room.measurement_unit = jsonData["units"]
         room.description = jsonData["description"]
         room.save
         return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s}, \"room_id\": #{room.id} } }")
@@ -231,31 +231,31 @@ simply returns true as we have no access to the APIs, it inherits all the method
 
     end
   # this method takes all the data from the eigth stage of listing of a property on the wizard.
-    def stage8(jsonData, stage, current_user, property)
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+    def stage8(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
       property.keyword = jsonData["keywords"]
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the ninth stage of listing of a property on the wizard.
-    def stage9(jsonData, stage, current_user, property)
-      if jsonData["property_id"] == nil then
-        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
-      end
+    def stage9(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
 
-      if current_user.properties.exists?(jsonData["property_id"]) != true then 
+      if current_user.properties.exists?(propertyID) != true then 
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
       end
 
-      property = current_user.properties.find(jsonData["property_id"])
+      property = current_user.properties.find(propertyID)
       property.description = jsonData["description"]
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")

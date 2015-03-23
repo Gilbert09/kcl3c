@@ -51,19 +51,35 @@ $(document).ready(function() {
 				break;
 		}
 
-		$.ajax({
-			url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data
-		}).done(function(msg) {
-			alert(JSON.stringify(msg));
+		if (stage == 7) {
+			for (var i = 0; i < data.length; i++) {
+				$.ajax({
+					url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data[i]
+				}).done(function(msg) {
+					alert(JSON.stringify(msg));
+				});
+			}
+			$(".wizard-next").html("Done");
 			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 			if (nextStage.length == 0) return;
 			$($($(sThis).parents()[2])).fadeOut(1000, function() {
 				$(nextStage).fadeIn(1000);
 				changeButton();
 			});
-		});
-
-		
+		} else {
+			$.ajax({
+				url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data
+			}).done(function(msg) {
+				alert(JSON.stringify(msg));
+				$(".wizard-next").html("Done");
+				var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+				if (nextStage.length == 0) return;
+				$($($(sThis).parents()[2])).fadeOut(1000, function() {
+					$(nextStage).fadeIn(1000);
+					changeButton();
+				});
+			});
+		}
 	});
 
 	$(document).on("click", ".wizard-previous span", function() {
