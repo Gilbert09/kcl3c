@@ -9,7 +9,7 @@ $(document).ready(function() {
 		var intCurrentStep = parseInt(currentStep);
 
 		//Send data to be save
-		var stage = 1;
+		var stage = -1;
 		var data = "";
 
 		switch (intCurrentStep) {
