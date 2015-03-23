@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 		//Send data to be save
 		var stage = 1;
-		var data = {};
+		var data = "";
 
 		switch (currentStep) {
 			case 0:
@@ -51,9 +51,7 @@ $(document).ready(function() {
 		}
 
 		$.ajax({
-			url: '/account/listing/' + propertyID + '/save',
-			stage: stage,
-			data: data
+			url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data
 		}).done(function(msg) {
 			alert(msg);
 			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
