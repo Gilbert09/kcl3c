@@ -57,6 +57,8 @@ simply returns true as we have no access to the APIs, it inherits all the method
         stage8(jsonData, stage, current_user, property)
       when "9"
         stage9(jsonData, stage, current_user, property)
+      when "10"
+        stage10(jsonData, stage, current_user, property)
       else 
         return JSON.parse('{ "result": "Error", "message": "Invalid stage" }')
     end
