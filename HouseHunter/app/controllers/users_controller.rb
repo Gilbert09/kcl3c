@@ -51,6 +51,7 @@ this class represents the controller for all users, users must be signed in for 
     end
   end
 
+  # this method is again used in the security of the website and is used to create a new URL.
   def url_after_create
     Clearance.configuration.redirect_url
   end
