@@ -288,6 +288,6 @@ function stage9() {
 }
 
 function goto(step) {
-	$(".showing").hide()
-	$('div[data-step="' + step + '"]').show();
+	$(".showing").removeClass("showing");
+	$('div[data-step="' + step + '"]').addClass("showing");
 }
