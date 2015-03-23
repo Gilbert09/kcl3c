@@ -49,6 +49,8 @@ $(document).ready(function() {
 				stage = 9;
 				data = stage9();
 				break;
+			default:
+				return;
 		}
 
 		if (stage == 7) {
