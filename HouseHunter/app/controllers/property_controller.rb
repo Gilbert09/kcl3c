@@ -2,7 +2,8 @@ class PropertyController < ApplicationController
 
 =begin
 this class is a controller for any properties which are uploaded to the website, this class requires authorization in
-order to use as we need to ensure that a user can only manage their own properties.
+order to use as we need to ensure that a user can only manage their own properties, it inherits all the methods of the
+ ApplicationController class.
 =end
 
   before_filter :authorize

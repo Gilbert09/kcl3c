@@ -2,7 +2,7 @@ class StaticController < ApplicationController
 
 =begin
 this class is the controller for all static pages of the website, this means they are the same throughout the website
-and are not user specific.
+and are not user specific, it inherits all the methods of the ApplicationController class.
 =end
 
   # this method renders the index page.

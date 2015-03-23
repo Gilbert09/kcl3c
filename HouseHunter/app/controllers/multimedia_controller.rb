@@ -1,7 +1,8 @@
 class MultimediaController < ApplicationController
 
 =begin
-this class represents the controller for all the media such as images a user uploads to the website.
+this class represents the controller for all the media such as images a user uploads to the website, it inherits all
+the methods of the ApplicationController class.
 =end
 
   # this method retrieves the images a user has uploaded for a property.
