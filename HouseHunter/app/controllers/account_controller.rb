@@ -103,7 +103,7 @@ ApplicationController class.
   end
 
   # this method is called when a user exits the wizard before finishing a listing allowing them to come back and complete it later.
-  def saveWizard
+  def wizardSave
     if signed_in?
       api = ApiController.new
       result = api.saveDraft(JSON.parse(params["data"])["data"], params["stage"], current_user, params["id"])
