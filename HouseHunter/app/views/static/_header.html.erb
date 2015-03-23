@@ -85,12 +85,12 @@
         <nav>
             <ul>
                 <% if signed_in? %>
-                    <li><a href="account-wizard.html">My Account</a></li>
+                    <li><%= "My Account", account_path %></li>
                 <%  end %>
-                <li><a href="advice.html">Advice</a></li>
-                <li><a href="howitworks.html">How It Works</a></li>
-                <li><a href="fees.html">Fees</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
+                <li><%= "Advice", advice_path %></li>
+                <li><%= "How It Works", how_it_works_path %></li>
+                <li><%= "Fees", fees_path %></li>
+                <li><%= "FAQs", faq_path %></li>
             </ul>
         </nav>
     </div>
