@@ -1,29 +1,42 @@
 class ApiController < ApplicationController
-  
+
+=begin
+this class is a controller for the Rightmove and Zoopla APIs, it takes data from the wizard part of the website as a
+user fills in each section of the wizard with their property details, at current the methods to send data to the websites
+simply returns true as we have no access to the APIs.
+=end
+
+  # this method takes the data in a json format ready to send a property to Rightmove and Zoopla.
   def sendProperty(jsonData)
     return true
   end
 
+  # this method takes a property id in order to be able to then remove it from Zoopla and Rightmove.
   def removeProperty(propertyId)
     return true
   end
 
+  # this method returns a list of all the properties on Rightmove and Zoopla currently listed on their website under this website.
   def getBranchPropertyList(branchId)
     return true
   end
 
+  # this method takes the data in a json format ready to send a property to Rightmove and Zoopla, it is a premium listing.
   def addPremiumListing(jsonData)
     return true
   end
 
+  # this method takes the data in a json format ready to send a property to Rightmove and Zoopla, it is a featured listing.
   def addFeaturedProperty(jsonData)
     return true
   end
 
+  # this method takes a property id in order to be able to then remove it from Zoopla and Rightmove, it is however a featured property.
   def removeFeaturedProperty(propertyId)
     return true
   end
 
+  # this method saves an incomplete listing and is called if a user does not finish a listing.
   def saveDraft(jsonData, stage, current_user)
     case stage
       when "1"
@@ -49,7 +62,10 @@ class ApiController < ApplicationController
     end
   end
 
+  # the methods below this line are all private.
   private
+
+  # this method takes all the data from the first stage of listing of a property on the wizard, it takes parameters to help identify the user working.
     def stage1(jsonData, stage, current_user, property)
       current_user.first_name = jsonData["first_name"]
       current_user.last_name = jsonData["last_name"]
@@ -59,6 +75,7 @@ class ApiController < ApplicationController
       return JSON.parse('{ "result": "Success", "message": "Data saved" }')
     end
 
+  # this method takes all the data from the second stage of listing of a property on the wizard.
     def stage2(jsonData, stage, current_user)
       newAddress = true
       if jsonData["address_id"] != nil
@@ -101,6 +118,7 @@ class ApiController < ApplicationController
       end
     end
 
+  # this method takes all the data from the third stage of listing of a property on the wizard.
     def stage3(jsonData, stage, current_user)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
@@ -124,7 +142,7 @@ class ApiController < ApplicationController
 
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
-
+  # this method takes all the data from the fourth stage of listing of a property on the wizard.
     def stage4(jsonData, stage, current_user)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
@@ -140,6 +158,7 @@ class ApiController < ApplicationController
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
 
+  # this method takes all the data from the fifth stage of listing of a property on the wizard.
     def stage5(jsonData, stage, current_user)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
@@ -154,7 +173,7 @@ class ApiController < ApplicationController
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
-
+  # this method takes all the data from the sixth stage of listing of a property on the wizard.
     def stage6(jsonData, stage, current_user)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
@@ -169,7 +188,7 @@ class ApiController < ApplicationController
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
-
+  # this method takes all the data from the seventh stage of listing of a property on the wizard.
     def stage7(jsonData, stage, current_user)
       #TODO: Upload multimedia still, probably as a seperate method idk
 
@@ -211,7 +230,7 @@ class ApiController < ApplicationController
 
 
     end
-
+  # this method takes all the data from the eigth stage of listing of a property on the wizard.
     def stage8(jsonData, stage, current_user)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
@@ -226,7 +245,7 @@ class ApiController < ApplicationController
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
-
+  # this method takes all the data from the ninth stage of listing of a property on the wizard.
     def stage9(jsonData, stage, current_user)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
