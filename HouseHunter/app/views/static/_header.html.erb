@@ -2,7 +2,9 @@
     <div id="header-top-container">
         <div id="header-top">
             <div class="float-left" id="user-profile-link">
-                <%= link_to "Home Hunter", root_path %>
+                <% unless signed_in? %>
+                    <%= link_to "Home Hunter", root_path %>
+                <% end %>
             </div>
 
             <div class="float-right" id="user-control">
