@@ -37,26 +37,26 @@ simply returns true as we have no access to the APIs, it inherits all the method
   end
 
   # this method saves an incomplete listing and is called if a user does not finish a listing.
-  def saveDraft(jsonData, stage, current_user)
+  def saveDraft(jsonData, stage, current_user, property)
     case stage
       when "1"
-        stage1(jsonData, stage, current_user)
+        stage1(jsonData, stage, current_user, property)
       when "2"
-        stage2(jsonData, stage, current_user)
+        stage2(jsonData, stage, current_user, property)
       when "3"
-        stage3(jsonData, stage, current_user)
+        stage3(jsonData, stage, current_user, property)
       when "4"
-        stage4(jsonData, stage, current_user)
+        stage4(jsonData, stage, current_user, property)
       when "5"
-        stage5(jsonData, stage, current_user)
+        stage5(jsonData, stage, current_user, property)
       when "6"
-        stage6(jsonData, stage, current_user)
+        stage6(jsonData, stage, current_user, property)
       when "7"
-        stage7(jsonData, stage, current_user)
+        stage7(jsonData, stage, current_user, property)
       when "8"
-        stage8(jsonData, stage, current_user)
+        stage8(jsonData, stage, current_user, property)
       when "9"
-        stage9(jsonData, stage, current_user)
+        stage9(jsonData, stage, current_user, property)
       else 
         return JSON.parse('{ "result": "Error", "message": "Invalid stage" }')
     end
@@ -76,7 +76,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
     end
 
   # this method takes all the data from the second stage of listing of a property on the wizard.
-    def stage2(jsonData, stage, current_user)
+    def stage2(jsonData, stage, current_user, property)
       newAddress = true
       if jsonData["address_id"] != nil
         current_user.properties.each do |p|
@@ -119,7 +119,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
     end
 
   # this method takes all the data from the third stage of listing of a property on the wizard.
-    def stage3(jsonData, stage, current_user)
+    def stage3(jsonData, stage, current_user, property)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
@@ -143,7 +143,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the fourth stage of listing of a property on the wizard.
-    def stage4(jsonData, stage, current_user)
+    def stage4(jsonData, stage, current_user, property)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
@@ -159,7 +159,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
     end
 
   # this method takes all the data from the fifth stage of listing of a property on the wizard.
-    def stage5(jsonData, stage, current_user)
+    def stage5(jsonData, stage, current_user, property)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
@@ -174,7 +174,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the sixth stage of listing of a property on the wizard.
-    def stage6(jsonData, stage, current_user)
+    def stage6(jsonData, stage, current_user, property)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
@@ -189,7 +189,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the seventh stage of listing of a property on the wizard.
-    def stage7(jsonData, stage, current_user)
+    def stage7(jsonData, stage, current_user, property)
       #TODO: Upload multimedia still, probably as a seperate method idk
 
       if jsonData["property_id"] == nil then
@@ -231,7 +231,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
 
     end
   # this method takes all the data from the eigth stage of listing of a property on the wizard.
-    def stage8(jsonData, stage, current_user)
+    def stage8(jsonData, stage, current_user, property)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end
@@ -246,7 +246,7 @@ simply returns true as we have no access to the APIs, it inherits all the method
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
   # this method takes all the data from the ninth stage of listing of a property on the wizard.
-    def stage9(jsonData, stage, current_user)
+    def stage9(jsonData, stage, current_user, property)
       if jsonData["property_id"] == nil then
         return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
       end

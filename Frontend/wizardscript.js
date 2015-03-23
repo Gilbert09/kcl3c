@@ -5,10 +5,6 @@ $(document).ready(function() {
 		//Send data to be save
 
 
-
-
-
-
 		var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 		if (nextStage.length == 0) return;
 		$($($(this).parents()[2])).fadeOut(1000, function() {
@@ -39,6 +35,14 @@ $(document).ready(function() {
 
 	$(document).on("click", "div[data-step='5'] .wizard-next", function() {
 		generateRooms();
+	});
+
+	$("input[name='keyword']").keypress(function (e) {
+		if (e.which == 13) {
+			var text = $("input[name='keyword']").val();
+			$("#wizard-keywords-field").append("<div class=\"keyword\">" + text + "</div>")
+			$("input[name='keyword']").val("");
+	  	}
 	});
 
 	var options = {
@@ -158,20 +162,20 @@ function getRoomIndex(roomTitle) {
 	return -1;
 }
 
-function stage0() {
+function stage1() {
 	return JSON.stringify({"data": { "first_name": $("input[name='fname']").val(), "last_name": $("input[name='lname']").val(), "email": $("input[name='email']").val(), "phone_number": $("input[name='phone']").val() }})
 }
 
-function stage1() {
+function stage2() {
 	return JSON.stringify({"data":{"house_name_number": $("input[name='housenamenumber']").val(), "address_line_1": $("input[name='addressline1']").val(), "address_line_2": $("input[name='addressline2']").val(), "city": $("input[name='city']").val(), "county": $("input[name='county']").val(), "postcode": $("input[name='postcode']").val()}})
 }
 
 
-function stage2() {
+function stage3() {
 	return JSON.stringify({"data": { "property_type": $("select[name='propertytype']").val(), "number_of_floors": $("select[name='numberoffloors']").val(), "entrance_floor": $("select[name='entrancefloor']").val(), "condition": $("select[name='condition']").val(), "number_of_bedrooms": $("select[name='bedrooms']").val(), "number_of_bathroom": $("select[name='bathrooms']").val(), "number_of_receptions": $("select[name='receptionrooms']").val(), "number_of_other_rooms": $("select[name='otherrooms']").val(), "price": $("input[name='price']").val() }})
 }
 
-function stage3() {
+function stage4() {
 	var gardens = "";
 	$("div[data-step='3']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
 		gardens += $(e).text() + ",";
@@ -179,7 +183,7 @@ function stage3() {
 	return JSON.stringify({ "data": { "gardens": gardens.substring(0, gardens.length - 1) }})
 }
 
-function stage4() {
+function stage5() {
 	var parking = "";
 	$("div[data-step='4']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
 		parking += $(e).text() + ",";
@@ -187,7 +191,7 @@ function stage4() {
 	return JSON.stringify({ "data": { "parking": parking.substring(0, parking.length - 1) }})
 }
 
-function stage5() {
+function stage6() {
 	var heating = "";
 	$("div[data-step='5']").find(".wizard-content-checkbox-selected-span").each(function(i, e) {
 		heating += $(e).text() + ",";
@@ -195,12 +199,12 @@ function stage5() {
 	return JSON.stringify({ "data": { "heating": heating.substring(0, heating.length - 1) }})
 }
 
-function stage6() {
-
-}
-
 function stage7() {
-
+	var dataArr = [];
+	rooms.rooms.each(function(e, i) {
+		dataArr.push(JSON.stringify(e))
+	});
+	return dataArr;
 }
 
 function stage8() {
@@ -219,3 +223,11 @@ function stage11() {
 
 }
 
+function stage12() {
+
+}
+
+function goto(step) {
+	$(".showing").hide()
+	$('div[data-step="' + step + '"]').show();
+}

@@ -1,20 +1,70 @@
+var propertyID = window.location.pathname.substring(window.location.pathname.length - 6, window.location.pathname.length - 5);
+var rooms = { "rooms": [] }
+
 $(document).ready(function() {
 	$(document).on("click", ".wizard-next", function() {
+		changeButton();
 		var currentStep = $($(this).parents()[2]).attr("data-step");
 
+
 		//Send data to be save
+		var stage = 1;
+		var data = {};
 
+		switch (currentStep) {
+			case 0:
+				stage = 1;
+				data = stage1();
+				break;
+			case 1:
+				stage = 2;
+				data = stage2();
+				break;
+			case 2:
+				stage = 3;
+				data = stage3();
+				break;
+			case 3:
+				stage = 4;
+				data = stage4();
+				break;
+			case 4:
+				stage = 5;
+				data = stage5();
+				break;
+			case 5:
+				stage = 6;
+				data = stage6();
+				break;
+			case 6:
+				stage = 7;
+				data = stage7();
+				break;
+			case 8:
+				stage = 8;
+				data = stage8();
+				break;
+			case 9:
+				stage = 9;
+				data = stage9();
+				break;
+		}
 
-
-
-
-
-		var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
-		if (nextStage.length == 0) return;
-		$($($(this).parents()[2])).fadeOut(1000, function() {
-			$(nextStage).fadeIn(1000);
-			changeButton();
+		$.ajax({
+			url: '/account/listing/' + propertyID + '/save',
+			stage: stage,
+			data: data
+		}).done(function(msg) {
+			alert(msg);
+			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+			if (nextStage.length == 0) return;
+			$($($(this).parents()[2])).fadeOut(1000, function() {
+				$(nextStage).fadeIn(1000);
+				changeButton();
+			});
 		});
+
+		
 	});
 
 	$(document).on("click", ".wizard-previous span", function() {
@@ -39,6 +89,15 @@ $(document).ready(function() {
 
 	$(document).on("click", "div[data-step='5'] .wizard-next", function() {
 		generateRooms();
+	});
+
+	$("input[name='keyword']").keypress(function (e) {
+		if (e.which == 13) {
+			var text = $("input[name='keyword']").val();
+			if (text.trim() == "") return;
+			$("#wizard-keywords-field").append("<div class=\"keyword\">" + text + "</div>")
+			$("input[name='keyword']").val("");
+	  	}
 	});
 
 	var options = {
@@ -118,8 +177,6 @@ function changeButton() {
 		$(".wizard-next").html("<i class=\"fa fa-spinner fa-pulse fa-2x\"></i>");
 	}
 }
-
-var rooms = { "rooms": [] }
 
 function generateRooms() {
 	var bedrooms = parseInt($("select[name='bedrooms']").val());
@@ -204,22 +261,18 @@ function stage7() {
 }
 
 function stage8() {
-
+	var keywords = "";
+	$("#wizard-keywords-field .keyword").each(function(e, i) {
+		keywords += $(e).text() + ",";
+	});
+	return JSON.stringify({ "data": { "keywords": keywords.substring(0, keywords.length - 1) } });
 }
 
 function stage9() {
-
+	return JSON.stringify({ "data": { "description": $("#wizard-description-description textarea").val().trim() } })
 }
 
-function stage10() {
-
+function goto(step) {
+	$(".showing").hide()
+	$('div[data-step="' + step + '"]').show();
 }
-
-function stage11() {
-
-}
-
-function stage12() {
-
-}
-
