@@ -270,7 +270,7 @@ function stage6() {
 function stage7() {
 	var dataArr = [];
 	$.each(rooms.rooms, function(i, e) {
-		dataArr.push(JSON.stringify({ "data": { e } }))
+		dataArr.push(JSON.stringify({ "data": e }))
 	});
 	return dataArr;
 }
