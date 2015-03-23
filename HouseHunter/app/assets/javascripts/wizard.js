@@ -63,23 +63,47 @@ $(document).ready(function() {
 
 	$(document).on("click", ".wizard-room-list div", function() {
 		var currentTab = $(".wizard-room-list-selected").find("span").text();
+		var roomIndex = getRoomIndex(currentTab);
+		rooms.rooms[roomIndex]["title"] = $("input[name='roomtitle']").val();
+		rooms.rooms[roomIndex]["length"] = $("input[name='roomlength']").val();
+		rooms.rooms[roomIndex]["width"] = $("input[name='roomwidth']").val();
+		rooms.rooms[roomIndex]["units"] = $(".wizard-room-selected").text().trim();
+		rooms.rooms[roomIndex]["description"] = $("#wizard-room-description textarea").val();
+
+		$(".wizard-room-tab input, .wizard-room-tab textarea").val("");
+
+		var nextRoomTab = $(this).find("span").text();
+		var nextRoomIndex = getRoomIndex(nextRoomTab);
+		$("input[name='roomtitle']").val(rooms.rooms[nextRoomIndex]["title"])
+		$("input[name='roomlength']").val(rooms.rooms[nextRoomIndex]["length"]);
+		$("input[name='roomwidth']").val(rooms.rooms[nextRoomIndex]["width"]);
+		$("#wizard-room-description textarea").val(rooms.rooms[nextRoomIndex]["description"]);
+
+		if (rooms.rooms[nextRoomIndex]["units"].toLowerCase() == "metres") selectMetres($("#wizard-room-meters"));
+		else selectFeet($("#wizard-room-feet"));
 		
-
-
 		$(".wizard-room-list-selected").removeClass("wizard-room-list-selected");
 		$(this).addClass("wizard-room-list-selected");
 	});
 
 	$(document).on("click", "#wizard-room-meters", function() {
-		$("#wizard-room-feet").removeClass("wizard-room-selected");
-		$(this).addClass("wizard-room-selected");
+		selectMetres(this);
 	});
 
 	$(document).on("click", "#wizard-room-feet", function() {
-		$("#wizard-room-meters").removeClass("wizard-room-selected");
-		$(this).addClass("wizard-room-selected");
+		selectFeet(this);
 	});
 });
+
+function selectMetres(metres) {
+	$("#wizard-room-feet").removeClass("wizard-room-selected");
+	$(metres).addClass("wizard-room-selected");
+}
+
+function selectFeet(feet) {
+	$("#wizard-room-meters").removeClass("wizard-room-selected");
+	$(feet).addClass("wizard-room-selected");
+}
 
 function changeButton() {
 	if ($(".wizard-next").css("padding") == "12px 47px") {
@@ -105,25 +129,33 @@ function generateRooms() {
 
 	for (var i = 0; i < bedrooms; i++) {
 		$(".wizard-room-list").append("<div><span>Bedroom " + (i + 1) + "</span></div>");
-		rooms.rooms.push({ "title": "Bedroom " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+		rooms.rooms.push({ "name": "Bedroom " + (i + 1), "title": "Bedroom " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
 	}
 
 	for (var i = 0; i < receptions; i++) {
 		$(".wizard-room-list").append("<div><span>Reception " + (i + 1) + "</span></div>");
-		rooms.rooms.push({ "title": "Reception " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+		rooms.rooms.push({ "name": "Reception " + (i + 1), "title": "Reception " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
 	}
 
 	for (var i = 0; i < bathrooms; i++) {
 		$(".wizard-room-list").append("<div><span>Bathroom " + (i + 1) + "</span></div>");
-		rooms.rooms.push({ "title": "Bathroom " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+		rooms.rooms.push({ "name": "Bathroom " + (i + 1), "title": "Bathroom " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
 	}
 
 	for (var i = 0; i < other; i++) {
 		$(".wizard-room-list").append("<div><span>Other " + (i + 1) + "</span></div>");
-		rooms.rooms.push({ "title": "Other " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
+		rooms.rooms.push({ "name": "Other " + (i + 1), "title": "Other " + (i + 1), "length": "", "width": "", "units": "metres", "description": "" })
 	}
 
 	$($(".wizard-room-list").children()[0]).addClass("wizard-room-list-selected");
+	$("input[name='roomtitle']").val(rooms.rooms[0]["title"])
+}
+
+function getRoomIndex(roomTitle) {
+	for (var i = 0; i < rooms.rooms.length; i++) {
+		if (rooms.rooms[i]["name"] == roomTitle) return i;
+	}
+	return -1;
 }
 
 function stage0() {
