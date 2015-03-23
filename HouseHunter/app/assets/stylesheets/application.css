@@ -2295,7 +2295,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /* css conflict fixes */
 
-#no-border-radius {
+.no-border-radius {
     border-radius: 0px !important;
 }
 

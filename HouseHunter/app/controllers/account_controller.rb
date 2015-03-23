@@ -88,7 +88,7 @@ class AccountController < ApplicationController
   def saveWizard
     if signed_in?
       api = ApiController.new
-      result = api.saveDraft(JSON.parse(params["data"])["data"], params["stage"], current_user)
+      result = api.saveDraft(JSON.parse(params["data"])["data"], params["stage"], current_user, params["id"])
       render :json => result
     else
       render :json => '{ "status": "Error", "message": "User not authenticated" }'

@@ -1,16 +1,20 @@
 $(document).ready(function() {
 	$(document).on("click", ".wizard-next", function() {
-		var stThis = this;
-		setTimeout(function() {
-			var currentStep = $($(stThis).parents()[2]).attr("data-step");
-			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
-			if (nextStage.length == 0) return;
-			$($($(stThis).parents()[2])).fadeOut(1000, function() {
-				$(nextStage).fadeIn(1000);
-				changeButton();
-			});
-		}, 1000);
-		changeButton();
+		var currentStep = $($(this).parents()[2]).attr("data-step");
+
+		//Send data to be save
+
+
+
+
+
+
+		var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+		if (nextStage.length == 0) return;
+		$($($(stThis).parents()[2])).fadeOut(1000, function() {
+			$(nextStage).fadeIn(1000);
+			changeButton();
+		});
 	});
 
 	$(document).on("click", ".wizard-previous span", function() {
@@ -82,3 +86,48 @@ function changeButton() {
 		$(".wizard-next").html("<i class=\"fa fa-spinner fa-pulse fa-2x\"></i>");
 	}
 }
+
+function stage1() {
+	
+}
+
+function stage2() {
+
+}
+
+function stage3() {
+
+}
+
+function stage4() {
+
+}
+
+function stage5() {
+
+}
+
+function stage6() {
+
+}
+
+function stage7() {
+
+}
+
+function stage8() {
+
+}
+
+function stage9() {
+
+}
+
+function stage10() {
+
+}
+
+function stage11() {
+
+}
+

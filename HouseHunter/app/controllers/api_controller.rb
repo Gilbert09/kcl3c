@@ -50,7 +50,7 @@ class ApiController < ApplicationController
   end
 
   private
-    def stage1(jsonData, stage, current_user)
+    def stage1(jsonData, stage, current_user, property)
       current_user.first_name = jsonData["first_name"]
       current_user.last_name = jsonData["last_name"]
       current_user.email = jsonData["email"]
@@ -72,15 +72,12 @@ class ApiController < ApplicationController
       end
 
       if newAddress then
-        property = Property.new
         address = Address.new
-        property.save
+        property = Property.find(property)
         address.save
 
         address.property_id = property.id
-        property.user_id = current_user.id
         property.address_id = address.id
-        property.status = "Draft"
         property.save
 
         address.house_name_number = jsonData["house_name_number"]
