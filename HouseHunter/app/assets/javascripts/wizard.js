@@ -5,13 +5,13 @@ $(document).ready(function() {
 	$(document).on("click", ".wizard-next", function() {
 		changeButton();
 		var currentStep = $($(this).parents()[2]).attr("data-step");
-
+		var intCurrentStep = parseInt(currentStep);
 
 		//Send data to be save
 		var stage = 1;
 		var data = "";
 
-		switch (currentStep) {
+		switch (intCurrentStep) {
 			case 0:
 				stage = 1;
 				data = stage1();
