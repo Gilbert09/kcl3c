@@ -260,4 +260,19 @@ simply returns true as we have no access to the APIs, it inherits all the method
       property.save
       return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
     end
+
+    def stage10(jsonData, stage, current_user, propertyID)
+      #if jsonData["property_id"] == nil then
+      #  return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }');
+      #end
+
+      if current_user.properties.exists?(propertyID) != true then 
+        return JSON.parse('{ "result": "Error", "message": "Invalid property ID" }')
+      end
+
+      property = current_user.properties.find(propertyID)
+      property.status = "active"
+      property.save
+      return JSON.parse("{ \"result\": \"Success\", \"message\": \"Data saved\", \"data\": { \"property_id\": #{property.id.to_s} } }")
+    end
 end

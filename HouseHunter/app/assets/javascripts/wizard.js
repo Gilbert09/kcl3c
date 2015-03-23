@@ -50,6 +50,13 @@ $(document).ready(function() {
 				data = stage9();
 				break;
 			default:
+				$(".wizard-next").html("Done");
+				var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+				if (nextStage.length == 0) return;
+				$($($(sThis).parents()[2])).fadeOut(1000, function() {
+					$(nextStage).fadeIn(1000);
+					changeButton();
+				});
 				return;
 		}
 
@@ -58,7 +65,14 @@ $(document).ready(function() {
 				$.ajax({
 					url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data[i]
 				}).done(function(msg) {
-					alert(JSON.stringify(msg));
+					if (msg.result != "Success") {
+						var currentStep = $($(this).parents()[2]).attr("data-step");
+						var nextStage = $('div[data-step="' + (parseInt(currentStep) - 1) + '"]');
+						if (nextStage.length == 0) return;
+						$($($(sThis).parents()[2])).fadeOut(1000, function() {
+							$(nextStage).fadeIn(1000);
+						});
+					}
 				});
 			}
 			$(".wizard-next").html("Done");
@@ -72,14 +86,17 @@ $(document).ready(function() {
 			$.ajax({
 				url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data
 			}).done(function(msg) {
-				alert(JSON.stringify(msg));
-				$(".wizard-next").html("Done");
-				var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
-				if (nextStage.length == 0) return;
-				$($($(sThis).parents()[2])).fadeOut(1000, function() {
-					$(nextStage).fadeIn(1000);
+				if (msg.result == "Success") {
+					$(".wizard-next").html("Done");
+					var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
+					if (nextStage.length == 0) return;
+					$($($(sThis).parents()[2])).fadeOut(1000, function() {
+						$(nextStage).fadeIn(1000);
+						changeButton();
+					});
+				} else {
 					changeButton();
-				});
+				}
 			});
 		}
 	});
@@ -289,9 +306,21 @@ function stage9() {
 	return JSON.stringify({ "data": { "description": $("#wizard-description-description textarea").val().trim() } })
 }
 
+
+//HELPER METHODS FOR TESTING
 function goto(step) {
 	$(".showing").addClass("hidden");
 	$(".showing").removeClass("showing");
 	$('div[data-step="' + step + '"]').addClass("showing");
 	$('div[data-step="' + step + '"]').removeClass("hidden");
+}
+
+function finish() {
+	$.ajax({
+		url: '/account/listing/' + propertyID + '/save?stage=' + 10 + '&data=' + JSON.stringify({ "data": {  }})
+	}).done(function(msg) {
+		if (msg.result == "Success") {
+			window.location = "/account/active"
+		}
+	});
 }
