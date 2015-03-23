@@ -4,6 +4,7 @@ var rooms = { "rooms": [] }
 $(document).ready(function() {
 	$(document).on("click", ".wizard-next", function() {
 		changeButton();
+		var sThis = this;
 		var currentStep = $($(this).parents()[2]).attr("data-step");
 		var intCurrentStep = parseInt(currentStep);
 
@@ -53,10 +54,10 @@ $(document).ready(function() {
 		$.ajax({
 			url: '/account/listing/' + propertyID + '/save?stage=' + stage + '&data=' + data
 		}).done(function(msg) {
-			alert(msg);
+			alert(JSON.stringify(msg));
 			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 			if (nextStage.length == 0) return;
-			$($($(this).parents()[2])).fadeOut(1000, function() {
+			$($($(sThis).parents()[2])).fadeOut(1000, function() {
 				$(nextStage).fadeIn(1000);
 				changeButton();
 			});
