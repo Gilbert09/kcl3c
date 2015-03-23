@@ -2,7 +2,8 @@ class AccountController < ApplicationController
 
 =begin
 this class represents the controller for the users account page on the website, users must be logged in before having
-access to these methods because they are unique to every single user.
+access to these methods because they are unique to every single user, it inherits all the methods of the
+ApplicationController class.
 =end
 
   before_action :require_login 

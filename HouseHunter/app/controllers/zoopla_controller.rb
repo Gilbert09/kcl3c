@@ -1,7 +1,7 @@
 class ZooplaController < ApplicationController
 
 =begin
-this class is the controller for the Rightmove API.
+this class is the controller for the Rightmove API, it inherits all the methods of the ApplicationController class.
 =end
 
   @data = Hash.new

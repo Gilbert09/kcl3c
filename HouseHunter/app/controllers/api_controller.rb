@@ -3,7 +3,7 @@ class ApiController < ApplicationController
 =begin
 this class is a controller for the Rightmove and Zoopla APIs, it takes data from the wizard part of the website as a
 user fills in each section of the wizard with their property details, at current the methods to send data to the websites
-simply returns true as we have no access to the APIs.
+simply returns true as we have no access to the APIs, it inherits all the methods of the ApplicationController class.
 =end
 
   # this method takes the data in a json format ready to send a property to Rightmove and Zoopla.
