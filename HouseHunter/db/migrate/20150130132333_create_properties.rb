@@ -1,4 +1,10 @@
 class CreateProperties < ActiveRecord::Migration
+
+=begin
+this class represents the database migration of the properties.
+=end
+
+  # this method shows all of the fields associated with the property relation in the database and their data types to go with.
   def change
     create_table :properties do |t|
       t.integer :user_id

@@ -1,4 +1,9 @@
 class CreateAddresses < ActiveRecord::Migration
+
+=begin
+
+=end
+
   def change
     create_table :addresses do |t|
       t.integer :property_id
