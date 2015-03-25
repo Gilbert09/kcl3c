@@ -51,6 +51,7 @@ $(document).ready(function() {
 				break;
 			default:
 				$(".wizard-next").html("Done");
+				$(".wizard-next").css("padding", "18px 47px");
 				var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 				if (nextStage.length == 0) return;
 				$($($(sThis).parents()[2])).fadeOut(1000, function() {
@@ -76,11 +77,12 @@ $(document).ready(function() {
 				});
 			}
 			$(".wizard-next").html("Done");
+			$(".wizard-next").css("padding", "18px 47px");
 			var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 			if (nextStage.length == 0) return;
 			$($($(sThis).parents()[2])).fadeOut(1000, function() {
 				$(nextStage).fadeIn(1000);
-				changeButton();
+					changeButton();
 			});
 		} else {
 			$.ajax({
@@ -88,6 +90,7 @@ $(document).ready(function() {
 			}).done(function(msg) {
 				if (msg.result == "Success") {
 					$(".wizard-next").html("Done");
+					$(".wizard-next").css("padding", "18px 47px");
 					var nextStage = $('div[data-step="' + (parseInt(currentStep) + 1) + '"]');
 					if (nextStage.length == 0) return;
 					$($($(sThis).parents()[2])).fadeOut(1000, function() {
