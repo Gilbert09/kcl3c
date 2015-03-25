@@ -202,7 +202,7 @@ function selectFeet(feet) {
 }
 
 function changeButton() {
-	if ($(".wizard-next").css("padding") == "12px 47px") {
+	if ($(".wizard-next").html() == "Done") {
 		$(".wizard-next").html("Continue <i class=\"fa fa-long-arrow-right\"></i>");
 		$(".wizard-next").css("padding", "18px 47px");
 		$(".wizard-next").css("width", "200px");
