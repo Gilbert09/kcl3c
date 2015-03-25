@@ -1,4 +1,4 @@
-var propertyID = window.location.pathname.substring(window.location.pathname.length - 6, window.location.pathname.length - 5);
+var propertyID = window.location.pathname.replace( /^\D+/g, '').substring(0, window.location.pathname.replace( /^\D+/g, '').indexOf("/"));
 var rooms = { "rooms": [] }
 
 $(document).ready(function() {
