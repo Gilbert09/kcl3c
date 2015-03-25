@@ -202,7 +202,7 @@ function changeButton() {
 	if ($(".wizard-next").css("padding") == "12px 47px") {
 		$(".wizard-next").html("Continue <i class=\"fa fa-long-arrow-right\"></i>");
 		$(".wizard-next").css("padding", "18px 47px");
-		$(".wizard-next").css("width", "179px");
+		$(".wizard-next").css("width", "200px");
 	} else {
 		$(".wizard-next").css("padding", "12px 47px");
 		$(".wizard-next").animate({
