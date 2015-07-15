@@ -1,5 +1,5 @@
 # kcl3c
-Seocnd year Software Engineering Group Project 3
+Second year Software Engineering Group - Project 3
 
 As a team we made an online real estate system for a client working with King's College London.
 
